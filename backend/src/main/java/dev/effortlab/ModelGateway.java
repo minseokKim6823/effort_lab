@@ -30,7 +30,9 @@ public class ModelGateway {
     public String model() { return model; }
     public boolean available() { return Files.isRegularFile(script); }
 
-    public Generation generate(String task, Effort effort, Mode mode) {
+    public Generation generate(String task, Effort effort, Mode mode) { return generate(task,effort,mode,true); }
+    public Generation generateDefault(String task, Effort effort, Mode mode) { return generate(task,effort,mode,false); }
+    private Generation generate(String task, Effort effort, Mode mode, boolean compact) {
         if (mode == Mode.DEMO) return demo(task,effort);
         if (!available()) throw new IllegalStateException("Codex CLI 경로를 찾지 못했습니다. CODEX_JS_PATH를 설정하세요.");
         long start=System.nanoTime();
@@ -40,12 +42,18 @@ public class ModelGateway {
         Process process=null;
         try {
             Files.createDirectories(work); Files.createDirectories(trace.getParent());
+            Path instructions=work.resolve("answer-instructions.txt");
+            if(compact) try(var source=ModelGateway.class.getResourceAsStream("/answer-instructions.txt")) {
+                if(source==null) throw new IOException("Missing answer instructions");
+                Files.copy(source,instructions,StandardCopyOption.REPLACE_EXISTING);
+            }
             List<String> args=new ArrayList<>(List.of(node,script.toString(),"exec",
                 "--ignore-user-config","--ephemeral","--skip-git-repo-check","--json",
                 "-s","read-only","-C",work.toString(),"-m",model,
                 "-c","model_reasoning_effort="+effort.name().toLowerCase(Locale.ROOT),
                 "-c","approval_policy=never","-c","web_search=disabled",
                 "--disable","shell_tool","--disable","apps","--disable","multi_agent","-"));
+            if(compact) args.addAll(args.size()-1,List.of("-c","model_instructions_file="+json.writeValueAsString(instructions.toString()),"-c","project_doc_max_bytes=0"));
             process=new ProcessBuilder(args).redirectError(ProcessBuilder.Redirect.DISCARD)
                 .redirectOutput(trace.toFile()).start();
             try (var stdin=process.getOutputStream()) {

@@ -1,5 +1,7 @@
 package dev.effortlab;
 import java.util.List;
+import java.io.IOException;
+import tools.jackson.databind.json.JsonMapper;
 import org.springframework.stereotype.Component;
 import static dev.effortlab.Domain.*;
 @Component
@@ -20,5 +22,13 @@ public class BenchmarkCases {
         new Case("hard-4", "분산 정족수", "추론", "분산 시스템의 정족수 조건 R+W>N 및 2W>N을 모두 만족해야 합니다. N=5,W=3일 때 가능한 최소 양의 정수 R을 숫자로만 출력하세요.", "3", Effort.HIGH)
     );
     public List<Case> all() { return cases; }
-    public Case forPrompt(String prompt) { return cases.stream().filter(c -> c.prompt().equals(prompt)).findFirst().orElse(null); }
+    public List<Case> all(String suite) {
+        if(!"challenge".equals(suite)) return cases;
+        try(var input=getClass().getResourceAsStream("/challenge-cases.json")) {
+            if(input==null) throw new IllegalStateException("Challenge dataset missing");
+            return List.of(JsonMapper.builder().build().readValue(input,Case[].class));
+        } catch(IOException e) { throw new IllegalStateException("Challenge dataset unreadable",e); }
+    }
+    public String version(String suite) {return "challenge".equals(suite)?"challenge-12-seed20260923-v1":VERSION;}
+    public Case forPrompt(String prompt) { return java.util.stream.Stream.concat(cases.stream(),all("challenge").stream()).filter(c -> c.prompt().equals(prompt)).findFirst().orElse(null); }
 }

@@ -17,12 +17,12 @@ public class EvaluationService {
         if((check==Check.EXACT || check==Check.CONTAINS) && (expected==null || expected.isBlank()))
             throw new IllegalArgumentException("정답 또는 필수 문자열을 입력하세요.");
         Decision decision=router.route(task,risk);
-        Effort current=strategy==Strategy.ADAPTIVE ? decision.effort() : strategy==Strategy.HIGH ? Effort.HIGH : Effort.LOW;
+        Effort current=strategy==Strategy.ADAPTIVE ? decision.effort() : strategy==Strategy.LOW ? Effort.LOW : Effort.HIGH;
         List<Attempt> attempts=new ArrayList<>();
         Usage usage=Usage.zero(); long elapsed=0; String verdict="STOPPED",error=null;boolean unknown=false;
         while(canContinue.getAsBoolean()) {
             Generation result;
-            try {result=gateway.generate(task,current,mode);}
+            try {result=strategy==Strategy.DEFAULT_HIGH ? gateway.generateDefault(task,current,mode) : gateway.generate(task,current,mode);}
             catch(ModelGateway.ModelFailure e) { error=e.getMessage();unknown=e.unknownUsage;verdict="ERROR";break; }
             String checked=result.providerStatus().equals("completed") ? verifier.verify(result.output(),check,expected) : "FAIL";
             attempts.add(new Attempt(current,result.output(),result.usage(),result.latencyMs(),

@@ -25,6 +25,6 @@ public class ExperimentStore {
     public void recoverInterrupted() {
         for(Report r:recent()) if(r.status().equals("RUNNING")) save(new Report(r.id(),r.createdAt(),"INTERRUPTED",
             r.mode(),r.model(),r.policyVersion(),r.datasetVersion(),r.request(),r.plannedTrials(),r.trials(),
-            r.arms(),null,false,r.note(),"서버가 중단되었습니다. 마지막 호출의 사용량이 누락되었을 수 있습니다.",true));
+            r.arms(),null,false,r.note(),"서버가 중단되었습니다. 마지막 호출의 사용량이 누락되었을 수 있습니다.",true,null,r.contextPolicy()));
     }
 }

@@ -45,12 +45,12 @@ public class BenchmarkService {
     }
     private void run(Job job) {
         try {
-            List<Case> selected=cases.all().subList(0,job.request.caseCount());
+            List<Case> selected=cases.all(job.request.suite()).subList(0,job.request.caseCount());
             outer: for(int repeat=0;repeat<job.request.repeats();repeat++) {
                 for(int index=0;index<selected.size();index++) {
                     Case c=selected.get(index);
-                    List<Strategy> order=new ArrayList<>(List.of(Strategy.HIGH,Strategy.LOW,Strategy.ADAPTIVE));
-                    Collections.rotate(order,(index+repeat)%3);
+                    List<Strategy> order=new ArrayList<>(List.of(Strategy.values()));
+                    Collections.rotate(order,(index+repeat)%order.size());
                     for(Strategy strategy:order) {
                         if(!canContinue(job)) break outer;
                         Execution result=evaluator.execute(c.prompt(),Risk.NORMAL,Check.EXACT,c.expectedAnswer(),
@@ -100,12 +100,14 @@ public class BenchmarkService {
         boolean comparable=job.status.equals("COMPLETED") && trials.size()==job.planned && !unknown;
         long base=arms.get(Strategy.HIGH).totalTokens();
         Double saving=comparable && base>0 ? 100.0*(base-arms.get(Strategy.ADAPTIVE).totalTokens())/base : null;
+        long original=arms.get(Strategy.DEFAULT_HIGH).totalTokens();
+        Double overall=comparable && original>0 ? 100.0*(original-arms.get(Strategy.ADAPTIVE).totalTokens())/original : null;
         String note=job.request.mode()==Mode.DEMO
             ? "시뮬레이션입니다. 토큰·정답은 고정 규칙으로 생성되어 실제 모델 절감률의 증거가 아닙니다."
-            : "Codex 구독의 실제 usage입니다. 기본 지시문·캐시·재시도를 포함하며 요금 절감액이나 구독 한도와 동일하지 않습니다.";
+            : "Codex 구독 실제 usage. 기본 문맥 high와 답변 전용 문맥 high/low/자동을 비교합니다. 문맥 축소와 effort 효과를 구분하세요. 캐시·재시도 포함이며 요금·구독 한도 절감률은 아닙니다.";
         return new Report(job.id,job.created,job.status,job.request.mode(),job.model,
-            EffortRouter.VERSION,BenchmarkCases.VERSION,job.request,job.planned,trials,arms,saving,
-            comparable,note,job.error,unknown);
+            EffortRouter.VERSION,cases.version(job.request.suite()),job.request,job.planned,trials,arms,saving,
+            comparable,note,job.error,unknown,overall,"answer-only-v1");
     }
     private static class Job {
         final String id=UUID.randomUUID().toString(),created=Instant.now().toString(),model;
@@ -115,7 +117,7 @@ public class BenchmarkService {
         volatile String status="RUNNING",error=null;volatile boolean cancelled=false;
         Job(BenchmarkRequest request,String model) {
             this.request=request;this.model=request.mode()==Mode.DEMO?"scripted-demo":model;
-            this.planned=request.caseCount()*request.repeats()*3;
+            this.planned=request.caseCount()*request.repeats()*Strategy.values().length;
         }
     }
 }

@@ -13,7 +13,7 @@ class ExperimentTest {
         Report report=initial;
         for(int i=0;i<100 && report.status().equals("RUNNING");i++){Thread.sleep(20);report=service.get(initial.id());}
         assertThat(report.status()).isEqualTo("COMPLETED");
-        assertThat(report.trials()).hasSize(9);
+        assertThat(report.trials()).hasSize(12);
         assertThat(report.arms().get(Strategy.ADAPTIVE).passed()).isEqualTo(3);
         assertThat(report.mode()).isEqualTo(Mode.DEMO);
         assertThat(store.get(report.id()).id()).isEqualTo(report.id());

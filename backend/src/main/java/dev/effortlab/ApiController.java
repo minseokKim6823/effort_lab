@@ -27,7 +27,10 @@ public class ApiController {
     @PostMapping("/execute") public Execution execute(@Valid @RequestBody ExecuteRequest request) {
         return benchmarks.single(request);
     }
-    @GetMapping("/cases") public List<Case> cases() {return cases.all();}
+    @GetMapping("/cases") public List<Case> cases(@RequestParam(defaultValue="starter") String suite) {
+        if(!List.of("starter","challenge").contains(suite)) throw new IllegalArgumentException("알 수 없는 문제 세트입니다.");
+        return cases.all(suite);
+    }
     @GetMapping("/benchmarks") public List<Report> recent() {return benchmarks.recent();}
     @PostMapping("/benchmarks") public Report start(@Valid @RequestBody BenchmarkRequest request) {return benchmarks.start(request);}
     @GetMapping("/benchmarks/{id}") public Report get(@PathVariable String id) {return benchmarks.get(id);}
