@@ -34,6 +34,7 @@ public class ApiController {
     @GetMapping("/benchmarks") public List<Report> recent() {return benchmarks.recent();}
     @PostMapping("/benchmarks") public Report start(@Valid @RequestBody BenchmarkRequest request) {return benchmarks.start(request);}
     @GetMapping("/benchmarks/{id}") public Report get(@PathVariable String id) {return benchmarks.get(id);}
+    @PostMapping("/benchmarks/{id}/resume") public Report resume(@PathVariable String id) {return benchmarks.resume(id);}
     @PostMapping("/benchmarks/{id}/cancel") public Report cancel(@PathVariable String id) {return benchmarks.cancel(id);}
     @ExceptionHandler({IllegalArgumentException.class,MethodArgumentNotValidException.class,HttpMessageNotReadableException.class})
     public ResponseEntity<Map<String,String>> bad(Exception e) {

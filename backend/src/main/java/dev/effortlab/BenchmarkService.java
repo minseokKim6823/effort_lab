@@ -40,6 +40,23 @@ public class BenchmarkService {
             return snapshot(job);
         } catch(RuntimeException e) {busy.set(false);throw e;}
     }
+    public Report resume(String id) {
+        Report prior=store.get(id);
+        if(!prior.status().equals("ERROR") || prior.unknownUsage() || prior.trials().isEmpty())
+            throw new IllegalStateException("호출 전 오류로 멈춘 실험만 재개할 수 있습니다.");
+        Trial last=prior.trials().getLast();
+        if(!last.execution().verdict().equals("ERROR") || !last.execution().attempts().isEmpty())
+            throw new IllegalStateException("마지막 호출의 사용량이 확정되지 않아 재개할 수 없습니다.");
+        if(!EffortRouter.VERSION.equals(prior.policyVersion()) || !cases.version(prior.request().suite()).equals(prior.datasetVersion())
+            || !"answer-only-v1".equals(prior.contextPolicy()) || (prior.mode()==Mode.CODEX && !gateway.model().equals(prior.model())))
+            throw new IllegalStateException("모델·정책·문제 세트가 변경되어 같은 실험으로 재개할 수 없습니다.");
+        checkProvider(prior.mode());
+        if(!busy.compareAndSet(false,true)) throw new IllegalStateException("다른 작업이 실행 중입니다.");
+        try {
+            Job job=new Job(prior);
+            active=job;store.save(snapshot(job));worker.submit(()->run(job));return snapshot(job);
+        } catch(RuntimeException e) {busy.set(false);throw e;}
+    }
     private void checkProvider(Mode mode) {
         if(mode==Mode.CODEX && !gateway.available()) throw new IllegalStateException("Codex CLI를 설치하고 codex login으로 로그인하세요.");
     }
@@ -52,6 +69,8 @@ public class BenchmarkService {
                     List<Strategy> order=new ArrayList<>(List.of(Strategy.values()));
                     Collections.rotate(order,(index+repeat)%order.size());
                     for(Strategy strategy:order) {
+                        int repetition=repeat+1;
+                        if(job.trials.stream().anyMatch(t->t.caseId().equals(c.id()) && t.repetition()==repetition && t.execution().strategy()==strategy)) continue;
                         if(!canContinue(job)) break outer;
                         Execution result=evaluator.execute(c.prompt(),Risk.NORMAL,Check.EXACT,c.expectedAnswer(),
                             job.request.mode(),strategy,()->canContinue(job),job.spent::addAndGet);
@@ -110,12 +129,18 @@ public class BenchmarkService {
             comparable,note,job.error,unknown,overall,"answer-only-v1");
     }
     private static class Job {
-        final String id=UUID.randomUUID().toString(),created=Instant.now().toString(),model;
+        Job(Report prior) {
+            id=prior.id();created=prior.createdAt();model=prior.model();request=prior.request();planned=prior.plannedTrials();
+            trials.addAll(prior.trials().subList(0,prior.trials().size()-1));
+            spent.set(trials.stream().mapToLong(t->t.execution().totalTokens()).sum());
+        }
+        final String id,created,model;
         final BenchmarkRequest request;final int planned;
         final List<Trial> trials=new CopyOnWriteArrayList<>();
         final AtomicLong spent=new AtomicLong();
         volatile String status="RUNNING",error=null;volatile boolean cancelled=false;
         Job(BenchmarkRequest request,String model) {
+            this.id=UUID.randomUUID().toString();this.created=Instant.now().toString();
             this.request=request;this.model=request.mode()==Mode.DEMO?"scripted-demo":model;
             this.planned=request.caseCount()*request.repeats()*Strategy.values().length;
         }

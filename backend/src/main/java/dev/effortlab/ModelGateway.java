@@ -71,6 +71,7 @@ public class ModelGateway {
             if(process!=null) { process.descendants().forEach(ProcessHandle::destroyForcibly); process.destroyForcibly(); }
             throw new ModelFailure("실행이 중단되어 마지막 호출의 사용량을 확인할 수 없습니다.",true);
         } catch (IOException e) {
+            System.getLogger(ModelGateway.class.getName()).log(System.Logger.Level.WARNING,"CLI I/O failure",e);
             throw new ModelFailure("Codex 실행 또는 측정 기록 저장에 실패했습니다. CLI 경로와 로그인 상태를 확인하세요.",process!=null);
         }
     }
