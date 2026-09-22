@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-09-22T12:19:19.812Z",
+  "reportId": "fe1abd28-9167-4752-a7af-b38ccbf5b4f9",
+  "tracesChecked": 36,
+  "trialsChecked": 36,
+  "status": "PASS",
+  "checks": [
+    "raw usage vs attempts",
+    "raw answers vs displayed answers",
+    "PASS vs reference answers",
+    "all retries included",
+    "arm totals",
+    "reported savings formula"
+  ]
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0c907-7f2e-7873-951a-ae40fbb23e13"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"EFFORT LAB"}}
+{"type":"turn.completed","usage":{"input_tokens":6846,"cached_input_tokens":4864,"cache_write_input_tokens":0,"output_tokens":7,"reasoning_output_tokens":0}}

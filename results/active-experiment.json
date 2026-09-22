@@ -1,0 +1,9 @@
+{
+  "id": "fe1abd28-9167-4752-a7af-b38ccbf5b4f9",
+  "config": {
+    "mode": "CODEX",
+    "repeats": 1,
+    "caseCount": 12,
+    "tokenBudget": 350000
+  }
+}

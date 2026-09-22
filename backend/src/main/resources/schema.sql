@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS experiments (
+ id VARCHAR(36) PRIMARY KEY,
+ created_at VARCHAR(40) NOT NULL,
+ report CLOB NOT NULL
+);

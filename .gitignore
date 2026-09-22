@@ -1,0 +1,14 @@
+.gradle/
+build/
+node_modules/
+dist/
+.env
+data/
+*.log
+.tools/
+frontend/test-results/
+frontend/playwright-report/
+desktop/node_modules/
+release/
+*.pfx
+*.pem

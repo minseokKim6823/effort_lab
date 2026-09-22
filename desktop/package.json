@@ -1,0 +1,48 @@
+{
+  "name": "effort-lab-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Effort Lab desktop application",
+  "main": "main.cjs",
+  "author": "Effort Lab",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis portable"
+  },
+  "devDependencies": {
+    "electron": "39.2.7",
+    "electron-builder": "26.0.12"
+  },
+  "build": {
+    "appId": "dev.effortlab.desktop",
+    "productName": "Effort Lab",
+    "directories": {
+      "output": "../release"
+    },
+    "files": [
+      "main.cjs",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../backend/build/libs/effort-lab-0.1.0.jar",
+        "to": "backend/effort-lab.jar"
+      },
+      {
+        "from": "../frontend/dist",
+        "to": "frontend"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false
+    }
+  }
+}

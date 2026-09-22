@@ -1,0 +1,13 @@
+import {chromium} from '../frontend/node_modules/playwright/index.mjs';
+import fs from 'node:fs/promises';
+const browser=await chromium.launch({channel:'chrome',headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
+await page.goto('http://127.0.0.1:5173');
+await page.getByRole('button',{name:'effort 분석하기'}).click();
+await page.locator('.effort-result h3').waitFor();
+await fs.mkdir('results/screenshots',{recursive:true});
+await page.screenshot({path:'results/screenshots/studio-final.jpg',quality:55,type:'jpeg'});
+await page.getByRole('button',{name:'비교 실험',exact:true}).click();
+await page.getByRole('heading',{name:'비교 실험 설정'}).waitFor();
+await page.screenshot({path:'results/screenshots/benchmark-final.png',fullPage:true});
+await browser.close();
