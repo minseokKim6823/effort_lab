@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "testedAt": "2026-09-24T06:48:12.574Z",
+  "checks": [
+    "packaged React assets loaded",
+    "bundled Java backend started",
+    "bundled Codex CLI runs",
+    "foreign local requests rejected",
+    "effort routing LOW",
+    "DEMO answer PASS",
+    "four-arm challenge benchmark completes",
+    "challenge reference visible",
+    "backend shuts down with app"
+  ],
+  "subscriptionCalls": 0
+}

@@ -12,3 +12,6 @@ desktop/node_modules/
 release/
 *.pfx
 *.pem
+.idea/
+*.tsbuildinfo
+desktop/runtime/

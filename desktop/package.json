@@ -1,48 +1,70 @@
 {
-  "name": "effort-lab-desktop",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Effort Lab desktop application",
-  "main": "main.cjs",
-  "author": "Effort Lab",
-  "scripts": {
-    "start": "electron .",
-    "dist": "electron-builder --win nsis portable"
-  },
-  "devDependencies": {
-    "electron": "39.2.7",
-    "electron-builder": "26.0.12"
-  },
-  "build": {
-    "appId": "dev.effortlab.desktop",
-    "productName": "Effort Lab",
-    "directories": {
-      "output": "../release"
-    },
-    "files": [
-      "main.cjs",
-      "package.json"
-    ],
-    "extraResources": [
-      {
-        "from": "../backend/build/libs/effort-lab-0.1.0.jar",
-        "to": "backend/effort-lab.jar"
-      },
-      {
-        "from": "../frontend/dist",
-        "to": "frontend"
-      }
-    ],
-    "win": {
-      "target": [
-        "nsis",
-        "portable"
-      ]
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "perMachine": false
-    }
-  }
+    "name":  "effort-lab-desktop",
+    "version":  "0.1.0",
+    "private":  true,
+    "description":  "Effort Lab — measured reasoning effort and context optimization",
+    "main":  "main.cjs",
+    "author":  "Effort Lab",
+    "scripts":  {
+                    "start":  "electron .",
+                    "dist":  "electron-builder --win nsis portable --x64 --publish never"
+                },
+    "dependencies":  {
+                         "@openai/codex":  "0.153.4"
+                     },
+    "devDependencies":  {
+                            "electron":  "44.4.3",
+                            "electron-builder":  "26.15.3"
+                        },
+    "build":  {
+                  "appId":  "dev.effortlab.desktop",
+                  "productName":  "Effort Lab",
+                  "directories":  {
+                                      "output":  "../release"
+                                  },
+                  "files":  [
+                                "main.cjs",
+                                "package.json",
+                                "!node_modules/**/*",
+                                "loading.html"
+                            ],
+                  "extraResources":  [
+                                         {
+                                             "from":  "../backend/build/libs/effort-lab-0.1.0.jar",
+                                             "to":  "backend/effort-lab.jar"
+                                         },
+                                         {
+                                             "from":  "runtime",
+                                             "to":  "runtime"
+                                         },
+                                         {
+                                             "from":  "node_modules/@openai",
+                                             "to":  "codex/node_modules/@openai"
+                                         },
+                                         {
+                                             "to":  "licenses",
+                                             "from":  "licenses"
+                                         },
+                                         {
+                                             "to":  "THIRD-PARTY-NOTICES.md",
+                                             "from":  "THIRD-PARTY-NOTICES.md"
+                                         }
+                                     ],
+                  "win":  {
+                              "target":  [
+                                             "nsis",
+                                             "portable"
+                                         ],
+                              "signAndEditExecutable":  false
+                          },
+                  "nsis":  {
+                               "oneClick":  false,
+                               "allowToChangeInstallationDirectory":  true,
+                               "perMachine":  false,
+                               "artifactName":  "Effort-Lab-Setup-${version}-${arch}.${ext}"
+                           },
+                  "portable":  {
+                                   "artifactName":  "Effort-Lab-${version}-portable-${arch}.${ext}"
+                               }
+              }
 }
