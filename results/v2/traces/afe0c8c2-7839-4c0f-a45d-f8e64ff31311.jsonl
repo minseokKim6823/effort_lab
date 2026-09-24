@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a0c9f1-224b-7cd1-904a-3e6dea0893de"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"alpha-beta-2026-gamma"}}
+{"type":"turn.completed","usage":{"input_tokens":3374,"cached_input_tokens":1792,"cache_write_input_tokens":0,"output_tokens":11,"reasoning_output_tokens":0}}

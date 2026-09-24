@@ -1,0 +1,9 @@
+{
+  "resumedAt": "2026-09-22T16:47:37.873Z",
+  "reportId": "d1c0aae3-5a84-4321-82ac-3085fbddf51a",
+  "priorTrials": 73,
+  "retainedTrials": 72,
+  "reason": "pre-call local I/O failure; completed usage retained; server JAR now immutable copy",
+  "policyUnchanged": true,
+  "datasetUnchanged": true
+}

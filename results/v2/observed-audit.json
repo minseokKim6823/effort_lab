@@ -1,0 +1,16 @@
+{
+  "status": "PARTIAL_AUDIT_PASS",
+  "experimentComplete": false,
+  "verifiedCalls": 85,
+  "unknownUsageTrials": 1,
+  "completedRepetition": 1,
+  "completedRepetitionTrials": 48,
+  "checks": [
+    "known raw usage",
+    "known raw answers",
+    "exact grading including failures",
+    "retry costs",
+    "arm totals",
+    "complete first repetition without case exclusions"
+  ]
+}

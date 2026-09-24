@@ -1,0 +1,68 @@
+{
+  "model": "gpt-5.6-luna",
+  "sourceReportId": "d1c0aae3-5a84-4321-82ac-3085fbddf51a",
+  "sourceStatus": "ERROR",
+  "experimentComplete": false,
+  "scope": "first completed repetition only; full planned experiment interrupted by usage limit",
+  "trials": 48,
+  "plannedTrials": 144,
+  "recordedTrials": 84,
+  "arms": {
+    "DEFAULT_HIGH": {
+      "trials": 12,
+      "passed": 11,
+      "passRate": 91.66666666666666,
+      "retries": 0,
+      "usage": {
+        "inputTokens": 82263,
+        "outputTokens": 4576,
+        "reasoningTokens": 4440,
+        "cachedInputTokens": 35840
+      },
+      "totalTokens": 86839
+    },
+    "HIGH": {
+      "trials": 12,
+      "passed": 11,
+      "passRate": 91.66666666666666,
+      "retries": 0,
+      "usage": {
+        "inputTokens": 39900,
+        "outputTokens": 6756,
+        "reasoningTokens": 6616,
+        "cachedInputTokens": 18176
+      },
+      "totalTokens": 46656
+    },
+    "LOW": {
+      "trials": 12,
+      "passed": 11,
+      "passRate": 91.66666666666666,
+      "retries": 0,
+      "usage": {
+        "inputTokens": 39966,
+        "outputTokens": 4127,
+        "reasoningTokens": 3993,
+        "cachedInputTokens": 24576
+      },
+      "totalTokens": 44093
+    },
+    "ADAPTIVE": {
+      "trials": 12,
+      "passed": 10,
+      "passRate": 83.33333333333334,
+      "retries": 1,
+      "usage": {
+        "inputTokens": 42900,
+        "outputTokens": 5767,
+        "reasoningTokens": 5628,
+        "cachedInputTokens": 13568
+      },
+      "totalTokens": 48667
+    }
+  },
+  "contextSavingsPercent": 46.272987943205244,
+  "effortSavingsPercent": -4.310270919067215,
+  "overallSavingsPercent": 43.95720816683748,
+  "conclusion": "완료된 1회차에서 문맥을 줄인 high는 기존 high와 정답 수가 같았습니다(11/12). 자동 effort는 10/12로 낮았고 짧은 문맥 high보다 토큰도 더 썼습니다. 전체 3회 반복은 구독 사용량 한도로 중단되어, 이 수치는 완료된 1회차의 관찰 결과이며 확정된 전체 절감률이 아닙니다."
+}

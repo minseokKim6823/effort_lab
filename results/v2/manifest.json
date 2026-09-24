@@ -1,0 +1,16 @@
+{
+  "startedAt": "2026-09-22T16:17:09.008Z",
+  "config": {
+    "mode": "CODEX",
+    "repeats": 3,
+    "caseCount": 12,
+    "tokenBudget": 650000,
+    "suite": "challenge"
+  },
+  "gitCommit": "1910250bfff34e45e8283e2ae7ebcc727472af2b",
+  "datasetSha256": "1a0461d2c42f57ced0d5bb614f9c86f08ff0f1a5d5405425a2471940e34b9ae6",
+  "policy": "rules-1.1",
+  "context": "answer-only-v1",
+  "cli": "0.153.4",
+  "selection": "12 fixed cases, no post-run exclusions, three repetitions, rotated arm order"
+}

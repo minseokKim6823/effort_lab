@@ -1,0 +1,3973 @@
+{
+  "id": "d1c0aae3-5a84-4321-82ac-3085fbddf51a",
+  "createdAt": "2026-09-22T16:17:09.265208600Z",
+  "status": "ERROR",
+  "mode": "CODEX",
+  "model": "gpt-5.6-luna",
+  "policyVersion": "rules-1.1",
+  "datasetVersion": "challenge-12-seed20260923-v1",
+  "request": {
+    "mode": "CODEX",
+    "repeats": 3,
+    "caseCount": 12,
+    "tokenBudget": 650000,
+    "suite": "challenge"
+  },
+  "plannedTrials": 144,
+  "trials": [
+    {
+      "caseId": "c01",
+      "title": "제품 코드 변환",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 1823,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "INVOICE-AZ29-QX71-REV-B",
+            "usage": {
+              "inputTokens": 6856,
+              "outputTokens": 15,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 4864
+            },
+            "latencyMs": 7115,
+            "responseId": "45d474e3-6cb1-49a1-b548-cc18c0dd70bc",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6856,
+          "outputTokens": 15,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 4864
+        },
+        "totalTokens": 6871,
+        "latencyMs": 7115,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c01",
+      "title": "제품 코드 변환",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 322,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "INVOICE-AZ29-QX71-REV-B",
+            "usage": {
+              "inputTokens": 3247,
+              "outputTokens": 26,
+              "reasoningTokens": 9,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 4440,
+            "responseId": "4240ae5f-0987-4cbf-98a9-89e98e1a0ce8",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3247,
+          "outputTokens": 26,
+          "reasoningTokens": 9,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 3273,
+        "latencyMs": 4440,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c01",
+      "title": "제품 코드 변환",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 117,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "INVOICE-AZ29-QX71-REV-B",
+            "usage": {
+              "inputTokens": 3247,
+              "outputTokens": 15,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 4967,
+            "responseId": "b4f1b033-0fd6-4be0-89a5-88481aa2a8a5",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3247,
+          "outputTokens": 15,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3262,
+        "latencyMs": 4967,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c01",
+      "title": "제품 코드 변환",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 272,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "INVOICE-AZ29-QX71-REV-B",
+            "usage": {
+              "inputTokens": 3247,
+              "outputTokens": 15,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 5982,
+            "responseId": "0550c72f-eaf9-45b4-aa84-7f6204b4f059",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3247,
+          "outputTokens": 15,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3262,
+        "latencyMs": 5982,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c02",
+      "title": "주문 조건 집계",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 2748,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "MEDIUM",
+            "output": "10316",
+            "usage": {
+              "inputTokens": 3380,
+              "outputTokens": 78,
+              "reasoningTokens": 70,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 6012,
+            "responseId": "4fd7a892-defc-498e-811f-151be5e84ff2",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3380,
+          "outputTokens": 78,
+          "reasoningTokens": 70,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 3458,
+        "latencyMs": 6012,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c02",
+      "title": "주문 조건 집계",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 490,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "10316",
+            "usage": {
+              "inputTokens": 6884,
+              "outputTokens": 75,
+              "reasoningTokens": 67,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 5275,
+            "responseId": "145000aa-a183-4d82-bd1e-013a14a40dd8",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6884,
+          "outputTokens": 75,
+          "reasoningTokens": 67,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 6959,
+        "latencyMs": 5275,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c02",
+      "title": "주문 조건 집계",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 335,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "10316",
+            "usage": {
+              "inputTokens": 3380,
+              "outputTokens": 74,
+              "reasoningTokens": 66,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 5367,
+            "responseId": "532202c7-7666-4b64-a2a0-7d6898eb2aa8",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3380,
+          "outputTokens": 74,
+          "reasoningTokens": 66,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3454,
+        "latencyMs": 5367,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c02",
+      "title": "주문 조건 집계",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 360,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "10316",
+            "usage": {
+              "inputTokens": 3380,
+              "outputTokens": 75,
+              "reasoningTokens": 67,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 6337,
+            "responseId": "ea048738-fbdc-4bb5-985f-a589e82c54e7",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3380,
+          "outputTokens": 75,
+          "reasoningTokens": 67,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3455,
+        "latencyMs": 6337,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c03",
+      "title": "순열 제약의 경우의 수",
+      "category": "조합 추론",
+      "repetition": 1,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "HIGH",
+          "score": 100,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다.",
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 140,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "6660",
+            "usage": {
+              "inputTokens": 3320,
+              "outputTokens": 261,
+              "reasoningTokens": 253,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 8152,
+            "responseId": "6f9dd0f2-8df7-418d-8af1-a79407ef342f",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3320,
+          "outputTokens": 261,
+          "reasoningTokens": 253,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3581,
+        "latencyMs": 8152,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c03",
+      "title": "순열 제약의 경우의 수",
+      "category": "조합 추론",
+      "repetition": 1,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "HIGH",
+          "score": 100,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다.",
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 128,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "9120",
+            "usage": {
+              "inputTokens": 3320,
+              "outputTokens": 314,
+              "reasoningTokens": 306,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 19702,
+            "responseId": "51703417-cb19-4fce-a61a-825c68bea4b1",
+            "providerStatus": "completed",
+            "verdict": "FAIL"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3320,
+          "outputTokens": 314,
+          "reasoningTokens": 306,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 3634,
+        "latencyMs": 19702,
+        "verdict": "FAIL",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c03",
+      "title": "순열 제약의 경우의 수",
+      "category": "조합 추론",
+      "repetition": 1,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "HIGH",
+          "score": 100,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다.",
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 109,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "8820",
+            "usage": {
+              "inputTokens": 6824,
+              "outputTokens": 336,
+              "reasoningTokens": 328,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 10393,
+            "responseId": "a56cac41-61e3-4b6c-b153-03912c73a561",
+            "providerStatus": "completed",
+            "verdict": "FAIL"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6824,
+          "outputTokens": 336,
+          "reasoningTokens": 328,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 7160,
+        "latencyMs": 10393,
+        "verdict": "FAIL",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c03",
+      "title": "순열 제약의 경우의 수",
+      "category": "조합 추론",
+      "repetition": 1,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "HIGH",
+          "score": 100,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다.",
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 105,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "6660",
+            "usage": {
+              "inputTokens": 3320,
+              "outputTokens": 339,
+              "reasoningTokens": 331,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 10430,
+            "responseId": "bcb1ef7a-9ed3-4316-9dd7-d58c13ee5cad",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3320,
+          "outputTokens": 339,
+          "reasoningTokens": 331,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3659,
+        "latencyMs": 10430,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c04",
+      "title": "필드 추출",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 311,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "b@example.com,c@example.com,e@example.com",
+            "usage": {
+              "inputTokens": 3312,
+              "outputTokens": 28,
+              "reasoningTokens": 13,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 6678,
+            "responseId": "b548c710-0985-49d4-87c1-4663309333af",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3312,
+          "outputTokens": 28,
+          "reasoningTokens": 13,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3340,
+        "latencyMs": 6678,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c04",
+      "title": "필드 추출",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 639,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "b@example.com,c@example.com,e@example.com",
+            "usage": {
+              "inputTokens": 3312,
+              "outputTokens": 13,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 4476,
+            "responseId": "b5b6c1fa-b1ad-4433-8a8b-5f55c8aa399b",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3312,
+          "outputTokens": 13,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3325,
+        "latencyMs": 4476,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c04",
+      "title": "필드 추출",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 285,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "b@example.com,c@example.com,e@example.com",
+            "usage": {
+              "inputTokens": 3312,
+              "outputTokens": 13,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 4663,
+            "responseId": "2b20cb68-89a4-4255-bd56-505bd0a6394f",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3312,
+          "outputTokens": 13,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3325,
+        "latencyMs": 4663,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c04",
+      "title": "필드 추출",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 262,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "b@example.com,c@example.com,e@example.com",
+            "usage": {
+              "inputTokens": 6816,
+              "outputTokens": 13,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 4864
+            },
+            "latencyMs": 4092,
+            "responseId": "ccc6f18c-683a-47fa-8b8b-bdbe28ecce79",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6816,
+          "outputTokens": 13,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 4864
+        },
+        "totalTokens": 6829,
+        "latencyMs": 4092,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c05",
+      "title": "모듈러 점화식",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 111,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "24",
+            "usage": {
+              "inputTokens": 6774,
+              "outputTokens": 419,
+              "reasoningTokens": 412,
+              "cachedInputTokens": 4864
+            },
+            "latencyMs": 16153,
+            "responseId": "0d87f1d1-08cf-49f6-a055-5e8be00c8439",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6774,
+          "outputTokens": 419,
+          "reasoningTokens": 412,
+          "cachedInputTokens": 4864
+        },
+        "totalTokens": 7193,
+        "latencyMs": 16153,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c05",
+      "title": "모듈러 점화식",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 84,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "24",
+            "usage": {
+              "inputTokens": 3375,
+              "outputTokens": 408,
+              "reasoningTokens": 401,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 12000,
+            "responseId": "2cca33d6-39db-44b2-8c27-21448ff5581e",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3375,
+          "outputTokens": 408,
+          "reasoningTokens": 401,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 3783,
+        "latencyMs": 12000,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c05",
+      "title": "모듈러 점화식",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 78,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "24",
+            "usage": {
+              "inputTokens": 3375,
+              "outputTokens": 295,
+              "reasoningTokens": 288,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 10761,
+            "responseId": "fd415230-59f7-4bd3-a024-2b89216ef652",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3375,
+          "outputTokens": 295,
+          "reasoningTokens": 288,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3670,
+        "latencyMs": 10761,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c05",
+      "title": "모듈러 점화식",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 178,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "MEDIUM",
+            "output": "300",
+            "usage": {
+              "inputTokens": 3375,
+              "outputTokens": 402,
+              "reasoningTokens": 395,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 17864,
+            "responseId": "d153e604-a92f-4d9a-ae5e-b35ea75855b5",
+            "providerStatus": "completed",
+            "verdict": "FAIL"
+          },
+          {
+            "effort": "HIGH",
+            "output": "24",
+            "usage": {
+              "inputTokens": 3375,
+              "outputTokens": 410,
+              "reasoningTokens": 403,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 19104,
+            "responseId": "9bea4918-f3e8-4ef7-a15c-beec0dc775ab",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6750,
+          "outputTokens": 812,
+          "reasoningTokens": 798,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 7562,
+        "latencyMs": 36968,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c06",
+      "title": "0/1 배낭 최적화",
+      "category": "최적화",
+      "repetition": 1,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 204,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "177",
+            "usage": {
+              "inputTokens": 2946,
+              "outputTokens": 1842,
+              "reasoningTokens": 1835,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 39143,
+            "responseId": "c46dccae-0a2c-4fc9-be89-84c3f1ef3eb3",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 2946,
+          "outputTokens": 1842,
+          "reasoningTokens": 1835,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 4788,
+        "latencyMs": 39143,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c06",
+      "title": "0/1 배낭 최적화",
+      "category": "최적화",
+      "repetition": 1,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 135,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "177",
+            "usage": {
+              "inputTokens": 6930,
+              "outputTokens": 943,
+              "reasoningTokens": 936,
+              "cachedInputTokens": 4864
+            },
+            "latencyMs": 23478,
+            "responseId": "b2076191-8409-442b-9da2-0909a50eabe6",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6930,
+          "outputTokens": 943,
+          "reasoningTokens": 936,
+          "cachedInputTokens": 4864
+        },
+        "totalTokens": 7873,
+        "latencyMs": 23478,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c06",
+      "title": "0/1 배낭 최적화",
+      "category": "최적화",
+      "repetition": 1,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 124,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "177",
+            "usage": {
+              "inputTokens": 3321,
+              "outputTokens": 1466,
+              "reasoningTokens": 1459,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 30474,
+            "responseId": "8904f93a-ac26-4af0-9a74-e09e58e9f817",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3321,
+          "outputTokens": 1466,
+          "reasoningTokens": 1459,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 4787,
+        "latencyMs": 30474,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c06",
+      "title": "0/1 배낭 최적화",
+      "category": "최적화",
+      "repetition": 1,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 122,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "177",
+            "usage": {
+              "inputTokens": 3321,
+              "outputTokens": 708,
+              "reasoningTokens": 701,
+              "cachedInputTokens": 2816
+            },
+            "latencyMs": 16516,
+            "responseId": "1d8367b8-a676-4b16-97f2-52891029608b",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3321,
+          "outputTokens": 708,
+          "reasoningTokens": 701,
+          "cachedInputTokens": 2816
+        },
+        "totalTokens": 4029,
+        "latencyMs": 16516,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c07",
+      "title": "음수 포함 정렬",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 130,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "-44,-42,-36,-19,-18,-15,-13,-4,3,12,12,18,23,24,35",
+            "usage": {
+              "inputTokens": 3031,
+              "outputTokens": 80,
+              "reasoningTokens": 44,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 5676,
+            "responseId": "4445b75d-1c43-4d73-8618-f7bfe8f7267b",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3031,
+          "outputTokens": 80,
+          "reasoningTokens": 44,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3111,
+        "latencyMs": 5676,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c07",
+      "title": "음수 포함 정렬",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 197,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "-44,-42,-36,-19,-18,-15,-13,-4,3,12,12,18,23,24,35",
+            "usage": {
+              "inputTokens": 3280,
+              "outputTokens": 34,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 6755,
+            "responseId": "db320fd6-2d15-417b-ad0f-075ce82fe99f",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3280,
+          "outputTokens": 34,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3314,
+        "latencyMs": 6755,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c07",
+      "title": "음수 포함 정렬",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 88,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "-44,-42,-36,-19,-18,-15,-13,-4,3,12,12,18,23,24,35",
+            "usage": {
+              "inputTokens": 6784,
+              "outputTokens": 83,
+              "reasoningTokens": 47,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 5249,
+            "responseId": "d8e835a9-a98d-4f7d-b7ad-b78848126584",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6784,
+          "outputTokens": 83,
+          "reasoningTokens": 47,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 6867,
+        "latencyMs": 5249,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c07",
+      "title": "음수 포함 정렬",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 85,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "-44,-42,-36,-19,-18,-15,-13,-4,3,12,12,18,23,24,35",
+            "usage": {
+              "inputTokens": 3280,
+              "outputTokens": 87,
+              "reasoningTokens": 51,
+              "cachedInputTokens": 2816
+            },
+            "latencyMs": 5705,
+            "responseId": "0eb759f9-dd13-434d-a774-20434c6bd7f1",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3280,
+          "outputTokens": 87,
+          "reasoningTokens": 51,
+          "cachedInputTokens": 2816
+        },
+        "totalTokens": 3367,
+        "latencyMs": 5705,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c08",
+      "title": "가중 그래프 경로",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 154,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "22",
+            "usage": {
+              "inputTokens": 3455,
+              "outputTokens": 100,
+              "reasoningTokens": 93,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 5579,
+            "responseId": "7336e310-7e60-44db-851e-8dfa27368451",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3455,
+          "outputTokens": 100,
+          "reasoningTokens": 93,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3555,
+        "latencyMs": 5579,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c08",
+      "title": "가중 그래프 경로",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 326,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "22",
+            "usage": {
+              "inputTokens": 3350,
+              "outputTokens": 90,
+              "reasoningTokens": 83,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 5787,
+            "responseId": "4b61912e-a0b3-4f20-934d-6b3ffdef0372",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3350,
+          "outputTokens": 90,
+          "reasoningTokens": 83,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3440,
+        "latencyMs": 5787,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c08",
+      "title": "가중 그래프 경로",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 154,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "MEDIUM",
+            "output": "22",
+            "usage": {
+              "inputTokens": 3350,
+              "outputTokens": 99,
+              "reasoningTokens": 92,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 5351,
+            "responseId": "39ea9f19-6c98-4686-94fa-ebaf7208458a",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3350,
+          "outputTokens": 99,
+          "reasoningTokens": 92,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3449,
+        "latencyMs": 5351,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c08",
+      "title": "가중 그래프 경로",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 153,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "22",
+            "usage": {
+              "inputTokens": 6854,
+              "outputTokens": 133,
+              "reasoningTokens": 126,
+              "cachedInputTokens": 4864
+            },
+            "latencyMs": 8022,
+            "responseId": "6b539e22-866e-4699-bf07-38f30808bfb1",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6854,
+          "outputTokens": 133,
+          "reasoningTokens": 126,
+          "cachedInputTokens": 4864
+        },
+        "totalTokens": 6987,
+        "latencyMs": 8022,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c09",
+      "title": "선행 작업 일정 수",
+      "category": "조합 추론",
+      "repetition": 1,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 123,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "77",
+            "usage": {
+              "inputTokens": 6812,
+              "outputTokens": 1549,
+              "reasoningTokens": 1542,
+              "cachedInputTokens": 4864
+            },
+            "latencyMs": 32316,
+            "responseId": "55afbda1-a4dd-46f3-9a68-02d391022898",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6812,
+          "outputTokens": 1549,
+          "reasoningTokens": 1542,
+          "cachedInputTokens": 4864
+        },
+        "totalTokens": 8361,
+        "latencyMs": 32316,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c09",
+      "title": "선행 작업 일정 수",
+      "category": "조합 추론",
+      "repetition": 1,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 329,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "74",
+            "usage": {
+              "inputTokens": 3308,
+              "outputTokens": 2538,
+              "reasoningTokens": 2531,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 107929,
+            "responseId": "b08c57f8-8778-4880-814e-8cdb5ff35a84",
+            "providerStatus": "completed",
+            "verdict": "FAIL"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3308,
+          "outputTokens": 2538,
+          "reasoningTokens": 2531,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 5846,
+        "latencyMs": 107929,
+        "verdict": "FAIL",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c09",
+      "title": "선행 작업 일정 수",
+      "category": "조합 추론",
+      "repetition": 1,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 276,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "63",
+            "usage": {
+              "inputTokens": 3413,
+              "outputTokens": 1179,
+              "reasoningTokens": 1172,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 26172,
+            "responseId": "f223750c-afa3-460d-ad15-340ff1054e2b",
+            "providerStatus": "completed",
+            "verdict": "FAIL"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3413,
+          "outputTokens": 1179,
+          "reasoningTokens": 1172,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 4592,
+        "latencyMs": 26172,
+        "verdict": "FAIL",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c09",
+      "title": "선행 작업 일정 수",
+      "category": "조합 추론",
+      "repetition": 1,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 106,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "65",
+            "usage": {
+              "inputTokens": 3308,
+              "outputTokens": 1952,
+              "reasoningTokens": 1945,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 39645,
+            "responseId": "add0e7d8-bb12-4f6d-8cae-4f733f8fed10",
+            "providerStatus": "completed",
+            "verdict": "FAIL"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3308,
+          "outputTokens": 1952,
+          "reasoningTokens": 1945,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 5260,
+        "latencyMs": 39645,
+        "verdict": "FAIL",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c10",
+      "title": "기호 정규화",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 118,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "alpha-beta-2026-gamma",
+            "usage": {
+              "inputTokens": 3269,
+              "outputTokens": 11,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 2816
+            },
+            "latencyMs": 6678,
+            "responseId": "0a946974-2410-45db-b9ab-2f4c1cd88533",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3269,
+          "outputTokens": 11,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 2816
+        },
+        "totalTokens": 3280,
+        "latencyMs": 6678,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c10",
+      "title": "기호 정규화",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 242,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "alpha-beta-2026-gamma",
+            "usage": {
+              "inputTokens": 6878,
+              "outputTokens": 71,
+              "reasoningTokens": 58,
+              "cachedInputTokens": 4864
+            },
+            "latencyMs": 14616,
+            "responseId": "3a583a77-b57f-4c73-9ee7-38a8ca1475eb",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6878,
+          "outputTokens": 71,
+          "reasoningTokens": 58,
+          "cachedInputTokens": 4864
+        },
+        "totalTokens": 6949,
+        "latencyMs": 14616,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c10",
+      "title": "기호 정규화",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 253,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "alpha-beta-2026-gamma",
+            "usage": {
+              "inputTokens": 3269,
+              "outputTokens": 58,
+              "reasoningTokens": 45,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 9328,
+            "responseId": "c92bbe7b-d4d6-4d23-bc4c-35009d8c95e4",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3269,
+          "outputTokens": 58,
+          "reasoningTokens": 45,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3327,
+        "latencyMs": 9328,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c10",
+      "title": "기호 정규화",
+      "category": "변환",
+      "repetition": 1,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 110,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "alpha-beta-2026-gamma",
+            "usage": {
+              "inputTokens": 3374,
+              "outputTokens": 11,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 9947,
+            "responseId": "afe0c8c2-7839-4c0f-a45d-f8e64ff31311",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3374,
+          "outputTokens": 11,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3385,
+        "latencyMs": 9947,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c11",
+      "title": "반올림 없는 할인 집계",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 144,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "2317",
+            "usage": {
+              "inputTokens": 3404,
+              "outputTokens": 151,
+              "reasoningTokens": 143,
+              "cachedInputTokens": 2816
+            },
+            "latencyMs": 12827,
+            "responseId": "707e2427-b072-4488-b37e-09286158be93",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3404,
+          "outputTokens": 151,
+          "reasoningTokens": 143,
+          "cachedInputTokens": 2816
+        },
+        "totalTokens": 3555,
+        "latencyMs": 12827,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c11",
+      "title": "반올림 없는 할인 집계",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 214,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "MEDIUM",
+            "output": "2317",
+            "usage": {
+              "inputTokens": 3404,
+              "outputTokens": 151,
+              "reasoningTokens": 143,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 21497,
+            "responseId": "4efc1e29-4311-413f-8d28-9a689762c244",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3404,
+          "outputTokens": 151,
+          "reasoningTokens": 143,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 3555,
+        "latencyMs": 21497,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c11",
+      "title": "반올림 없는 할인 집계",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 212,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "2317",
+            "usage": {
+              "inputTokens": 6908,
+              "outputTokens": 151,
+              "reasoningTokens": 143,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 41933,
+            "responseId": "95e2c66e-4974-4ce1-b3c7-13f9bcb6f25b",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6908,
+          "outputTokens": 151,
+          "reasoningTokens": 143,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 7059,
+        "latencyMs": 41933,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c11",
+      "title": "반올림 없는 할인 집계",
+      "category": "계산",
+      "repetition": 1,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 3513,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "2317",
+            "usage": {
+              "inputTokens": 3299,
+              "outputTokens": 161,
+              "reasoningTokens": 153,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 9668,
+            "responseId": "61494dd6-0dac-41ac-9bde-87426544b3b0",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3299,
+          "outputTokens": 161,
+          "reasoningTokens": 153,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 3460,
+        "latencyMs": 9668,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c12",
+      "title": "작업 배정 최적화",
+      "category": "최적화",
+      "repetition": 1,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 383,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "78",
+            "usage": {
+              "inputTokens": 3334,
+              "outputTokens": 1471,
+              "reasoningTokens": 1464,
+              "cachedInputTokens": 2816
+            },
+            "latencyMs": 32350,
+            "responseId": "28051084-5e59-4e88-ae0b-6844e7c17a4b",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3334,
+          "outputTokens": 1471,
+          "reasoningTokens": 1464,
+          "cachedInputTokens": 2816
+        },
+        "totalTokens": 4805,
+        "latencyMs": 32350,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c12",
+      "title": "작업 배정 최적화",
+      "category": "최적화",
+      "repetition": 1,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 262,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "78",
+            "usage": {
+              "inputTokens": 3439,
+              "outputTokens": 1249,
+              "reasoningTokens": 1242,
+              "cachedInputTokens": 2816
+            },
+            "latencyMs": 27458,
+            "responseId": "319e58f6-42e1-4a08-ab0c-48b7b4511e8d",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3439,
+          "outputTokens": 1249,
+          "reasoningTokens": 1242,
+          "cachedInputTokens": 2816
+        },
+        "totalTokens": 4688,
+        "latencyMs": 27458,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c12",
+      "title": "작업 배정 최적화",
+      "category": "최적화",
+      "repetition": 1,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 301,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "78",
+            "usage": {
+              "inputTokens": 3334,
+              "outputTokens": 446,
+              "reasoningTokens": 439,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 14055,
+            "responseId": "403b2d44-2491-4ea2-be28-94e446453898",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3334,
+          "outputTokens": 446,
+          "reasoningTokens": 439,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 3780,
+        "latencyMs": 14055,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c12",
+      "title": "작업 배정 최적화",
+      "category": "최적화",
+      "repetition": 1,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 162,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "78",
+            "usage": {
+              "inputTokens": 6943,
+              "outputTokens": 788,
+              "reasoningTokens": 781,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 31050,
+            "responseId": "2f6445c6-f8ab-4cfa-85ce-61e3d6680255",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6943,
+          "outputTokens": 788,
+          "reasoningTokens": 781,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 7731,
+        "latencyMs": 31050,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c01",
+      "title": "제품 코드 변환",
+      "category": "변환",
+      "repetition": 2,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 139,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "INVOICE-AZ29-QX71-REV-B",
+            "usage": {
+              "inputTokens": 3352,
+              "outputTokens": 15,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 8918,
+            "responseId": "9963ad81-a718-48d1-a23c-34f65b1a5e30",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3352,
+          "outputTokens": 15,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3367,
+        "latencyMs": 8918,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c01",
+      "title": "제품 코드 변환",
+      "category": "변환",
+      "repetition": 2,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 142,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "INVOICE-AZ29-QX71-REV-B",
+            "usage": {
+              "inputTokens": 6751,
+              "outputTokens": 27,
+              "reasoningTokens": 10,
+              "cachedInputTokens": 5888
+            },
+            "latencyMs": 22611,
+            "responseId": "a6848de7-0887-4462-9859-0a577baddf6e",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6751,
+          "outputTokens": 27,
+          "reasoningTokens": 10,
+          "cachedInputTokens": 5888
+        },
+        "totalTokens": 6778,
+        "latencyMs": 22611,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c01",
+      "title": "제품 코드 변환",
+      "category": "변환",
+      "repetition": 2,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 162,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "INVOICE-AZ29-QX71-REV-B",
+            "usage": {
+              "inputTokens": 3352,
+              "outputTokens": 15,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 15166,
+            "responseId": "2a1d8230-642f-4fb9-972e-32838d49cf5e",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3352,
+          "outputTokens": 15,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3367,
+        "latencyMs": 15166,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c01",
+      "title": "제품 코드 변환",
+      "category": "변환",
+      "repetition": 2,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 169,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "INVOICE-AZ29-QX71-REV-B",
+            "usage": {
+              "inputTokens": 3352,
+              "outputTokens": 15,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 17993,
+            "responseId": "45d59d1b-2853-4a4f-b3a3-3a56424e0d73",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3352,
+          "outputTokens": 15,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3367,
+        "latencyMs": 17993,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c02",
+      "title": "주문 조건 집계",
+      "category": "계산",
+      "repetition": 2,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 861,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "10316",
+            "usage": {
+              "inputTokens": 3485,
+              "outputTokens": 77,
+              "reasoningTokens": 69,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 11137,
+            "responseId": "ba9e4f65-3e5d-4dfc-9d08-74030aacbe0b",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3485,
+          "outputTokens": 77,
+          "reasoningTokens": 69,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3562,
+        "latencyMs": 11137,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c02",
+      "title": "주문 조건 집계",
+      "category": "계산",
+      "repetition": 2,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 326,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "MEDIUM",
+            "output": "10316",
+            "usage": {
+              "inputTokens": 3380,
+              "outputTokens": 78,
+              "reasoningTokens": 70,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 6769,
+            "responseId": "d98b254f-e036-42d3-9430-4ad8a8279330",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3380,
+          "outputTokens": 78,
+          "reasoningTokens": 70,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 3458,
+        "latencyMs": 6769,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c02",
+      "title": "주문 조건 집계",
+      "category": "계산",
+      "repetition": 2,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 379,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "10316",
+            "usage": {
+              "inputTokens": 6884,
+              "outputTokens": 77,
+              "reasoningTokens": 69,
+              "cachedInputTokens": 5888
+            },
+            "latencyMs": 22219,
+            "responseId": "f2007d07-9a75-42dc-be4f-b346b86aea6f",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6884,
+          "outputTokens": 77,
+          "reasoningTokens": 69,
+          "cachedInputTokens": 5888
+        },
+        "totalTokens": 6961,
+        "latencyMs": 22219,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c02",
+      "title": "주문 조건 집계",
+      "category": "계산",
+      "repetition": 2,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 415,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "10316",
+            "usage": {
+              "inputTokens": 3380,
+              "outputTokens": 81,
+              "reasoningTokens": 73,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 6433,
+            "responseId": "048dfc36-151f-4f37-8700-bc7dadf479aa",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3380,
+          "outputTokens": 81,
+          "reasoningTokens": 73,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 3461,
+        "latencyMs": 6433,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c03",
+      "title": "순열 제약의 경우의 수",
+      "category": "조합 추론",
+      "repetition": 2,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "HIGH",
+          "score": 100,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다.",
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 137,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "6480",
+            "usage": {
+              "inputTokens": 3320,
+              "outputTokens": 524,
+              "reasoningTokens": 516,
+              "cachedInputTokens": 2816
+            },
+            "latencyMs": 13364,
+            "responseId": "2f43908c-a4a1-4361-b098-d41a5a365dfd",
+            "providerStatus": "completed",
+            "verdict": "FAIL"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3320,
+          "outputTokens": 524,
+          "reasoningTokens": 516,
+          "cachedInputTokens": 2816
+        },
+        "totalTokens": 3844,
+        "latencyMs": 13364,
+        "verdict": "FAIL",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c03",
+      "title": "순열 제약의 경우의 수",
+      "category": "조합 추론",
+      "repetition": 2,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "HIGH",
+          "score": 100,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다.",
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 106,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "6660",
+            "usage": {
+              "inputTokens": 3320,
+              "outputTokens": 245,
+              "reasoningTokens": 237,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 8488,
+            "responseId": "ec4c829e-0f82-4a82-84fa-feea3326e44d",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3320,
+          "outputTokens": 245,
+          "reasoningTokens": 237,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3565,
+        "latencyMs": 8488,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c03",
+      "title": "순열 제약의 경우의 수",
+      "category": "조합 추론",
+      "repetition": 2,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "HIGH",
+          "score": 100,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다.",
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 116,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "6660",
+            "usage": {
+              "inputTokens": 3320,
+              "outputTokens": 273,
+              "reasoningTokens": 265,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 16047,
+            "responseId": "11a9dc12-f036-4fb4-a764-675453729b57",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3320,
+          "outputTokens": 273,
+          "reasoningTokens": 265,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 3593,
+        "latencyMs": 16047,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c03",
+      "title": "순열 제약의 경우의 수",
+      "category": "조합 추론",
+      "repetition": 2,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "HIGH",
+          "score": 100,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다.",
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 124,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "6660",
+            "usage": {
+              "inputTokens": 6929,
+              "outputTokens": 259,
+              "reasoningTokens": 251,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 33489,
+            "responseId": "c33cda6d-f3a6-45eb-b19b-4f339e7b53a3",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6929,
+          "outputTokens": 259,
+          "reasoningTokens": 251,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 7188,
+        "latencyMs": 33489,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c04",
+      "title": "필드 추출",
+      "category": "변환",
+      "repetition": 2,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 434,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "b@example.com,c@example.com,e@example.com",
+            "usage": {
+              "inputTokens": 6816,
+              "outputTokens": 13,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 5888
+            },
+            "latencyMs": 4446,
+            "responseId": "3aa8b022-3e4a-4a34-82c2-2471ebc16a18",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6816,
+          "outputTokens": 13,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 5888
+        },
+        "totalTokens": 6829,
+        "latencyMs": 4446,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c04",
+      "title": "필드 추출",
+      "category": "변환",
+      "repetition": 2,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 225,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "b@example.com,c@example.com,e@example.com",
+            "usage": {
+              "inputTokens": 3312,
+              "outputTokens": 13,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 2816
+            },
+            "latencyMs": 3330,
+            "responseId": "a04544f3-df85-46b9-9312-3a6fae0d4169",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3312,
+          "outputTokens": 13,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 2816
+        },
+        "totalTokens": 3325,
+        "latencyMs": 3330,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c04",
+      "title": "필드 추출",
+      "category": "변환",
+      "repetition": 2,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 223,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "b@example.com,c@example.com,e@example.com",
+            "usage": {
+              "inputTokens": 3417,
+              "outputTokens": 13,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 5319,
+            "responseId": "9681ac2e-da8a-4f03-bde7-c8ef0fd95757",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3417,
+          "outputTokens": 13,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3430,
+        "latencyMs": 5319,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c04",
+      "title": "필드 추출",
+      "category": "변환",
+      "repetition": 2,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 411,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "b@example.com,c@example.com,e@example.com",
+            "usage": {
+              "inputTokens": 3312,
+              "outputTokens": 13,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 4930,
+            "responseId": "38385937-c050-4d96-a8d4-fcf34a41864a",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3312,
+          "outputTokens": 13,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3325,
+        "latencyMs": 4930,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c05",
+      "title": "모듈러 점화식",
+      "category": "계산",
+      "repetition": 2,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 113,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "MEDIUM",
+            "output": "512",
+            "usage": {
+              "inputTokens": 3062,
+              "outputTokens": 281,
+              "reasoningTokens": 274,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 8257,
+            "responseId": "d612169d-8390-4745-9088-536d09eb6ba1",
+            "providerStatus": "completed",
+            "verdict": "FAIL"
+          },
+          {
+            "effort": "HIGH",
+            "output": "24",
+            "usage": {
+              "inputTokens": 3270,
+              "outputTokens": 296,
+              "reasoningTokens": 289,
+              "cachedInputTokens": 2816
+            },
+            "latencyMs": 10018,
+            "responseId": "80a7897e-25b0-444b-80e1-aa1c492e5782",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6332,
+          "outputTokens": 577,
+          "reasoningTokens": 563,
+          "cachedInputTokens": 4608
+        },
+        "totalTokens": 6909,
+        "latencyMs": 18275,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c05",
+      "title": "모듈러 점화식",
+      "category": "계산",
+      "repetition": 2,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 121,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "24",
+            "usage": {
+              "inputTokens": 6774,
+              "outputTokens": 420,
+              "reasoningTokens": 413,
+              "cachedInputTokens": 4864
+            },
+            "latencyMs": 16965,
+            "responseId": "72e7ecd8-92da-47d8-88e9-0d8f1a1a583b",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6774,
+          "outputTokens": 420,
+          "reasoningTokens": 413,
+          "cachedInputTokens": 4864
+        },
+        "totalTokens": 7194,
+        "latencyMs": 16965,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c05",
+      "title": "모듈러 점화식",
+      "category": "계산",
+      "repetition": 2,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 106,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "24",
+            "usage": {
+              "inputTokens": 3270,
+              "outputTokens": 435,
+              "reasoningTokens": 428,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 11489,
+            "responseId": "566b88f7-f221-47a7-b35e-2eb14be26c13",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3270,
+          "outputTokens": 435,
+          "reasoningTokens": 428,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3705,
+        "latencyMs": 11489,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c05",
+      "title": "모듈러 점화식",
+      "category": "계산",
+      "repetition": 2,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 102,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "122",
+            "usage": {
+              "inputTokens": 3270,
+              "outputTokens": 570,
+              "reasoningTokens": 563,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 24812,
+            "responseId": "a6702481-5d66-491f-aa3b-cc63acc590c2",
+            "providerStatus": "completed",
+            "verdict": "FAIL"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3270,
+          "outputTokens": 570,
+          "reasoningTokens": 563,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3840,
+        "latencyMs": 24812,
+        "verdict": "FAIL",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c06",
+      "title": "0/1 배낭 최적화",
+      "category": "최적화",
+      "repetition": 2,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 125,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "177",
+            "usage": {
+              "inputTokens": 3426,
+              "outputTokens": 1027,
+              "reasoningTokens": 1020,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 24429,
+            "responseId": "74c152ce-e5b1-492b-82b2-2ddaaf4a4bcd",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3426,
+          "outputTokens": 1027,
+          "reasoningTokens": 1020,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 4453,
+        "latencyMs": 24429,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c06",
+      "title": "0/1 배낭 최적화",
+      "category": "최적화",
+      "repetition": 2,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 159,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "177",
+            "usage": {
+              "inputTokens": 3321,
+              "outputTokens": 949,
+              "reasoningTokens": 942,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 44469,
+            "responseId": "0b124d23-4189-4b9b-bf77-08b61d681529",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3321,
+          "outputTokens": 949,
+          "reasoningTokens": 942,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 4270,
+        "latencyMs": 44469,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c06",
+      "title": "0/1 배낭 최적화",
+      "category": "최적화",
+      "repetition": 2,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 256,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "177",
+            "usage": {
+              "inputTokens": 6825,
+              "outputTokens": 822,
+              "reasoningTokens": 815,
+              "cachedInputTokens": 5888
+            },
+            "latencyMs": 39722,
+            "responseId": "48f4f62f-75cb-4548-8209-4e02d14a6f72",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6825,
+          "outputTokens": 822,
+          "reasoningTokens": 815,
+          "cachedInputTokens": 5888
+        },
+        "totalTokens": 7647,
+        "latencyMs": 39722,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c06",
+      "title": "0/1 배낭 최적화",
+      "category": "최적화",
+      "repetition": 2,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 295,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "177",
+            "usage": {
+              "inputTokens": 3426,
+              "outputTokens": 1160,
+              "reasoningTokens": 1153,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 44440,
+            "responseId": "b89fde7a-8167-484e-95f6-5f00fe1cc810",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3426,
+          "outputTokens": 1160,
+          "reasoningTokens": 1153,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 4586,
+        "latencyMs": 44440,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c07",
+      "title": "음수 포함 정렬",
+      "category": "변환",
+      "repetition": 2,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 2278,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "-44,-42,-36,-19,-18,-15,-13,-4,3,12,12,18,23,24,35",
+            "usage": {
+              "inputTokens": 3280,
+              "outputTokens": 92,
+              "reasoningTokens": 56,
+              "cachedInputTokens": 2816
+            },
+            "latencyMs": 7816,
+            "responseId": "e8be10d3-c8ba-4507-853b-ab9a07946d8e",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3280,
+          "outputTokens": 92,
+          "reasoningTokens": 56,
+          "cachedInputTokens": 2816
+        },
+        "totalTokens": 3372,
+        "latencyMs": 7816,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c07",
+      "title": "음수 포함 정렬",
+      "category": "변환",
+      "repetition": 2,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 244,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "-44,-42,-36,-19,-18,-15,-13,-4,3,12,12,18,23,24,35",
+            "usage": {
+              "inputTokens": 3280,
+              "outputTokens": 82,
+              "reasoningTokens": 46,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 20873,
+            "responseId": "b53cb5b7-c563-4925-ab1e-0d52847ecb5d",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3280,
+          "outputTokens": 82,
+          "reasoningTokens": 46,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3362,
+        "latencyMs": 20873,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c07",
+      "title": "음수 포함 정렬",
+      "category": "변환",
+      "repetition": 2,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 1132,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "-44,-42,-36,-19,-18,-15,-13,-4,3,12,12,18,23,24,35",
+            "usage": {
+              "inputTokens": 3280,
+              "outputTokens": 79,
+              "reasoningTokens": 43,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 5544,
+            "responseId": "b54b274f-bec7-4ac7-9509-1bca58d94b92",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3280,
+          "outputTokens": 79,
+          "reasoningTokens": 43,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3359,
+        "latencyMs": 5544,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c07",
+      "title": "음수 포함 정렬",
+      "category": "변환",
+      "repetition": 2,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "LOW",
+          "score": 0,
+          "reasons": [
+            "짧고 명확한 변환·추출 작업 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 245,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "-44,-42,-36,-19,-18,-15,-13,-4,3,12,12,18,23,24,35",
+            "usage": {
+              "inputTokens": 6784,
+              "outputTokens": 83,
+              "reasoningTokens": 47,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 6111,
+            "responseId": "9bf6b701-90e8-4371-b177-a5869eae0c43",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6784,
+          "outputTokens": 83,
+          "reasoningTokens": 47,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 6867,
+        "latencyMs": 6111,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c08",
+      "title": "가중 그래프 경로",
+      "category": "계산",
+      "repetition": 2,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 217,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "22",
+            "usage": {
+              "inputTokens": 6854,
+              "outputTokens": 102,
+              "reasoningTokens": 95,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 5305,
+            "responseId": "2f96f6ac-2ca7-403c-b383-24d9c9aaef64",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6854,
+          "outputTokens": 102,
+          "reasoningTokens": 95,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 6956,
+        "latencyMs": 5305,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c08",
+      "title": "가중 그래프 경로",
+      "category": "계산",
+      "repetition": 2,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 214,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "22",
+            "usage": {
+              "inputTokens": 3350,
+              "outputTokens": 138,
+              "reasoningTokens": 131,
+              "cachedInputTokens": 2816
+            },
+            "latencyMs": 8394,
+            "responseId": "660817d6-717d-4fbc-974c-f6a614001208",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3350,
+          "outputTokens": 138,
+          "reasoningTokens": 131,
+          "cachedInputTokens": 2816
+        },
+        "totalTokens": 3488,
+        "latencyMs": 8394,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c08",
+      "title": "가중 그래프 경로",
+      "category": "계산",
+      "repetition": 2,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 140,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "LOW",
+            "output": "30",
+            "usage": {
+              "inputTokens": 3350,
+              "outputTokens": 5,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 5496,
+            "responseId": "0f78a1c9-8d0a-4683-9f2d-40074bad2644",
+            "providerStatus": "completed",
+            "verdict": "FAIL"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3350,
+          "outputTokens": 5,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 3355,
+        "latencyMs": 5496,
+        "verdict": "FAIL",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c08",
+      "title": "가중 그래프 경로",
+      "category": "계산",
+      "repetition": 2,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "MEDIUM",
+          "score": 30,
+          "reasons": [
+            "계산·구현 또는 여러 조건을 다루는 작업입니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 161,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "MEDIUM",
+            "output": "22",
+            "usage": {
+              "inputTokens": 3350,
+              "outputTokens": 103,
+              "reasoningTokens": 96,
+              "cachedInputTokens": 0
+            },
+            "latencyMs": 8733,
+            "responseId": "944f86c7-14b2-49e6-8b3e-df0561f2bd18",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3350,
+          "outputTokens": 103,
+          "reasoningTokens": 96,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 3453,
+        "latencyMs": 8733,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c09",
+      "title": "선행 작업 일정 수",
+      "category": "조합 추론",
+      "repetition": 2,
+      "execution": {
+        "strategy": "ADAPTIVE",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 136,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "35",
+            "usage": {
+              "inputTokens": 3308,
+              "outputTokens": 1024,
+              "reasoningTokens": 1017,
+              "cachedInputTokens": 2816
+            },
+            "latencyMs": 22206,
+            "responseId": "ebb40cfd-0298-4a2d-b70b-0b49d53d6207",
+            "providerStatus": "completed",
+            "verdict": "FAIL"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3308,
+          "outputTokens": 1024,
+          "reasoningTokens": 1017,
+          "cachedInputTokens": 2816
+        },
+        "totalTokens": 4332,
+        "latencyMs": 22206,
+        "verdict": "FAIL",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c09",
+      "title": "선행 작업 일정 수",
+      "category": "조합 추론",
+      "repetition": 2,
+      "execution": {
+        "strategy": "DEFAULT_HIGH",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 87,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "63",
+            "usage": {
+              "inputTokens": 6812,
+              "outputTokens": 1355,
+              "reasoningTokens": 1348,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 28333,
+            "responseId": "b8b92d45-ae9f-46a7-b065-eb44c422275f",
+            "providerStatus": "completed",
+            "verdict": "FAIL"
+          }
+        ],
+        "usage": {
+          "inputTokens": 6812,
+          "outputTokens": 1355,
+          "reasoningTokens": 1348,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 8167,
+        "latencyMs": 28333,
+        "verdict": "FAIL",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c09",
+      "title": "선행 작업 일정 수",
+      "category": "조합 추론",
+      "repetition": 2,
+      "execution": {
+        "strategy": "HIGH",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 165,
+          "routingTokens": 0
+        },
+        "attempts": [
+          {
+            "effort": "HIGH",
+            "output": "77",
+            "usage": {
+              "inputTokens": 3413,
+              "outputTokens": 2248,
+              "reasoningTokens": 2241,
+              "cachedInputTokens": 1792
+            },
+            "latencyMs": 131215,
+            "responseId": "afeacb70-2078-4526-8eac-43c6297a6b50",
+            "providerStatus": "completed",
+            "verdict": "PASS"
+          }
+        ],
+        "usage": {
+          "inputTokens": 3413,
+          "outputTokens": 2248,
+          "reasoningTokens": 2241,
+          "cachedInputTokens": 1792
+        },
+        "totalTokens": 5661,
+        "latencyMs": 131215,
+        "verdict": "PASS",
+        "error": null,
+        "unknownUsage": false
+      }
+    },
+    {
+      "caseId": "c09",
+      "title": "선행 작업 일정 수",
+      "category": "조합 추론",
+      "repetition": 2,
+      "execution": {
+        "strategy": "LOW",
+        "decision": {
+          "effort": "HIGH",
+          "score": 70,
+          "reasons": [
+            "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+          ],
+          "policyVersion": "rules-1.1",
+          "routingMicros": 102,
+          "routingTokens": 0
+        },
+        "attempts": [],
+        "usage": {
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 0
+        },
+        "totalTokens": 0,
+        "latencyMs": 0,
+        "verdict": "ERROR",
+        "error": "Codex 사용량을 수신하지 못했습니다. codex login status와 로컬 CLI 실행을 확인하세요.",
+        "unknownUsage": true
+      }
+    }
+  ],
+  "arms": {
+    "DEFAULT_HIGH": {
+      "trials": 21,
+      "passed": 19,
+      "retries": 0,
+      "usage": {
+        "inputTokens": 143692,
+        "outputTokens": 7734,
+        "reasoningTokens": 7488,
+        "cachedInputTokens": 67840
+      },
+      "totalTokens": 151426,
+      "passRate": 90.47619047619048,
+      "meanLatencyMs": 18042.52380952381,
+      "tokensPerSuccess": 7969.789473684211
+    },
+    "HIGH": {
+      "trials": 21,
+      "passed": 19,
+      "retries": 0,
+      "usage": {
+        "inputTokens": 70003,
+        "outputTokens": 11462,
+        "reasoningTokens": 11214,
+        "cachedInputTokens": 34816
+      },
+      "totalTokens": 81465,
+      "passRate": 90.47619047619048,
+      "meanLatencyMs": 22933.095238095237,
+      "tokensPerSuccess": 4287.631578947368
+    },
+    "LOW": {
+      "trials": 21,
+      "passed": 17,
+      "retries": 0,
+      "usage": {
+        "inputTokens": 66866,
+        "outputTokens": 6161,
+        "reasoningTokens": 5928,
+        "cachedInputTokens": 38912
+      },
+      "totalTokens": 73027,
+      "passRate": 80.95238095238095,
+      "meanLatencyMs": 12267.761904761905,
+      "tokensPerSuccess": 4295.705882352941
+    },
+    "ADAPTIVE": {
+      "trials": 21,
+      "passed": 18,
+      "retries": 2,
+      "usage": {
+        "inputTokens": 75855,
+        "outputTokens": 8878,
+        "reasoningTokens": 8624,
+        "cachedInputTokens": 26368
+      },
+      "totalTokens": 84733,
+      "passRate": 85.71428571428571,
+      "meanLatencyMs": 16302,
+      "tokensPerSuccess": 4707.388888888889
+    }
+  },
+  "savingsPercent": null,
+  "comparable": false,
+  "note": "Codex 구독 실제 usage. 기본 문맥 high와 답변 전용 문맥 high/low/자동을 비교합니다. 문맥 축소와 effort 효과를 구분하세요. 캐시·재시도 포함이며 요금·구독 한도 절감률은 아닙니다.",
+  "error": "Codex 사용량을 수신하지 못했습니다. codex login status와 로컬 CLI 실행을 확인하세요.",
+  "unknownUsage": true,
+  "overallSavingsPercent": null,
+  "contextPolicy": "answer-only-v1"
+}
