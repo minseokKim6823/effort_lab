@@ -15,3 +15,5 @@ release/
 .idea/
 *.tsbuildinfo
 desktop/runtime/
+results/**/active.json
+results/**/report.partial.json
