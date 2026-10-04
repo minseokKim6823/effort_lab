@@ -14,8 +14,9 @@ public class ApiController {
     private final BenchmarkCases cases;
     private final BenchmarkService benchmarks;
     private final ModelGateway gateway;
-    public ApiController(EffortRouter router,BenchmarkCases cases,BenchmarkService benchmarks,ModelGateway gateway) {
-        this.router=router;this.cases=cases;this.benchmarks=benchmarks;this.gateway=gateway;
+    private final BatchService batch;
+    public ApiController(EffortRouter router,BenchmarkCases cases,BenchmarkService benchmarks,ModelGateway gateway,BatchService batch) {
+        this.router=router;this.cases=cases;this.benchmarks=benchmarks;this.gateway=gateway;this.batch=batch;
     }
     @GetMapping("/status") public Map<String,Object> status() {
         return Map.of("codexAvailable",gateway.available(),"model",gateway.model(),
@@ -26,6 +27,9 @@ public class ApiController {
     }
     @PostMapping("/execute") public Execution execute(@Valid @RequestBody ExecuteRequest request) {
         return benchmarks.single(request);
+    }
+    @PostMapping("/batch") public BatchDomain.Result batch(@Valid @RequestBody BatchDomain.Request request) {
+        return benchmarks.exclusively(request.mode(),()->batch.execute(request));
     }
     @GetMapping("/cases") public List<Case> cases(@RequestParam(defaultValue="starter") String suite) {
         if(!List.of("starter","challenge").contains(suite)) throw new IllegalArgumentException("알 수 없는 문제 세트입니다.");
