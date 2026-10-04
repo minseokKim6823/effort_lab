@@ -1,0 +1,71 @@
+{
+  "index": 23,
+  "group": 4,
+  "arm": "SINGLE_HIGH",
+  "caseIds": [
+    "b20"
+  ],
+  "batchSize": 1,
+  "request": {
+    "mode": "CODEX",
+    "batchSize": 1,
+    "tokenBudget": 103013,
+    "items": [
+      {
+        "id": "b20",
+        "task": "최단 경로 알고리즘 문제: 정점은 0부터 7, 방향 간선 (출발,도착,가중치)는 [[0,1,19],[0,2,7],[0,3,8],[1,2,5],[1,4,7],[2,3,7],[2,4,3],[3,5,6],[4,5,16],[4,6,7],[5,6,15],[5,7,12],[6,7,5]] 입니다. 정점 0에서 7까지 최단 거리만 정수로 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "22"
+      }
+    ]
+  },
+  "result": {
+    "id": "46ad8e35-d390-4b3d-8bde-136aeadb7dfc",
+    "createdAt": "2026-10-04T08:05:06.845385400Z",
+    "mode": "CODEX",
+    "model": "gpt-5.6-luna",
+    "policyVersion": "batch-high-v1",
+    "status": "COMPLETED",
+    "batchSize": 1,
+    "plannedCalls": 1,
+    "items": [
+      {
+        "id": "b20",
+        "output": "22",
+        "verdict": "PASS",
+        "callId": "9c8f10cf-a1fc-425f-8af1-08a074c7936b"
+      }
+    ],
+    "calls": [
+      {
+        "taskIds": [
+          "b20"
+        ],
+        "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b20\",\"task\":\"최단 경로 알고리즘 문제: 정점은 0부터 7, 방향 간선 (출발,도착,가중치)는 [[0,1,19],[0,2,7],[0,3,8],[1,2,5],[1,4,7],[2,3,7],[2,4,3],[3,5,6],[4,5,16],[4,6,7],[5,6,15],[5,7,12],[6,7,5]] 입니다. 정점 0에서 7까지 최단 거리만 정수로 출력하세요.\"}]",
+        "generation": {
+          "output": "{\"answers\":[{\"id\":\"b20\",\"answer\":\"22\"}]}",
+          "usage": {
+            "inputTokens": 4140,
+            "outputTokens": 153,
+            "reasoningTokens": 133,
+            "cachedInputTokens": 3840
+          },
+          "latencyMs": 8318,
+          "responseId": "9c8f10cf-a1fc-425f-8af1-08a074c7936b",
+          "providerStatus": "completed"
+        },
+        "parseError": null
+      }
+    ],
+    "usage": {
+      "inputTokens": 4140,
+      "outputTokens": 153,
+      "reasoningTokens": 133,
+      "cachedInputTokens": 3840
+    },
+    "totalTokens": 4293,
+    "latencyMs": 8318,
+    "unknownUsage": false,
+    "error": null
+  }
+}

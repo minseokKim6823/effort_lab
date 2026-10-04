@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a105f0-279c-7e72-acaa-04633d14a4b0"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"answers\":[{\"id\":\"b09\",\"answer\":\"21\"},{\"id\":\"b10\",\"answer\":\"omega-shipment-7300-package\"},{\"id\":\"b11\",\"answer\":\"2614\"},{\"id\":\"b12\",\"answer\":\"71\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":4371,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":2392,"reasoning_output_tokens":2338}}

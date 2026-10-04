@@ -1,0 +1,284 @@
+{
+  "startedAt": "2026-10-04T07:59:47.550Z",
+  "model": "gpt-5.6-luna",
+  "effort": "HIGH",
+  "context": "answer-only-v1",
+  "policy": "batch-high-v1",
+  "cliVersion": "codex-cli 0.153.4",
+  "node": "v22.23.1",
+  "gitCommit": "eafa3c8f08d713b4c081bc5c6d14268254bd8f06",
+  "datasetSha256": "106d39c2fee74d8e6e49423256b116fe2214faf5488a4b2e0f72fcc2cf1856a4",
+  "sourceHashes": {
+    "backend/src/main/java/dev/effortlab/BatchService.java": "9b109e46d630a401fc96cb1965c141a117488aaf645c6b05aed91609f70067ee",
+    "backend/src/main/java/dev/effortlab/BatchDomain.java": "11ae74bbfde927148e110f968c11c8090b03dbf2f755cfbb7916ff9f3f00fe62",
+    "backend/src/main/java/dev/effortlab/ModelGateway.java": "33805bcf0e611014f2d69ab18eb2993aaef16bb0a5bc77c673878aebdc8df3c9",
+    "backend/src/main/resources/answer-instructions.txt": "7690692aaaf1708f8b6a18f29d6612edd84a314bacfcd45967b55f6a1ad9c77c",
+    "scripts/generate-batch-cases.mjs": "10d64cf23931949bb08c2555b9224a4936f3f0899576940484419e80bdaf0f61",
+    "scripts/measure-batch.mjs": "f902fe6444bb772a68b6c3da5413531c9fb469ea51afb0c03edb4571262573a4"
+  },
+  "runnerJarSha256": "f65ecb876dc3f7848bb5a522c0f7d89ba9e2a62a7cbb7e99f24ebe496d018e4e",
+  "tokenBudget": 200000,
+  "plannedCases": 24,
+  "plannedCalls": 30,
+  "schedule": [
+    {
+      "group": 0,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b01"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 0,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b02"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 0,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b03"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 0,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b04"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 0,
+      "arm": "BATCH_HIGH",
+      "caseIds": [
+        "b01",
+        "b02",
+        "b03",
+        "b04"
+      ],
+      "batchSize": 4
+    },
+    {
+      "group": 1,
+      "arm": "BATCH_HIGH",
+      "caseIds": [
+        "b05",
+        "b06",
+        "b07",
+        "b08"
+      ],
+      "batchSize": 4
+    },
+    {
+      "group": 1,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b05"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 1,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b06"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 1,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b07"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 1,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b08"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 2,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b09"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 2,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b10"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 2,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b11"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 2,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b12"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 2,
+      "arm": "BATCH_HIGH",
+      "caseIds": [
+        "b09",
+        "b10",
+        "b11",
+        "b12"
+      ],
+      "batchSize": 4
+    },
+    {
+      "group": 3,
+      "arm": "BATCH_HIGH",
+      "caseIds": [
+        "b13",
+        "b14",
+        "b15",
+        "b16"
+      ],
+      "batchSize": 4
+    },
+    {
+      "group": 3,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b13"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 3,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b14"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 3,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b15"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 3,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b16"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 4,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b17"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 4,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b18"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 4,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b19"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 4,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b20"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 4,
+      "arm": "BATCH_HIGH",
+      "caseIds": [
+        "b17",
+        "b18",
+        "b19",
+        "b20"
+      ],
+      "batchSize": 4
+    },
+    {
+      "group": 5,
+      "arm": "BATCH_HIGH",
+      "caseIds": [
+        "b21",
+        "b22",
+        "b23",
+        "b24"
+      ],
+      "batchSize": 4
+    },
+    {
+      "group": 5,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b21"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 5,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b22"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 5,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b23"
+      ],
+      "batchSize": 1
+    },
+    {
+      "group": 5,
+      "arm": "SINGLE_HIGH",
+      "caseIds": [
+        "b24"
+      ],
+      "batchSize": 1
+    }
+  ],
+  "selection": "All 24 fresh instances, 12 known task families; fixed seeds 20260927/20260928. No retries or exclusions. Group order alternates singleton-first and batch-first."
+}

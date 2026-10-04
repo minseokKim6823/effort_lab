@@ -1,0 +1,113 @@
+{
+  "index": 24,
+  "group": 4,
+  "arm": "BATCH_HIGH",
+  "caseIds": [
+    "b17",
+    "b18",
+    "b19",
+    "b20"
+  ],
+  "batchSize": 4,
+  "request": {
+    "mode": "CODEX",
+    "batchSize": 4,
+    "tokenBudget": 98720,
+    "items": [
+      {
+        "id": "b17",
+        "task": "재귀 수열 F(0)=5, F(1)=8, F(n)=(4*F(n-1)+2*F(n-2)) mod 1013 입니다. F(17)을 계산하여 정수만 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "916"
+      },
+      {
+        "id": "b18",
+        "task": "0/1 배낭 최적화 문제: 각 물건은 최대 한 번만 선택할 수 있습니다. (무게,가치) 목록은 [[6,40],[4,14],[6,27],[12,17],[6,28],[8,11],[14,36],[12,37],[14,18],[8,45]]이고 용량은 34입니다. 총무게가 용량 이하인 선택의 최대 총가치를 정수만 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "154"
+      },
+      {
+        "id": "b19",
+        "task": "정수를 오름차순 정렬하세요: -67,55,47,0,16,0,-66,-25,-66,-70,35,-20,-66,66,47. 중복도 유지하고 공백 없이 쉼표로 연결한 숫자만 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66"
+      },
+      {
+        "id": "b20",
+        "task": "최단 경로 알고리즘 문제: 정점은 0부터 7, 방향 간선 (출발,도착,가중치)는 [[0,1,19],[0,2,7],[0,3,8],[1,2,5],[1,4,7],[2,3,7],[2,4,3],[3,5,6],[4,5,16],[4,6,7],[5,6,15],[5,7,12],[6,7,5]] 입니다. 정점 0에서 7까지 최단 거리만 정수로 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "22"
+      }
+    ]
+  },
+  "result": {
+    "id": "12ef39d8-2f97-4809-8181-94299e2c5c20",
+    "createdAt": "2026-10-04T08:05:45.866552Z",
+    "mode": "CODEX",
+    "model": "gpt-5.6-luna",
+    "policyVersion": "batch-high-v1",
+    "status": "COMPLETED",
+    "batchSize": 4,
+    "plannedCalls": 1,
+    "items": [
+      {
+        "id": "b17",
+        "output": "916",
+        "verdict": "PASS",
+        "callId": "c391f033-fe64-4e6e-95fa-a73745b4b683"
+      },
+      {
+        "id": "b18",
+        "output": "154",
+        "verdict": "PASS",
+        "callId": "c391f033-fe64-4e6e-95fa-a73745b4b683"
+      },
+      {
+        "id": "b19",
+        "output": "-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66",
+        "verdict": "PASS",
+        "callId": "c391f033-fe64-4e6e-95fa-a73745b4b683"
+      },
+      {
+        "id": "b20",
+        "output": "22",
+        "verdict": "PASS",
+        "callId": "c391f033-fe64-4e6e-95fa-a73745b4b683"
+      }
+    ],
+    "calls": [
+      {
+        "taskIds": [
+          "b17",
+          "b18",
+          "b19",
+          "b20"
+        ],
+        "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b17\",\"task\":\"재귀 수열 F(0)=5, F(1)=8, F(n)=(4*F(n-1)+2*F(n-2)) mod 1013 입니다. F(17)을 계산하여 정수만 출력하세요.\"},{\"id\":\"b18\",\"task\":\"0/1 배낭 최적화 문제: 각 물건은 최대 한 번만 선택할 수 있습니다. (무게,가치) 목록은 [[6,40],[4,14],[6,27],[12,17],[6,28],[8,11],[14,36],[12,37],[14,18],[8,45]]이고 용량은 34입니다. 총무게가 용량 이하인 선택의 최대 총가치를 정수만 출력하세요.\"},{\"id\":\"b19\",\"task\":\"정수를 오름차순 정렬하세요: -67,55,47,0,16,0,-66,-25,-66,-70,35,-20,-66,66,47. 중복도 유지하고 공백 없이 쉼표로 연결한 숫자만 출력하세요.\"},{\"id\":\"b20\",\"task\":\"최단 경로 알고리즘 문제: 정점은 0부터 7, 방향 간선 (출발,도착,가중치)는 [[0,1,19],[0,2,7],[0,3,8],[1,2,5],[1,4,7],[2,3,7],[2,4,3],[3,5,6],[4,5,16],[4,6,7],[5,6,15],[5,7,12],[6,7,5]] 입니다. 정점 0에서 7까지 최단 거리만 정수로 출력하세요.\"}]",
+        "generation": {
+          "output": "{\"answers\":[{\"id\":\"b17\",\"answer\":\"916\"},{\"id\":\"b18\",\"answer\":\"154\"},{\"id\":\"b19\",\"answer\":\"-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66\"},{\"id\":\"b20\",\"answer\":\"22\"}]}",
+          "usage": {
+            "inputTokens": 4379,
+            "outputTokens": 1819,
+            "reasoningTokens": 1743,
+            "cachedInputTokens": 0
+          },
+          "latencyMs": 38878,
+          "responseId": "c391f033-fe64-4e6e-95fa-a73745b4b683",
+          "providerStatus": "completed"
+        },
+        "parseError": null
+      }
+    ],
+    "usage": {
+      "inputTokens": 4379,
+      "outputTokens": 1819,
+      "reasoningTokens": 1743,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 6198,
+    "latencyMs": 38878,
+    "unknownUsage": false,
+    "error": null
+  }
+}

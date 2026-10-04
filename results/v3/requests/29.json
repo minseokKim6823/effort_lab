@@ -1,0 +1,71 @@
+{
+  "index": 29,
+  "group": 5,
+  "arm": "SINGLE_HIGH",
+  "caseIds": [
+    "b24"
+  ],
+  "batchSize": 1,
+  "request": {
+    "mode": "CODEX",
+    "batchSize": 1,
+    "tokenBudget": 76165,
+    "items": [
+      {
+        "id": "b24",
+        "task": "최적화 문제: 직원 5명에게 작업 5개를 하나씩 배정합니다. 직원과 작업은 각각 정확히 한 번 사용합니다. 비용 행렬은 행이 직원, 열이 작업 순서로 [[25,36,15,40,9],[27,8,42,35,30],[31,22,14,32,14],[37,26,26,34,40],[8,42,26,12,12]] 입니다. 가능한 배정 중 최소 총비용만 정수로 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "73"
+      }
+    ]
+  },
+  "result": {
+    "id": "f6037da2-79db-4ca2-b265-5eda50e73703",
+    "createdAt": "2026-10-04T08:07:14.332737200Z",
+    "mode": "CODEX",
+    "model": "gpt-5.6-luna",
+    "policyVersion": "batch-high-v1",
+    "status": "COMPLETED",
+    "batchSize": 1,
+    "plannedCalls": 1,
+    "items": [
+      {
+        "id": "b24",
+        "output": "73",
+        "verdict": "PASS",
+        "callId": "c591bc8d-555d-453f-a307-de74829f25ac"
+      }
+    ],
+    "calls": [
+      {
+        "taskIds": [
+          "b24"
+        ],
+        "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b24\",\"task\":\"최적화 문제: 직원 5명에게 작업 5개를 하나씩 배정합니다. 직원과 작업은 각각 정확히 한 번 사용합니다. 비용 행렬은 행이 직원, 열이 작업 순서로 [[25,36,15,40,9],[27,8,42,35,30],[31,22,14,32,14],[37,26,26,34,40],[8,42,26,12,12]] 입니다. 가능한 배정 중 최소 총비용만 정수로 출력하세요.\"}]",
+        "generation": {
+          "output": "{\"answers\":[{\"id\":\"b24\",\"answer\":\"73\"}]}",
+          "usage": {
+            "inputTokens": 3734,
+            "outputTokens": 536,
+            "reasoningTokens": 516,
+            "cachedInputTokens": 0
+          },
+          "latencyMs": 21088,
+          "responseId": "c591bc8d-555d-453f-a307-de74829f25ac",
+          "providerStatus": "completed"
+        },
+        "parseError": null
+      }
+    ],
+    "usage": {
+      "inputTokens": 3734,
+      "outputTokens": 536,
+      "reasoningTokens": 516,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 4270,
+    "latencyMs": 21088,
+    "unknownUsage": false,
+    "error": null
+  }
+}

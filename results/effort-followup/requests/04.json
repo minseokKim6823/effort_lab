@@ -1,0 +1,42 @@
+{
+  "index": 4,
+  "caseId": "b05",
+  "effort": "LOW",
+  "model": "gpt-5.6-luna",
+  "startedAt": "2026-10-04T08:36:31.162Z",
+  "sourcePath": "results/v3/requests/06.json",
+  "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b05\",\"task\":\"재귀 수열 F(0)=4, F(1)=11, F(n)=(3*F(n-1)+3*F(n-2)) mod 1009 입니다. F(20)을 계산하여 정수만 출력하세요.\"}]",
+  "promptSha256": "6a89b59bc280b0482a9c6e6e62b88e500901c3a4cfdcbcbe9665c70eaae3b9d7",
+  "stdinSha256": "7b588f19ee38620215ad22671c3f717143feb6b822c3f0242016bd1828d8d4ba",
+  "result": {
+    "status": "COMPLETED",
+    "unknownUsage": false,
+    "usage": {
+      "inputTokens": 3807,
+      "outputTokens": 432,
+      "reasoningTokens": 412,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 4239,
+    "output": "{\"answers\":[{\"id\":\"b05\",\"answer\":\"240\"}]}",
+    "parsed": {
+      "id": "b05",
+      "answer": "240"
+    },
+    "verdict": "FAIL",
+    "responseId": "9fb1b1a6-0806-4748-89eb-0b5f36379631",
+    "tracePath": "results/effort-followup/traces/9fb1b1a6-0806-4748-89eb-0b5f36379631.jsonl",
+    "error": null,
+    "process": {
+      "exitCode": 0,
+      "signal": null,
+      "spawnError": null,
+      "started": true,
+      "timedOut": false,
+      "interrupted": false,
+      "stdinError": null
+    },
+    "latencyMs": 17796,
+    "traceSha256": "55dd0a274c4db151c7eff2d675eb115843451977c4d438bc0caf448776a0881f"
+  }
+}

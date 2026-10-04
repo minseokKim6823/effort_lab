@@ -1,0 +1,42 @@
+{
+  "index": 20,
+  "caseId": "b21",
+  "effort": "LOW",
+  "model": "gpt-5.6-luna",
+  "startedAt": "2026-10-04T08:40:42.098Z",
+  "sourcePath": "results/v3/requests/26.json",
+  "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b21\",\"task\":\"제약 충족 문제: 작업 0부터 6까지를 각각 한 번, 한 번에 하나씩 수행합니다. 선행 관계 (먼저,나중)는 [[6,4],[3,4],[3,0],[4,5],[0,2],[5,1],[2,1]] 입니다. 모든 선행 관계를 만족하는 전체 실행 순서의 경우의 수를 정수로 출력하세요.\"}]",
+  "promptSha256": "24f8ae4134bf47c5bff5bd63f9f3a6980bc95140e3d3833aa34bb47ed8b20b5f",
+  "stdinSha256": "1f6ad786d907bbfdbf1b5924686aaae974c70f42fcdfa5fab8f5f2657b9529ba",
+  "result": {
+    "status": "COMPLETED",
+    "unknownUsage": false,
+    "usage": {
+      "inputTokens": 3402,
+      "outputTokens": 647,
+      "reasoningTokens": 627,
+      "cachedInputTokens": 2816
+    },
+    "totalTokens": 4049,
+    "output": "{\"answers\":[{\"id\":\"b21\",\"answer\":\"20\"}]}",
+    "parsed": {
+      "id": "b21",
+      "answer": "20"
+    },
+    "verdict": "FAIL",
+    "responseId": "fcc908b5-54c3-4a9f-9a7b-8f3954d50d29",
+    "tracePath": "results/effort-followup/traces/fcc908b5-54c3-4a9f-9a7b-8f3954d50d29.jsonl",
+    "error": null,
+    "process": {
+      "exitCode": 0,
+      "signal": null,
+      "spawnError": null,
+      "started": true,
+      "timedOut": false,
+      "interrupted": false,
+      "stdinError": null
+    },
+    "latencyMs": 20864,
+    "traceSha256": "ee0a54af12560a17cebe4854fe9e15fa396ad4bb9ba0a53f75bfa543f77a4a95"
+  }
+}

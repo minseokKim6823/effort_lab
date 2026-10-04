@@ -1,0 +1,42 @@
+{
+  "index": 1,
+  "caseId": "b02",
+  "effort": "LOW",
+  "model": "gpt-5.6-luna",
+  "startedAt": "2026-10-04T08:35:41.434Z",
+  "sourcePath": "results/v3/requests/01.json",
+  "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b02\",\"task\":\"SQL 집계 결과를 계산하세요. orders(status,price,quantity)의 행은 [[\\\"cancelled\\\",896,4],[\\\"paid\\\",230,4],[\\\"paid\\\",158,6],[\\\"paid\\\",350,6],[\\\"cancelled\\\",516,6],[\\\"paid\\\",576,6],[\\\"paid\\\",722,4],[\\\"paid\\\",812,4],[\\\"cancelled\\\",642,2],[\\\"paid\\\",926,6],[\\\"paid\\\",406,4],[\\\"paid\\\",480,2],[\\\"cancelled\\\",364,4],[\\\"paid\\\",396,2],[\\\"paid\\\",406,4],[\\\"paid\\\",176,4]] 입니다. SELECT SUM(price*quantity) FROM orders WHERE status='paid' AND quantity>=3; 정수만 출력하세요.\"}]",
+  "promptSha256": "499d1c0536c3b6b307177eda72c41b371efc771460ea9ab5263a9d942d1e65de",
+  "stdinSha256": "adcb5a215b71904260705974fc0c87c1d912b11fbc44cbdd146aded3920df9ad",
+  "result": {
+    "status": "COMPLETED",
+    "unknownUsage": false,
+    "usage": {
+      "inputTokens": 4169,
+      "outputTokens": 143,
+      "reasoningTokens": 122,
+      "cachedInputTokens": 1792
+    },
+    "totalTokens": 4312,
+    "output": "{\"answers\":[{\"id\":\"b02\",\"answer\":\"23068\"}]}",
+    "parsed": {
+      "id": "b02",
+      "answer": "23068"
+    },
+    "verdict": "PASS",
+    "responseId": "3239de81-7ca6-408b-b88a-d34f52a4ba8f",
+    "tracePath": "results/effort-followup/traces/3239de81-7ca6-408b-b88a-d34f52a4ba8f.jsonl",
+    "error": null,
+    "process": {
+      "exitCode": 0,
+      "signal": null,
+      "spawnError": null,
+      "started": true,
+      "timedOut": false,
+      "interrupted": false,
+      "stdinError": null
+    },
+    "latencyMs": 15453,
+    "traceSha256": "de9ed46ca08186625cd862ca8eaf145e746e5a82dc9582976a9d7c9843871b86"
+  }
+}

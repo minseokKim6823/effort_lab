@@ -1,0 +1,71 @@
+{
+  "index": 19,
+  "group": 3,
+  "arm": "SINGLE_HIGH",
+  "caseIds": [
+    "b16"
+  ],
+  "batchSize": 1,
+  "request": {
+    "mode": "CODEX",
+    "batchSize": 1,
+    "tokenBudget": 119304,
+    "items": [
+      {
+        "id": "b16",
+        "task": "다음 JSON 배열에서 active가 true인 객체의 email만 원래 순서대로 추출하세요. 공백 없이 쉼표로 연결하고 따옴표는 쓰지 마세요. [{\"email\":\"team28-2@example.org\",\"active\":true},{\"email\":\"team28-3@example.org\",\"active\":false},{\"email\":\"team28-4@example.org\",\"active\":true},{\"email\":\"team28-5@example.org\",\"active\":true},{\"email\":\"team28-6@example.org\",\"active\":false},{\"email\":\"team28-7@example.org\",\"active\":true}]",
+        "check": "EXACT",
+        "expectedAnswer": "team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org"
+      }
+    ]
+  },
+  "result": {
+    "id": "7c3260d6-ffb8-4c47-b184-ba13f1554425",
+    "createdAt": "2026-10-04T08:04:16.469238300Z",
+    "mode": "CODEX",
+    "model": "gpt-5.6-luna",
+    "policyVersion": "batch-high-v1",
+    "status": "COMPLETED",
+    "batchSize": 1,
+    "plannedCalls": 1,
+    "items": [
+      {
+        "id": "b16",
+        "output": "team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org",
+        "verdict": "PASS",
+        "callId": "babbd3dd-a8c0-4a45-a86a-a15311ad02a6"
+      }
+    ],
+    "calls": [
+      {
+        "taskIds": [
+          "b16"
+        ],
+        "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b16\",\"task\":\"다음 JSON 배열에서 active가 true인 객체의 email만 원래 순서대로 추출하세요. 공백 없이 쉼표로 연결하고 따옴표는 쓰지 마세요. [{\\\"email\\\":\\\"team28-2@example.org\\\",\\\"active\\\":true},{\\\"email\\\":\\\"team28-3@example.org\\\",\\\"active\\\":false},{\\\"email\\\":\\\"team28-4@example.org\\\",\\\"active\\\":true},{\\\"email\\\":\\\"team28-5@example.org\\\",\\\"active\\\":true},{\\\"email\\\":\\\"team28-6@example.org\\\",\\\"active\\\":false},{\\\"email\\\":\\\"team28-7@example.org\\\",\\\"active\\\":true}]\"}]",
+        "generation": {
+          "output": "{\"answers\":[{\"id\":\"b16\",\"answer\":\"team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org\"}]}",
+          "usage": {
+            "inputTokens": 4135,
+            "outputTokens": 99,
+            "reasoningTokens": 53,
+            "cachedInputTokens": 3840
+          },
+          "latencyMs": 7817,
+          "responseId": "babbd3dd-a8c0-4a45-a86a-a15311ad02a6",
+          "providerStatus": "completed"
+        },
+        "parseError": null
+      }
+    ],
+    "usage": {
+      "inputTokens": 4135,
+      "outputTokens": 99,
+      "reasoningTokens": 53,
+      "cachedInputTokens": 3840
+    },
+    "totalTokens": 4234,
+    "latencyMs": 7817,
+    "unknownUsage": false,
+    "error": null
+  }
+}

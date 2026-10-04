@@ -1,0 +1,71 @@
+{
+  "index": 6,
+  "group": 1,
+  "arm": "SINGLE_HIGH",
+  "caseIds": [
+    "b05"
+  ],
+  "batchSize": 1,
+  "request": {
+    "mode": "CODEX",
+    "batchSize": 1,
+    "tokenBudget": 176237,
+    "items": [
+      {
+        "id": "b05",
+        "task": "재귀 수열 F(0)=4, F(1)=11, F(n)=(3*F(n-1)+3*F(n-2)) mod 1009 입니다. F(20)을 계산하여 정수만 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "783"
+      }
+    ]
+  },
+  "result": {
+    "id": "79058a26-a9ee-47b7-b453-51528975d539",
+    "createdAt": "2026-10-04T08:01:19.644409700Z",
+    "mode": "CODEX",
+    "model": "gpt-5.6-luna",
+    "policyVersion": "batch-high-v1",
+    "status": "COMPLETED",
+    "batchSize": 1,
+    "plannedCalls": 1,
+    "items": [
+      {
+        "id": "b05",
+        "output": "783",
+        "verdict": "PASS",
+        "callId": "e4c6331b-83d7-4024-b211-0c55b42abf38"
+      }
+    ],
+    "calls": [
+      {
+        "taskIds": [
+          "b05"
+        ],
+        "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b05\",\"task\":\"재귀 수열 F(0)=4, F(1)=11, F(n)=(3*F(n-1)+3*F(n-2)) mod 1009 입니다. F(20)을 계산하여 정수만 출력하세요.\"}]",
+        "generation": {
+          "output": "{\"answers\":[{\"id\":\"b05\",\"answer\":\"783\"}]}",
+          "usage": {
+            "inputTokens": 3769,
+            "outputTokens": 404,
+            "reasoningTokens": 384,
+            "cachedInputTokens": 0
+          },
+          "latencyMs": 12315,
+          "responseId": "e4c6331b-83d7-4024-b211-0c55b42abf38",
+          "providerStatus": "completed"
+        },
+        "parseError": null
+      }
+    ],
+    "usage": {
+      "inputTokens": 3769,
+      "outputTokens": 404,
+      "reasoningTokens": 384,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 4173,
+    "latencyMs": 12315,
+    "unknownUsage": false,
+    "error": null
+  }
+}

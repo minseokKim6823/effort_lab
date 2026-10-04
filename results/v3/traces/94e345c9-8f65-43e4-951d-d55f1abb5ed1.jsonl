@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a105f2-9686-7990-b439-eb1dfeca9eeb"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"answers\":[{\"id\":\"b21\",\"answer\":\"16\"},{\"id\":\"b22\",\"answer\":\"delta-shipment-9689-node\"},{\"id\":\"b23\",\"answer\":\"3155\"},{\"id\":\"b24\",\"answer\":\"73\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":3340,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":1924,"reasoning_output_tokens":1870}}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a105ed-2317-76f2-8d69-4b7eeb9b64d0"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"answers\":[{\"id\":\"b01\",\"answer\":\"SHIPMENT-6PU-22L5-REV-D\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":3342,"cached_input_tokens":1792,"cache_write_input_tokens":0,"output_tokens":70,"reasoning_output_tokens":39}}

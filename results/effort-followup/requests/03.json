@@ -1,0 +1,42 @@
+{
+  "index": 3,
+  "caseId": "b04",
+  "effort": "LOW",
+  "model": "gpt-5.6-luna",
+  "startedAt": "2026-10-04T08:36:17.740Z",
+  "sourcePath": "results/v3/requests/03.json",
+  "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b04\",\"task\":\"다음 JSON 배열에서 active가 true인 객체의 email만 원래 순서대로 추출하세요. 공백 없이 쉼표로 연결하고 따옴표는 쓰지 마세요. [{\\\"email\\\":\\\"team27-2@example.org\\\",\\\"active\\\":true},{\\\"email\\\":\\\"team27-3@example.org\\\",\\\"active\\\":false},{\\\"email\\\":\\\"team27-4@example.org\\\",\\\"active\\\":true},{\\\"email\\\":\\\"team27-5@example.org\\\",\\\"active\\\":true},{\\\"email\\\":\\\"team27-6@example.org\\\",\\\"active\\\":false},{\\\"email\\\":\\\"team27-7@example.org\\\",\\\"active\\\":false}]\"}]",
+  "promptSha256": "64edc8d55d73c4dee111966d915ee110a23b5a702f8b05da2796475cc4f501e6",
+  "stdinSha256": "507789d244541dde3fda79408812af6f24d7c0930561d368fff2122e954de8e4",
+  "result": {
+    "status": "COMPLETED",
+    "unknownUsage": false,
+    "usage": {
+      "inputTokens": 4135,
+      "outputTokens": 37,
+      "reasoningTokens": 0,
+      "cachedInputTokens": 1792
+    },
+    "totalTokens": 4172,
+    "output": "{\"answers\":[{\"id\":\"b04\",\"answer\":\"team27-2@example.org,team27-4@example.org,team27-5@example.org\"}]}",
+    "parsed": {
+      "id": "b04",
+      "answer": "team27-2@example.org,team27-4@example.org,team27-5@example.org"
+    },
+    "verdict": "PASS",
+    "responseId": "335e26fa-867c-4a08-9887-220c16be67da",
+    "tracePath": "results/effort-followup/traces/335e26fa-867c-4a08-9887-220c16be67da.jsonl",
+    "error": null,
+    "process": {
+      "exitCode": 0,
+      "signal": null,
+      "spawnError": null,
+      "started": true,
+      "timedOut": false,
+      "interrupted": false,
+      "stdinError": null
+    },
+    "latencyMs": 13376,
+    "traceSha256": "7e8f81bee5051ef03bb5b5179a63b54b1e380ebad60c1407c9ee9b25a766079e"
+  }
+}

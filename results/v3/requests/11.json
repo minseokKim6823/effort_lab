@@ -1,0 +1,71 @@
+{
+  "index": 11,
+  "group": 2,
+  "arm": "SINGLE_HIGH",
+  "caseIds": [
+    "b10"
+  ],
+  "batchSize": 1,
+  "request": {
+    "mode": "CODEX",
+    "batchSize": 1,
+    "tokenBudget": 156173,
+    "items": [
+      {
+        "id": "b10",
+        "task": "문자열 'OMEGA__Shipment---7300..Package'에서 영문은 소문자로 변환하고, 연속된 영숫자 아닌 문자들을 각각 하이픈 하나로 바꾸세요. 결과만 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "omega-shipment-7300-package"
+      }
+    ]
+  },
+  "result": {
+    "id": "0dc2c62f-9bda-451b-a67d-30d60a81b75a",
+    "createdAt": "2026-10-04T08:02:28.625Z",
+    "mode": "CODEX",
+    "model": "gpt-5.6-luna",
+    "policyVersion": "batch-high-v1",
+    "status": "COMPLETED",
+    "batchSize": 1,
+    "plannedCalls": 1,
+    "items": [
+      {
+        "id": "b10",
+        "output": "omega-shipment-7300-package",
+        "verdict": "PASS",
+        "callId": "b8ad569a-cbe0-45ef-a304-2cea570504b8"
+      }
+    ],
+    "calls": [
+      {
+        "taskIds": [
+          "b10"
+        ],
+        "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b10\",\"task\":\"문자열 'OMEGA__Shipment---7300..Package'에서 영문은 소문자로 변환하고, 연속된 영숫자 아닌 문자들을 각각 하이픈 하나로 바꾸세요. 결과만 출력하세요.\"}]",
+        "generation": {
+          "output": "{\"answers\":[{\"id\":\"b10\",\"answer\":\"omega-shipment-7300-package\"}]}",
+          "usage": {
+            "inputTokens": 3805,
+            "outputTokens": 80,
+            "reasoningTokens": 54,
+            "cachedInputTokens": 0
+          },
+          "latencyMs": 6845,
+          "responseId": "b8ad569a-cbe0-45ef-a304-2cea570504b8",
+          "providerStatus": "completed"
+        },
+        "parseError": null
+      }
+    ],
+    "usage": {
+      "inputTokens": 3805,
+      "outputTokens": 80,
+      "reasoningTokens": 54,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 3885,
+    "latencyMs": 6845,
+    "unknownUsage": false,
+    "error": null
+  }
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a105f0-afe5-77b1-b1ef-54688c505d56"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"answers\":[{\"id\":\"b13\",\"answer\":\"SHIPMENT-6CN-17HU-REV-F\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":4037,"cached_input_tokens":1792,"cache_write_input_tokens":0,"output_tokens":58,"reasoning_output_tokens":28}}

@@ -1,0 +1,42 @@
+{
+  "index": 11,
+  "caseId": "b12",
+  "effort": "LOW",
+  "model": "gpt-5.6-luna",
+  "startedAt": "2026-10-04T08:38:28.915Z",
+  "sourcePath": "results/v3/requests/13.json",
+  "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b12\",\"task\":\"최적화 문제: 직원 5명에게 작업 5개를 하나씩 배정합니다. 직원과 작업은 각각 정확히 한 번 사용합니다. 비용 행렬은 행이 직원, 열이 작업 순서로 [[16,13,43,20,12],[11,10,22,23,40],[20,38,42,25,43],[44,17,9,22,10],[42,14,17,21,44]] 입니다. 가능한 배정 중 최소 총비용만 정수로 출력하세요.\"}]",
+  "promptSha256": "e9b530b1e6a86d16c48bdf72857b7577f29bca8032c0f243942365cf6b9d3c14",
+  "stdinSha256": "3004a404245179994131e2679d97d70c2d318c524c1c8d875481c3ef3b8c3343",
+  "result": {
+    "status": "COMPLETED",
+    "unknownUsage": false,
+    "usage": {
+      "inputTokens": 3428,
+      "outputTokens": 810,
+      "reasoningTokens": 790,
+      "cachedInputTokens": 1792
+    },
+    "totalTokens": 4238,
+    "output": "{\"answers\":[{\"id\":\"b12\",\"answer\":\"71\"}]}",
+    "parsed": {
+      "id": "b12",
+      "answer": "71"
+    },
+    "verdict": "PASS",
+    "responseId": "9b486f76-96dc-4e9d-829c-f0747de095df",
+    "tracePath": "results/effort-followup/traces/9b486f76-96dc-4e9d-829c-f0747de095df.jsonl",
+    "error": null,
+    "process": {
+      "exitCode": 0,
+      "signal": null,
+      "spawnError": null,
+      "started": true,
+      "timedOut": false,
+      "interrupted": false,
+      "stdinError": null
+    },
+    "latencyMs": 20107,
+    "traceSha256": "09d676b611eb3323175dee10933e2072f60af327d6cfefac7e6966042213e101"
+  }
+}

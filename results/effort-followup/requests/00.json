@@ -1,0 +1,42 @@
+{
+  "index": 0,
+  "caseId": "b01",
+  "effort": "LOW",
+  "model": "gpt-5.6-luna",
+  "startedAt": "2026-10-04T08:35:19.362Z",
+  "sourcePath": "results/v3/requests/00.json",
+  "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b01\",\"task\":\"다음 문자열을 대문자로 변환하세요: 'shipment-6pu-22l5-rev-d'. 문자열만 출력하세요.\"}]",
+  "promptSha256": "3479d3594d8fe25dc15cb8c096efd78e1f60ed4ee1cdbe5fceedc9760854bb21",
+  "stdinSha256": "699aa82aacf2767f344e6803b6794d7c050b240952745233c5fa15733dc11271",
+  "result": {
+    "status": "COMPLETED",
+    "unknownUsage": false,
+    "usage": {
+      "inputTokens": 4038,
+      "outputTokens": 69,
+      "reasoningTokens": 38,
+      "cachedInputTokens": 1792
+    },
+    "totalTokens": 4107,
+    "output": "{\"answers\":[{\"id\":\"b01\",\"answer\":\"SHIPMENT-6PU-22L5-REV-D\"}]}",
+    "parsed": {
+      "id": "b01",
+      "answer": "SHIPMENT-6PU-22L5-REV-D"
+    },
+    "verdict": "PASS",
+    "responseId": "23ca6e3c-9e42-4e80-872f-b06f78b79b14",
+    "tracePath": "results/effort-followup/traces/23ca6e3c-9e42-4e80-872f-b06f78b79b14.jsonl",
+    "error": null,
+    "process": {
+      "exitCode": 0,
+      "signal": null,
+      "spawnError": null,
+      "started": true,
+      "timedOut": false,
+      "interrupted": false,
+      "stdinError": null
+    },
+    "latencyMs": 21311,
+    "traceSha256": "328405af3f2d6247e357ef7e250d06665f4bafde8762bd1398e5420e7acdc5b1"
+  }
+}

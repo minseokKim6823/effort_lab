@@ -1,0 +1,71 @@
+{
+  "index": 28,
+  "group": 5,
+  "arm": "SINGLE_HIGH",
+  "caseIds": [
+    "b23"
+  ],
+  "batchSize": 1,
+  "request": {
+    "mode": "CODEX",
+    "batchSize": 1,
+    "tokenBudget": 79740,
+    "items": [
+      {
+        "id": "b23",
+        "task": "조건별 계산: 가격 목록은 588,155,286,709,192,511,562,585 입니다. 1부터 센 홀수 위치의 상품은 18% 할인, 짝수 위치는 7% 할인합니다. 상품별 할인 후 가격에서 소수점 이하는 버린 뒤 합산합니다. 최종 합계만 정수로 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "3155"
+      }
+    ]
+  },
+  "result": {
+    "id": "c0daa01e-65ad-4373-b10c-7ab5bacf70fd",
+    "createdAt": "2026-10-04T08:06:52.555121600Z",
+    "mode": "CODEX",
+    "model": "gpt-5.6-luna",
+    "policyVersion": "batch-high-v1",
+    "status": "COMPLETED",
+    "batchSize": 1,
+    "plannedCalls": 1,
+    "items": [
+      {
+        "id": "b23",
+        "output": "3155",
+        "verdict": "PASS",
+        "callId": "1bfd8d13-ecfd-4286-942f-e28c1e40c11a"
+      }
+    ],
+    "calls": [
+      {
+        "taskIds": [
+          "b23"
+        ],
+        "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b23\",\"task\":\"조건별 계산: 가격 목록은 588,155,286,709,192,511,562,585 입니다. 1부터 센 홀수 위치의 상품은 18% 할인, 짝수 위치는 7% 할인합니다. 상품별 할인 후 가격에서 소수점 이하는 버린 뒤 합산합니다. 최종 합계만 정수로 출력하세요.\"}]",
+        "generation": {
+          "output": "{\"answers\":[{\"id\":\"b23\",\"answer\":\"3155\"}]}",
+          "usage": {
+            "inputTokens": 3393,
+            "outputTokens": 182,
+            "reasoningTokens": 161,
+            "cachedInputTokens": 2816
+          },
+          "latencyMs": 8510,
+          "responseId": "1bfd8d13-ecfd-4286-942f-e28c1e40c11a",
+          "providerStatus": "completed"
+        },
+        "parseError": null
+      }
+    ],
+    "usage": {
+      "inputTokens": 3393,
+      "outputTokens": 182,
+      "reasoningTokens": 161,
+      "cachedInputTokens": 2816
+    },
+    "totalTokens": 3575,
+    "latencyMs": 8510,
+    "unknownUsage": false,
+    "error": null
+  }
+}

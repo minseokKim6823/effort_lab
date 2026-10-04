@@ -1,0 +1,113 @@
+{
+  "index": 4,
+  "group": 0,
+  "arm": "BATCH_HIGH",
+  "caseIds": [
+    "b01",
+    "b02",
+    "b03",
+    "b04"
+  ],
+  "batchSize": 4,
+  "request": {
+    "mode": "CODEX",
+    "batchSize": 4,
+    "tokenBudget": 185698,
+    "items": [
+      {
+        "id": "b01",
+        "task": "다음 문자열을 대문자로 변환하세요: 'shipment-6pu-22l5-rev-d'. 문자열만 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "SHIPMENT-6PU-22L5-REV-D"
+      },
+      {
+        "id": "b02",
+        "task": "SQL 집계 결과를 계산하세요. orders(status,price,quantity)의 행은 [[\"cancelled\",896,4],[\"paid\",230,4],[\"paid\",158,6],[\"paid\",350,6],[\"cancelled\",516,6],[\"paid\",576,6],[\"paid\",722,4],[\"paid\",812,4],[\"cancelled\",642,2],[\"paid\",926,6],[\"paid\",406,4],[\"paid\",480,2],[\"cancelled\",364,4],[\"paid\",396,2],[\"paid\",406,4],[\"paid\",176,4]] 입니다. SELECT SUM(price*quantity) FROM orders WHERE status='paid' AND quantity>=3; 정수만 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "23068"
+      },
+      {
+        "id": "b03",
+        "task": "제약 충족 문제: 1부터 8까지의 숫자를 각각 한 번 사용해 일렬로 나열합니다. 7은 4보다 앞, 8는 6보다 앞에 있어야 합니다. 3과 1는 서로 인접하면 안 되고 첫 숫자는 7일 수 없습니다. 조건을 모두 만족하는 순열의 경우의 수를 정수로 출력하세요. 답만 출력하고 설명이나 코드 블록은 쓰지 마세요.",
+        "check": "EXACT",
+        "expectedAnswer": "5760"
+      },
+      {
+        "id": "b04",
+        "task": "다음 JSON 배열에서 active가 true인 객체의 email만 원래 순서대로 추출하세요. 공백 없이 쉼표로 연결하고 따옴표는 쓰지 마세요. [{\"email\":\"team27-2@example.org\",\"active\":true},{\"email\":\"team27-3@example.org\",\"active\":false},{\"email\":\"team27-4@example.org\",\"active\":true},{\"email\":\"team27-5@example.org\",\"active\":true},{\"email\":\"team27-6@example.org\",\"active\":false},{\"email\":\"team27-7@example.org\",\"active\":false}]",
+        "check": "EXACT",
+        "expectedAnswer": "team27-2@example.org,team27-4@example.org,team27-5@example.org"
+      }
+    ]
+  },
+  "result": {
+    "id": "7a9a0362-56d0-4742-83eb-feb6d59a7315",
+    "createdAt": "2026-10-04T08:00:36.136652Z",
+    "mode": "CODEX",
+    "model": "gpt-5.6-luna",
+    "policyVersion": "batch-high-v1",
+    "status": "COMPLETED",
+    "batchSize": 4,
+    "plannedCalls": 1,
+    "items": [
+      {
+        "id": "b01",
+        "output": "SHIPMENT-6PU-22L5-REV-D",
+        "verdict": "PASS",
+        "callId": "d1a0d277-01c8-47a0-920d-6b0d976b9cf0"
+      },
+      {
+        "id": "b02",
+        "output": "23068",
+        "verdict": "PASS",
+        "callId": "d1a0d277-01c8-47a0-920d-6b0d976b9cf0"
+      },
+      {
+        "id": "b03",
+        "output": "5760",
+        "verdict": "PASS",
+        "callId": "d1a0d277-01c8-47a0-920d-6b0d976b9cf0"
+      },
+      {
+        "id": "b04",
+        "output": "team27-2@example.org,team27-4@example.org,team27-5@example.org",
+        "verdict": "PASS",
+        "callId": "d1a0d277-01c8-47a0-920d-6b0d976b9cf0"
+      }
+    ],
+    "calls": [
+      {
+        "taskIds": [
+          "b01",
+          "b02",
+          "b03",
+          "b04"
+        ],
+        "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b01\",\"task\":\"다음 문자열을 대문자로 변환하세요: 'shipment-6pu-22l5-rev-d'. 문자열만 출력하세요.\"},{\"id\":\"b02\",\"task\":\"SQL 집계 결과를 계산하세요. orders(status,price,quantity)의 행은 [[\\\"cancelled\\\",896,4],[\\\"paid\\\",230,4],[\\\"paid\\\",158,6],[\\\"paid\\\",350,6],[\\\"cancelled\\\",516,6],[\\\"paid\\\",576,6],[\\\"paid\\\",722,4],[\\\"paid\\\",812,4],[\\\"cancelled\\\",642,2],[\\\"paid\\\",926,6],[\\\"paid\\\",406,4],[\\\"paid\\\",480,2],[\\\"cancelled\\\",364,4],[\\\"paid\\\",396,2],[\\\"paid\\\",406,4],[\\\"paid\\\",176,4]] 입니다. SELECT SUM(price*quantity) FROM orders WHERE status='paid' AND quantity>=3; 정수만 출력하세요.\"},{\"id\":\"b03\",\"task\":\"제약 충족 문제: 1부터 8까지의 숫자를 각각 한 번 사용해 일렬로 나열합니다. 7은 4보다 앞, 8는 6보다 앞에 있어야 합니다. 3과 1는 서로 인접하면 안 되고 첫 숫자는 7일 수 없습니다. 조건을 모두 만족하는 순열의 경우의 수를 정수로 출력하세요. 답만 출력하고 설명이나 코드 블록은 쓰지 마세요.\"},{\"id\":\"b04\",\"task\":\"다음 JSON 배열에서 active가 true인 객체의 email만 원래 순서대로 추출하세요. 공백 없이 쉼표로 연결하고 따옴표는 쓰지 마세요. [{\\\"email\\\":\\\"team27-2@example.org\\\",\\\"active\\\":true},{\\\"email\\\":\\\"team27-3@example.org\\\",\\\"active\\\":false},{\\\"email\\\":\\\"team27-4@example.org\\\",\\\"active\\\":true},{\\\"email\\\":\\\"team27-5@example.org\\\",\\\"active\\\":true},{\\\"email\\\":\\\"team27-6@example.org\\\",\\\"active\\\":false},{\\\"email\\\":\\\"team27-7@example.org\\\",\\\"active\\\":false}]\"}]",
+        "generation": {
+          "output": "{\"answers\":[{\"id\":\"b01\",\"answer\":\"SHIPMENT-6PU-22L5-REV-D\"},{\"id\":\"b02\",\"answer\":\"23068\"},{\"id\":\"b03\",\"answer\":\"5760\"},{\"id\":\"b04\",\"answer\":\"team27-2@example.org,team27-4@example.org,team27-5@example.org\"}]}",
+          "usage": {
+            "inputTokens": 3753,
+            "outputTokens": 522,
+            "reasoningTokens": 443,
+            "cachedInputTokens": 0
+          },
+          "latencyMs": 12946,
+          "responseId": "d1a0d277-01c8-47a0-920d-6b0d976b9cf0",
+          "providerStatus": "completed"
+        },
+        "parseError": null
+      }
+    ],
+    "usage": {
+      "inputTokens": 3753,
+      "outputTokens": 522,
+      "reasoningTokens": 443,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 4275,
+    "latencyMs": 12946,
+    "unknownUsage": false,
+    "error": null
+  }
+}

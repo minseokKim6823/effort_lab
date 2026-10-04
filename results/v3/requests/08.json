@@ -1,0 +1,71 @@
+{
+  "index": 8,
+  "group": 1,
+  "arm": "SINGLE_HIGH",
+  "caseIds": [
+    "b07"
+  ],
+  "batchSize": 1,
+  "request": {
+    "mode": "CODEX",
+    "batchSize": 1,
+    "tokenBudget": 167685,
+    "items": [
+      {
+        "id": "b07",
+        "task": "정수를 오름차순 정렬하세요: 26,-44,64,-54,70,52,57,-27,-49,30,32,-35,70,12,64. 중복도 유지하고 공백 없이 쉼표로 연결한 숫자만 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "-54,-49,-44,-35,-27,12,26,30,32,52,57,64,64,70,70"
+      }
+    ]
+  },
+  "result": {
+    "id": "83411d5f-4366-40cb-b382-8b7287ca6d5f",
+    "createdAt": "2026-10-04T08:01:47.494119200Z",
+    "mode": "CODEX",
+    "model": "gpt-5.6-luna",
+    "policyVersion": "batch-high-v1",
+    "status": "COMPLETED",
+    "batchSize": 1,
+    "plannedCalls": 1,
+    "items": [
+      {
+        "id": "b07",
+        "output": "-54,-49,-44,-35,-27,12,26,30,32,52,57,64,64,70,70",
+        "verdict": "PASS",
+        "callId": "b2b00edf-961f-4057-9acb-321d84553bd3"
+      }
+    ],
+    "calls": [
+      {
+        "taskIds": [
+          "b07"
+        ],
+        "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b07\",\"task\":\"정수를 오름차순 정렬하세요: 26,-44,64,-54,70,52,57,-27,-49,30,32,-35,70,12,64. 중복도 유지하고 공백 없이 쉼표로 연결한 숫자만 출력하세요.\"}]",
+        "generation": {
+          "output": "{\"answers\":[{\"id\":\"b07\",\"answer\":\"-54,-49,-44,-35,-27,12,26,30,32,52,57,64,64,70,70\"}]}",
+          "usage": {
+            "inputTokens": 3374,
+            "outputTokens": 99,
+            "reasoningTokens": 50,
+            "cachedInputTokens": 0
+          },
+          "latencyMs": 6108,
+          "responseId": "b2b00edf-961f-4057-9acb-321d84553bd3",
+          "providerStatus": "completed"
+        },
+        "parseError": null
+      }
+    ],
+    "usage": {
+      "inputTokens": 3374,
+      "outputTokens": 99,
+      "reasoningTokens": 50,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 3473,
+    "latencyMs": 6108,
+    "unknownUsage": false,
+    "error": null
+  }
+}

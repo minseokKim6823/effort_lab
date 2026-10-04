@@ -1,0 +1,71 @@
+{
+  "index": 17,
+  "group": 3,
+  "arm": "SINGLE_HIGH",
+  "caseIds": [
+    "b14"
+  ],
+  "batchSize": 1,
+  "request": {
+    "mode": "CODEX",
+    "batchSize": 1,
+    "tokenBudget": 128065,
+    "items": [
+      {
+        "id": "b14",
+        "task": "SQL 집계 결과를 계산하세요. orders(status,price,quantity)의 행은 [[\"paid\",483,3],[\"paid\",1065,5],[\"paid\",415,1],[\"cancelled\",515,3],[\"paid\",437,3],[\"paid\",799,5],[\"paid\",793,3],[\"cancelled\",795,3],[\"paid\",321,3],[\"paid\",577,1],[\"paid\",599,5],[\"cancelled\",703,1],[\"paid\",413,1],[\"paid\",485,5],[\"paid\",705,3],[\"cancelled\",921,3]] 입니다. SELECT SUM(price*quantity) FROM orders WHERE status='paid' AND quantity>=4; 정수만 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "14740"
+      }
+    ]
+  },
+  "result": {
+    "id": "45715f0e-4f8f-4e49-bf50-d1ff45f35a9f",
+    "createdAt": "2026-10-04T08:03:56.358497300Z",
+    "mode": "CODEX",
+    "model": "gpt-5.6-luna",
+    "policyVersion": "batch-high-v1",
+    "status": "COMPLETED",
+    "batchSize": 1,
+    "plannedCalls": 1,
+    "items": [
+      {
+        "id": "b14",
+        "output": "14740",
+        "verdict": "PASS",
+        "callId": "2fe8a622-3ca4-493d-846f-e268931d99d4"
+      }
+    ],
+    "calls": [
+      {
+        "taskIds": [
+          "b14"
+        ],
+        "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b14\",\"task\":\"SQL 집계 결과를 계산하세요. orders(status,price,quantity)의 행은 [[\\\"paid\\\",483,3],[\\\"paid\\\",1065,5],[\\\"paid\\\",415,1],[\\\"cancelled\\\",515,3],[\\\"paid\\\",437,3],[\\\"paid\\\",799,5],[\\\"paid\\\",793,3],[\\\"cancelled\\\",795,3],[\\\"paid\\\",321,3],[\\\"paid\\\",577,1],[\\\"paid\\\",599,5],[\\\"cancelled\\\",703,1],[\\\"paid\\\",413,1],[\\\"paid\\\",485,5],[\\\"paid\\\",705,3],[\\\"cancelled\\\",921,3]] 입니다. SELECT SUM(price*quantity) FROM orders WHERE status='paid' AND quantity>=4; 정수만 출력하세요.\"}]",
+        "generation": {
+          "output": "{\"answers\":[{\"id\":\"b14\",\"answer\":\"14740\"}]}",
+          "usage": {
+            "inputTokens": 4170,
+            "outputTokens": 148,
+            "reasoningTokens": 127,
+            "cachedInputTokens": 0
+          },
+          "latencyMs": 8855,
+          "responseId": "2fe8a622-3ca4-493d-846f-e268931d99d4",
+          "providerStatus": "completed"
+        },
+        "parseError": null
+      }
+    ],
+    "usage": {
+      "inputTokens": 4170,
+      "outputTokens": 148,
+      "reasoningTokens": 127,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 4318,
+    "latencyMs": 8855,
+    "unknownUsage": false,
+    "error": null
+  }
+}

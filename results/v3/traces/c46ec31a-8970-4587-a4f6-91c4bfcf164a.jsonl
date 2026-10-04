@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a105f0-74d9-7831-8cec-94a14299207d"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"answers\":[{\"id\":\"b13\",\"answer\":\"SHIPMENT-6CN-17HU-REV-F\"},{\"id\":\"b14\",\"answer\":\"14740\"},{\"id\":\"b15\",\"answer\":\"6480\"},{\"id\":\"b16\",\"answer\":\"team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":4449,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":530,"reasoning_output_tokens":445}}

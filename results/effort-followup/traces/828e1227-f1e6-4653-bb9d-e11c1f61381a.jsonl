@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a10610-2757-7df3-bc9b-867ff1dc0c1a"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"answers\":[{\"id\":\"b10\",\"answer\":\"omega-shipment-7300-package\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":4059,"cached_input_tokens":1792,"cache_write_input_tokens":0,"output_tokens":78,"reasoning_output_tokens":52}}

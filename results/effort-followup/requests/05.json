@@ -1,0 +1,42 @@
+{
+  "index": 5,
+  "caseId": "b06",
+  "effort": "LOW",
+  "model": "gpt-5.6-luna",
+  "startedAt": "2026-10-04T08:36:49.076Z",
+  "sourcePath": "results/v3/requests/07.json",
+  "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b06\",\"task\":\"0/1 배낭 최적화 문제: 각 물건은 최대 한 번만 선택할 수 있습니다. (무게,가치) 목록은 [[5,13],[3,10],[13,17],[3,45],[13,42],[7,21],[13,29],[3,43],[5,29],[3,38]]이고 용량은 31입니다. 총무게가 용량 이하인 선택의 최대 총가치를 정수만 출력하세요.\"}]",
+  "promptSha256": "9f7157280c54ebea26c0dcb5c66d5be74173248b87312049886cc68c5fa51833",
+  "stdinSha256": "eb5bb9bc403d797c1b6abdae88791e30392b0ad37ebba580f840ed5633eab966",
+  "result": {
+    "status": "COMPLETED",
+    "unknownUsage": false,
+    "usage": {
+      "inputTokens": 3631,
+      "outputTokens": 382,
+      "reasoningTokens": 362,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 4013,
+    "output": "{\"answers\":[{\"id\":\"b06\",\"answer\":\"199\"}]}",
+    "parsed": {
+      "id": "b06",
+      "answer": "199"
+    },
+    "verdict": "FAIL",
+    "responseId": "b4a20cb4-bf59-4a9c-a2fb-91325d88a8d1",
+    "tracePath": "results/effort-followup/traces/b4a20cb4-bf59-4a9c-a2fb-91325d88a8d1.jsonl",
+    "error": null,
+    "process": {
+      "exitCode": 0,
+      "signal": null,
+      "spawnError": null,
+      "started": true,
+      "timedOut": false,
+      "interrupted": false,
+      "stdinError": null
+    },
+    "latencyMs": 31039,
+    "traceSha256": "9d8faee06253b7ad3e643f5f9a2d5aef3a8de70613af78a884326badb43d68ef"
+  }
+}

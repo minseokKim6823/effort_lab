@@ -1,0 +1,42 @@
+{
+  "index": 10,
+  "caseId": "b11",
+  "effort": "LOW",
+  "model": "gpt-5.6-luna",
+  "startedAt": "2026-10-04T08:38:12.797Z",
+  "sourcePath": "results/v3/requests/12.json",
+  "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b11\",\"task\":\"조건별 계산: 가격 목록은 315,190,485,224,159,594,617,532 입니다. 1부터 센 홀수 위치의 상품은 20% 할인, 짝수 위치는 12% 할인합니다. 상품별 할인 후 가격에서 소수점 이하는 버린 뒤 합산합니다. 최종 합계만 정수로 출력하세요.\"}]",
+  "promptSha256": "7784ce8995257fdd7a5bf669c38c8d0661111eb6d2c9f9829bf922eddd5e107f",
+  "stdinSha256": "7dca20423e0a4393dbe4a6a6d0177aa14e2c59fa34109de62cde214e039fc6fc",
+  "result": {
+    "status": "COMPLETED",
+    "unknownUsage": false,
+    "usage": {
+      "inputTokens": 4089,
+      "outputTokens": 158,
+      "reasoningTokens": 137,
+      "cachedInputTokens": 3840
+    },
+    "totalTokens": 4247,
+    "output": "{\"answers\":[{\"id\":\"b11\",\"answer\":\"2614\"}]}",
+    "parsed": {
+      "id": "b11",
+      "answer": "2614"
+    },
+    "verdict": "PASS",
+    "responseId": "04f7ed64-f324-42a6-8cb2-c59582496357",
+    "tracePath": "results/effort-followup/traces/04f7ed64-f324-42a6-8cb2-c59582496357.jsonl",
+    "error": null,
+    "process": {
+      "exitCode": 0,
+      "signal": null,
+      "spawnError": null,
+      "started": true,
+      "timedOut": false,
+      "interrupted": false,
+      "stdinError": null
+    },
+    "latencyMs": 16065,
+    "traceSha256": "0fded62dbe767b715991e84925cfe99ad70dcbfde83961f6394af0c04a8ea2a1"
+  }
+}

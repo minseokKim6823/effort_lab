@@ -1,0 +1,113 @@
+{
+  "index": 25,
+  "group": 5,
+  "arm": "BATCH_HIGH",
+  "caseIds": [
+    "b21",
+    "b22",
+    "b23",
+    "b24"
+  ],
+  "batchSize": 4,
+  "request": {
+    "mode": "CODEX",
+    "batchSize": 4,
+    "tokenBudget": 92522,
+    "items": [
+      {
+        "id": "b21",
+        "task": "제약 충족 문제: 작업 0부터 6까지를 각각 한 번, 한 번에 하나씩 수행합니다. 선행 관계 (먼저,나중)는 [[6,4],[3,4],[3,0],[4,5],[0,2],[5,1],[2,1]] 입니다. 모든 선행 관계를 만족하는 전체 실행 순서의 경우의 수를 정수로 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "16"
+      },
+      {
+        "id": "b22",
+        "task": "문자열 'DELTA__Shipment---9689..Node'에서 영문은 소문자로 변환하고, 연속된 영숫자 아닌 문자들을 각각 하이픈 하나로 바꾸세요. 결과만 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "delta-shipment-9689-node"
+      },
+      {
+        "id": "b23",
+        "task": "조건별 계산: 가격 목록은 588,155,286,709,192,511,562,585 입니다. 1부터 센 홀수 위치의 상품은 18% 할인, 짝수 위치는 7% 할인합니다. 상품별 할인 후 가격에서 소수점 이하는 버린 뒤 합산합니다. 최종 합계만 정수로 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "3155"
+      },
+      {
+        "id": "b24",
+        "task": "최적화 문제: 직원 5명에게 작업 5개를 하나씩 배정합니다. 직원과 작업은 각각 정확히 한 번 사용합니다. 비용 행렬은 행이 직원, 열이 작업 순서로 [[25,36,15,40,9],[27,8,42,35,30],[31,22,14,32,14],[37,26,26,34,40],[8,42,26,12,12]] 입니다. 가능한 배정 중 최소 총비용만 정수로 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "73"
+      }
+    ]
+  },
+  "result": {
+    "id": "1a4737f7-5f3c-4f9e-a990-2a635655fc9d",
+    "createdAt": "2026-10-04T08:06:25.708251400Z",
+    "mode": "CODEX",
+    "model": "gpt-5.6-luna",
+    "policyVersion": "batch-high-v1",
+    "status": "COMPLETED",
+    "batchSize": 4,
+    "plannedCalls": 1,
+    "items": [
+      {
+        "id": "b21",
+        "output": "16",
+        "verdict": "PASS",
+        "callId": "94e345c9-8f65-43e4-951d-d55f1abb5ed1"
+      },
+      {
+        "id": "b22",
+        "output": "delta-shipment-9689-node",
+        "verdict": "PASS",
+        "callId": "94e345c9-8f65-43e4-951d-d55f1abb5ed1"
+      },
+      {
+        "id": "b23",
+        "output": "3155",
+        "verdict": "PASS",
+        "callId": "94e345c9-8f65-43e4-951d-d55f1abb5ed1"
+      },
+      {
+        "id": "b24",
+        "output": "73",
+        "verdict": "PASS",
+        "callId": "94e345c9-8f65-43e4-951d-d55f1abb5ed1"
+      }
+    ],
+    "calls": [
+      {
+        "taskIds": [
+          "b21",
+          "b22",
+          "b23",
+          "b24"
+        ],
+        "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b21\",\"task\":\"제약 충족 문제: 작업 0부터 6까지를 각각 한 번, 한 번에 하나씩 수행합니다. 선행 관계 (먼저,나중)는 [[6,4],[3,4],[3,0],[4,5],[0,2],[5,1],[2,1]] 입니다. 모든 선행 관계를 만족하는 전체 실행 순서의 경우의 수를 정수로 출력하세요.\"},{\"id\":\"b22\",\"task\":\"문자열 'DELTA__Shipment---9689..Node'에서 영문은 소문자로 변환하고, 연속된 영숫자 아닌 문자들을 각각 하이픈 하나로 바꾸세요. 결과만 출력하세요.\"},{\"id\":\"b23\",\"task\":\"조건별 계산: 가격 목록은 588,155,286,709,192,511,562,585 입니다. 1부터 센 홀수 위치의 상품은 18% 할인, 짝수 위치는 7% 할인합니다. 상품별 할인 후 가격에서 소수점 이하는 버린 뒤 합산합니다. 최종 합계만 정수로 출력하세요.\"},{\"id\":\"b24\",\"task\":\"최적화 문제: 직원 5명에게 작업 5개를 하나씩 배정합니다. 직원과 작업은 각각 정확히 한 번 사용합니다. 비용 행렬은 행이 직원, 열이 작업 순서로 [[25,36,15,40,9],[27,8,42,35,30],[31,22,14,32,14],[37,26,26,34,40],[8,42,26,12,12]] 입니다. 가능한 배정 중 최소 총비용만 정수로 출력하세요.\"}]",
+        "generation": {
+          "output": "{\"answers\":[{\"id\":\"b21\",\"answer\":\"16\"},{\"id\":\"b22\",\"answer\":\"delta-shipment-9689-node\"},{\"id\":\"b23\",\"answer\":\"3155\"},{\"id\":\"b24\",\"answer\":\"73\"}]}",
+          "usage": {
+            "inputTokens": 3340,
+            "outputTokens": 1924,
+            "reasoningTokens": 1870,
+            "cachedInputTokens": 0
+          },
+          "latencyMs": 39719,
+          "responseId": "94e345c9-8f65-43e4-951d-d55f1abb5ed1",
+          "providerStatus": "completed"
+        },
+        "parseError": null
+      }
+    ],
+    "usage": {
+      "inputTokens": 3340,
+      "outputTokens": 1924,
+      "reasoningTokens": 1870,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 5264,
+    "latencyMs": 39719,
+    "unknownUsage": false,
+    "error": null
+  }
+}

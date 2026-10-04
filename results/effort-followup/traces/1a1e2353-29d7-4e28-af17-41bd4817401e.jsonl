@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a10612-372b-7ef3-93c6-1d0f997ed3b9"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"answers\":[{\"id\":\"b19\",\"answer\":\"-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66\"}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":4070,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":116,"reasoning_output_tokens":67}}

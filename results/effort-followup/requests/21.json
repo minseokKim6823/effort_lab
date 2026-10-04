@@ -1,0 +1,42 @@
+{
+  "index": 21,
+  "caseId": "b22",
+  "effort": "LOW",
+  "model": "gpt-5.6-luna",
+  "startedAt": "2026-10-04T08:41:03.018Z",
+  "sourcePath": "results/v3/requests/27.json",
+  "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b22\",\"task\":\"문자열 'DELTA__Shipment---9689..Node'에서 영문은 소문자로 변환하고, 연속된 영숫자 아닌 문자들을 각각 하이픈 하나로 바꾸세요. 결과만 출력하세요.\"}]",
+  "promptSha256": "dfe0e4b4d8d1865eaf1a977967173bad50dae5f806c8ceda037e1e16ebd6311f",
+  "stdinSha256": "973dcb41bc2f21afade285fe987cbd2c563585efff0c67a1c2a6cbb935abe483",
+  "result": {
+    "status": "COMPLETED",
+    "unknownUsage": false,
+    "usage": {
+      "inputTokens": 3363,
+      "outputTokens": 55,
+      "reasoningTokens": 29,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 3418,
+    "output": "{\"answers\":[{\"id\":\"b22\",\"answer\":\"delta-shipment-9689-node\"}]}",
+    "parsed": {
+      "id": "b22",
+      "answer": "delta-shipment-9689-node"
+    },
+    "verdict": "PASS",
+    "responseId": "7c7da38a-fd6f-4ce1-a97b-9f06dfd8ddee",
+    "tracePath": "results/effort-followup/traces/7c7da38a-fd6f-4ce1-a97b-9f06dfd8ddee.jsonl",
+    "error": null,
+    "process": {
+      "exitCode": 0,
+      "signal": null,
+      "spawnError": null,
+      "started": true,
+      "timedOut": false,
+      "interrupted": false,
+      "stdinError": null
+    },
+    "latencyMs": 9423,
+    "traceSha256": "5bcec4317d42abfd1b8b418b8d4fdb9056a31404e78ad9484a6cac160bf4d3a1"
+  }
+}

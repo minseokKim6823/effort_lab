@@ -1,0 +1,71 @@
+{
+  "index": 13,
+  "group": 2,
+  "arm": "SINGLE_HIGH",
+  "caseIds": [
+    "b12"
+  ],
+  "batchSize": 1,
+  "request": {
+    "mode": "CODEX",
+    "batchSize": 1,
+    "tokenBudget": 148968,
+    "items": [
+      {
+        "id": "b12",
+        "task": "최적화 문제: 직원 5명에게 작업 5개를 하나씩 배정합니다. 직원과 작업은 각각 정확히 한 번 사용합니다. 비용 행렬은 행이 직원, 열이 작업 순서로 [[16,13,43,20,12],[11,10,22,23,40],[20,38,42,25,43],[44,17,9,22,10],[42,14,17,21,44]] 입니다. 가능한 배정 중 최소 총비용만 정수로 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "71"
+      }
+    ]
+  },
+  "result": {
+    "id": "b076b8eb-39ce-4cde-af4e-9de57b2348b9",
+    "createdAt": "2026-10-04T08:03:06.158227500Z",
+    "mode": "CODEX",
+    "model": "gpt-5.6-luna",
+    "policyVersion": "batch-high-v1",
+    "status": "COMPLETED",
+    "batchSize": 1,
+    "plannedCalls": 1,
+    "items": [
+      {
+        "id": "b12",
+        "output": "71",
+        "verdict": "PASS",
+        "callId": "895106a9-fcca-41a2-834e-9659fdbf232a"
+      }
+    ],
+    "calls": [
+      {
+        "taskIds": [
+          "b12"
+        ],
+        "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b12\",\"task\":\"최적화 문제: 직원 5명에게 작업 5개를 하나씩 배정합니다. 직원과 작업은 각각 정확히 한 번 사용합니다. 비용 행렬은 행이 직원, 열이 작업 순서로 [[16,13,43,20,12],[11,10,22,23,40],[20,38,42,25,43],[44,17,9,22,10],[42,14,17,21,44]] 입니다. 가능한 배정 중 최소 총비용만 정수로 출력하세요.\"}]",
+        "generation": {
+          "output": "{\"answers\":[{\"id\":\"b12\",\"answer\":\"71\"}]}",
+          "usage": {
+            "inputTokens": 4124,
+            "outputTokens": 942,
+            "reasoningTokens": 922,
+            "cachedInputTokens": 0
+          },
+          "latencyMs": 28536,
+          "responseId": "895106a9-fcca-41a2-834e-9659fdbf232a",
+          "providerStatus": "completed"
+        },
+        "parseError": null
+      }
+    ],
+    "usage": {
+      "inputTokens": 4124,
+      "outputTokens": 942,
+      "reasoningTokens": 922,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 5066,
+    "latencyMs": 28536,
+    "unknownUsage": false,
+    "error": null
+  }
+}

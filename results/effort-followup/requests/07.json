@@ -1,0 +1,42 @@
+{
+  "index": 7,
+  "caseId": "b08",
+  "effort": "LOW",
+  "model": "gpt-5.6-luna",
+  "startedAt": "2026-10-04T08:37:30.575Z",
+  "sourcePath": "results/v3/requests/09.json",
+  "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b08\",\"task\":\"최단 경로 알고리즘 문제: 정점은 0부터 7, 방향 간선 (출발,도착,가중치)는 [[0,1,13],[0,2,3],[0,3,7],[1,2,10],[1,4,7],[2,3,15],[2,4,11],[3,5,5],[4,5,18],[4,6,3],[5,6,3],[5,7,11],[6,7,17]] 입니다. 정점 0에서 7까지 최단 거리만 정수로 출력하세요.\"}]",
+  "promptSha256": "905948baba8f032ec1e4a62bb5867b888fe7565e4b20cf4bf7e48d111906a7f6",
+  "stdinSha256": "f8c394bf340e0caa7b18fb6cf997789d06af824d3e9023e622ef995cc0537829",
+  "result": {
+    "status": "COMPLETED",
+    "unknownUsage": false,
+    "usage": {
+      "inputTokens": 3444,
+      "outputTokens": 18,
+      "reasoningTokens": 0,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 3462,
+    "output": "{\"answers\":[{\"id\":\"b08\",\"answer\":\"27\"}]}",
+    "parsed": {
+      "id": "b08",
+      "answer": "27"
+    },
+    "verdict": "FAIL",
+    "responseId": "2d69b543-f42d-4f88-b7b2-b93e4627ebe4",
+    "tracePath": "results/effort-followup/traces/2d69b543-f42d-4f88-b7b2-b93e4627ebe4.jsonl",
+    "error": null,
+    "process": {
+      "exitCode": 0,
+      "signal": null,
+      "spawnError": null,
+      "started": true,
+      "timedOut": false,
+      "interrupted": false,
+      "stdinError": null
+    },
+    "latencyMs": 8277,
+    "traceSha256": "d9a862bed8c0af1e4cd57e5d22a999712b5cf2f274142663aa46cd0ad11eea34"
+  }
+}

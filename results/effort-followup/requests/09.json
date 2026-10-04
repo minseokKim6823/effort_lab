@@ -1,0 +1,42 @@
+{
+  "index": 9,
+  "caseId": "b10",
+  "effort": "LOW",
+  "model": "gpt-5.6-luna",
+  "startedAt": "2026-10-04T08:38:02.174Z",
+  "sourcePath": "results/v3/requests/11.json",
+  "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b10\",\"task\":\"문자열 'OMEGA__Shipment---7300..Package'에서 영문은 소문자로 변환하고, 연속된 영숫자 아닌 문자들을 각각 하이픈 하나로 바꾸세요. 결과만 출력하세요.\"}]",
+  "promptSha256": "6ee4b6a8967074fdce5950225b61121c8e07f73e01f9d6c40e3f1a4637d9e1aa",
+  "stdinSha256": "5365ccb88121c052a9568cc09e5f87a343a470956504291e5c4f277365f24683",
+  "result": {
+    "status": "COMPLETED",
+    "unknownUsage": false,
+    "usage": {
+      "inputTokens": 4059,
+      "outputTokens": 78,
+      "reasoningTokens": 52,
+      "cachedInputTokens": 1792
+    },
+    "totalTokens": 4137,
+    "output": "{\"answers\":[{\"id\":\"b10\",\"answer\":\"omega-shipment-7300-package\"}]}",
+    "parsed": {
+      "id": "b10",
+      "answer": "omega-shipment-7300-package"
+    },
+    "verdict": "PASS",
+    "responseId": "828e1227-f1e6-4653-bb9d-e11c1f61381a",
+    "tracePath": "results/effort-followup/traces/828e1227-f1e6-4653-bb9d-e11c1f61381a.jsonl",
+    "error": null,
+    "process": {
+      "exitCode": 0,
+      "signal": null,
+      "spawnError": null,
+      "started": true,
+      "timedOut": false,
+      "interrupted": false,
+      "stdinError": null
+    },
+    "latencyMs": 10548,
+    "traceSha256": "24dd16d28babce8b7bd893f9ca9b62ac78b44a10aa95eb9980fb9ac822d7245a"
+  }
+}

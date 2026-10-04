@@ -1,0 +1,1261 @@
+{
+  "status": "AUDIT_PASS",
+  "experimentComplete": true,
+  "measuredAt": "2026-10-04T08:07:14.415Z",
+  "model": "gpt-5.6-luna",
+  "cliVersion": "codex-cli 0.153.4",
+  "scope": "24 fresh instances from 12 known synthetic task families, one execution per arm; fixed HIGH, identical context and JSON wrapper, no retries.",
+  "verifiedCalls": 30,
+  "arms": {
+    "SINGLE_HIGH": {
+      "calls": 24,
+      "items": 24,
+      "passed": 24,
+      "inputTokens": 87784,
+      "outputTokens": 7656,
+      "reasoningTokens": 7036,
+      "cachedInputTokens": 17664,
+      "totalTokens": 95440,
+      "latencyMs": 285506,
+      "rows": [
+        {
+          "id": "b01",
+          "title": "제품 코드 변환 · 1",
+          "category": "변환",
+          "group": 0,
+          "position": 1,
+          "passed": true,
+          "expected": "SHIPMENT-6PU-22L5-REV-D",
+          "answer": "SHIPMENT-6PU-22L5-REV-D",
+          "callId": "337a99d6-614b-441a-8790-31ca28685a1a"
+        },
+        {
+          "id": "b02",
+          "title": "주문 조건 집계 · 1",
+          "category": "계산",
+          "group": 0,
+          "position": 1,
+          "passed": true,
+          "expected": "23068",
+          "answer": "23068",
+          "callId": "9a7a2305-98c3-4a81-a11f-c5f5e41627cd"
+        },
+        {
+          "id": "b03",
+          "title": "순열 제약의 경우의 수 · 1",
+          "category": "조합 추론",
+          "group": 0,
+          "position": 1,
+          "passed": true,
+          "expected": "5760",
+          "answer": "5760",
+          "callId": "73e3a74e-4929-4471-9e7a-f0037fdb76fb"
+        },
+        {
+          "id": "b04",
+          "title": "필드 추출 · 1",
+          "category": "변환",
+          "group": 0,
+          "position": 1,
+          "passed": true,
+          "expected": "team27-2@example.org,team27-4@example.org,team27-5@example.org",
+          "answer": "team27-2@example.org,team27-4@example.org,team27-5@example.org",
+          "callId": "326219bd-7671-4e98-9679-c6bfb852fe70"
+        },
+        {
+          "id": "b05",
+          "title": "모듈러 점화식 · 1",
+          "category": "계산",
+          "group": 1,
+          "position": 1,
+          "passed": true,
+          "expected": "783",
+          "answer": "783",
+          "callId": "e4c6331b-83d7-4024-b211-0c55b42abf38"
+        },
+        {
+          "id": "b06",
+          "title": "0/1 배낭 최적화 · 1",
+          "category": "최적화",
+          "group": 1,
+          "position": 1,
+          "passed": true,
+          "expected": "207",
+          "answer": "207",
+          "callId": "29b4ff73-52d0-487b-a067-5a950e42967d"
+        },
+        {
+          "id": "b07",
+          "title": "음수 포함 정렬 · 1",
+          "category": "변환",
+          "group": 1,
+          "position": 1,
+          "passed": true,
+          "expected": "-54,-49,-44,-35,-27,12,26,30,32,52,57,64,64,70,70",
+          "answer": "-54,-49,-44,-35,-27,12,26,30,32,52,57,64,64,70,70",
+          "callId": "b2b00edf-961f-4057-9acb-321d84553bd3"
+        },
+        {
+          "id": "b08",
+          "title": "가중 그래프 경로 · 1",
+          "category": "계산",
+          "group": 1,
+          "position": 1,
+          "passed": true,
+          "expected": "23",
+          "answer": "23",
+          "callId": "e04d0f25-1271-4056-b333-8dd3a4338d8a"
+        },
+        {
+          "id": "b09",
+          "title": "선행 작업 일정 수 · 1",
+          "category": "조합 추론",
+          "group": 2,
+          "position": 1,
+          "passed": true,
+          "expected": "21",
+          "answer": "21",
+          "callId": "e66eb726-4079-4abc-9fc1-a44ce363d9cf"
+        },
+        {
+          "id": "b10",
+          "title": "기호 정규화 · 1",
+          "category": "변환",
+          "group": 2,
+          "position": 1,
+          "passed": true,
+          "expected": "omega-shipment-7300-package",
+          "answer": "omega-shipment-7300-package",
+          "callId": "b8ad569a-cbe0-45ef-a304-2cea570504b8"
+        },
+        {
+          "id": "b11",
+          "title": "반올림 없는 할인 집계 · 1",
+          "category": "계산",
+          "group": 2,
+          "position": 1,
+          "passed": true,
+          "expected": "2614",
+          "answer": "2614",
+          "callId": "68b19f38-1d12-473d-a530-33b1e6fd8cf6"
+        },
+        {
+          "id": "b12",
+          "title": "작업 배정 최적화 · 1",
+          "category": "최적화",
+          "group": 2,
+          "position": 1,
+          "passed": true,
+          "expected": "71",
+          "answer": "71",
+          "callId": "895106a9-fcca-41a2-834e-9659fdbf232a"
+        },
+        {
+          "id": "b13",
+          "title": "제품 코드 변환 · 2",
+          "category": "변환",
+          "group": 3,
+          "position": 1,
+          "passed": true,
+          "expected": "SHIPMENT-6CN-17HU-REV-F",
+          "answer": "SHIPMENT-6CN-17HU-REV-F",
+          "callId": "2d68a99b-8897-49bc-90e5-004c036f93cb"
+        },
+        {
+          "id": "b14",
+          "title": "주문 조건 집계 · 2",
+          "category": "계산",
+          "group": 3,
+          "position": 1,
+          "passed": true,
+          "expected": "14740",
+          "answer": "14740",
+          "callId": "2fe8a622-3ca4-493d-846f-e268931d99d4"
+        },
+        {
+          "id": "b15",
+          "title": "순열 제약의 경우의 수 · 2",
+          "category": "조합 추론",
+          "group": 3,
+          "position": 1,
+          "passed": true,
+          "expected": "6480",
+          "answer": "6480",
+          "callId": "1922f1a6-ede4-489d-8f74-3c3add1e5204"
+        },
+        {
+          "id": "b16",
+          "title": "필드 추출 · 2",
+          "category": "변환",
+          "group": 3,
+          "position": 1,
+          "passed": true,
+          "expected": "team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org",
+          "answer": "team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org",
+          "callId": "babbd3dd-a8c0-4a45-a86a-a15311ad02a6"
+        },
+        {
+          "id": "b17",
+          "title": "모듈러 점화식 · 2",
+          "category": "계산",
+          "group": 4,
+          "position": 1,
+          "passed": true,
+          "expected": "916",
+          "answer": "916",
+          "callId": "d328c832-341e-4ee2-9ef9-2e1e252e60ec"
+        },
+        {
+          "id": "b18",
+          "title": "0/1 배낭 최적화 · 2",
+          "category": "최적화",
+          "group": 4,
+          "position": 1,
+          "passed": true,
+          "expected": "154",
+          "answer": "154",
+          "callId": "fd44f61b-3689-4ef3-8ce5-b0da8dcd8ace"
+        },
+        {
+          "id": "b19",
+          "title": "음수 포함 정렬 · 2",
+          "category": "변환",
+          "group": 4,
+          "position": 1,
+          "passed": true,
+          "expected": "-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66",
+          "answer": "-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66",
+          "callId": "6de07b92-0da2-4e92-b1a7-128498b0d4c1"
+        },
+        {
+          "id": "b20",
+          "title": "가중 그래프 경로 · 2",
+          "category": "계산",
+          "group": 4,
+          "position": 1,
+          "passed": true,
+          "expected": "22",
+          "answer": "22",
+          "callId": "9c8f10cf-a1fc-425f-8af1-08a074c7936b"
+        },
+        {
+          "id": "b21",
+          "title": "선행 작업 일정 수 · 2",
+          "category": "조합 추론",
+          "group": 5,
+          "position": 1,
+          "passed": true,
+          "expected": "16",
+          "answer": "16",
+          "callId": "2d9e8273-6f1d-4c56-947a-978dce2fda0b"
+        },
+        {
+          "id": "b22",
+          "title": "기호 정규화 · 2",
+          "category": "변환",
+          "group": 5,
+          "position": 1,
+          "passed": true,
+          "expected": "delta-shipment-9689-node",
+          "answer": "delta-shipment-9689-node",
+          "callId": "0651005a-3616-49cb-89ee-b7770b4286ee"
+        },
+        {
+          "id": "b23",
+          "title": "반올림 없는 할인 집계 · 2",
+          "category": "계산",
+          "group": 5,
+          "position": 1,
+          "passed": true,
+          "expected": "3155",
+          "answer": "3155",
+          "callId": "1bfd8d13-ecfd-4286-942f-e28c1e40c11a"
+        },
+        {
+          "id": "b24",
+          "title": "작업 배정 최적화 · 2",
+          "category": "최적화",
+          "group": 5,
+          "position": 1,
+          "passed": true,
+          "expected": "73",
+          "answer": "73",
+          "callId": "c591bc8d-555d-453f-a307-de74829f25ac"
+        }
+      ],
+      "passRate": 100
+    },
+    "BATCH_HIGH": {
+      "calls": 6,
+      "items": 24,
+      "passed": 24,
+      "inputTokens": 23975,
+      "outputTokens": 8690,
+      "reasoningTokens": 8266,
+      "cachedInputTokens": 0,
+      "totalTokens": 32665,
+      "latencyMs": 157525,
+      "rows": [
+        {
+          "id": "b01",
+          "title": "제품 코드 변환 · 1",
+          "category": "변환",
+          "group": 0,
+          "position": 1,
+          "passed": true,
+          "expected": "SHIPMENT-6PU-22L5-REV-D",
+          "answer": "SHIPMENT-6PU-22L5-REV-D",
+          "callId": "d1a0d277-01c8-47a0-920d-6b0d976b9cf0"
+        },
+        {
+          "id": "b02",
+          "title": "주문 조건 집계 · 1",
+          "category": "계산",
+          "group": 0,
+          "position": 2,
+          "passed": true,
+          "expected": "23068",
+          "answer": "23068",
+          "callId": "d1a0d277-01c8-47a0-920d-6b0d976b9cf0"
+        },
+        {
+          "id": "b03",
+          "title": "순열 제약의 경우의 수 · 1",
+          "category": "조합 추론",
+          "group": 0,
+          "position": 3,
+          "passed": true,
+          "expected": "5760",
+          "answer": "5760",
+          "callId": "d1a0d277-01c8-47a0-920d-6b0d976b9cf0"
+        },
+        {
+          "id": "b04",
+          "title": "필드 추출 · 1",
+          "category": "변환",
+          "group": 0,
+          "position": 4,
+          "passed": true,
+          "expected": "team27-2@example.org,team27-4@example.org,team27-5@example.org",
+          "answer": "team27-2@example.org,team27-4@example.org,team27-5@example.org",
+          "callId": "d1a0d277-01c8-47a0-920d-6b0d976b9cf0"
+        },
+        {
+          "id": "b05",
+          "title": "모듈러 점화식 · 1",
+          "category": "계산",
+          "group": 1,
+          "position": 1,
+          "passed": true,
+          "expected": "783",
+          "answer": "783",
+          "callId": "1c2d5ac2-90fd-4ed9-9edf-c25f54c8d422"
+        },
+        {
+          "id": "b06",
+          "title": "0/1 배낭 최적화 · 1",
+          "category": "최적화",
+          "group": 1,
+          "position": 2,
+          "passed": true,
+          "expected": "207",
+          "answer": "207",
+          "callId": "1c2d5ac2-90fd-4ed9-9edf-c25f54c8d422"
+        },
+        {
+          "id": "b07",
+          "title": "음수 포함 정렬 · 1",
+          "category": "변환",
+          "group": 1,
+          "position": 3,
+          "passed": true,
+          "expected": "-54,-49,-44,-35,-27,12,26,30,32,52,57,64,64,70,70",
+          "answer": "-54,-49,-44,-35,-27,12,26,30,32,52,57,64,64,70,70",
+          "callId": "1c2d5ac2-90fd-4ed9-9edf-c25f54c8d422"
+        },
+        {
+          "id": "b08",
+          "title": "가중 그래프 경로 · 1",
+          "category": "계산",
+          "group": 1,
+          "position": 4,
+          "passed": true,
+          "expected": "23",
+          "answer": "23",
+          "callId": "1c2d5ac2-90fd-4ed9-9edf-c25f54c8d422"
+        },
+        {
+          "id": "b09",
+          "title": "선행 작업 일정 수 · 1",
+          "category": "조합 추론",
+          "group": 2,
+          "position": 1,
+          "passed": true,
+          "expected": "21",
+          "answer": "21",
+          "callId": "79c0a9db-4866-4d06-bd15-b7536b43ebbe"
+        },
+        {
+          "id": "b10",
+          "title": "기호 정규화 · 1",
+          "category": "변환",
+          "group": 2,
+          "position": 2,
+          "passed": true,
+          "expected": "omega-shipment-7300-package",
+          "answer": "omega-shipment-7300-package",
+          "callId": "79c0a9db-4866-4d06-bd15-b7536b43ebbe"
+        },
+        {
+          "id": "b11",
+          "title": "반올림 없는 할인 집계 · 1",
+          "category": "계산",
+          "group": 2,
+          "position": 3,
+          "passed": true,
+          "expected": "2614",
+          "answer": "2614",
+          "callId": "79c0a9db-4866-4d06-bd15-b7536b43ebbe"
+        },
+        {
+          "id": "b12",
+          "title": "작업 배정 최적화 · 1",
+          "category": "최적화",
+          "group": 2,
+          "position": 4,
+          "passed": true,
+          "expected": "71",
+          "answer": "71",
+          "callId": "79c0a9db-4866-4d06-bd15-b7536b43ebbe"
+        },
+        {
+          "id": "b13",
+          "title": "제품 코드 변환 · 2",
+          "category": "변환",
+          "group": 3,
+          "position": 1,
+          "passed": true,
+          "expected": "SHIPMENT-6CN-17HU-REV-F",
+          "answer": "SHIPMENT-6CN-17HU-REV-F",
+          "callId": "c46ec31a-8970-4587-a4f6-91c4bfcf164a"
+        },
+        {
+          "id": "b14",
+          "title": "주문 조건 집계 · 2",
+          "category": "계산",
+          "group": 3,
+          "position": 2,
+          "passed": true,
+          "expected": "14740",
+          "answer": "14740",
+          "callId": "c46ec31a-8970-4587-a4f6-91c4bfcf164a"
+        },
+        {
+          "id": "b15",
+          "title": "순열 제약의 경우의 수 · 2",
+          "category": "조합 추론",
+          "group": 3,
+          "position": 3,
+          "passed": true,
+          "expected": "6480",
+          "answer": "6480",
+          "callId": "c46ec31a-8970-4587-a4f6-91c4bfcf164a"
+        },
+        {
+          "id": "b16",
+          "title": "필드 추출 · 2",
+          "category": "변환",
+          "group": 3,
+          "position": 4,
+          "passed": true,
+          "expected": "team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org",
+          "answer": "team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org",
+          "callId": "c46ec31a-8970-4587-a4f6-91c4bfcf164a"
+        },
+        {
+          "id": "b17",
+          "title": "모듈러 점화식 · 2",
+          "category": "계산",
+          "group": 4,
+          "position": 1,
+          "passed": true,
+          "expected": "916",
+          "answer": "916",
+          "callId": "c391f033-fe64-4e6e-95fa-a73745b4b683"
+        },
+        {
+          "id": "b18",
+          "title": "0/1 배낭 최적화 · 2",
+          "category": "최적화",
+          "group": 4,
+          "position": 2,
+          "passed": true,
+          "expected": "154",
+          "answer": "154",
+          "callId": "c391f033-fe64-4e6e-95fa-a73745b4b683"
+        },
+        {
+          "id": "b19",
+          "title": "음수 포함 정렬 · 2",
+          "category": "변환",
+          "group": 4,
+          "position": 3,
+          "passed": true,
+          "expected": "-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66",
+          "answer": "-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66",
+          "callId": "c391f033-fe64-4e6e-95fa-a73745b4b683"
+        },
+        {
+          "id": "b20",
+          "title": "가중 그래프 경로 · 2",
+          "category": "계산",
+          "group": 4,
+          "position": 4,
+          "passed": true,
+          "expected": "22",
+          "answer": "22",
+          "callId": "c391f033-fe64-4e6e-95fa-a73745b4b683"
+        },
+        {
+          "id": "b21",
+          "title": "선행 작업 일정 수 · 2",
+          "category": "조합 추론",
+          "group": 5,
+          "position": 1,
+          "passed": true,
+          "expected": "16",
+          "answer": "16",
+          "callId": "94e345c9-8f65-43e4-951d-d55f1abb5ed1"
+        },
+        {
+          "id": "b22",
+          "title": "기호 정규화 · 2",
+          "category": "변환",
+          "group": 5,
+          "position": 2,
+          "passed": true,
+          "expected": "delta-shipment-9689-node",
+          "answer": "delta-shipment-9689-node",
+          "callId": "94e345c9-8f65-43e4-951d-d55f1abb5ed1"
+        },
+        {
+          "id": "b23",
+          "title": "반올림 없는 할인 집계 · 2",
+          "category": "계산",
+          "group": 5,
+          "position": 3,
+          "passed": true,
+          "expected": "3155",
+          "answer": "3155",
+          "callId": "94e345c9-8f65-43e4-951d-d55f1abb5ed1"
+        },
+        {
+          "id": "b24",
+          "title": "작업 배정 최적화 · 2",
+          "category": "최적화",
+          "group": 5,
+          "position": 4,
+          "passed": true,
+          "expected": "73",
+          "answer": "73",
+          "callId": "94e345c9-8f65-43e4-951d-d55f1abb5ed1"
+        }
+      ],
+      "passRate": 100
+    }
+  },
+  "paired": {
+    "bothCorrect": 24,
+    "singleOnlyCorrect": 0,
+    "batchOnlyCorrect": 0,
+    "bothWrong": 0
+  },
+  "totalSavingsPercent": 65.77430846605196,
+  "inputSavingsPercent": 72.68864485555454,
+  "latencySavingsPercent": 44.82602817453924,
+  "observedQualityMaintained": true,
+  "cases": [
+    {
+      "id": "b01",
+      "title": "제품 코드 변환 · 1",
+      "category": "변환",
+      "expected": "SHIPMENT-6PU-22L5-REV-D",
+      "single": {
+        "id": "b01",
+        "title": "제품 코드 변환 · 1",
+        "category": "변환",
+        "group": 0,
+        "position": 1,
+        "passed": true,
+        "expected": "SHIPMENT-6PU-22L5-REV-D",
+        "answer": "SHIPMENT-6PU-22L5-REV-D",
+        "callId": "337a99d6-614b-441a-8790-31ca28685a1a"
+      },
+      "batch": {
+        "id": "b01",
+        "title": "제품 코드 변환 · 1",
+        "category": "변환",
+        "group": 0,
+        "position": 1,
+        "passed": true,
+        "expected": "SHIPMENT-6PU-22L5-REV-D",
+        "answer": "SHIPMENT-6PU-22L5-REV-D",
+        "callId": "d1a0d277-01c8-47a0-920d-6b0d976b9cf0"
+      }
+    },
+    {
+      "id": "b02",
+      "title": "주문 조건 집계 · 1",
+      "category": "계산",
+      "expected": "23068",
+      "single": {
+        "id": "b02",
+        "title": "주문 조건 집계 · 1",
+        "category": "계산",
+        "group": 0,
+        "position": 1,
+        "passed": true,
+        "expected": "23068",
+        "answer": "23068",
+        "callId": "9a7a2305-98c3-4a81-a11f-c5f5e41627cd"
+      },
+      "batch": {
+        "id": "b02",
+        "title": "주문 조건 집계 · 1",
+        "category": "계산",
+        "group": 0,
+        "position": 2,
+        "passed": true,
+        "expected": "23068",
+        "answer": "23068",
+        "callId": "d1a0d277-01c8-47a0-920d-6b0d976b9cf0"
+      }
+    },
+    {
+      "id": "b03",
+      "title": "순열 제약의 경우의 수 · 1",
+      "category": "조합 추론",
+      "expected": "5760",
+      "single": {
+        "id": "b03",
+        "title": "순열 제약의 경우의 수 · 1",
+        "category": "조합 추론",
+        "group": 0,
+        "position": 1,
+        "passed": true,
+        "expected": "5760",
+        "answer": "5760",
+        "callId": "73e3a74e-4929-4471-9e7a-f0037fdb76fb"
+      },
+      "batch": {
+        "id": "b03",
+        "title": "순열 제약의 경우의 수 · 1",
+        "category": "조합 추론",
+        "group": 0,
+        "position": 3,
+        "passed": true,
+        "expected": "5760",
+        "answer": "5760",
+        "callId": "d1a0d277-01c8-47a0-920d-6b0d976b9cf0"
+      }
+    },
+    {
+      "id": "b04",
+      "title": "필드 추출 · 1",
+      "category": "변환",
+      "expected": "team27-2@example.org,team27-4@example.org,team27-5@example.org",
+      "single": {
+        "id": "b04",
+        "title": "필드 추출 · 1",
+        "category": "변환",
+        "group": 0,
+        "position": 1,
+        "passed": true,
+        "expected": "team27-2@example.org,team27-4@example.org,team27-5@example.org",
+        "answer": "team27-2@example.org,team27-4@example.org,team27-5@example.org",
+        "callId": "326219bd-7671-4e98-9679-c6bfb852fe70"
+      },
+      "batch": {
+        "id": "b04",
+        "title": "필드 추출 · 1",
+        "category": "변환",
+        "group": 0,
+        "position": 4,
+        "passed": true,
+        "expected": "team27-2@example.org,team27-4@example.org,team27-5@example.org",
+        "answer": "team27-2@example.org,team27-4@example.org,team27-5@example.org",
+        "callId": "d1a0d277-01c8-47a0-920d-6b0d976b9cf0"
+      }
+    },
+    {
+      "id": "b05",
+      "title": "모듈러 점화식 · 1",
+      "category": "계산",
+      "expected": "783",
+      "single": {
+        "id": "b05",
+        "title": "모듈러 점화식 · 1",
+        "category": "계산",
+        "group": 1,
+        "position": 1,
+        "passed": true,
+        "expected": "783",
+        "answer": "783",
+        "callId": "e4c6331b-83d7-4024-b211-0c55b42abf38"
+      },
+      "batch": {
+        "id": "b05",
+        "title": "모듈러 점화식 · 1",
+        "category": "계산",
+        "group": 1,
+        "position": 1,
+        "passed": true,
+        "expected": "783",
+        "answer": "783",
+        "callId": "1c2d5ac2-90fd-4ed9-9edf-c25f54c8d422"
+      }
+    },
+    {
+      "id": "b06",
+      "title": "0/1 배낭 최적화 · 1",
+      "category": "최적화",
+      "expected": "207",
+      "single": {
+        "id": "b06",
+        "title": "0/1 배낭 최적화 · 1",
+        "category": "최적화",
+        "group": 1,
+        "position": 1,
+        "passed": true,
+        "expected": "207",
+        "answer": "207",
+        "callId": "29b4ff73-52d0-487b-a067-5a950e42967d"
+      },
+      "batch": {
+        "id": "b06",
+        "title": "0/1 배낭 최적화 · 1",
+        "category": "최적화",
+        "group": 1,
+        "position": 2,
+        "passed": true,
+        "expected": "207",
+        "answer": "207",
+        "callId": "1c2d5ac2-90fd-4ed9-9edf-c25f54c8d422"
+      }
+    },
+    {
+      "id": "b07",
+      "title": "음수 포함 정렬 · 1",
+      "category": "변환",
+      "expected": "-54,-49,-44,-35,-27,12,26,30,32,52,57,64,64,70,70",
+      "single": {
+        "id": "b07",
+        "title": "음수 포함 정렬 · 1",
+        "category": "변환",
+        "group": 1,
+        "position": 1,
+        "passed": true,
+        "expected": "-54,-49,-44,-35,-27,12,26,30,32,52,57,64,64,70,70",
+        "answer": "-54,-49,-44,-35,-27,12,26,30,32,52,57,64,64,70,70",
+        "callId": "b2b00edf-961f-4057-9acb-321d84553bd3"
+      },
+      "batch": {
+        "id": "b07",
+        "title": "음수 포함 정렬 · 1",
+        "category": "변환",
+        "group": 1,
+        "position": 3,
+        "passed": true,
+        "expected": "-54,-49,-44,-35,-27,12,26,30,32,52,57,64,64,70,70",
+        "answer": "-54,-49,-44,-35,-27,12,26,30,32,52,57,64,64,70,70",
+        "callId": "1c2d5ac2-90fd-4ed9-9edf-c25f54c8d422"
+      }
+    },
+    {
+      "id": "b08",
+      "title": "가중 그래프 경로 · 1",
+      "category": "계산",
+      "expected": "23",
+      "single": {
+        "id": "b08",
+        "title": "가중 그래프 경로 · 1",
+        "category": "계산",
+        "group": 1,
+        "position": 1,
+        "passed": true,
+        "expected": "23",
+        "answer": "23",
+        "callId": "e04d0f25-1271-4056-b333-8dd3a4338d8a"
+      },
+      "batch": {
+        "id": "b08",
+        "title": "가중 그래프 경로 · 1",
+        "category": "계산",
+        "group": 1,
+        "position": 4,
+        "passed": true,
+        "expected": "23",
+        "answer": "23",
+        "callId": "1c2d5ac2-90fd-4ed9-9edf-c25f54c8d422"
+      }
+    },
+    {
+      "id": "b09",
+      "title": "선행 작업 일정 수 · 1",
+      "category": "조합 추론",
+      "expected": "21",
+      "single": {
+        "id": "b09",
+        "title": "선행 작업 일정 수 · 1",
+        "category": "조합 추론",
+        "group": 2,
+        "position": 1,
+        "passed": true,
+        "expected": "21",
+        "answer": "21",
+        "callId": "e66eb726-4079-4abc-9fc1-a44ce363d9cf"
+      },
+      "batch": {
+        "id": "b09",
+        "title": "선행 작업 일정 수 · 1",
+        "category": "조합 추론",
+        "group": 2,
+        "position": 1,
+        "passed": true,
+        "expected": "21",
+        "answer": "21",
+        "callId": "79c0a9db-4866-4d06-bd15-b7536b43ebbe"
+      }
+    },
+    {
+      "id": "b10",
+      "title": "기호 정규화 · 1",
+      "category": "변환",
+      "expected": "omega-shipment-7300-package",
+      "single": {
+        "id": "b10",
+        "title": "기호 정규화 · 1",
+        "category": "변환",
+        "group": 2,
+        "position": 1,
+        "passed": true,
+        "expected": "omega-shipment-7300-package",
+        "answer": "omega-shipment-7300-package",
+        "callId": "b8ad569a-cbe0-45ef-a304-2cea570504b8"
+      },
+      "batch": {
+        "id": "b10",
+        "title": "기호 정규화 · 1",
+        "category": "변환",
+        "group": 2,
+        "position": 2,
+        "passed": true,
+        "expected": "omega-shipment-7300-package",
+        "answer": "omega-shipment-7300-package",
+        "callId": "79c0a9db-4866-4d06-bd15-b7536b43ebbe"
+      }
+    },
+    {
+      "id": "b11",
+      "title": "반올림 없는 할인 집계 · 1",
+      "category": "계산",
+      "expected": "2614",
+      "single": {
+        "id": "b11",
+        "title": "반올림 없는 할인 집계 · 1",
+        "category": "계산",
+        "group": 2,
+        "position": 1,
+        "passed": true,
+        "expected": "2614",
+        "answer": "2614",
+        "callId": "68b19f38-1d12-473d-a530-33b1e6fd8cf6"
+      },
+      "batch": {
+        "id": "b11",
+        "title": "반올림 없는 할인 집계 · 1",
+        "category": "계산",
+        "group": 2,
+        "position": 3,
+        "passed": true,
+        "expected": "2614",
+        "answer": "2614",
+        "callId": "79c0a9db-4866-4d06-bd15-b7536b43ebbe"
+      }
+    },
+    {
+      "id": "b12",
+      "title": "작업 배정 최적화 · 1",
+      "category": "최적화",
+      "expected": "71",
+      "single": {
+        "id": "b12",
+        "title": "작업 배정 최적화 · 1",
+        "category": "최적화",
+        "group": 2,
+        "position": 1,
+        "passed": true,
+        "expected": "71",
+        "answer": "71",
+        "callId": "895106a9-fcca-41a2-834e-9659fdbf232a"
+      },
+      "batch": {
+        "id": "b12",
+        "title": "작업 배정 최적화 · 1",
+        "category": "최적화",
+        "group": 2,
+        "position": 4,
+        "passed": true,
+        "expected": "71",
+        "answer": "71",
+        "callId": "79c0a9db-4866-4d06-bd15-b7536b43ebbe"
+      }
+    },
+    {
+      "id": "b13",
+      "title": "제품 코드 변환 · 2",
+      "category": "변환",
+      "expected": "SHIPMENT-6CN-17HU-REV-F",
+      "single": {
+        "id": "b13",
+        "title": "제품 코드 변환 · 2",
+        "category": "변환",
+        "group": 3,
+        "position": 1,
+        "passed": true,
+        "expected": "SHIPMENT-6CN-17HU-REV-F",
+        "answer": "SHIPMENT-6CN-17HU-REV-F",
+        "callId": "2d68a99b-8897-49bc-90e5-004c036f93cb"
+      },
+      "batch": {
+        "id": "b13",
+        "title": "제품 코드 변환 · 2",
+        "category": "변환",
+        "group": 3,
+        "position": 1,
+        "passed": true,
+        "expected": "SHIPMENT-6CN-17HU-REV-F",
+        "answer": "SHIPMENT-6CN-17HU-REV-F",
+        "callId": "c46ec31a-8970-4587-a4f6-91c4bfcf164a"
+      }
+    },
+    {
+      "id": "b14",
+      "title": "주문 조건 집계 · 2",
+      "category": "계산",
+      "expected": "14740",
+      "single": {
+        "id": "b14",
+        "title": "주문 조건 집계 · 2",
+        "category": "계산",
+        "group": 3,
+        "position": 1,
+        "passed": true,
+        "expected": "14740",
+        "answer": "14740",
+        "callId": "2fe8a622-3ca4-493d-846f-e268931d99d4"
+      },
+      "batch": {
+        "id": "b14",
+        "title": "주문 조건 집계 · 2",
+        "category": "계산",
+        "group": 3,
+        "position": 2,
+        "passed": true,
+        "expected": "14740",
+        "answer": "14740",
+        "callId": "c46ec31a-8970-4587-a4f6-91c4bfcf164a"
+      }
+    },
+    {
+      "id": "b15",
+      "title": "순열 제약의 경우의 수 · 2",
+      "category": "조합 추론",
+      "expected": "6480",
+      "single": {
+        "id": "b15",
+        "title": "순열 제약의 경우의 수 · 2",
+        "category": "조합 추론",
+        "group": 3,
+        "position": 1,
+        "passed": true,
+        "expected": "6480",
+        "answer": "6480",
+        "callId": "1922f1a6-ede4-489d-8f74-3c3add1e5204"
+      },
+      "batch": {
+        "id": "b15",
+        "title": "순열 제약의 경우의 수 · 2",
+        "category": "조합 추론",
+        "group": 3,
+        "position": 3,
+        "passed": true,
+        "expected": "6480",
+        "answer": "6480",
+        "callId": "c46ec31a-8970-4587-a4f6-91c4bfcf164a"
+      }
+    },
+    {
+      "id": "b16",
+      "title": "필드 추출 · 2",
+      "category": "변환",
+      "expected": "team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org",
+      "single": {
+        "id": "b16",
+        "title": "필드 추출 · 2",
+        "category": "변환",
+        "group": 3,
+        "position": 1,
+        "passed": true,
+        "expected": "team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org",
+        "answer": "team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org",
+        "callId": "babbd3dd-a8c0-4a45-a86a-a15311ad02a6"
+      },
+      "batch": {
+        "id": "b16",
+        "title": "필드 추출 · 2",
+        "category": "변환",
+        "group": 3,
+        "position": 4,
+        "passed": true,
+        "expected": "team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org",
+        "answer": "team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org",
+        "callId": "c46ec31a-8970-4587-a4f6-91c4bfcf164a"
+      }
+    },
+    {
+      "id": "b17",
+      "title": "모듈러 점화식 · 2",
+      "category": "계산",
+      "expected": "916",
+      "single": {
+        "id": "b17",
+        "title": "모듈러 점화식 · 2",
+        "category": "계산",
+        "group": 4,
+        "position": 1,
+        "passed": true,
+        "expected": "916",
+        "answer": "916",
+        "callId": "d328c832-341e-4ee2-9ef9-2e1e252e60ec"
+      },
+      "batch": {
+        "id": "b17",
+        "title": "모듈러 점화식 · 2",
+        "category": "계산",
+        "group": 4,
+        "position": 1,
+        "passed": true,
+        "expected": "916",
+        "answer": "916",
+        "callId": "c391f033-fe64-4e6e-95fa-a73745b4b683"
+      }
+    },
+    {
+      "id": "b18",
+      "title": "0/1 배낭 최적화 · 2",
+      "category": "최적화",
+      "expected": "154",
+      "single": {
+        "id": "b18",
+        "title": "0/1 배낭 최적화 · 2",
+        "category": "최적화",
+        "group": 4,
+        "position": 1,
+        "passed": true,
+        "expected": "154",
+        "answer": "154",
+        "callId": "fd44f61b-3689-4ef3-8ce5-b0da8dcd8ace"
+      },
+      "batch": {
+        "id": "b18",
+        "title": "0/1 배낭 최적화 · 2",
+        "category": "최적화",
+        "group": 4,
+        "position": 2,
+        "passed": true,
+        "expected": "154",
+        "answer": "154",
+        "callId": "c391f033-fe64-4e6e-95fa-a73745b4b683"
+      }
+    },
+    {
+      "id": "b19",
+      "title": "음수 포함 정렬 · 2",
+      "category": "변환",
+      "expected": "-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66",
+      "single": {
+        "id": "b19",
+        "title": "음수 포함 정렬 · 2",
+        "category": "변환",
+        "group": 4,
+        "position": 1,
+        "passed": true,
+        "expected": "-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66",
+        "answer": "-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66",
+        "callId": "6de07b92-0da2-4e92-b1a7-128498b0d4c1"
+      },
+      "batch": {
+        "id": "b19",
+        "title": "음수 포함 정렬 · 2",
+        "category": "변환",
+        "group": 4,
+        "position": 3,
+        "passed": true,
+        "expected": "-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66",
+        "answer": "-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66",
+        "callId": "c391f033-fe64-4e6e-95fa-a73745b4b683"
+      }
+    },
+    {
+      "id": "b20",
+      "title": "가중 그래프 경로 · 2",
+      "category": "계산",
+      "expected": "22",
+      "single": {
+        "id": "b20",
+        "title": "가중 그래프 경로 · 2",
+        "category": "계산",
+        "group": 4,
+        "position": 1,
+        "passed": true,
+        "expected": "22",
+        "answer": "22",
+        "callId": "9c8f10cf-a1fc-425f-8af1-08a074c7936b"
+      },
+      "batch": {
+        "id": "b20",
+        "title": "가중 그래프 경로 · 2",
+        "category": "계산",
+        "group": 4,
+        "position": 4,
+        "passed": true,
+        "expected": "22",
+        "answer": "22",
+        "callId": "c391f033-fe64-4e6e-95fa-a73745b4b683"
+      }
+    },
+    {
+      "id": "b21",
+      "title": "선행 작업 일정 수 · 2",
+      "category": "조합 추론",
+      "expected": "16",
+      "single": {
+        "id": "b21",
+        "title": "선행 작업 일정 수 · 2",
+        "category": "조합 추론",
+        "group": 5,
+        "position": 1,
+        "passed": true,
+        "expected": "16",
+        "answer": "16",
+        "callId": "2d9e8273-6f1d-4c56-947a-978dce2fda0b"
+      },
+      "batch": {
+        "id": "b21",
+        "title": "선행 작업 일정 수 · 2",
+        "category": "조합 추론",
+        "group": 5,
+        "position": 1,
+        "passed": true,
+        "expected": "16",
+        "answer": "16",
+        "callId": "94e345c9-8f65-43e4-951d-d55f1abb5ed1"
+      }
+    },
+    {
+      "id": "b22",
+      "title": "기호 정규화 · 2",
+      "category": "변환",
+      "expected": "delta-shipment-9689-node",
+      "single": {
+        "id": "b22",
+        "title": "기호 정규화 · 2",
+        "category": "변환",
+        "group": 5,
+        "position": 1,
+        "passed": true,
+        "expected": "delta-shipment-9689-node",
+        "answer": "delta-shipment-9689-node",
+        "callId": "0651005a-3616-49cb-89ee-b7770b4286ee"
+      },
+      "batch": {
+        "id": "b22",
+        "title": "기호 정규화 · 2",
+        "category": "변환",
+        "group": 5,
+        "position": 2,
+        "passed": true,
+        "expected": "delta-shipment-9689-node",
+        "answer": "delta-shipment-9689-node",
+        "callId": "94e345c9-8f65-43e4-951d-d55f1abb5ed1"
+      }
+    },
+    {
+      "id": "b23",
+      "title": "반올림 없는 할인 집계 · 2",
+      "category": "계산",
+      "expected": "3155",
+      "single": {
+        "id": "b23",
+        "title": "반올림 없는 할인 집계 · 2",
+        "category": "계산",
+        "group": 5,
+        "position": 1,
+        "passed": true,
+        "expected": "3155",
+        "answer": "3155",
+        "callId": "1bfd8d13-ecfd-4286-942f-e28c1e40c11a"
+      },
+      "batch": {
+        "id": "b23",
+        "title": "반올림 없는 할인 집계 · 2",
+        "category": "계산",
+        "group": 5,
+        "position": 3,
+        "passed": true,
+        "expected": "3155",
+        "answer": "3155",
+        "callId": "94e345c9-8f65-43e4-951d-d55f1abb5ed1"
+      }
+    },
+    {
+      "id": "b24",
+      "title": "작업 배정 최적화 · 2",
+      "category": "최적화",
+      "expected": "73",
+      "single": {
+        "id": "b24",
+        "title": "작업 배정 최적화 · 2",
+        "category": "최적화",
+        "group": 5,
+        "position": 1,
+        "passed": true,
+        "expected": "73",
+        "answer": "73",
+        "callId": "c591bc8d-555d-453f-a307-de74829f25ac"
+      },
+      "batch": {
+        "id": "b24",
+        "title": "작업 배정 최적화 · 2",
+        "category": "최적화",
+        "group": 5,
+        "position": 4,
+        "passed": true,
+        "expected": "73",
+        "answer": "73",
+        "callId": "94e345c9-8f65-43e4-951d-d55f1abb5ed1"
+      }
+    }
+  ],
+  "checks": [
+    "frozen dataset hash",
+    "all scheduled requests",
+    "raw JSONL usage and outputs",
+    "all IDs and exact grading",
+    "no verifier labels in prompts",
+    "no tools",
+    "all costs including failures",
+    "paired correctness"
+  ]
+}

@@ -1,0 +1,631 @@
+{
+  "status": "AUDIT_PASS",
+  "experimentComplete": true,
+  "measuredAt": "2026-10-04T08:41:49.384Z",
+  "model": "gpt-5.6-luna",
+  "cliVersion": "codex-cli 0.153.4",
+  "scope": "Exploratory follow-up on 24 fixed synthetic cases. HIGH completed before LOW; one call per case and arm, with no retries.",
+  "arms": {
+    "SINGLE_HIGH": {
+      "calls": 24,
+      "passed": 24,
+      "inputTokens": 87784,
+      "outputTokens": 7656,
+      "reasoningTokens": 7036,
+      "cachedInputTokens": 17664,
+      "totalTokens": 95440,
+      "latencyMs": 285506,
+      "rows": [
+        {
+          "id": "b01",
+          "title": "제품 코드 변환 · 1",
+          "category": "변환",
+          "passed": true,
+          "answer": "SHIPMENT-6PU-22L5-REV-D",
+          "inputTokens": 3342,
+          "outputTokens": 70,
+          "reasoningTokens": 39,
+          "cachedInputTokens": 1792
+        },
+        {
+          "id": "b02",
+          "title": "주문 조건 집계 · 1",
+          "category": "계산",
+          "passed": true,
+          "answer": "23068",
+          "inputTokens": 3473,
+          "outputTokens": 162,
+          "reasoningTokens": 141,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b03",
+          "title": "순열 제약의 경우의 수 · 1",
+          "category": "조합 추론",
+          "passed": true,
+          "answer": "5760",
+          "inputTokens": 3414,
+          "outputTokens": 365,
+          "reasoningTokens": 344,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b04",
+          "title": "필드 추출 · 1",
+          "category": "변환",
+          "passed": true,
+          "answer": "team27-2@example.org,team27-4@example.org,team27-5@example.org",
+          "inputTokens": 3439,
+          "outputTokens": 37,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b05",
+          "title": "모듈러 점화식 · 1",
+          "category": "계산",
+          "passed": true,
+          "answer": "783",
+          "inputTokens": 3769,
+          "outputTokens": 404,
+          "reasoningTokens": 384,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b06",
+          "title": "0/1 배낭 최적화 · 1",
+          "category": "최적화",
+          "passed": true,
+          "answer": "207",
+          "inputTokens": 3415,
+          "outputTokens": 964,
+          "reasoningTokens": 944,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b07",
+          "title": "음수 포함 정렬 · 1",
+          "category": "변환",
+          "passed": true,
+          "answer": "-54,-49,-44,-35,-27,12,26,30,32,52,57,64,64,70,70",
+          "inputTokens": 3374,
+          "outputTokens": 99,
+          "reasoningTokens": 50,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b08",
+          "title": "가중 그래프 경로 · 1",
+          "category": "계산",
+          "passed": true,
+          "answer": "23",
+          "inputTokens": 3444,
+          "outputTokens": 135,
+          "reasoningTokens": 115,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b09",
+          "title": "선행 작업 일정 수 · 1",
+          "category": "조합 추론",
+          "passed": true,
+          "answer": "21",
+          "inputTokens": 3406,
+          "outputTokens": 1054,
+          "reasoningTokens": 1034,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b10",
+          "title": "기호 정규화 · 1",
+          "category": "변환",
+          "passed": true,
+          "answer": "omega-shipment-7300-package",
+          "inputTokens": 3805,
+          "outputTokens": 80,
+          "reasoningTokens": 54,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b11",
+          "title": "반올림 없는 할인 집계 · 1",
+          "category": "계산",
+          "passed": true,
+          "answer": "2614",
+          "inputTokens": 3139,
+          "outputTokens": 181,
+          "reasoningTokens": 160,
+          "cachedInputTokens": 1792
+        },
+        {
+          "id": "b12",
+          "title": "작업 배정 최적화 · 1",
+          "category": "최적화",
+          "passed": true,
+          "answer": "71",
+          "inputTokens": 4124,
+          "outputTokens": 942,
+          "reasoningTokens": 922,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b13",
+          "title": "제품 코드 변환 · 2",
+          "category": "변환",
+          "passed": true,
+          "answer": "SHIPMENT-6CN-17HU-REV-F",
+          "inputTokens": 4037,
+          "outputTokens": 58,
+          "reasoningTokens": 28,
+          "cachedInputTokens": 1792
+        },
+        {
+          "id": "b14",
+          "title": "주문 조건 집계 · 2",
+          "category": "계산",
+          "passed": true,
+          "answer": "14740",
+          "inputTokens": 4170,
+          "outputTokens": 148,
+          "reasoningTokens": 127,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b15",
+          "title": "순열 제약의 경우의 수 · 2",
+          "category": "조합 추론",
+          "passed": true,
+          "answer": "6480",
+          "inputTokens": 4110,
+          "outputTokens": 333,
+          "reasoningTokens": 312,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b16",
+          "title": "필드 추출 · 2",
+          "category": "변환",
+          "passed": true,
+          "answer": "team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org",
+          "inputTokens": 4135,
+          "outputTokens": 99,
+          "reasoningTokens": 53,
+          "cachedInputTokens": 3840
+        },
+        {
+          "id": "b17",
+          "title": "모듈러 점화식 · 2",
+          "category": "계산",
+          "passed": true,
+          "answer": "916",
+          "inputTokens": 3365,
+          "outputTokens": 429,
+          "reasoningTokens": 409,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b18",
+          "title": "0/1 배낭 최적화 · 2",
+          "category": "최적화",
+          "passed": true,
+          "answer": "154",
+          "inputTokens": 3415,
+          "outputTokens": 661,
+          "reasoningTokens": 641,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b19",
+          "title": "음수 포함 정렬 · 2",
+          "category": "변환",
+          "passed": true,
+          "answer": "-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66",
+          "inputTokens": 4070,
+          "outputTokens": 117,
+          "reasoningTokens": 68,
+          "cachedInputTokens": 1792
+        },
+        {
+          "id": "b20",
+          "title": "가중 그래프 경로 · 2",
+          "category": "계산",
+          "passed": true,
+          "answer": "22",
+          "inputTokens": 4140,
+          "outputTokens": 153,
+          "reasoningTokens": 133,
+          "cachedInputTokens": 3840
+        },
+        {
+          "id": "b21",
+          "title": "선행 작업 일정 수 · 2",
+          "category": "조합 추론",
+          "passed": true,
+          "answer": "16",
+          "inputTokens": 3708,
+          "outputTokens": 371,
+          "reasoningTokens": 351,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b22",
+          "title": "기호 정규화 · 2",
+          "category": "변환",
+          "passed": true,
+          "answer": "delta-shipment-9689-node",
+          "inputTokens": 3363,
+          "outputTokens": 76,
+          "reasoningTokens": 50,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b23",
+          "title": "반올림 없는 할인 집계 · 2",
+          "category": "계산",
+          "passed": true,
+          "answer": "3155",
+          "inputTokens": 3393,
+          "outputTokens": 182,
+          "reasoningTokens": 161,
+          "cachedInputTokens": 2816
+        },
+        {
+          "id": "b24",
+          "title": "작업 배정 최적화 · 2",
+          "category": "최적화",
+          "passed": true,
+          "answer": "73",
+          "inputTokens": 3734,
+          "outputTokens": 536,
+          "reasoningTokens": 516,
+          "cachedInputTokens": 0
+        }
+      ]
+    },
+    "SINGLE_LOW": {
+      "calls": 24,
+      "passed": 19,
+      "inputTokens": 92806,
+      "outputTokens": 6173,
+      "reasoningTokens": 5557,
+      "cachedInputTokens": 21248,
+      "totalTokens": 98979,
+      "latencyMs": 386455,
+      "rows": [
+        {
+          "id": "b01",
+          "title": "제품 코드 변환 · 1",
+          "category": "변환",
+          "passed": true,
+          "answer": "SHIPMENT-6PU-22L5-REV-D",
+          "inputTokens": 4038,
+          "outputTokens": 69,
+          "reasoningTokens": 38,
+          "cachedInputTokens": 1792
+        },
+        {
+          "id": "b02",
+          "title": "주문 조건 집계 · 1",
+          "category": "계산",
+          "passed": true,
+          "answer": "23068",
+          "inputTokens": 4169,
+          "outputTokens": 143,
+          "reasoningTokens": 122,
+          "cachedInputTokens": 1792
+        },
+        {
+          "id": "b03",
+          "title": "순열 제약의 경우의 수 · 1",
+          "category": "조합 추론",
+          "passed": true,
+          "answer": "5760",
+          "inputTokens": 4110,
+          "outputTokens": 295,
+          "reasoningTokens": 274,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b04",
+          "title": "필드 추출 · 1",
+          "category": "변환",
+          "passed": true,
+          "answer": "team27-2@example.org,team27-4@example.org,team27-5@example.org",
+          "inputTokens": 4135,
+          "outputTokens": 37,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792
+        },
+        {
+          "id": "b05",
+          "title": "모듈러 점화식 · 1",
+          "category": "계산",
+          "passed": false,
+          "answer": "240",
+          "inputTokens": 3807,
+          "outputTokens": 432,
+          "reasoningTokens": 412,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b06",
+          "title": "0/1 배낭 최적화 · 1",
+          "category": "최적화",
+          "passed": false,
+          "answer": "199",
+          "inputTokens": 3631,
+          "outputTokens": 382,
+          "reasoningTokens": 362,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b07",
+          "title": "음수 포함 정렬 · 1",
+          "category": "변환",
+          "passed": true,
+          "answer": "-54,-49,-44,-35,-27,12,26,30,32,52,57,64,64,70,70",
+          "inputTokens": 3374,
+          "outputTokens": 97,
+          "reasoningTokens": 48,
+          "cachedInputTokens": 1792
+        },
+        {
+          "id": "b08",
+          "title": "가중 그래프 경로 · 1",
+          "category": "계산",
+          "passed": false,
+          "answer": "27",
+          "inputTokens": 3444,
+          "outputTokens": 18,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b09",
+          "title": "선행 작업 일정 수 · 1",
+          "category": "조합 추론",
+          "passed": false,
+          "answer": "18",
+          "inputTokens": 3406,
+          "outputTokens": 858,
+          "reasoningTokens": 838,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b10",
+          "title": "기호 정규화 · 1",
+          "category": "변환",
+          "passed": true,
+          "answer": "omega-shipment-7300-package",
+          "inputTokens": 4059,
+          "outputTokens": 78,
+          "reasoningTokens": 52,
+          "cachedInputTokens": 1792
+        },
+        {
+          "id": "b11",
+          "title": "반올림 없는 할인 집계 · 1",
+          "category": "계산",
+          "passed": true,
+          "answer": "2614",
+          "inputTokens": 4089,
+          "outputTokens": 158,
+          "reasoningTokens": 137,
+          "cachedInputTokens": 3840
+        },
+        {
+          "id": "b12",
+          "title": "작업 배정 최적화 · 1",
+          "category": "최적화",
+          "passed": true,
+          "answer": "71",
+          "inputTokens": 3428,
+          "outputTokens": 810,
+          "reasoningTokens": 790,
+          "cachedInputTokens": 1792
+        },
+        {
+          "id": "b13",
+          "title": "제품 코드 변환 · 2",
+          "category": "변환",
+          "passed": true,
+          "answer": "SHIPMENT-6CN-17HU-REV-F",
+          "inputTokens": 3341,
+          "outputTokens": 56,
+          "reasoningTokens": 26,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b14",
+          "title": "주문 조건 집계 · 2",
+          "category": "계산",
+          "passed": true,
+          "answer": "14740",
+          "inputTokens": 4170,
+          "outputTokens": 102,
+          "reasoningTokens": 81,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b15",
+          "title": "순열 제약의 경우의 수 · 2",
+          "category": "조합 추론",
+          "passed": true,
+          "answer": "6480",
+          "inputTokens": 4110,
+          "outputTokens": 274,
+          "reasoningTokens": 253,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b16",
+          "title": "필드 추출 · 2",
+          "category": "변환",
+          "passed": true,
+          "answer": "team28-2@example.org,team28-4@example.org,team28-5@example.org,team28-7@example.org",
+          "inputTokens": 4135,
+          "outputTokens": 44,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b17",
+          "title": "모듈러 점화식 · 2",
+          "category": "계산",
+          "passed": true,
+          "answer": "916",
+          "inputTokens": 4061,
+          "outputTokens": 318,
+          "reasoningTokens": 298,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b18",
+          "title": "0/1 배낭 최적화 · 2",
+          "category": "최적화",
+          "passed": true,
+          "answer": "154",
+          "inputTokens": 4111,
+          "outputTokens": 367,
+          "reasoningTokens": 347,
+          "cachedInputTokens": 3840
+        },
+        {
+          "id": "b19",
+          "title": "음수 포함 정렬 · 2",
+          "category": "변환",
+          "passed": true,
+          "answer": "-70,-67,-66,-66,-66,-25,-20,0,0,16,35,47,47,55,66",
+          "inputTokens": 4070,
+          "outputTokens": 116,
+          "reasoningTokens": 67,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b20",
+          "title": "가중 그래프 경로 · 2",
+          "category": "계산",
+          "passed": true,
+          "answer": "22",
+          "inputTokens": 4140,
+          "outputTokens": 119,
+          "reasoningTokens": 99,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b21",
+          "title": "선행 작업 일정 수 · 2",
+          "category": "조합 추론",
+          "passed": false,
+          "answer": "20",
+          "inputTokens": 3402,
+          "outputTokens": 647,
+          "reasoningTokens": 627,
+          "cachedInputTokens": 2816
+        },
+        {
+          "id": "b22",
+          "title": "기호 정규화 · 2",
+          "category": "변환",
+          "passed": true,
+          "answer": "delta-shipment-9689-node",
+          "inputTokens": 3363,
+          "outputTokens": 55,
+          "reasoningTokens": 29,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b23",
+          "title": "반올림 없는 할인 집계 · 2",
+          "category": "계산",
+          "passed": true,
+          "answer": "3155",
+          "inputTokens": 4089,
+          "outputTokens": 169,
+          "reasoningTokens": 148,
+          "cachedInputTokens": 0
+        },
+        {
+          "id": "b24",
+          "title": "작업 배정 최적화 · 2",
+          "category": "최적화",
+          "passed": true,
+          "answer": "73",
+          "inputTokens": 4124,
+          "outputTokens": 529,
+          "reasoningTokens": 509,
+          "cachedInputTokens": 0
+        }
+      ]
+    }
+  },
+  "paired": {
+    "bothCorrect": 19,
+    "highOnlyCorrect": 5,
+    "lowOnlyCorrect": 0,
+    "bothWrong": 0
+  },
+  "categories": [
+    {
+      "category": "변환",
+      "count": 8,
+      "high": {
+        "passed": 8,
+        "tokens": 30201
+      },
+      "low": {
+        "passed": 8,
+        "tokens": 31067
+      }
+    },
+    {
+      "category": "계산",
+      "count": 8,
+      "high": {
+        "passed": 8,
+        "tokens": 30687
+      },
+      "low": {
+        "passed": 6,
+        "tokens": 33428
+      }
+    },
+    {
+      "category": "조합 추론",
+      "count": 4,
+      "high": {
+        "passed": 4,
+        "tokens": 16761
+      },
+      "low": {
+        "passed": 2,
+        "tokens": 17102
+      }
+    },
+    {
+      "category": "최적화",
+      "count": 4,
+      "high": {
+        "passed": 4,
+        "tokens": 17791
+      },
+      "low": {
+        "passed": 3,
+        "tokens": 17382
+      }
+    }
+  ],
+  "totalSavingsPercent": -3.708088851634535,
+  "observedQualityMaintained": false,
+  "reasoningOnlyMaximumSavingsPercent": 7.3721709974853304,
+  "limitations": "Order, time, and prompt cache are confounded. One draw per arm and case; no general routing claim or statistical significance.",
+  "checks": [
+    "frozen case and baseline hashes",
+    "source and instruction hashes",
+    "all 24 LOW records and 24 HIGH records",
+    "raw JSONL usage and outputs",
+    "identical prompts and answer grading",
+    "all known token costs",
+    "no tools or failed turns"
+  ]
+}

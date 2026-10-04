@@ -1,0 +1,113 @@
+{
+  "index": 14,
+  "group": 2,
+  "arm": "BATCH_HIGH",
+  "caseIds": [
+    "b09",
+    "b10",
+    "b11",
+    "b12"
+  ],
+  "batchSize": 4,
+  "request": {
+    "mode": "CODEX",
+    "batchSize": 4,
+    "tokenBudget": 143902,
+    "items": [
+      {
+        "id": "b09",
+        "task": "제약 충족 문제: 작업 0부터 6까지를 각각 한 번, 한 번에 하나씩 수행합니다. 선행 관계 (먼저,나중)는 [[6,1],[6,4],[2,4],[2,5],[1,3],[4,3],[5,0],[3,0]] 입니다. 모든 선행 관계를 만족하는 전체 실행 순서의 경우의 수를 정수로 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "21"
+      },
+      {
+        "id": "b10",
+        "task": "문자열 'OMEGA__Shipment---7300..Package'에서 영문은 소문자로 변환하고, 연속된 영숫자 아닌 문자들을 각각 하이픈 하나로 바꾸세요. 결과만 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "omega-shipment-7300-package"
+      },
+      {
+        "id": "b11",
+        "task": "조건별 계산: 가격 목록은 315,190,485,224,159,594,617,532 입니다. 1부터 센 홀수 위치의 상품은 20% 할인, 짝수 위치는 12% 할인합니다. 상품별 할인 후 가격에서 소수점 이하는 버린 뒤 합산합니다. 최종 합계만 정수로 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "2614"
+      },
+      {
+        "id": "b12",
+        "task": "최적화 문제: 직원 5명에게 작업 5개를 하나씩 배정합니다. 직원과 작업은 각각 정확히 한 번 사용합니다. 비용 행렬은 행이 직원, 열이 작업 순서로 [[16,13,43,20,12],[11,10,22,23,40],[20,38,42,25,43],[44,17,9,22,10],[42,14,17,21,44]] 입니다. 가능한 배정 중 최소 총비용만 정수로 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "71"
+      }
+    ]
+  },
+  "result": {
+    "id": "1ab7e49a-cf77-4011-857f-c17ce3571f1e",
+    "createdAt": "2026-10-04T08:03:25.193784700Z",
+    "mode": "CODEX",
+    "model": "gpt-5.6-luna",
+    "policyVersion": "batch-high-v1",
+    "status": "COMPLETED",
+    "batchSize": 4,
+    "plannedCalls": 1,
+    "items": [
+      {
+        "id": "b09",
+        "output": "21",
+        "verdict": "PASS",
+        "callId": "79c0a9db-4866-4d06-bd15-b7536b43ebbe"
+      },
+      {
+        "id": "b10",
+        "output": "omega-shipment-7300-package",
+        "verdict": "PASS",
+        "callId": "79c0a9db-4866-4d06-bd15-b7536b43ebbe"
+      },
+      {
+        "id": "b11",
+        "output": "2614",
+        "verdict": "PASS",
+        "callId": "79c0a9db-4866-4d06-bd15-b7536b43ebbe"
+      },
+      {
+        "id": "b12",
+        "output": "71",
+        "verdict": "PASS",
+        "callId": "79c0a9db-4866-4d06-bd15-b7536b43ebbe"
+      }
+    ],
+    "calls": [
+      {
+        "taskIds": [
+          "b09",
+          "b10",
+          "b11",
+          "b12"
+        ],
+        "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b09\",\"task\":\"제약 충족 문제: 작업 0부터 6까지를 각각 한 번, 한 번에 하나씩 수행합니다. 선행 관계 (먼저,나중)는 [[6,1],[6,4],[2,4],[2,5],[1,3],[4,3],[5,0],[3,0]] 입니다. 모든 선행 관계를 만족하는 전체 실행 순서의 경우의 수를 정수로 출력하세요.\"},{\"id\":\"b10\",\"task\":\"문자열 'OMEGA__Shipment---7300..Package'에서 영문은 소문자로 변환하고, 연속된 영숫자 아닌 문자들을 각각 하이픈 하나로 바꾸세요. 결과만 출력하세요.\"},{\"id\":\"b11\",\"task\":\"조건별 계산: 가격 목록은 315,190,485,224,159,594,617,532 입니다. 1부터 센 홀수 위치의 상품은 20% 할인, 짝수 위치는 12% 할인합니다. 상품별 할인 후 가격에서 소수점 이하는 버린 뒤 합산합니다. 최종 합계만 정수로 출력하세요.\"},{\"id\":\"b12\",\"task\":\"최적화 문제: 직원 5명에게 작업 5개를 하나씩 배정합니다. 직원과 작업은 각각 정확히 한 번 사용합니다. 비용 행렬은 행이 직원, 열이 작업 순서로 [[16,13,43,20,12],[11,10,22,23,40],[20,38,42,25,43],[44,17,9,22,10],[42,14,17,21,44]] 입니다. 가능한 배정 중 최소 총비용만 정수로 출력하세요.\"}]",
+        "generation": {
+          "output": "{\"answers\":[{\"id\":\"b09\",\"answer\":\"21\"},{\"id\":\"b10\",\"answer\":\"omega-shipment-7300-package\"},{\"id\":\"b11\",\"answer\":\"2614\"},{\"id\":\"b12\",\"answer\":\"71\"}]}",
+          "usage": {
+            "inputTokens": 4371,
+            "outputTokens": 2392,
+            "reasoningTokens": 2338,
+            "cachedInputTokens": 0
+          },
+          "latencyMs": 18921,
+          "responseId": "79c0a9db-4866-4d06-bd15-b7536b43ebbe",
+          "providerStatus": "completed"
+        },
+        "parseError": null
+      }
+    ],
+    "usage": {
+      "inputTokens": 4371,
+      "outputTokens": 2392,
+      "reasoningTokens": 2338,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 6763,
+    "latencyMs": 18921,
+    "unknownUsage": false,
+    "error": null
+  }
+}

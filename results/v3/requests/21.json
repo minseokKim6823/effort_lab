@@ -1,0 +1,71 @@
+{
+  "index": 21,
+  "group": 4,
+  "arm": "SINGLE_HIGH",
+  "caseIds": [
+    "b18"
+  ],
+  "batchSize": 1,
+  "request": {
+    "mode": "CODEX",
+    "batchSize": 1,
+    "tokenBudget": 111276,
+    "items": [
+      {
+        "id": "b18",
+        "task": "0/1 배낭 최적화 문제: 각 물건은 최대 한 번만 선택할 수 있습니다. (무게,가치) 목록은 [[6,40],[4,14],[6,27],[12,17],[6,28],[8,11],[14,36],[12,37],[14,18],[8,45]]이고 용량은 34입니다. 총무게가 용량 이하인 선택의 최대 총가치를 정수만 출력하세요.",
+        "check": "EXACT",
+        "expectedAnswer": "154"
+      }
+    ]
+  },
+  "result": {
+    "id": "1d57a3dd-efd4-4ab0-a027-7a23bb197041",
+    "createdAt": "2026-10-04T08:04:51.127059900Z",
+    "mode": "CODEX",
+    "model": "gpt-5.6-luna",
+    "policyVersion": "batch-high-v1",
+    "status": "COMPLETED",
+    "batchSize": 1,
+    "plannedCalls": 1,
+    "items": [
+      {
+        "id": "b18",
+        "output": "154",
+        "verdict": "PASS",
+        "callId": "fd44f61b-3689-4ef3-8ce5-b0da8dcd8ace"
+      }
+    ],
+    "calls": [
+      {
+        "taskIds": [
+          "b18"
+        ],
+        "prompt": "Solve each independent task below using only its own text. Keep tasks separate. Each task's output instruction applies to its answer string, not the outer JSON. Return exactly one JSON object with an answers array, one entry per ID, no extra IDs or markdown. Schema: {\"answers\":[{\"id\":\"task_id\",\"answer\":\"answer text\"}]}. Do not use tools. Tasks:\n[{\"id\":\"b18\",\"task\":\"0/1 배낭 최적화 문제: 각 물건은 최대 한 번만 선택할 수 있습니다. (무게,가치) 목록은 [[6,40],[4,14],[6,27],[12,17],[6,28],[8,11],[14,36],[12,37],[14,18],[8,45]]이고 용량은 34입니다. 총무게가 용량 이하인 선택의 최대 총가치를 정수만 출력하세요.\"}]",
+        "generation": {
+          "output": "{\"answers\":[{\"id\":\"b18\",\"answer\":\"154\"}]}",
+          "usage": {
+            "inputTokens": 3415,
+            "outputTokens": 661,
+            "reasoningTokens": 641,
+            "cachedInputTokens": 0
+          },
+          "latencyMs": 20338,
+          "responseId": "fd44f61b-3689-4ef3-8ce5-b0da8dcd8ace",
+          "providerStatus": "completed"
+        },
+        "parseError": null
+      }
+    ],
+    "usage": {
+      "inputTokens": 3415,
+      "outputTokens": 661,
+      "reasoningTokens": 641,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 4076,
+    "latencyMs": 20338,
+    "unknownUsage": false,
+    "error": null
+  }
+}
