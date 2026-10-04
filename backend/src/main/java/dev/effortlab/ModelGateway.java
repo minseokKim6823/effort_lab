@@ -54,40 +54,54 @@ public class ModelGateway {
                 "-c","approval_policy=never","-c","web_search=disabled",
                 "--disable","shell_tool","--disable","apps","--disable","multi_agent","-"));
             if(compact) args.addAll(args.size()-1,List.of("-c","model_instructions_file="+json.writeValueAsString(instructions.toString()),"-c","project_doc_max_bytes=0"));
-            process=new ProcessBuilder(args).redirectError(ProcessBuilder.Redirect.DISCARD)
-                .redirectOutput(trace.toFile()).start();
+            process=startProcess(args,trace);
             try (var stdin=process.getOutputStream()) {
                 stdin.write((task+"\n\n문제의 답만 출력하세요. 도구를 사용하지 마세요.").getBytes(StandardCharsets.UTF_8));
             }
             if (!process.waitFor(timeout,TimeUnit.SECONDS)) {
-                process.descendants().forEach(ProcessHandle::destroyForcibly);
-                process.destroyForcibly();
                 throw new ModelFailure("Codex 응답 시간 초과. 마지막 호출의 사용량은 확인할 수 없습니다.",true);
             }
             return parse(Files.readString(trace,StandardCharsets.UTF_8),
                 Duration.ofNanos(System.nanoTime()-start).toMillis(),id,process.exitValue());
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            if(process!=null) { process.descendants().forEach(ProcessHandle::destroyForcibly); process.destroyForcibly(); }
             throw new ModelFailure("실행이 중단되어 마지막 호출의 사용량을 확인할 수 없습니다.",true);
         } catch (IOException e) {
             System.getLogger(ModelGateway.class.getName()).log(System.Logger.Level.WARNING,"CLI I/O failure",e);
             throw new ModelFailure("Codex 실행 또는 측정 기록 저장에 실패했습니다. CLI 경로와 로그인 상태를 확인하세요.",process!=null);
+        } finally {
+            // Also stop the child if writing stdin or reading the trace fails.
+            if(process!=null && process.isAlive()) {
+                process.descendants().forEach(ProcessHandle::destroyForcibly);
+                process.destroyForcibly();
+            }
         }
+    }
+    Process startProcess(List<String> args,Path trace) throws IOException {
+        return new ProcessBuilder(args).redirectError(ProcessBuilder.Redirect.DISCARD)
+            .redirectOutput(trace.toFile()).start();
     }
     public Generation parse(String jsonl,long elapsed,String id,int exitCode) {
         String output=""; Usage usage=Usage.zero(); boolean seenUsage=false,failed=exitCode!=0,toolUsed=false;
         for(String line:jsonl.lines().toList()) {
             if(!line.stripLeading().startsWith("{")) continue;
             JsonNode event;
-            try { event=json.readTree(line); } catch(Exception e) { continue; }
+            try { event=json.readTree(line); }
+            catch(Exception e) { throw new ModelFailure("Codex 측정 기록이 손상되어 사용량을 확인할 수 없습니다.",true); }
             String type=event.path("type").asText("");
             if(type.equals("turn.completed")) {
                 JsonNode u=event.path("usage");
-                if(!u.has("input_tokens") || !u.has("output_tokens"))
-                    throw new ModelFailure("Codex가 사용량 필드를 반환하지 않았습니다.",true);
-                usage=usage.plus(new Usage(u.path("input_tokens").asLong(),u.path("output_tokens").asLong(),
-                    u.path("reasoning_output_tokens").asLong(),u.path("cached_input_tokens").asLong()));
+                long input=tokenCount(u,"input_tokens",true),outputTokens=tokenCount(u,"output_tokens",true);
+                long reasoning=tokenCount(u,"reasoning_output_tokens",false),cached=tokenCount(u,"cached_input_tokens",false);
+                if(reasoning>outputTokens || cached>input)
+                    throw new ModelFailure("Codex 사용량의 부분 합이 총량을 초과합니다.",true);
+                try {
+                    usage=new Usage(Math.addExact(usage.inputTokens(),input),Math.addExact(usage.outputTokens(),outputTokens),
+                        Math.addExact(usage.reasoningTokens(),reasoning),Math.addExact(usage.cachedInputTokens(),cached));
+                    Math.addExact(usage.inputTokens(),usage.outputTokens());
+                } catch(ArithmeticException e) {
+                    throw new ModelFailure("Codex 사용량이 지원 범위를 초과합니다.",true);
+                }
                 seenUsage=true;
             }
             if(type.equals("turn.failed") || type.equals("error")) failed=true;
@@ -100,6 +114,13 @@ public class ModelGateway {
         }
         if(!seenUsage) throw new ModelFailure("Codex 사용량을 수신하지 못했습니다. codex login status와 로컬 CLI 실행을 확인하세요.",true);
         return new Generation(output,usage,elapsed,id,failed ? "failed" : toolUsed ? "tool_used" : "completed");
+    }
+    private long tokenCount(JsonNode usage,String name,boolean required) {
+        if(!usage.has(name) && !required) return 0;
+        JsonNode value=usage.path(name);
+        if(!value.isIntegralNumber() || !value.canConvertToLong() || value.asLong()<0)
+            throw new ModelFailure("Codex 사용량 필드가 없거나 올바른 정수가 아닙니다: "+name,true);
+        return value.asLong();
     }
     private Generation demo(String task,Effort effort) {
         Case c=cases.forPrompt(task);

@@ -12,6 +12,8 @@ public class OriginGuard extends OncePerRequestFilter {
     private String sessionToken;
     @Override protected void doFilterInternal(HttpServletRequest req,HttpServletResponse res,FilterChain chain)
         throws ServletException,IOException {
+        // Origin can be absent on same-origin requests after DNS rebinding.
+        if(!isLoopbackHost(req.getServerName())) {res.sendError(403);return;}
         if(sessionToken!=null && !sessionToken.isBlank() && !sessionToken.equals(req.getHeader("X-Effort-Lab-Token"))) {res.sendError(403);return;}
         res.setHeader("Content-Security-Policy","default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'");
         res.setHeader("X-Content-Type-Options","nosniff");
@@ -21,12 +23,15 @@ public class OriginGuard extends OncePerRequestFilter {
             try {
                 URI uri=URI.create(origin);
                 String host=uri.getHost();
-                allowed=("127.0.0.1".equals(host)||"localhost".equals(host))
+                allowed=isLoopbackHost(host)
                     && (SetHolder.PORTS.contains(uri.getPort()) || uri.getPort()==req.getServerPort()) && "http".equals(uri.getScheme());
             } catch(Exception ignored) {}
             if(!allowed) {res.sendError(403);return;}
         }
         chain.doFilter(req,res);
+    }
+    private static boolean isLoopbackHost(String host) {
+        return "127.0.0.1".equals(host) || "localhost".equalsIgnoreCase(host);
     }
     private static class SetHolder {static final java.util.Set<Integer> PORTS=java.util.Set.of(5173,4173,8087);}
 }

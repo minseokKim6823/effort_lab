@@ -23,12 +23,13 @@ public class BenchmarkService {
     @PreDestroy void close() {worker.shutdownNow();}
     public boolean isBusy() {return busy.get();}
     public Execution single(ExecuteRequest request) {
-        checkProvider(request.mode());
+        return exclusively(request.mode(),()->evaluator.execute(request.task(),request.risk(),request.check(),request.expectedAnswer(),
+            request.mode(),Strategy.ADAPTIVE,()->true,n->{}));
+    }
+    public <T> T exclusively(Mode mode,java.util.function.Supplier<T> work) {
+        checkProvider(mode);
         if(!busy.compareAndSet(false,true)) throw new IllegalStateException("다른 작업이 실행 중입니다.");
-        try {
-            return evaluator.execute(request.task(),request.risk(),request.check(),request.expectedAnswer(),
-                request.mode(),Strategy.ADAPTIVE,()->true,n->{});
-        } finally {busy.set(false);}
+        try {return work.get();} finally {busy.set(false);}
     }
     public Report start(BenchmarkRequest request) {
         checkProvider(request.mode());
@@ -81,7 +82,8 @@ public class BenchmarkService {
                 }
             }
             if(job.status.equals("RUNNING")) job.status=job.cancelled ? "CANCELLED"
-                : job.trials.size()==job.planned ? "COMPLETED" : "BUDGET_EXCEEDED";
+                : job.trials.size()==job.planned && job.trials.stream().noneMatch(t->t.execution().verdict().equals("STOPPED"))
+                    ? "COMPLETED" : "BUDGET_EXCEEDED";
         } catch(Exception e) {job.status="ERROR";job.error="실험 실행에 실패했습니다. 서버 로그 및 Codex 로그인을 확인하세요.";}
         finally {
             try {store.save(snapshot(job));} finally {busy.set(false);}
