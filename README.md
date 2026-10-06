@@ -6,7 +6,7 @@
 
 Spring Boot · Java 21 · React · TypeScript · Electron · H2
 
-[기획서](docs/기획서.md) · [개선 설계](docs/개선설계.md) · [실측 결과](docs/개선실측결과.md) · [Releases](https://github.com/minseokKim6823/effort_lab/releases)
+[기획서](docs/기획서.md) · [묶음 실측](docs/묶음실측결과.md) · [추론 예산 연구](docs/추론예산연구.md) · [Releases](https://github.com/minseokKim6823/effort_lab/releases)
 
 ## 다운로드와 시작
 
@@ -14,8 +14,8 @@ Spring Boot · Java 21 · React · TypeScript · Electron · H2
 
 | 파일 | 용도 |
 |---|---|
-| `Effort-Lab-Setup-0.1.0-x64.exe` | 설치형. 설치 후 시작 메뉴에서 Effort Lab 실행 |
-| `Effort-Lab-0.1.0-portable-x64.exe` | 설치 없이 실행하는 포터블 |
+| `Effort-Lab-Setup-0.2.0-x64.exe` | 설치형. 설치 후 시작 메뉴에서 Effort Lab 실행 |
+| `Effort-Lab-0.2.0-portable-x64.exe` | 설치 없이 실행하는 포터블 |
 | `SHA256SUMS.txt` | 다운로드 파일의 SHA-256 확인 |
 
 **데스크톱 패키지에는 Java 21, Node 런타임, Codex CLI가 포함됩니다. 별도 설치는 필요하지 않습니다.**
@@ -30,12 +30,16 @@ Spring Boot · Java 21 · React · TypeScript · Electron · H2
 배포 파일은 코드 서명되지 않아 Windows가 알 수 없는 게시자로 표시할 수 있습니다. 아래 명령으로 받은 파일을 확인하고, 같은 릴리스의 `SHA256SUMS.txt`와 비교하세요.
 
 ```powershell
-Get-FileHash .\Effort-Lab-Setup-0.1.0-x64.exe -Algorithm SHA256
+Get-FileHash .\Effort-Lab-Setup-0.2.0-x64.exe -Algorithm SHA256
 ```
 
 ## 실제로 얼마나 줄었나
 
-**문맥 축소의 효과는 관측했지만, 자동 effort 선택의 개선은 아직 입증하지 못했습니다.**
+**독립 작업 묶음 실행의 효과는 관측했지만, 자동 effort 선택의 개선은 아직 입증하지 못했습니다.**
+
+새로운 24개 합성 문제에서 같은 `high` effort로 개별 호출 24회와 네 문제씩 묶은 호출 6회를 비교했습니다. 두 방식 모두 24/24 정답이었고 총토큰은 **95,440 → 32,665(65.77% 감소)**였습니다. 반복 문맥을 공유해 입력 토큰이 87,784 → 23,975로 줄었습니다. 문제당 한 번씩 실행했으며, 12개 기존 유형의 새 인스턴스이므로 실제 업무나 다른 작업 유형의 품질 유지로 일반화할 수 없습니다. [조건·원본·감사 결과](docs/묶음실측결과.md)를 공개합니다.
+
+같은 24문제의 개별 호출에서 `low`는 **98,979토큰·19/24 정답**으로, `high`의 **95,440토큰·24/24 정답**보다 토큰을 **3.71% 더 사용**하고 5문제를 더 틀렸습니다. 한 번씩 다른 시점에 실행한 탐색적 비교이며, 낮은 effort가 항상 저렴하다는 가정도 성립하지 않았습니다. [후속 계획·원본·독립 감사](docs/개별-effort-후속결과.md)를 공개합니다. 기존 자동 정책의 성과는 아래와 같습니다.
 
 확장 12문제의 **완료된 첫 번째 반복** 결과입니다. 모델은 `gpt-5.6-luna`이며, 정답은 코드로 계산하고 실험 전에 고정했습니다.
 
@@ -138,6 +142,9 @@ npm run test:e2e --prefix frontend
 - [기획서](docs/기획서.md): 문제, 목적, 사용 흐름
 - [개선 설계](docs/개선설계.md): 네 비교군과 데스크톱 구조
 - [개선 실측 결과](docs/개선실측결과.md): 조건, 중단, 원본 검증, 실패 사례
+- [묶음 실측 결과](docs/묶음실측결과.md): 24개 문제, 30개 호출, 65.77% 총토큰 감소와 적용 범위
+- [개별 effort 후속 결과](docs/개별-effort-후속결과.md): 같은 24개 문제의 high/low 품질과 전체 토큰
+- [추론 예산 연구](docs/추론예산연구.md): 라우터·재시도 비용, 관련 연구, 향후 검증 기준
 - [측정 방법](docs/측정방법.md): 집계와 검증 기준
 - [개발 검증 결과](docs/검증결과.md): 초기 빌드·테스트 기록
 - [데스크톱 실행 검증](results/desktop-smoke.json): 번들 실행과 종료 확인

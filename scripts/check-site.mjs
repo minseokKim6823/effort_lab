@@ -10,6 +10,11 @@ try{
  await page.goto('http://127.0.0.1:'+server.address().port+'/effort_lab/');
  await page.locator('.bar-row').first().waitFor();
  assert.equal(await page.locator('.bar-row').count(),4);
+ assert.match(await page.locator('.batch-proof').textContent(),/65\.77/);
+ assert.match(await page.locator('.batch-proof').textContent(),/24\/24/);
+ assert.match(await page.locator('.followup-note').textContent(),/98,979.*19\/24/);
+ assert.match(await page.locator('.hero-actions .button').getAttribute('href'),/Effort-Lab-Setup-0\.2\.0-x64\.exe$/);
+ assert.match(await page.locator('.download-actions .secondary').getAttribute('href'),/Effort-Lab-0\.2\.0-portable-x64\.exe$/);
  assert.match(await page.locator('#overall').textContent(),/46\.27% 감소/);
  assert.match(await page.locator('#conclusion').textContent(),/한도로 중단/);
  const totals=await page.locator('.bar-value').allTextContents();
@@ -24,5 +29,5 @@ try{
  await page.screenshot({path:'results/screenshots/site-mobile.png',fullPage:true});
  for(const a of await page.locator('a[href^="#"]').all()){const id=await a.getAttribute('href');assert.equal(await page.locator(id).count(),1);}
  assert.deepEqual(errors,[]);
- console.log('Site PASS: observed metrics, honest interruption notice, chart toggle, desktop/mobile layout, local navigation.');
+ console.log('Site PASS: batch evidence, release links, observed effort metrics, interruption notice, chart toggle, desktop/mobile layout, local navigation.');
 }finally{await browser.close();await new Promise(r=>server.close(r))}
