@@ -1,6 +1,7 @@
 {
   "status": "PASS",
-  "testedAt": "2026-09-24T06:48:12.574Z",
+  "version": "0.2.0",
+  "testedAt": "2026-10-06T11:42:45.642Z",
   "checks": [
     "packaged React assets loaded",
     "bundled Java backend started",
@@ -8,6 +9,8 @@
     "foreign local requests rejected",
     "effort routing LOW",
     "DEMO answer PASS",
+    "four DEMO batch items verified in one measured call",
+    "packaged version matches release",
     "four-arm challenge benchmark completes",
     "challenge reference visible",
     "backend shuts down with app"

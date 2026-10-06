@@ -6,7 +6,7 @@ const smoke=process.env.EFFORTLAB_SMOKE==='1';
 if(process.env.EFFORTLAB_USER_DATA)app.setPath('userData',path.resolve(process.env.EFFORTLAB_USER_DATA));
 const resources=app.isPackaged?process.resourcesPath:__dirname;
 const java=path.join(resources,'runtime','java','bin','java.exe');
-const jar=app.isPackaged?path.join(resources,'backend','effort-lab.jar'):path.join(__dirname,'..','backend','build','libs','effort-lab-0.1.0.jar');
+const jar=app.isPackaged?path.join(resources,'backend','effort-lab.jar'):path.join(__dirname,'..','backend','build','libs','effort-lab.jar');
 const codex=app.isPackaged?path.join(resources,'codex','node_modules','@openai','codex','bin','codex.js'):path.join(__dirname,'node_modules','@openai','codex','bin','codex.js');
 const token=randomBytes(32).toString('hex');
 let backend,log,origin,quitting=false,stopped=false;

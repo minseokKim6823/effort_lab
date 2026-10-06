@@ -12,9 +12,9 @@ function readItems(source:string):BatchItemInput[]{
  if(!Array.isArray(value)||value.length<1||value.length>24)throw new Error('한 번에 1~24개의 작업을 입력해주세요.');
  const ids=new Set<string>();
  for(const item of value){
-  if(!item||typeof item!=='object'||typeof item.id!=='string'||!item.id.trim()||ids.has(item.id))throw new Error('각 작업에는 중복되지 않는 id가 필요합니다.');
+  if(!item||typeof item!=='object'||typeof item.id!=='string'||!(/^[A-Za-z0-9_-]{1,64}$/).test(item.id)||ids.has(item.id))throw new Error('각 id는 중복 없이 영문·숫자·하이픈·밑줄 1~64자로 입력해주세요.');
   ids.add(item.id);
-  if(typeof item.task!=='string'||!item.task.trim()||item.task.length>8000)throw new Error(item.id+': 작업은 1~8,000자로 입력해주세요.');
+  if(typeof item.task!=='string'||!item.task.trim()||item.task.length>4000)throw new Error(item.id+': 작업은 1~4,000자로 입력해주세요.');
   if(!['NONE','EXACT','CONTAINS','JSON'].includes(item.check))throw new Error(item.id+': check는 NONE, EXACT, CONTAINS, JSON 중 하나여야 합니다.');
   if((item.check==='EXACT'||item.check==='CONTAINS')&&(typeof item.expectedAnswer!=='string'||!item.expectedAnswer.trim()))throw new Error(item.id+': 선택한 검증 방식에는 expectedAnswer가 필요합니다.');
   if(item.expectedAnswer!==undefined&&(typeof item.expectedAnswer!=='string'||item.expectedAnswer.length>4000))throw new Error(item.id+': expectedAnswer는 최대 4,000자 문자열이어야 합니다.');
@@ -48,7 +48,7 @@ export default function BatchPanel({mode,disabled,onBusyChange}:{mode:Mode;disab
    <div className="sample-list"><button disabled={locked||!examples.length} onClick={()=>{setSource(JSON.stringify(examples,null,2));setReport(null);setError('')}}><Beaker size={13}/>기초 예제 4개 불러오기</button></div>
    <label className="batch-label" htmlFor="batch-items">작업 목록 · JSON 배열</label>
    <textarea id="batch-items" className="batch-source" spellCheck={false} value={source} disabled={locked} onChange={e=>setSource(e.target.value)} aria-describedby="batch-input-help"/>
-   <p id="batch-input-help" className="helper">최대 24개. 각 작업에 id, task, check를 입력하세요. EXACT·CONTAINS의 expectedAnswer는 검증에만 사용합니다. 이전 답변이나 외부 파일에 의존하는 작업은 분리해주세요.</p>
+   <p id="batch-input-help" className="helper">최대 24개, 작업당 4,000자. 각 작업에 id, task, check를 입력하세요. EXACT·CONTAINS의 expectedAnswer는 검증에만 사용합니다. 이전 답변이나 외부 파일에 의존하는 작업은 분리해주세요.</p>
    <div className="batch-controls">
     <label>호출당 최대 작업 수<select value={batchSize} onChange={e=>setBatchSize(+e.target.value)} disabled={locked}><option value={1}>1개 · 개별 실행 기준</option><option value={2}>2개씩 묶음</option><option value={3}>3개씩 묶음</option><option value={4}>4개씩 묶음</option></select></label>
     <label>총토큰 중단 기준<input type="number" value={budget} min={1000} max={2000000} step={1000} disabled={locked} onChange={e=>setBudget(+e.target.value)}/></label>

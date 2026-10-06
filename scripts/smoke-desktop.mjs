@@ -3,6 +3,7 @@ import {execFileSync} from 'node:child_process';
 import path from 'node:path';import fs from 'node:fs/promises';import assert from 'node:assert/strict';import os from 'node:os';
 const require=createRequire(path.resolve('frontend/package.json'));
 const {_electron:electron}=require('playwright');const {expect}=require('@playwright/test');
+const packageVersion=JSON.parse(await fs.readFile('desktop/package.json','utf8')).version;
 const userData=await fs.mkdtemp(path.join(os.tmpdir(),'effort-lab-smoke-'));
 const env={...process.env,EFFORTLAB_SMOKE:'1',EFFORTLAB_USER_DATA:userData};delete env.ELECTRON_RUN_AS_NODE;
 const app=await electron.launch({executablePath:path.resolve('release/win-unpacked/Effort Lab.exe'),env,timeout:90000});
@@ -17,6 +18,17 @@ try{
  await page.getByLabel('실행 모드').selectOption('DEMO');
  await page.getByRole('button',{name:'선택한 방식으로 실행'}).click();
  await expect(page.locator('.result-strip .badge')).toHaveText('pass');
+ await page.getByRole('button',{name:'묶음 실행',exact:true}).click();
+ await expect(page.getByRole('button',{name:'기초 예제 4개 불러오기'})).toBeEnabled();
+ const batchResponse=page.waitForResponse(r=>r.url().endsWith('/api/batch')&&r.request().method()==='POST');
+ await page.getByRole('button',{name:'묶음 실행 시작'}).click();
+ const batch=await (await batchResponse).json();
+ assert.equal(batch.mode,'DEMO');assert.equal(batch.status,'COMPLETED');assert.equal(batch.unknownUsage,false);
+ assert.equal(batch.plannedCalls,1);assert.equal(batch.calls.length,1);assert.equal(batch.calls[0].taskIds.length,4);
+ assert.equal(batch.items.length,4);assert.ok(batch.items.every(item=>item.verdict==='PASS'));
+ await expect(page.locator('.batch-results .result-strip')).toContainText('사용량 확인된 호출 1회');
+ await expect(page.locator('.batch-results .result-strip')).toContainText('정답 4 / 4개');
+ await expect(page.locator('.batch-output')).toHaveCount(4);
  await page.getByRole('button',{name:'비교 실험',exact:true}).click();
  await page.getByLabel('문제 세트').selectOption('challenge');
  await page.getByLabel('예제 작업 수').selectOption('3');
@@ -27,10 +39,11 @@ try{
  await page.locator('tbody tr').first().click();
  await expect(page.locator('.detail-panel')).toContainText('invoice-az29');
  await fs.mkdir('results/screenshots',{recursive:true});
- const bundle=await app.evaluate(({app})=>({exe:app.getPath('exe'),appPath:app.getAppPath()}));
+ const bundle=await app.evaluate(({app})=>({exe:app.getPath('exe'),appPath:app.getAppPath(),version:app.getVersion()}));
+ assert.equal(bundle.version,packageVersion,'Packaged version must match the release package');
  const version=execFileSync(bundle.exe,[path.join(path.dirname(bundle.appPath),'codex/node_modules/@openai/codex/bin/codex.js'),'--version'],{env:{...env,ELECTRON_RUN_AS_NODE:'1'},windowsHide:true,encoding:'utf8'});
  assert.ok(version.includes('0.153.4'),'Bundled CLI must run on bundled Node');
 } finally {await app.close();}
 if(origin){let closed=false;for(let n=0;n<30;n++){try{await fetch(origin+'/api/status')}catch{closed=true;break}await new Promise(r=>setTimeout(r,200));}assert.ok(closed,'Backend must stop when Electron exits');}
-const result={status:'PASS',testedAt:new Date().toISOString(),checks:['packaged React assets loaded','bundled Java backend started','bundled Codex CLI runs','foreign local requests rejected','effort routing LOW','DEMO answer PASS','four-arm challenge benchmark completes','challenge reference visible','backend shuts down with app'],subscriptionCalls:0};
+const result={status:'PASS',version:packageVersion,testedAt:new Date().toISOString(),checks:['packaged React assets loaded','bundled Java backend started','bundled Codex CLI runs','foreign local requests rejected','effort routing LOW','DEMO answer PASS','four DEMO batch items verified in one measured call','packaged version matches release','four-arm challenge benchmark completes','challenge reference visible','backend shuts down with app'],subscriptionCalls:0};
 await fs.writeFile('results/desktop-smoke.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));

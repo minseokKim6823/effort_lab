@@ -11,6 +11,13 @@ jobs:
     timeout-minutes: 35
     steps:
       - uses: actions/checkout@v7.0.1
+      - name: Validate release tag
+        shell: pwsh
+        run: |
+          $version = (Get-Content -Raw ./desktop/package.json | ConvertFrom-Json).version
+          if ($env:GITHUB_REF -like 'refs/tags/*' -and $env:GITHUB_REF_NAME -ne "v$version") {
+            throw "Tag $env:GITHUB_REF_NAME does not match package version v$version"
+          }
       - uses: actions/setup-node@v7.0.0
         with:
           node-version: '24'
@@ -31,6 +38,12 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          $assets = @(Get-ChildItem ./release/*.exe | ForEach-Object { $_.FullName }) + @((Resolve-Path ./release/SHA256SUMS.txt).Path)
+          $version = (Get-Content -Raw ./desktop/package.json | ConvertFrom-Json).version
+          $artifactNames = @("Effort-Lab-Setup-$version-x64.exe", "Effort-Lab-$version-portable-x64.exe", "SHA256SUMS.txt")
+          $assets = @($artifactNames | ForEach-Object {
+            $asset = Join-Path ./release $_
+            if (-not (Test-Path -LiteralPath $asset -PathType Leaf)) { throw "Missing release asset: $_" }
+            (Resolve-Path -LiteralPath $asset).Path
+          })
           gh release create "$env:GITHUB_REF_NAME" @assets --title "Effort Lab $env:GITHUB_REF_NAME" --notes-file docs/RELEASE_NOTES.md --verify-tag
           if ($LASTEXITCODE -ne 0) { throw 'Release upload failed' }

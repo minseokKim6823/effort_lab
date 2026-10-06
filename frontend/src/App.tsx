@@ -44,7 +44,7 @@ export default function App(){
    <div className="connection"><span className={'status-dot '+(status?'live':'')}/><div>{status?'로컬 서버 연결됨':'서버 연결 확인 중'}<small>{status?.model||'Spring Boot · React'}</small></div></div>
   </aside>
   <main>
-   <header className="topbar"><div>Workspace <ChevronRight size={13}/> <strong>{tab==='workspace'?'작업 스튜디오':tab==='benchmark'?'비교 실험':tab==='batch'?'묶음 실행':'설계와 측정 기준'}</strong></div><span className="version">MVP / v0.1</span></header>
+   <header className="topbar"><div>Workspace <ChevronRight size={13}/> <strong>{tab==='workspace'?'작업 스튜디오':tab==='benchmark'?'비교 실험':tab==='batch'?'묶음 실행':'설계와 측정 기준'}</strong></div><span className="version">v0.2</span></header>
    {error&&<div className="error-banner" role="alert">{error}<button aria-label="오류 닫기" onClick={()=>setError('')}>×</button></div>}
    <div className="content">
     <section className="page-heading"><div><span className="eyebrow">{tab==='workspace'?'THINK JUST ENOUGH':tab==='benchmark'?'MEASURE, THEN OPTIMIZE':tab==='batch'?'SHARE THE CONTEXT':'BUILT ON EVIDENCE'}</span><h1>{tab==='workspace'?'필요한 만큼만 생각하도록.':tab==='benchmark'?'절약은 숫자로 확인하세요.':tab==='batch'?'짧은 작업은 함께 해결하세요.':'무엇을 줄이고, 무엇을 지킬까.'}</h1><p>{tab==='workspace'?'작업에 맞는 effort를 고르고, 답의 품질과 실제 사용량을 확인하세요.':tab==='benchmark'?'같은 모델, 같은 문제. 네 가지 실행 전략을 공정하게 비교합니다.':tab==='batch'?'반복되는 문맥은 한 번만. 작업별 답과 호출별 사용량을 확인하세요.':'목표는 적은 토큰 자체가 아니라, 같은 품질을 더 적은 총토큰으로 얻는 것입니다.'}</p></div>{modeControl()}</section>

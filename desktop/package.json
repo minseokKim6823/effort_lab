@@ -1,6 +1,6 @@
 {
     "name":  "effort-lab-desktop",
-    "version":  "0.1.0",
+    "version":  "0.2.0",
     "private":  true,
     "description":  "Effort Lab — measured reasoning effort and context optimization",
     "main":  "main.cjs",
@@ -30,7 +30,7 @@
                             ],
                   "extraResources":  [
                                          {
-                                             "from":  "../backend/build/libs/effort-lab-0.1.0.jar",
+                                             "from":  "../backend/build/libs/effort-lab.jar",
                                              "to":  "backend/effort-lab.jar"
                                          },
                                          {
