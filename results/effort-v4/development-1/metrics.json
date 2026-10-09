@@ -1,0 +1,1036 @@
+{
+  "status": "AUDIT_PASS",
+  "experimentComplete": true,
+  "phase": "development",
+  "runName": "development-1",
+  "measuredAt": "2026-10-09T10:50:36.975Z",
+  "model": "gpt-5.6-luna",
+  "cliVersion": "codex-cli 0.153.4",
+  "baselinePolicy": "rules-1.1",
+  "candidatePolicy": "rules-1.2",
+  "manifestSha256": "f4aac3e74deaf062bcc92d6b735aa3d240daef9787f73eea0b996882784d6267",
+  "runSha256": "9da9b002343b692c750c28d1de17ffdc1bdd6e494c565094658d23ef547834e5",
+  "datasetSha256": "676bad60f8c8db8d08f842a5d362a5848fac155716fa23bf2f1f866a0784a336",
+  "plannedTrials": 24,
+  "knownTokens": 99037,
+  "tokenBudget": 140000,
+  "tokenBudgetExceeded": false,
+  "arms": {
+    "HIGH": {
+      "trials": 6,
+      "attempts": 6,
+      "retries": 0,
+      "retriedTrials": 0,
+      "firstPass": 4,
+      "finalPass": 4,
+      "inputTokens": 22505,
+      "outputTokens": 1945,
+      "reasoningTokens": 1874,
+      "cachedInputTokens": 1792,
+      "totalTokens": 24450,
+      "latencyMs": 64663,
+      "failedAttemptTokens": 8891,
+      "retryTokens": 0,
+      "initialEfforts": {
+        "LOW": 0,
+        "MEDIUM": 0,
+        "HIGH": 6
+      },
+      "rows": [
+        {
+          "caseId": "b01",
+          "title": "제품 코드 변환 · 1",
+          "category": "변환",
+          "firstPassed": false,
+          "finalPassed": false,
+          "initialEffort": "HIGH",
+          "retries": 0,
+          "inputTokens": 3600,
+          "outputTokens": 18,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 0,
+          "totalTokens": 3618,
+          "latencyMs": 10655,
+          "attempts": [
+            {
+              "effort": "HIGH",
+              "passed": false,
+              "inputTokens": 3600,
+              "outputTokens": 18,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 0,
+              "totalTokens": 3618,
+              "latencyMs": 10655,
+              "responseId": "c4fc27c7-b540-40c6-8194-3b5661789dc0",
+              "answer": "'SHIPMENT-6PU-22L5-REV-D'"
+            }
+          ]
+        },
+        {
+          "caseId": "b04",
+          "title": "필드 추출 · 1",
+          "category": "변환",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "HIGH",
+          "retries": 0,
+          "inputTokens": 3692,
+          "outputTokens": 24,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 0,
+          "totalTokens": 3716,
+          "latencyMs": 12766,
+          "attempts": [
+            {
+              "effort": "HIGH",
+              "passed": true,
+              "inputTokens": 3692,
+              "outputTokens": 24,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 0,
+              "totalTokens": 3716,
+              "latencyMs": 12766,
+              "responseId": "998622d2-78e1-4bf6-816a-2e4c31033266",
+              "answer": "team27-2@example.org,team27-4@example.org,team27-5@example.org"
+            }
+          ]
+        },
+        {
+          "caseId": "b02",
+          "title": "주문 조건 집계 · 1",
+          "category": "계산",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "HIGH",
+          "retries": 0,
+          "inputTokens": 3858,
+          "outputTokens": 124,
+          "reasoningTokens": 116,
+          "cachedInputTokens": 0,
+          "totalTokens": 3982,
+          "latencyMs": 8466,
+          "attempts": [
+            {
+              "effort": "HIGH",
+              "passed": true,
+              "inputTokens": 3858,
+              "outputTokens": 124,
+              "reasoningTokens": 116,
+              "cachedInputTokens": 0,
+              "totalTokens": 3982,
+              "latencyMs": 8466,
+              "responseId": "2e614c47-bcbe-4be5-af86-498c2a522a8a",
+              "answer": "23068"
+            }
+          ]
+        },
+        {
+          "caseId": "b05",
+          "title": "모듈러 점화식 · 1",
+          "category": "계산",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "HIGH",
+          "retries": 0,
+          "inputTokens": 3977,
+          "outputTokens": 385,
+          "reasoningTokens": 378,
+          "cachedInputTokens": 1792,
+          "totalTokens": 4362,
+          "latencyMs": 8410,
+          "attempts": [
+            {
+              "effort": "HIGH",
+              "passed": true,
+              "inputTokens": 3977,
+              "outputTokens": 385,
+              "reasoningTokens": 378,
+              "cachedInputTokens": 1792,
+              "totalTokens": 4362,
+              "latencyMs": 8410,
+              "responseId": "b6a30b0e-c54d-4f81-ba6e-84f72aa1f2f3",
+              "answer": "783"
+            }
+          ]
+        },
+        {
+          "caseId": "b08",
+          "title": "가중 그래프 경로 · 1",
+          "category": "계산",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "HIGH",
+          "retries": 0,
+          "inputTokens": 3360,
+          "outputTokens": 139,
+          "reasoningTokens": 132,
+          "cachedInputTokens": 0,
+          "totalTokens": 3499,
+          "latencyMs": 7687,
+          "attempts": [
+            {
+              "effort": "HIGH",
+              "passed": true,
+              "inputTokens": 3360,
+              "outputTokens": 139,
+              "reasoningTokens": 132,
+              "cachedInputTokens": 0,
+              "totalTokens": 3499,
+              "latencyMs": 7687,
+              "responseId": "ede68638-61eb-4722-a689-277233422bd0",
+              "answer": "23"
+            }
+          ]
+        },
+        {
+          "caseId": "b09",
+          "title": "선행 작업 일정 수 · 1",
+          "category": "조합 추론",
+          "firstPassed": false,
+          "finalPassed": false,
+          "initialEffort": "HIGH",
+          "retries": 0,
+          "inputTokens": 4018,
+          "outputTokens": 1255,
+          "reasoningTokens": 1248,
+          "cachedInputTokens": 0,
+          "totalTokens": 5273,
+          "latencyMs": 16679,
+          "attempts": [
+            {
+              "effort": "HIGH",
+              "passed": false,
+              "inputTokens": 4018,
+              "outputTokens": 1255,
+              "reasoningTokens": 1248,
+              "cachedInputTokens": 0,
+              "totalTokens": 5273,
+              "latencyMs": 16679,
+              "responseId": "9370bae3-58c9-4052-9bb2-9ad589f9d147",
+              "answer": "26"
+            }
+          ]
+        }
+      ],
+      "firstPassRate": 0.6666666666666666,
+      "finalPassRate": 0.6666666666666666,
+      "meanLatencyMs": 10777.166666666666,
+      "tokensPerFinalSuccess": 6112.5
+    },
+    "LOW": {
+      "trials": 6,
+      "attempts": 6,
+      "retries": 0,
+      "retriedTrials": 0,
+      "firstPass": 4,
+      "finalPass": 4,
+      "inputTokens": 23510,
+      "outputTokens": 1541,
+      "reasoningTokens": 1472,
+      "cachedInputTokens": 0,
+      "totalTokens": 25051,
+      "latencyMs": 64300,
+      "failedAttemptTokens": 9251,
+      "retryTokens": 0,
+      "initialEfforts": {
+        "LOW": 6,
+        "MEDIUM": 0,
+        "HIGH": 0
+      },
+      "rows": [
+        {
+          "caseId": "b01",
+          "title": "제품 코드 변환 · 1",
+          "category": "변환",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "LOW",
+          "retries": 0,
+          "inputTokens": 3621,
+          "outputTokens": 16,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 0,
+          "totalTokens": 3637,
+          "latencyMs": 13138,
+          "attempts": [
+            {
+              "effort": "LOW",
+              "passed": true,
+              "inputTokens": 3621,
+              "outputTokens": 16,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 0,
+              "totalTokens": 3637,
+              "latencyMs": 13138,
+              "responseId": "46395a5e-2dea-4392-871a-8184a96f7153",
+              "answer": "SHIPMENT-6PU-22L5-REV-D"
+            }
+          ]
+        },
+        {
+          "caseId": "b04",
+          "title": "필드 추출 · 1",
+          "category": "변환",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "LOW",
+          "retries": 0,
+          "inputTokens": 4046,
+          "outputTokens": 24,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 0,
+          "totalTokens": 4070,
+          "latencyMs": 12356,
+          "attempts": [
+            {
+              "effort": "LOW",
+              "passed": true,
+              "inputTokens": 4046,
+              "outputTokens": 24,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 0,
+              "totalTokens": 4070,
+              "latencyMs": 12356,
+              "responseId": "2b836d89-a50a-4589-a275-28cb4909ad1b",
+              "answer": "team27-2@example.org,team27-4@example.org,team27-5@example.org"
+            }
+          ]
+        },
+        {
+          "caseId": "b02",
+          "title": "주문 조건 집계 · 1",
+          "category": "계산",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "LOW",
+          "retries": 0,
+          "inputTokens": 4084,
+          "outputTokens": 122,
+          "reasoningTokens": 114,
+          "cachedInputTokens": 0,
+          "totalTokens": 4206,
+          "latencyMs": 7456,
+          "attempts": [
+            {
+              "effort": "LOW",
+              "passed": true,
+              "inputTokens": 4084,
+              "outputTokens": 122,
+              "reasoningTokens": 114,
+              "cachedInputTokens": 0,
+              "totalTokens": 4206,
+              "latencyMs": 7456,
+              "responseId": "fc15eff5-e4e0-4053-b0e5-87267f4319cc",
+              "answer": "23068"
+            }
+          ]
+        },
+        {
+          "caseId": "b05",
+          "title": "모듈러 점화식 · 1",
+          "category": "계산",
+          "firstPassed": false,
+          "finalPassed": false,
+          "initialEffort": "LOW",
+          "retries": 0,
+          "inputTokens": 3977,
+          "outputTokens": 456,
+          "reasoningTokens": 449,
+          "cachedInputTokens": 0,
+          "totalTokens": 4433,
+          "latencyMs": 8788,
+          "attempts": [
+            {
+              "effort": "LOW",
+              "passed": false,
+              "inputTokens": 3977,
+              "outputTokens": 456,
+              "reasoningTokens": 449,
+              "cachedInputTokens": 0,
+              "totalTokens": 4433,
+              "latencyMs": 8788,
+              "responseId": "21439634-4dd7-43a2-a444-65d990668822",
+              "answer": "240"
+            }
+          ]
+        },
+        {
+          "caseId": "b08",
+          "title": "가중 그래프 경로 · 1",
+          "category": "계산",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "LOW",
+          "retries": 0,
+          "inputTokens": 3764,
+          "outputTokens": 123,
+          "reasoningTokens": 116,
+          "cachedInputTokens": 0,
+          "totalTokens": 3887,
+          "latencyMs": 7387,
+          "attempts": [
+            {
+              "effort": "LOW",
+              "passed": true,
+              "inputTokens": 3764,
+              "outputTokens": 123,
+              "reasoningTokens": 116,
+              "cachedInputTokens": 0,
+              "totalTokens": 3887,
+              "latencyMs": 7387,
+              "responseId": "94ec9ebd-235f-4c7d-9f1c-2ec88200ab04",
+              "answer": "23"
+            }
+          ]
+        },
+        {
+          "caseId": "b09",
+          "title": "선행 작업 일정 수 · 1",
+          "category": "조합 추론",
+          "firstPassed": false,
+          "finalPassed": false,
+          "initialEffort": "LOW",
+          "retries": 0,
+          "inputTokens": 4018,
+          "outputTokens": 800,
+          "reasoningTokens": 793,
+          "cachedInputTokens": 0,
+          "totalTokens": 4818,
+          "latencyMs": 15175,
+          "attempts": [
+            {
+              "effort": "LOW",
+              "passed": false,
+              "inputTokens": 4018,
+              "outputTokens": 800,
+              "reasoningTokens": 793,
+              "cachedInputTokens": 0,
+              "totalTokens": 4818,
+              "latencyMs": 15175,
+              "responseId": "0b7908f8-3bcb-4dfa-80c9-418854d509f1",
+              "answer": "16"
+            }
+          ]
+        }
+      ],
+      "firstPassRate": 0.6666666666666666,
+      "finalPassRate": 0.6666666666666666,
+      "meanLatencyMs": 10716.666666666666,
+      "tokensPerFinalSuccess": 6262.75
+    },
+    "LEGACY": {
+      "trials": 6,
+      "attempts": 6,
+      "retries": 0,
+      "retriedTrials": 0,
+      "firstPass": 5,
+      "finalPass": 5,
+      "inputTokens": 22489,
+      "outputTokens": 1278,
+      "reasoningTokens": 1209,
+      "cachedInputTokens": 1792,
+      "totalTokens": 23767,
+      "latencyMs": 56205,
+      "failedAttemptTokens": 4608,
+      "retryTokens": 0,
+      "initialEfforts": {
+        "LOW": 2,
+        "MEDIUM": 3,
+        "HIGH": 1
+      },
+      "rows": [
+        {
+          "caseId": "b01",
+          "title": "제품 코드 변환 · 1",
+          "category": "변환",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "LOW",
+          "retries": 0,
+          "inputTokens": 3258,
+          "outputTokens": 16,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 0,
+          "totalTokens": 3274,
+          "latencyMs": 7854,
+          "attempts": [
+            {
+              "effort": "LOW",
+              "passed": true,
+              "inputTokens": 3258,
+              "outputTokens": 16,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 0,
+              "totalTokens": 3274,
+              "latencyMs": 7854,
+              "responseId": "ff3358c1-dd61-4440-b79d-70014100b272",
+              "answer": "SHIPMENT-6PU-22L5-REV-D"
+            }
+          ]
+        },
+        {
+          "caseId": "b04",
+          "title": "필드 추출 · 1",
+          "category": "변환",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "LOW",
+          "retries": 0,
+          "inputTokens": 4046,
+          "outputTokens": 24,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792,
+          "totalTokens": 4070,
+          "latencyMs": 11494,
+          "attempts": [
+            {
+              "effort": "LOW",
+              "passed": true,
+              "inputTokens": 4046,
+              "outputTokens": 24,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792,
+              "totalTokens": 4070,
+              "latencyMs": 11494,
+              "responseId": "582ef1ae-aa14-49ba-80d8-91697b940c27",
+              "answer": "team27-2@example.org,team27-4@example.org,team27-5@example.org"
+            }
+          ]
+        },
+        {
+          "caseId": "b02",
+          "title": "주문 조건 집계 · 1",
+          "category": "계산",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "MEDIUM",
+          "retries": 0,
+          "inputTokens": 3830,
+          "outputTokens": 132,
+          "reasoningTokens": 124,
+          "cachedInputTokens": 0,
+          "totalTokens": 3962,
+          "latencyMs": 10832,
+          "attempts": [
+            {
+              "effort": "MEDIUM",
+              "passed": true,
+              "inputTokens": 3830,
+              "outputTokens": 132,
+              "reasoningTokens": 124,
+              "cachedInputTokens": 0,
+              "totalTokens": 3962,
+              "latencyMs": 10832,
+              "responseId": "9ee6215d-d0b3-4f61-b928-d9c8a77a36f4",
+              "answer": "23068"
+            }
+          ]
+        },
+        {
+          "caseId": "b05",
+          "title": "모듈러 점화식 · 1",
+          "category": "계산",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "MEDIUM",
+          "retries": 0,
+          "inputTokens": 3977,
+          "outputTokens": 349,
+          "reasoningTokens": 342,
+          "cachedInputTokens": 0,
+          "totalTokens": 4326,
+          "latencyMs": 8904,
+          "attempts": [
+            {
+              "effort": "MEDIUM",
+              "passed": true,
+              "inputTokens": 3977,
+              "outputTokens": 349,
+              "reasoningTokens": 342,
+              "cachedInputTokens": 0,
+              "totalTokens": 4326,
+              "latencyMs": 8904,
+              "responseId": "86998891-bb5b-4c00-8f81-97aa5ed0c28f",
+              "answer": "783"
+            }
+          ]
+        },
+        {
+          "caseId": "b08",
+          "title": "가중 그래프 경로 · 1",
+          "category": "계산",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "MEDIUM",
+          "retries": 0,
+          "inputTokens": 3360,
+          "outputTokens": 167,
+          "reasoningTokens": 160,
+          "cachedInputTokens": 0,
+          "totalTokens": 3527,
+          "latencyMs": 6296,
+          "attempts": [
+            {
+              "effort": "MEDIUM",
+              "passed": true,
+              "inputTokens": 3360,
+              "outputTokens": 167,
+              "reasoningTokens": 160,
+              "cachedInputTokens": 0,
+              "totalTokens": 3527,
+              "latencyMs": 6296,
+              "responseId": "003408bd-efb8-47d4-b02f-09bd4ed59cdd",
+              "answer": "23"
+            }
+          ]
+        },
+        {
+          "caseId": "b09",
+          "title": "선행 작업 일정 수 · 1",
+          "category": "조합 추론",
+          "firstPassed": false,
+          "finalPassed": false,
+          "initialEffort": "HIGH",
+          "retries": 0,
+          "inputTokens": 4018,
+          "outputTokens": 590,
+          "reasoningTokens": 583,
+          "cachedInputTokens": 0,
+          "totalTokens": 4608,
+          "latencyMs": 10825,
+          "attempts": [
+            {
+              "effort": "HIGH",
+              "passed": false,
+              "inputTokens": 4018,
+              "outputTokens": 590,
+              "reasoningTokens": 583,
+              "cachedInputTokens": 0,
+              "totalTokens": 4608,
+              "latencyMs": 10825,
+              "responseId": "20f92e8a-a1eb-44a9-99fa-721262d1260f",
+              "answer": "16"
+            }
+          ]
+        }
+      ],
+      "firstPassRate": 0.8333333333333334,
+      "finalPassRate": 0.8333333333333334,
+      "meanLatencyMs": 9367.5,
+      "tokensPerFinalSuccess": 4753.4
+    },
+    "CANDIDATE": {
+      "trials": 6,
+      "attempts": 6,
+      "retries": 0,
+      "retriedTrials": 0,
+      "firstPass": 6,
+      "finalPass": 6,
+      "inputTokens": 24135,
+      "outputTokens": 1634,
+      "reasoningTokens": 1565,
+      "cachedInputTokens": 3584,
+      "totalTokens": 25769,
+      "latencyMs": 62387,
+      "failedAttemptTokens": 0,
+      "retryTokens": 0,
+      "initialEfforts": {
+        "LOW": 2,
+        "MEDIUM": 1,
+        "HIGH": 3
+      },
+      "rows": [
+        {
+          "caseId": "b01",
+          "title": "제품 코드 변환 · 1",
+          "category": "변환",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "LOW",
+          "retries": 0,
+          "inputTokens": 3954,
+          "outputTokens": 16,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792,
+          "totalTokens": 3970,
+          "latencyMs": 11654,
+          "attempts": [
+            {
+              "effort": "LOW",
+              "passed": true,
+              "inputTokens": 3954,
+              "outputTokens": 16,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792,
+              "totalTokens": 3970,
+              "latencyMs": 11654,
+              "responseId": "1c0b2864-1e44-4d97-8a8a-f4b8cd15161c",
+              "answer": "SHIPMENT-6PU-22L5-REV-D"
+            }
+          ]
+        },
+        {
+          "caseId": "b04",
+          "title": "필드 추출 · 1",
+          "category": "변환",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "LOW",
+          "retries": 0,
+          "inputTokens": 4046,
+          "outputTokens": 24,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792,
+          "totalTokens": 4070,
+          "latencyMs": 10701,
+          "attempts": [
+            {
+              "effort": "LOW",
+              "passed": true,
+              "inputTokens": 4046,
+              "outputTokens": 24,
+              "reasoningTokens": 0,
+              "cachedInputTokens": 1792,
+              "totalTokens": 4070,
+              "latencyMs": 10701,
+              "responseId": "e897b701-140c-4ddf-b1a4-a2d0a24f17c9",
+              "answer": "team27-2@example.org,team27-4@example.org,team27-5@example.org"
+            }
+          ]
+        },
+        {
+          "caseId": "b02",
+          "title": "주문 조건 집계 · 1",
+          "category": "계산",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "MEDIUM",
+          "retries": 0,
+          "inputTokens": 4084,
+          "outputTokens": 134,
+          "reasoningTokens": 126,
+          "cachedInputTokens": 0,
+          "totalTokens": 4218,
+          "latencyMs": 8879,
+          "attempts": [
+            {
+              "effort": "MEDIUM",
+              "passed": true,
+              "inputTokens": 4084,
+              "outputTokens": 134,
+              "reasoningTokens": 126,
+              "cachedInputTokens": 0,
+              "totalTokens": 4218,
+              "latencyMs": 8879,
+              "responseId": "af34eca2-3eae-4705-b101-c58fe0e06830",
+              "answer": "23068"
+            }
+          ]
+        },
+        {
+          "caseId": "b05",
+          "title": "모듈러 점화식 · 1",
+          "category": "계산",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "HIGH",
+          "retries": 0,
+          "inputTokens": 3977,
+          "outputTokens": 400,
+          "reasoningTokens": 393,
+          "cachedInputTokens": 0,
+          "totalTokens": 4377,
+          "latencyMs": 10569,
+          "attempts": [
+            {
+              "effort": "HIGH",
+              "passed": true,
+              "inputTokens": 3977,
+              "outputTokens": 400,
+              "reasoningTokens": 393,
+              "cachedInputTokens": 0,
+              "totalTokens": 4377,
+              "latencyMs": 10569,
+              "responseId": "7bffb238-0917-4cf9-91d2-7fe5d85b909c",
+              "answer": "783"
+            }
+          ]
+        },
+        {
+          "caseId": "b08",
+          "title": "가중 그래프 경로 · 1",
+          "category": "계산",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "HIGH",
+          "retries": 0,
+          "inputTokens": 4056,
+          "outputTokens": 101,
+          "reasoningTokens": 94,
+          "cachedInputTokens": 0,
+          "totalTokens": 4157,
+          "latencyMs": 6709,
+          "attempts": [
+            {
+              "effort": "HIGH",
+              "passed": true,
+              "inputTokens": 4056,
+              "outputTokens": 101,
+              "reasoningTokens": 94,
+              "cachedInputTokens": 0,
+              "totalTokens": 4157,
+              "latencyMs": 6709,
+              "responseId": "89762145-9aa3-4013-9fea-27dd20aff4a6",
+              "answer": "23"
+            }
+          ]
+        },
+        {
+          "caseId": "b09",
+          "title": "선행 작업 일정 수 · 1",
+          "category": "조합 추론",
+          "firstPassed": true,
+          "finalPassed": true,
+          "initialEffort": "HIGH",
+          "retries": 0,
+          "inputTokens": 4018,
+          "outputTokens": 959,
+          "reasoningTokens": 952,
+          "cachedInputTokens": 0,
+          "totalTokens": 4977,
+          "latencyMs": 13875,
+          "attempts": [
+            {
+              "effort": "HIGH",
+              "passed": true,
+              "inputTokens": 4018,
+              "outputTokens": 959,
+              "reasoningTokens": 952,
+              "cachedInputTokens": 0,
+              "totalTokens": 4977,
+              "latencyMs": 13875,
+              "responseId": "9747e16e-c197-4cee-8766-69e693aeb680",
+              "answer": "21"
+            }
+          ]
+        }
+      ],
+      "firstPassRate": 1,
+      "finalPassRate": 1,
+      "meanLatencyMs": 10397.833333333334,
+      "tokensPerFinalSuccess": 4294.833333333333
+    }
+  },
+  "comparisons": {
+    "LOW_vs_HIGH": {
+      "baseline": "HIGH",
+      "measured": "LOW",
+      "totalSavingsPercent": -2.458077709611452,
+      "outputSavingsPercent": 20.77120822622108,
+      "latencySavingsPercent": 0.561372036558774,
+      "firstPassDifference": 0,
+      "finalPassDifference": 0,
+      "observedQualityMaintained": true,
+      "paired": {
+        "bothCorrect": 3,
+        "baselineOnlyCorrect": 1,
+        "comparisonOnlyCorrect": 1,
+        "bothWrong": 1
+      }
+    },
+    "LEGACY_vs_HIGH": {
+      "baseline": "HIGH",
+      "measured": "LEGACY",
+      "totalSavingsPercent": 2.7934560327198366,
+      "outputSavingsPercent": 34.29305912596401,
+      "latencySavingsPercent": 13.080123099763389,
+      "firstPassDifference": 1,
+      "finalPassDifference": 1,
+      "observedQualityMaintained": true,
+      "paired": {
+        "bothCorrect": 4,
+        "baselineOnlyCorrect": 0,
+        "comparisonOnlyCorrect": 1,
+        "bothWrong": 1
+      }
+    },
+    "CANDIDATE_vs_HIGH": {
+      "baseline": "HIGH",
+      "measured": "CANDIDATE",
+      "totalSavingsPercent": -5.394683026584867,
+      "outputSavingsPercent": 15.989717223650386,
+      "latencySavingsPercent": 3.519787204429117,
+      "firstPassDifference": 2,
+      "finalPassDifference": 2,
+      "observedQualityMaintained": true,
+      "paired": {
+        "bothCorrect": 4,
+        "baselineOnlyCorrect": 0,
+        "comparisonOnlyCorrect": 2,
+        "bothWrong": 0
+      }
+    },
+    "CANDIDATE_vs_LEGACY": {
+      "baseline": "LEGACY",
+      "measured": "CANDIDATE",
+      "totalSavingsPercent": -8.423444271468844,
+      "outputSavingsPercent": -27.85602503912363,
+      "latencySavingsPercent": -10.99902143937372,
+      "firstPassDifference": 1,
+      "finalPassDifference": 1,
+      "observedQualityMaintained": true,
+      "paired": {
+        "bothCorrect": 5,
+        "baselineOnlyCorrect": 0,
+        "comparisonOnlyCorrect": 1,
+        "bothWrong": 0
+      }
+    },
+    "CANDIDATE_vs_LOW": {
+      "baseline": "LOW",
+      "measured": "CANDIDATE",
+      "totalSavingsPercent": -2.8661530477825234,
+      "outputSavingsPercent": -6.035042180402336,
+      "latencySavingsPercent": 2.9751166407465006,
+      "firstPassDifference": 2,
+      "finalPassDifference": 2,
+      "observedQualityMaintained": true,
+      "paired": {
+        "bothCorrect": 4,
+        "baselineOnlyCorrect": 0,
+        "comparisonOnlyCorrect": 2,
+        "bothWrong": 0
+      }
+    }
+  },
+  "categories": [
+    {
+      "category": "변환",
+      "arms": {
+        "HIGH": {
+          "trials": 2,
+          "firstPass": 1,
+          "finalPass": 1,
+          "retries": 0,
+          "totalTokens": 7334,
+          "outputTokens": 42
+        },
+        "LOW": {
+          "trials": 2,
+          "firstPass": 2,
+          "finalPass": 2,
+          "retries": 0,
+          "totalTokens": 7707,
+          "outputTokens": 40
+        },
+        "LEGACY": {
+          "trials": 2,
+          "firstPass": 2,
+          "finalPass": 2,
+          "retries": 0,
+          "totalTokens": 7344,
+          "outputTokens": 40
+        },
+        "CANDIDATE": {
+          "trials": 2,
+          "firstPass": 2,
+          "finalPass": 2,
+          "retries": 0,
+          "totalTokens": 8040,
+          "outputTokens": 40
+        }
+      }
+    },
+    {
+      "category": "계산",
+      "arms": {
+        "HIGH": {
+          "trials": 3,
+          "firstPass": 3,
+          "finalPass": 3,
+          "retries": 0,
+          "totalTokens": 11843,
+          "outputTokens": 648
+        },
+        "LOW": {
+          "trials": 3,
+          "firstPass": 2,
+          "finalPass": 2,
+          "retries": 0,
+          "totalTokens": 12526,
+          "outputTokens": 701
+        },
+        "LEGACY": {
+          "trials": 3,
+          "firstPass": 3,
+          "finalPass": 3,
+          "retries": 0,
+          "totalTokens": 11815,
+          "outputTokens": 648
+        },
+        "CANDIDATE": {
+          "trials": 3,
+          "firstPass": 3,
+          "finalPass": 3,
+          "retries": 0,
+          "totalTokens": 12752,
+          "outputTokens": 635
+        }
+      }
+    },
+    {
+      "category": "조합 추론",
+      "arms": {
+        "HIGH": {
+          "trials": 1,
+          "firstPass": 0,
+          "finalPass": 0,
+          "retries": 0,
+          "totalTokens": 5273,
+          "outputTokens": 1255
+        },
+        "LOW": {
+          "trials": 1,
+          "firstPass": 0,
+          "finalPass": 0,
+          "retries": 0,
+          "totalTokens": 4818,
+          "outputTokens": 800
+        },
+        "LEGACY": {
+          "trials": 1,
+          "firstPass": 0,
+          "finalPass": 0,
+          "retries": 0,
+          "totalTokens": 4608,
+          "outputTokens": 590
+        },
+        "CANDIDATE": {
+          "trials": 1,
+          "firstPass": 1,
+          "finalPass": 1,
+          "retries": 0,
+          "totalTokens": 4977,
+          "outputTokens": 959
+        }
+      }
+    }
+  ],
+  "accounting": "Total = input + output. Reasoning is already included in output; cached input is already included in input. Every failed answer and retry is included.",
+  "limitations": [
+    "Synthetic cases; one execution per arm and case. No statistical significance or general routing guarantee.",
+    "Retries use a known exact answer in the local verifier. Findings apply to tasks with an equivalent available correctness check.",
+    "Raw CLI events establish outputs and usage. Effort is checked against recorded attempts, route decisions and frozen service source; CLI events do not independently report its launch configuration.",
+    "Latency comes from service measurements; CLI events do not contain independent timestamps. Dynamic provider input and caching can vary.",
+    "Development results are used for policy tuning and cannot establish performance on unseen cases."
+  ],
+  "checks": [
+    "complete frozen schedule with all four arms per case",
+    "dataset, request, trace and immutable source snapshot hashes",
+    "independent routing prediction and every escalation",
+    "strict raw JSONL parsing and all four usage fields",
+    "plain exact answers and first/final pass grading",
+    "all failed answers and retries charged",
+    "no unaccounted request or trace files"
+  ]
+}

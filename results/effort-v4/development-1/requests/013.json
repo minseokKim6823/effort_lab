@@ -1,0 +1,57 @@
+{
+  "index": 13,
+  "caseId": "b05",
+  "arm": "HIGH",
+  "risk": "HIGH",
+  "taskSha256": "1bc31f9fb821c2717587afd2715419aa286d376c3609c520637a81f107f5bc2d",
+  "startedAt": "2026-10-09T10:48:43.877Z",
+  "result": {
+    "strategy": "HIGH",
+    "decision": {
+      "effort": "HIGH",
+      "score": 100,
+      "reasons": [
+        "사용자가 높은 정확도가 필요한 작업으로 지정했습니다.",
+        "점화식·최단 경로·증명 등 복잡한 추론 신호가 있습니다.",
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 155,
+      "routingTokens": 0
+    },
+    "attempts": [
+      {
+        "effort": "HIGH",
+        "output": "783",
+        "usage": {
+          "inputTokens": 3977,
+          "outputTokens": 385,
+          "reasoningTokens": 378,
+          "cachedInputTokens": 1792
+        },
+        "latencyMs": 8410,
+        "responseId": "b6a30b0e-c54d-4f81-ba6e-84f72aa1f2f3",
+        "providerStatus": "completed",
+        "verdict": "PASS"
+      }
+    ],
+    "usage": {
+      "inputTokens": 3977,
+      "outputTokens": 385,
+      "reasoningTokens": 378,
+      "cachedInputTokens": 1792
+    },
+    "totalTokens": 4362,
+    "latencyMs": 8410,
+    "verdict": "PASS",
+    "error": null,
+    "unknownUsage": false
+  },
+  "traceFiles": [
+    {
+      "responseId": "b6a30b0e-c54d-4f81-ba6e-84f72aa1f2f3",
+      "path": "traces/b6a30b0e-c54d-4f81-ba6e-84f72aa1f2f3.jsonl",
+      "sha256": "0ccbf11b2389481abe06d1fe173748e5add206dc397126aaef591cd606672763"
+    }
+  ]
+}

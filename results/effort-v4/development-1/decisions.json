@@ -1,0 +1,372 @@
+[
+  {
+    "index": 0,
+    "caseId": "b01",
+    "arm": "HIGH",
+    "decision": {
+      "effort": "HIGH",
+      "score": 80,
+      "reasons": [
+        "사용자가 높은 정확도가 필요한 작업으로 지정했습니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 9732,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 1,
+    "caseId": "b01",
+    "arm": "LOW",
+    "decision": {
+      "effort": "LOW",
+      "score": 0,
+      "reasons": [
+        "짧고 명확한 변환·추출 작업 신호가 있습니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 865,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 2,
+    "caseId": "b01",
+    "arm": "LEGACY",
+    "decision": {
+      "effort": "LOW",
+      "score": 0,
+      "reasons": [
+        "짧고 명확한 변환·추출 작업 신호가 있습니다."
+      ],
+      "policyVersion": "rules-1.1",
+      "routingMicros": 1518,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 3,
+    "caseId": "b01",
+    "arm": "CANDIDATE",
+    "decision": {
+      "effort": "LOW",
+      "score": 0,
+      "reasons": [
+        "짧고 명확한 변환·추출 작업 신호가 있습니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 315,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 4,
+    "caseId": "b04",
+    "arm": "LOW",
+    "decision": {
+      "effort": "LOW",
+      "score": 0,
+      "reasons": [
+        "짧고 명확한 변환·추출 작업 신호가 있습니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 3479,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 5,
+    "caseId": "b04",
+    "arm": "LEGACY",
+    "decision": {
+      "effort": "LOW",
+      "score": 0,
+      "reasons": [
+        "짧고 명확한 변환·추출 작업 신호가 있습니다."
+      ],
+      "policyVersion": "rules-1.1",
+      "routingMicros": 2860,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 6,
+    "caseId": "b04",
+    "arm": "CANDIDATE",
+    "decision": {
+      "effort": "LOW",
+      "score": 0,
+      "reasons": [
+        "짧고 명확한 변환·추출 작업 신호가 있습니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 862,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 7,
+    "caseId": "b04",
+    "arm": "HIGH",
+    "decision": {
+      "effort": "HIGH",
+      "score": 80,
+      "reasons": [
+        "사용자가 높은 정확도가 필요한 작업으로 지정했습니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 825,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 8,
+    "caseId": "b02",
+    "arm": "LEGACY",
+    "decision": {
+      "effort": "MEDIUM",
+      "score": 30,
+      "reasons": [
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.1",
+      "routingMicros": 630,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 9,
+    "caseId": "b02",
+    "arm": "CANDIDATE",
+    "decision": {
+      "effort": "MEDIUM",
+      "score": 30,
+      "reasons": [
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 897,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 10,
+    "caseId": "b02",
+    "arm": "HIGH",
+    "decision": {
+      "effort": "HIGH",
+      "score": 100,
+      "reasons": [
+        "사용자가 높은 정확도가 필요한 작업으로 지정했습니다.",
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 851,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 11,
+    "caseId": "b02",
+    "arm": "LOW",
+    "decision": {
+      "effort": "MEDIUM",
+      "score": 30,
+      "reasons": [
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 819,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 12,
+    "caseId": "b05",
+    "arm": "CANDIDATE",
+    "decision": {
+      "effort": "HIGH",
+      "score": 100,
+      "reasons": [
+        "점화식·최단 경로·증명 등 복잡한 추론 신호가 있습니다.",
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 462,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 13,
+    "caseId": "b05",
+    "arm": "HIGH",
+    "decision": {
+      "effort": "HIGH",
+      "score": 100,
+      "reasons": [
+        "사용자가 높은 정확도가 필요한 작업으로 지정했습니다.",
+        "점화식·최단 경로·증명 등 복잡한 추론 신호가 있습니다.",
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 618,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 14,
+    "caseId": "b05",
+    "arm": "LOW",
+    "decision": {
+      "effort": "HIGH",
+      "score": 100,
+      "reasons": [
+        "점화식·최단 경로·증명 등 복잡한 추론 신호가 있습니다.",
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 423,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 15,
+    "caseId": "b05",
+    "arm": "LEGACY",
+    "decision": {
+      "effort": "MEDIUM",
+      "score": 30,
+      "reasons": [
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.1",
+      "routingMicros": 175,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 16,
+    "caseId": "b08",
+    "arm": "HIGH",
+    "decision": {
+      "effort": "HIGH",
+      "score": 100,
+      "reasons": [
+        "사용자가 높은 정확도가 필요한 작업으로 지정했습니다.",
+        "점화식·최단 경로·증명 등 복잡한 추론 신호가 있습니다.",
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 816,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 17,
+    "caseId": "b08",
+    "arm": "LOW",
+    "decision": {
+      "effort": "HIGH",
+      "score": 100,
+      "reasons": [
+        "점화식·최단 경로·증명 등 복잡한 추론 신호가 있습니다.",
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 1223,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 18,
+    "caseId": "b08",
+    "arm": "LEGACY",
+    "decision": {
+      "effort": "MEDIUM",
+      "score": 30,
+      "reasons": [
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.1",
+      "routingMicros": 326,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 19,
+    "caseId": "b08",
+    "arm": "CANDIDATE",
+    "decision": {
+      "effort": "HIGH",
+      "score": 100,
+      "reasons": [
+        "점화식·최단 경로·증명 등 복잡한 추론 신호가 있습니다.",
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 1765,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 20,
+    "caseId": "b09",
+    "arm": "LOW",
+    "decision": {
+      "effort": "HIGH",
+      "score": 70,
+      "reasons": [
+        "점화식·최단 경로·증명 등 복잡한 추론 신호가 있습니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 714,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 21,
+    "caseId": "b09",
+    "arm": "LEGACY",
+    "decision": {
+      "effort": "HIGH",
+      "score": 70,
+      "reasons": [
+        "증명·보안·동시성 등 복잡한 추론 신호가 있습니다."
+      ],
+      "policyVersion": "rules-1.1",
+      "routingMicros": 275,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 22,
+    "caseId": "b09",
+    "arm": "CANDIDATE",
+    "decision": {
+      "effort": "HIGH",
+      "score": 70,
+      "reasons": [
+        "점화식·최단 경로·증명 등 복잡한 추론 신호가 있습니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 294,
+      "routingTokens": 0
+    }
+  },
+  {
+    "index": 23,
+    "caseId": "b09",
+    "arm": "HIGH",
+    "decision": {
+      "effort": "HIGH",
+      "score": 100,
+      "reasons": [
+        "사용자가 높은 정확도가 필요한 작업으로 지정했습니다.",
+        "점화식·최단 경로·증명 등 복잡한 추론 신호가 있습니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 188,
+      "routingTokens": 0
+    }
+  }
+]

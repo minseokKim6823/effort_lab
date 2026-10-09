@@ -1,0 +1,27 @@
+{
+  "decidedAt": "2026-10-09T10:51:53.646Z",
+  "candidatePolicy": "rules-1.2",
+  "candidateCommit": "c42f49f16a83b7f6fc7c9dd8b3e3d8b263f8dcb8",
+  "candidateJarSha256": "676c2ae207aa4fccb194e98743177d1a0962c09b267a43633bc90accde035992",
+  "sourceHashes": {
+    "backend/src/main/java/dev/effortlab/EffortRouter.java": "00b06dde78bf6269f08dd14d11fd3bd8e734fd2bb3d104f28021fb7b07464703",
+    "backend/src/main/java/dev/effortlab/EvaluationService.java": "e431a2d6a40de9e0db63fc478e9175dfc17472ca6acbb119d5f4d31c38307c7b",
+    "backend/src/main/java/dev/effortlab/ModelGateway.java": "33805bcf0e611014f2d69ab18eb2993aaef16bb0a5bc77c673878aebdc8df3c9",
+    "backend/src/main/java/dev/effortlab/AnswerVerifier.java": "a7357c671274b8d259e58b94ae7ad75440f2f4a48b77fa5624ac38ec820599ca",
+    "backend/src/main/resources/answer-instructions.txt": "7690692aaaf1708f8b6a18f29d6612edd84a314bacfcd45967b55f6a1ad9c77c",
+    "backend/src/main/java/dev/effortlab/Domain.java": "e1318a1e20a63da85b3d2b481e90e2ba623937172447e36e90a6c74c63d7ecc7",
+    "backend/src/main/java/dev/effortlab/BenchmarkService.java": "19b2bb02455a7dbcd3580bb601abf66c0c6f4474c41cf21d6f0a6f2de1c0fda2",
+    "scripts/measure-effort-v4.mjs": "eb1d3e3e987c4c19afbcf0124f4797cfe1befb0907f306d0315bdfd1c4208449",
+    "scripts/audit-effort-v4.mjs": "661d4f27447bc3f5aae1275e64b30229bdc5247c82900900545cd62c3467773c",
+    "scripts/generate-effort-cases.mjs": "064303227c2c74f580a3a7ea94cee1aa6f0482d78c384348dac683171f896827",
+    "scripts/build-effort-v4.ps1": "b2d3c9c20775971c6ac4b3162a3167e18833012c89768234038fbe5fdc4fd0f4",
+    "docs/effort-v4-plan.md": "003da1184ee3f9edb9b3787bb2d5801b87ea218cb815f4fc4f60194273415ee0",
+    "baseline/backend/src/main/java/dev/effortlab/EffortRouter.java": "610dcab06bddee5ff1bbc44f0d3cf8409e02245354e7bbd2f9e480385bb55b7e",
+    "baseline/backend/src/main/java/dev/effortlab/EvaluationService.java": "3e3120d2d604427ce3f6470f343b026d4a34f4a7eb0c44349ed608b52696110f"
+  },
+  "developmentMetricsSha256": "21fb63d1add6769ca41983e77761187b07ce67273e6776ae5ad6d9c59e3403e5",
+  "decision": "Retain rules-1.2 without a second development iteration; proceed to the preregistered holdout once.",
+  "rationale": "6/6 candidate answers but 8.42% more total tokens than legacy. Changed routes b05/b08 passed under both policies. The b09 candidate-only success occurred at HIGH in both arms and does not establish a routing benefit. No failure in a newly changed candidate route justifies another tuning step. Test the prior recurrence-retry hypothesis on the frozen new instances; do not claim development savings.",
+  "holdoutCases": "results/effort-v4/cases.json",
+  "holdoutRun": "holdout-1"
+}

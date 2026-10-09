@@ -1,0 +1,293 @@
+{
+  "schemaVersion": "effort-v4-1",
+  "phase": "development",
+  "runName": "development-1",
+  "startedAt": "2026-10-09T10:45:26.923Z",
+  "baselineCommit": "e4f179d84d41558d6836d50a567676f245813f81",
+  "candidateCommit": "c42f49f16a83b7f6fc7c9dd8b3e3d8b263f8dcb8",
+  "baselinePolicy": "rules-1.1",
+  "candidatePolicy": "rules-1.2",
+  "model": "gpt-5.6-luna",
+  "cliVersion": "codex-cli 0.153.4",
+  "cliSha256": "61b0194f3bb6534439c8d26a3ed57d0805f84b884588b761795323eeb92fcf70",
+  "nativeCliBinary": "C:\\Users\\alstj\\Desktop\\effort-lab\\desktop\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe",
+  "nativeCliSha256": "444a3f0008050605cae73cd9b7a2dcac61294062dfaab56dd20430fd6498518b",
+  "candidateBuildReceipt": {
+    "builtAt": "2026-10-09T10:44:26.1215415Z",
+    "command": "backend/gradlew.bat -p backend test bootJar --console=plain",
+    "sourceHashes": {
+      "backend/build.gradle": "a46396c0b64d709da2e98072895ec73231e179841b9db665413b4e6bff2c9d73",
+      "backend/gradle/wrapper/gradle-wrapper.jar": "7a9ce74cff467ca1bf60a4fcd9f05185acceda4d0f382434d393e17864262c5d",
+      "backend/gradle/wrapper/gradle-wrapper.properties": "6151889971788db72b09df78deed780a559123093fd08aef8f680846399eefc2",
+      "backend/settings.gradle": "c1f7c5922fddc739d64b2a7953d510d1c5c1e8227bdaf0b082a606aa574825d7",
+      "backend/src/main/java/dev/effortlab/AnswerVerifier.java": "a7357c671274b8d259e58b94ae7ad75440f2f4a48b77fa5624ac38ec820599ca",
+      "backend/src/main/java/dev/effortlab/ApiController.java": "3e8770369b351c52b1f876eb629db7f98260b6a3a659d43e58455bdbfb600f9b",
+      "backend/src/main/java/dev/effortlab/BatchDomain.java": "11ae74bbfde927148e110f968c11c8090b03dbf2f755cfbb7916ff9f3f00fe62",
+      "backend/src/main/java/dev/effortlab/BatchService.java": "9b109e46d630a401fc96cb1965c141a117488aaf645c6b05aed91609f70067ee",
+      "backend/src/main/java/dev/effortlab/BenchmarkCases.java": "e43a493eaab28cb73a504b8fe9f9c5e1ae262d46e7efc6eef22f0c3777acdda3",
+      "backend/src/main/java/dev/effortlab/BenchmarkService.java": "19b2bb02455a7dbcd3580bb601abf66c0c6f4474c41cf21d6f0a6f2de1c0fda2",
+      "backend/src/main/java/dev/effortlab/Domain.java": "e1318a1e20a63da85b3d2b481e90e2ba623937172447e36e90a6c74c63d7ecc7",
+      "backend/src/main/java/dev/effortlab/EffortLabApplication.java": "367d10a9046f9a21634821636337b91aec6f1804a679a47b65fc58d11d77f358",
+      "backend/src/main/java/dev/effortlab/EffortRouter.java": "00b06dde78bf6269f08dd14d11fd3bd8e734fd2bb3d104f28021fb7b07464703",
+      "backend/src/main/java/dev/effortlab/EvaluationService.java": "e431a2d6a40de9e0db63fc478e9175dfc17472ca6acbb119d5f4d31c38307c7b",
+      "backend/src/main/java/dev/effortlab/ExperimentStore.java": "495e26e5a8c22874e9451cf439d173d07a6f1606357d9a412d496f08e66fd33b",
+      "backend/src/main/java/dev/effortlab/ModelGateway.java": "33805bcf0e611014f2d69ab18eb2993aaef16bb0a5bc77c673878aebdc8df3c9",
+      "backend/src/main/java/dev/effortlab/OriginGuard.java": "808014ba31ec8403632e2b0d0a5023d833f597fc9553e55a080b8af88009425b",
+      "backend/src/main/resources/answer-instructions.txt": "7690692aaaf1708f8b6a18f29d6612edd84a314bacfcd45967b55f6a1ad9c77c",
+      "backend/src/main/resources/application.properties": "81635dd2dd264b4c1aabf1cb429f0135696bff5c9403449c2ae89d93d9966dd2",
+      "backend/src/main/resources/challenge-cases.json": "1a0461d2c42f57ced0d5bb614f9c86f08ff0f1a5d5405425a2471940e34b9ae6",
+      "backend/src/main/resources/schema.sql": "068d01f421d92211e6b2e225747bebbea906d4f96f9618cd696dd00188e155e8"
+    },
+    "jarSha256": "676c2ae207aa4fccb194e98743177d1a0962c09b267a43633bc90accde035992"
+  },
+  "javaBinary": "C:\\Users\\alstj\\Desktop\\effort-lab\\desktop\\runtime\\java\\bin\\java.exe",
+  "nodeBinary": "C:\\nvm4w\\nodejs\\node.exe",
+  "commonWorkingDirectory": "C:\\Users\\alstj\\Desktop\\effort-lab\\.tools\\effort-v4\\shared",
+  "environment": {
+    "CODEX_MODEL": "gpt-5.6-luna",
+    "CODEX_JS_PATH": "C:\\Users\\alstj\\Desktop\\effort-lab\\desktop\\node_modules\\@openai\\codex\\bin\\codex.js",
+    "NODE_BINARY": "C:\\nvm4w\\nodejs\\node.exe",
+    "CODEX_TIMEOUT_SECONDS": "180",
+    "apiKeysRemoved": [
+      "OPENAI_API_KEY",
+      "CODEX_API_KEY"
+    ],
+    "inheritedEnvironment": "Same snapshot for both Java processes; user configuration ignored by CLI"
+  },
+  "baselineJarSha256": "5965248981d42c713f0e8a8bd8f68afebe9f27dbdc1ab13dffa2f52015661482",
+  "candidateJarSha256": "676c2ae207aa4fccb194e98743177d1a0962c09b267a43633bc90accde035992",
+  "dataset": [
+    {
+      "id": "b01",
+      "title": "제품 코드 변환 · 1",
+      "category": "변환",
+      "prompt": "다음 문자열을 대문자로 변환하세요: 'shipment-6pu-22l5-rev-d'. 문자열만 출력하세요.",
+      "expectedAnswer": "SHIPMENT-6PU-22L5-REV-D",
+      "demoMinimum": "LOW"
+    },
+    {
+      "id": "b04",
+      "title": "필드 추출 · 1",
+      "category": "변환",
+      "prompt": "다음 JSON 배열에서 active가 true인 객체의 email만 원래 순서대로 추출하세요. 공백 없이 쉼표로 연결하고 따옴표는 쓰지 마세요. [{\"email\":\"team27-2@example.org\",\"active\":true},{\"email\":\"team27-3@example.org\",\"active\":false},{\"email\":\"team27-4@example.org\",\"active\":true},{\"email\":\"team27-5@example.org\",\"active\":true},{\"email\":\"team27-6@example.org\",\"active\":false},{\"email\":\"team27-7@example.org\",\"active\":false}]",
+      "expectedAnswer": "team27-2@example.org,team27-4@example.org,team27-5@example.org",
+      "demoMinimum": "LOW"
+    },
+    {
+      "id": "b02",
+      "title": "주문 조건 집계 · 1",
+      "category": "계산",
+      "prompt": "SQL 집계 결과를 계산하세요. orders(status,price,quantity)의 행은 [[\"cancelled\",896,4],[\"paid\",230,4],[\"paid\",158,6],[\"paid\",350,6],[\"cancelled\",516,6],[\"paid\",576,6],[\"paid\",722,4],[\"paid\",812,4],[\"cancelled\",642,2],[\"paid\",926,6],[\"paid\",406,4],[\"paid\",480,2],[\"cancelled\",364,4],[\"paid\",396,2],[\"paid\",406,4],[\"paid\",176,4]] 입니다. SELECT SUM(price*quantity) FROM orders WHERE status='paid' AND quantity>=3; 정수만 출력하세요.",
+      "expectedAnswer": "23068",
+      "demoMinimum": "MEDIUM"
+    },
+    {
+      "id": "b05",
+      "title": "모듈러 점화식 · 1",
+      "category": "계산",
+      "prompt": "재귀 수열 F(0)=4, F(1)=11, F(n)=(3*F(n-1)+3*F(n-2)) mod 1009 입니다. F(20)을 계산하여 정수만 출력하세요.",
+      "expectedAnswer": "783",
+      "demoMinimum": "MEDIUM"
+    },
+    {
+      "id": "b08",
+      "title": "가중 그래프 경로 · 1",
+      "category": "계산",
+      "prompt": "최단 경로 알고리즘 문제: 정점은 0부터 7, 방향 간선 (출발,도착,가중치)는 [[0,1,13],[0,2,3],[0,3,7],[1,2,10],[1,4,7],[2,3,15],[2,4,11],[3,5,5],[4,5,18],[4,6,3],[5,6,3],[5,7,11],[6,7,17]] 입니다. 정점 0에서 7까지 최단 거리만 정수로 출력하세요.",
+      "expectedAnswer": "23",
+      "demoMinimum": "MEDIUM"
+    },
+    {
+      "id": "b09",
+      "title": "선행 작업 일정 수 · 1",
+      "category": "조합 추론",
+      "prompt": "제약 충족 문제: 작업 0부터 6까지를 각각 한 번, 한 번에 하나씩 수행합니다. 선행 관계 (먼저,나중)는 [[6,1],[6,4],[2,4],[2,5],[1,3],[4,3],[5,0],[3,0]] 입니다. 모든 선행 관계를 만족하는 전체 실행 순서의 경우의 수를 정수로 출력하세요.",
+      "expectedAnswer": "21",
+      "demoMinimum": "HIGH"
+    }
+  ],
+  "datasetSha256": "676bad60f8c8db8d08f842a5d362a5848fac155716fa23bf2f1f866a0784a336",
+  "schedule": [
+    {
+      "index": 0,
+      "caseId": "b01",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 1,
+      "caseId": "b01",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 2,
+      "caseId": "b01",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 3,
+      "caseId": "b01",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 4,
+      "caseId": "b04",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 5,
+      "caseId": "b04",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 6,
+      "caseId": "b04",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 7,
+      "caseId": "b04",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 8,
+      "caseId": "b02",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 9,
+      "caseId": "b02",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 10,
+      "caseId": "b02",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 11,
+      "caseId": "b02",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 12,
+      "caseId": "b05",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 13,
+      "caseId": "b05",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 14,
+      "caseId": "b05",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 15,
+      "caseId": "b05",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 16,
+      "caseId": "b08",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 17,
+      "caseId": "b08",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 18,
+      "caseId": "b08",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 19,
+      "caseId": "b08",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 20,
+      "caseId": "b09",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 21,
+      "caseId": "b09",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 22,
+      "caseId": "b09",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 23,
+      "caseId": "b09",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    }
+  ],
+  "plannedTrials": 24,
+  "tokenBudget": 140000,
+  "sourceHashes": {
+    "backend/src/main/java/dev/effortlab/EffortRouter.java": "00b06dde78bf6269f08dd14d11fd3bd8e734fd2bb3d104f28021fb7b07464703",
+    "backend/src/main/java/dev/effortlab/EvaluationService.java": "e431a2d6a40de9e0db63fc478e9175dfc17472ca6acbb119d5f4d31c38307c7b",
+    "backend/src/main/java/dev/effortlab/ModelGateway.java": "33805bcf0e611014f2d69ab18eb2993aaef16bb0a5bc77c673878aebdc8df3c9",
+    "backend/src/main/java/dev/effortlab/AnswerVerifier.java": "a7357c671274b8d259e58b94ae7ad75440f2f4a48b77fa5624ac38ec820599ca",
+    "backend/src/main/resources/answer-instructions.txt": "7690692aaaf1708f8b6a18f29d6612edd84a314bacfcd45967b55f6a1ad9c77c",
+    "backend/src/main/java/dev/effortlab/Domain.java": "e1318a1e20a63da85b3d2b481e90e2ba623937172447e36e90a6c74c63d7ecc7",
+    "backend/src/main/java/dev/effortlab/BenchmarkService.java": "19b2bb02455a7dbcd3580bb601abf66c0c6f4474c41cf21d6f0a6f2de1c0fda2",
+    "scripts/measure-effort-v4.mjs": "eb1d3e3e987c4c19afbcf0124f4797cfe1befb0907f306d0315bdfd1c4208449",
+    "scripts/audit-effort-v4.mjs": "661d4f27447bc3f5aae1275e64b30229bdc5247c82900900545cd62c3467773c",
+    "scripts/generate-effort-cases.mjs": "064303227c2c74f580a3a7ea94cee1aa6f0482d78c384348dac683171f896827",
+    "scripts/build-effort-v4.ps1": "b2d3c9c20775971c6ac4b3162a3167e18833012c89768234038fbe5fdc4fd0f4",
+    "docs/effort-v4-plan.md": "003da1184ee3f9edb9b3787bb2d5801b87ea218cb815f4fc4f60194273415ee0",
+    "baseline/backend/src/main/java/dev/effortlab/EffortRouter.java": "610dcab06bddee5ff1bbc44f0d3cf8409e02245354e7bbd2f9e480385bb55b7e",
+    "baseline/backend/src/main/java/dev/effortlab/EvaluationService.java": "3e3120d2d604427ce3f6470f343b026d4a34f4a7eb0c44349ed608b52696110f"
+  },
+  "sourceSnapshots": {
+    "backend/src/main/java/dev/effortlab/EffortRouter.java": "sources/00-EffortRouter.java",
+    "backend/src/main/java/dev/effortlab/EvaluationService.java": "sources/01-EvaluationService.java",
+    "backend/src/main/java/dev/effortlab/ModelGateway.java": "sources/02-ModelGateway.java",
+    "backend/src/main/java/dev/effortlab/AnswerVerifier.java": "sources/03-AnswerVerifier.java",
+    "backend/src/main/resources/answer-instructions.txt": "sources/04-answer-instructions.txt",
+    "backend/src/main/java/dev/effortlab/Domain.java": "sources/05-Domain.java",
+    "backend/src/main/java/dev/effortlab/BenchmarkService.java": "sources/06-BenchmarkService.java",
+    "scripts/measure-effort-v4.mjs": "sources/07-measure-effort-v4.mjs",
+    "scripts/audit-effort-v4.mjs": "sources/08-audit-effort-v4.mjs",
+    "scripts/generate-effort-cases.mjs": "sources/09-generate-effort-cases.mjs",
+    "scripts/build-effort-v4.ps1": "sources/10-build-effort-v4.ps1",
+    "docs/effort-v4-plan.md": "sources/11-effort-v4-plan.md",
+    "baseline/backend/src/main/java/dev/effortlab/EffortRouter.java": "sources/baseline-EffortRouter.java",
+    "baseline/backend/src/main/java/dev/effortlab/EvaluationService.java": "sources/baseline-EvaluationService.java"
+  },
+  "comparison": "One sequential execution per policy and case, including policy retries. All four policy orders rotated within each case. Identical task text, model, instructions, CLI, process environment and working directory.",
+  "grading": "EXACT after output; expected answer is sent to the local verifier only. HIGH uses Risk.HIGH, which changes only the router decision.",
+  "limitations": "Synthetic known families, one execution per arm and case. Dynamic provider input and cache may vary. Not a general routing guarantee."
+}
