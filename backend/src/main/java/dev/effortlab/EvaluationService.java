@@ -31,7 +31,8 @@ public class EvaluationService {
             verdict=checked;
             if(!result.providerStatus().equals("completed")) {error="모델 호출이 정상 종료되지 않았거나 도구를 사용했습니다.";verdict="ERROR";break;}
             if(!checked.equals("FAIL") || strategy!=Strategy.ADAPTIVE || current==Effort.HIGH) break;
-            current=current.next();
+            // Each retry repeats the input cost; use one final HIGH attempt after a failed lower effort.
+            current=Effort.HIGH;
             // A failed attempt is not a finished adaptive trial while a retry is pending.
             verdict="STOPPED";
         }

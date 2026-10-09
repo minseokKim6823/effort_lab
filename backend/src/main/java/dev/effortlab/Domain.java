@@ -13,7 +13,12 @@ public final class Domain {
     public enum Strategy { DEFAULT_HIGH, HIGH, LOW, ADAPTIVE }
     public record RouteRequest(@NotBlank @Size(max=20000) String task, @NotNull Risk risk) {}
     public record ExecuteRequest(@NotBlank @Size(max=20000) String task, @NotNull Risk risk,
-        @NotNull Mode mode, @NotNull Check check, @Size(max=4000) String expectedAnswer) {}
+        @NotNull Mode mode, @NotNull Check check, @Size(max=4000) String expectedAnswer, Strategy strategy) {
+        public ExecuteRequest(String task,Risk risk,Mode mode,Check check,String expectedAnswer) {
+            this(task,risk,mode,check,expectedAnswer,Strategy.ADAPTIVE);
+        }
+        public ExecuteRequest { if(strategy==null) strategy=Strategy.ADAPTIVE; }
+    }
     public record BenchmarkRequest(@NotNull Mode mode, @Min(1) @Max(3) int repeats,
         @Min(1) @Max(12) int caseCount, @Min(1000) @Max(2000000) long tokenBudget, String suite) {
         public BenchmarkRequest(Mode mode,int repeats,int caseCount,long tokenBudget) { this(mode,repeats,caseCount,tokenBudget,"starter"); }

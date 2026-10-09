@@ -20,6 +20,10 @@ class ResumeTest {
         Report broken=new Report(UUID.randomUUID().toString(),original.createdAt(),"ERROR",Mode.DEMO,original.model(),original.policyVersion(),original.datasetVersion(),original.request(),original.plannedTrials(),
             List.of(first,new Trial(second.caseId(),second.title(),second.category(),second.repetition(),fault)),original.arms(),null,false,original.note(),"pre-call I/O",false,null,original.contextPolicy());
         store.save(broken);
+        Report oldPolicy=new Report(UUID.randomUUID().toString(),broken.createdAt(),"ERROR",Mode.DEMO,broken.model(),"rules-1.1",broken.datasetVersion(),broken.request(),broken.plannedTrials(),broken.trials(),broken.arms(),null,false,broken.note(),broken.error(),false,null,broken.contextPolicy());
+        store.save(oldPolicy);
+        assertThatThrownBy(()->service.resume(oldPolicy.id())).isInstanceOf(IllegalStateException.class)
+            .hasMessageContaining("정책");
         Report recovered=complete(service.resume(broken.id()));
         assertThat(recovered.trials()).hasSize(12);
         assertThat(recovered.trials().getFirst()).isEqualTo(first);

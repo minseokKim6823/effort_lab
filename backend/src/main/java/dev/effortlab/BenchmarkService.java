@@ -24,7 +24,7 @@ public class BenchmarkService {
     public boolean isBusy() {return busy.get();}
     public Execution single(ExecuteRequest request) {
         return exclusively(request.mode(),()->evaluator.execute(request.task(),request.risk(),request.check(),request.expectedAnswer(),
-            request.mode(),Strategy.ADAPTIVE,()->true,n->{}));
+            request.mode(),request.strategy(),()->true,n->{}));
     }
     public <T> T exclusively(Mode mode,java.util.function.Supplier<T> work) {
         checkProvider(mode);

@@ -1,0 +1,194 @@
+[
+  {
+    "id": "h01",
+    "title": "제품 코드 변환 · 1",
+    "category": "변환",
+    "prompt": "다음 문자열을 대문자로 변환하세요: 'shipment-3te-1y6f-rev-d'. 문자열만 출력하세요.",
+    "expectedAnswer": "SHIPMENT-3TE-1Y6F-REV-D",
+    "demoMinimum": "LOW"
+  },
+  {
+    "id": "h02",
+    "title": "주문 조건 집계 · 1",
+    "category": "계산",
+    "prompt": "SQL 집계 결과를 계산하세요. orders(status,price,quantity)의 행은 [[\"cancelled\",1022,4],[\"paid\",1003,5],[\"paid\",788,2],[\"paid\",517,6],[\"cancelled\",467,6],[\"paid\",1091,3],[\"paid\",584,1],[\"paid\",411,6],[\"cancelled\",348,2],[\"paid\",867,4],[\"paid\",781,2],[\"paid\",209,5],[\"cancelled\",561,1],[\"paid\",524,6],[\"paid\",451,2],[\"paid\",208,1]] 입니다. SELECT SUM(price*quantity) FROM orders WHERE status='paid' AND quantity>=3; 정수만 출력하세요.",
+    "expectedAnswer": "21513",
+    "demoMinimum": "MEDIUM"
+  },
+  {
+    "id": "h03",
+    "title": "순열 제약의 경우의 수 · 1",
+    "category": "조합 추론",
+    "prompt": "제약 충족 문제: 1부터 8까지의 숫자를 각각 한 번 사용해 일렬로 나열합니다. 6은 1보다 앞, 7는 5보다 앞에 있어야 합니다. 3과 2는 서로 인접하면 안 되고 첫 숫자는 6일 수 없습니다. 조건을 모두 만족하는 순열의 경우의 수를 정수로 출력하세요. 답만 출력하고 설명이나 코드 블록은 쓰지 마세요.",
+    "expectedAnswer": "5760",
+    "demoMinimum": "HIGH"
+  },
+  {
+    "id": "h04",
+    "title": "필드 추출 · 1",
+    "category": "변환",
+    "prompt": "다음 JSON 배열에서 active가 true인 객체의 email만 원래 순서대로 추출하세요. 공백 없이 쉼표로 연결하고 따옴표는 쓰지 마세요. [{\"email\":\"team7-2@example.org\",\"active\":true},{\"email\":\"team7-3@example.org\",\"active\":false},{\"email\":\"team7-4@example.org\",\"active\":true},{\"email\":\"team7-5@example.org\",\"active\":true},{\"email\":\"team7-6@example.org\",\"active\":false},{\"email\":\"team7-7@example.org\",\"active\":false}]",
+    "expectedAnswer": "team7-2@example.org,team7-4@example.org,team7-5@example.org",
+    "demoMinimum": "LOW"
+  },
+  {
+    "id": "h05",
+    "title": "모듈러 점화식 · 1",
+    "category": "계산",
+    "prompt": "재귀 수열 F(0)=6, F(1)=7, F(n)=(3*F(n-1)+3*F(n-2)) mod 1009 입니다. F(17)을 계산하여 정수만 출력하세요.",
+    "expectedAnswer": "530",
+    "demoMinimum": "MEDIUM"
+  },
+  {
+    "id": "h06",
+    "title": "0/1 배낭 최적화 · 1",
+    "category": "최적화",
+    "prompt": "0/1 배낭 최적화 문제: 각 물건은 최대 한 번만 선택할 수 있습니다. (무게,가치) 목록은 [[10,22],[10,23],[14,13],[3,44],[10,40],[11,27],[9,23],[11,27],[10,19],[8,37]]이고 용량은 31입니다. 총무게가 용량 이하인 선택의 최대 총가치를 정수만 출력하세요.",
+    "expectedAnswer": "144",
+    "demoMinimum": "HIGH"
+  },
+  {
+    "id": "h07",
+    "title": "음수 포함 정렬 · 1",
+    "category": "변환",
+    "prompt": "정수를 오름차순 정렬하세요: -53,-16,-51,11,3,26,-64,-69,34,0,36,-45,-67,-21,-51. 중복도 유지하고 공백 없이 쉼표로 연결한 숫자만 출력하세요.",
+    "expectedAnswer": "-69,-67,-64,-53,-51,-51,-45,-21,-16,0,3,11,26,34,36",
+    "demoMinimum": "LOW"
+  },
+  {
+    "id": "h08",
+    "title": "가중 그래프 경로 · 1",
+    "category": "계산",
+    "prompt": "최단 경로 알고리즘 문제: 정점은 0부터 7, 방향 간선 (출발,도착,가중치)는 [[0,1,14],[0,2,8],[0,3,10],[1,2,8],[1,4,10],[2,3,12],[2,4,14],[3,5,14],[4,5,4],[4,6,3],[5,6,14],[5,7,4],[6,7,7]] 입니다. 정점 0에서 7까지 최단 거리만 정수로 출력하세요.",
+    "expectedAnswer": "28",
+    "demoMinimum": "MEDIUM"
+  },
+  {
+    "id": "h09",
+    "title": "선행 작업 일정 수 · 1",
+    "category": "조합 추론",
+    "prompt": "제약 충족 문제: 작업 0부터 6까지를 각각 한 번, 한 번에 하나씩 수행합니다. 선행 관계 (먼저,나중)는 [[3,0],[3,4],[1,4],[1,2],[0,5],[4,5],[2,6],[5,6]] 입니다. 모든 선행 관계를 만족하는 전체 실행 순서의 경우의 수를 정수로 출력하세요.",
+    "expectedAnswer": "21",
+    "demoMinimum": "HIGH"
+  },
+  {
+    "id": "h10",
+    "title": "기호 정규화 · 1",
+    "category": "변환",
+    "prompt": "문자열 'OMEGA__Shipment---4037..Package'에서 영문은 소문자로 변환하고, 연속된 영숫자 아닌 문자들을 각각 하이픈 하나로 바꾸세요. 결과만 출력하세요.",
+    "expectedAnswer": "omega-shipment-4037-package",
+    "demoMinimum": "LOW"
+  },
+  {
+    "id": "h11",
+    "title": "반올림 없는 할인 집계 · 1",
+    "category": "계산",
+    "prompt": "조건별 계산: 가격 목록은 334,250,385,487,341,353,305,425 입니다. 1부터 센 홀수 위치의 상품은 20% 할인, 짝수 위치는 12% 할인합니다. 상품별 할인 후 가격에서 소수점 이하는 버린 뒤 합산합니다. 최종 합계만 정수로 출력하세요.",
+    "expectedAnswer": "2423",
+    "demoMinimum": "MEDIUM"
+  },
+  {
+    "id": "h12",
+    "title": "작업 배정 최적화 · 1",
+    "category": "최적화",
+    "prompt": "최적화 문제: 직원 5명에게 작업 5개를 하나씩 배정합니다. 직원과 작업은 각각 정확히 한 번 사용합니다. 비용 행렬은 행이 직원, 열이 작업 순서로 [[35,36,43,26,27],[14,29,19,10,35],[16,15,40,28,44],[23,24,8,41,39],[29,26,44,16,24]] 입니다. 가능한 배정 중 최소 총비용만 정수로 출력하세요.",
+    "expectedAnswer": "80",
+    "demoMinimum": "HIGH"
+  },
+  {
+    "id": "h13",
+    "title": "제품 코드 변환 · 2",
+    "category": "변환",
+    "prompt": "다음 문자열을 대문자로 변환하세요: 'shipment-3ti-24h7-rev-f'. 문자열만 출력하세요.",
+    "expectedAnswer": "SHIPMENT-3TI-24H7-REV-F",
+    "demoMinimum": "LOW"
+  },
+  {
+    "id": "h14",
+    "title": "주문 조건 집계 · 2",
+    "category": "계산",
+    "prompt": "SQL 집계 결과를 계산하세요. orders(status,price,quantity)의 행은 [[\"paid\",722,4],[\"paid\",686,3],[\"paid\",247,1],[\"cancelled\",1000,6],[\"paid\",898,4],[\"paid\",1069,3],[\"paid\",801,4],[\"cancelled\",556,6],[\"paid\",632,1],[\"paid\",573,1],[\"paid\",468,2],[\"cancelled\",320,2],[\"paid\",181,6],[\"paid\",343,4],[\"paid\",1009,3],[\"cancelled\",173,5]] 입니다. SELECT SUM(price*quantity) FROM orders WHERE status='paid' AND quantity>=4; 정수만 출력하세요.",
+    "expectedAnswer": "12142",
+    "demoMinimum": "MEDIUM"
+  },
+  {
+    "id": "h15",
+    "title": "순열 제약의 경우의 수 · 2",
+    "category": "조합 추론",
+    "prompt": "제약 충족 문제: 1부터 8까지의 숫자를 각각 한 번 사용해 일렬로 나열합니다. 7은 5보다 앞, 6는 8보다 앞에 있어야 합니다. 2과 1는 서로 인접하면 안 되고 첫 숫자는 2일 수 없습니다. 조건을 모두 만족하는 순열의 경우의 수를 정수로 출력하세요. 답만 출력하고 설명이나 코드 블록은 쓰지 마세요.",
+    "expectedAnswer": "6480",
+    "demoMinimum": "HIGH"
+  },
+  {
+    "id": "h16",
+    "title": "필드 추출 · 2",
+    "category": "변환",
+    "prompt": "다음 JSON 배열에서 active가 true인 객체의 email만 원래 순서대로 추출하세요. 공백 없이 쉼표로 연결하고 따옴표는 쓰지 마세요. [{\"email\":\"team8-2@example.org\",\"active\":true},{\"email\":\"team8-3@example.org\",\"active\":false},{\"email\":\"team8-4@example.org\",\"active\":true},{\"email\":\"team8-5@example.org\",\"active\":true},{\"email\":\"team8-6@example.org\",\"active\":false},{\"email\":\"team8-7@example.org\",\"active\":true}]",
+    "expectedAnswer": "team8-2@example.org,team8-4@example.org,team8-5@example.org,team8-7@example.org",
+    "demoMinimum": "LOW"
+  },
+  {
+    "id": "h17",
+    "title": "모듈러 점화식 · 2",
+    "category": "계산",
+    "prompt": "재귀 수열 F(0)=5, F(1)=13, F(n)=(4*F(n-1)+2*F(n-2)) mod 1013 입니다. F(20)을 계산하여 정수만 출력하세요.",
+    "expectedAnswer": "583",
+    "demoMinimum": "MEDIUM"
+  },
+  {
+    "id": "h18",
+    "title": "0/1 배낭 최적화 · 2",
+    "category": "최적화",
+    "prompt": "0/1 배낭 최적화 문제: 각 물건은 최대 한 번만 선택할 수 있습니다. (무게,가치) 목록은 [[5,22],[3,13],[6,27],[5,38],[11,32],[9,43],[8,45],[3,13],[6,41],[8,43]]이고 용량은 34입니다. 총무게가 용량 이하인 선택의 최대 총가치를 정수만 출력하세요.",
+    "expectedAnswer": "194",
+    "demoMinimum": "HIGH"
+  },
+  {
+    "id": "h19",
+    "title": "음수 포함 정렬 · 2",
+    "category": "변환",
+    "prompt": "정수를 오름차순 정렬하세요: -7,-64,51,43,-29,-21,32,4,-57,-47,-67,35,-1,-41,51. 중복도 유지하고 공백 없이 쉼표로 연결한 숫자만 출력하세요.",
+    "expectedAnswer": "-67,-64,-57,-47,-41,-29,-21,-7,-1,4,32,35,43,51,51",
+    "demoMinimum": "LOW"
+  },
+  {
+    "id": "h20",
+    "title": "가중 그래프 경로 · 2",
+    "category": "계산",
+    "prompt": "최단 경로 알고리즘 문제: 정점은 0부터 7, 방향 간선 (출발,도착,가중치)는 [[0,1,11],[0,2,4],[0,3,11],[1,2,11],[1,4,3],[2,3,19],[2,4,13],[3,5,9],[4,5,18],[4,6,15],[5,6,8],[5,7,15],[6,7,8]] 입니다. 정점 0에서 7까지 최단 거리만 정수로 출력하세요.",
+    "expectedAnswer": "35",
+    "demoMinimum": "MEDIUM"
+  },
+  {
+    "id": "h21",
+    "title": "선행 작업 일정 수 · 2",
+    "category": "조합 추론",
+    "prompt": "제약 충족 문제: 작업 0부터 6까지를 각각 한 번, 한 번에 하나씩 수행합니다. 선행 관계 (먼저,나중)는 [[1,5],[3,5],[3,2],[5,6],[2,4],[6,0],[4,0]] 입니다. 모든 선행 관계를 만족하는 전체 실행 순서의 경우의 수를 정수로 출력하세요.",
+    "expectedAnswer": "16",
+    "demoMinimum": "HIGH"
+  },
+  {
+    "id": "h22",
+    "title": "기호 정규화 · 2",
+    "category": "변환",
+    "prompt": "문자열 'DELTA__Shipment---2813..Node'에서 영문은 소문자로 변환하고, 연속된 영숫자 아닌 문자들을 각각 하이픈 하나로 바꾸세요. 결과만 출력하세요.",
+    "expectedAnswer": "delta-shipment-2813-node",
+    "demoMinimum": "LOW"
+  },
+  {
+    "id": "h23",
+    "title": "반올림 없는 할인 집계 · 2",
+    "category": "계산",
+    "prompt": "조건별 계산: 가격 목록은 317,491,716,749,491,268,699,631 입니다. 1부터 센 홀수 위치의 상품은 18% 할인, 짝수 위치는 7% 할인합니다. 상품별 할인 후 가격에서 소수점 이하는 버린 뒤 합산합니다. 최종 합계만 정수로 출력하세요.",
+    "expectedAnswer": "3808",
+    "demoMinimum": "MEDIUM"
+  },
+  {
+    "id": "h24",
+    "title": "작업 배정 최적화 · 2",
+    "category": "최적화",
+    "prompt": "최적화 문제: 직원 5명에게 작업 5개를 하나씩 배정합니다. 직원과 작업은 각각 정확히 한 번 사용합니다. 비용 행렬은 행이 직원, 열이 작업 순서로 [[44,44,38,9,16],[14,22,17,38,20],[18,29,14,26,18],[16,25,32,22,35],[12,34,18,25,32]] 입니다. 가능한 배정 중 최소 총비용만 정수로 출력하세요.",
+    "expectedAnswer": "80",
+    "demoMinimum": "HIGH"
+  }
+]
