@@ -1,0 +1,96 @@
+{
+  "status": "LAUNCHER_BYTES_IDENTICAL",
+  "comparedAt": "2026-10-09T10:57:57.020866Z",
+  "manifest": {
+    "path": "results/effort-v4/development-1/manifest.json",
+    "sha256": "f4aac3e74deaf062bcc92d6b735aa3d240daef9787f73eea0b996882784d6267"
+  },
+  "jars": {
+    "baseline": {
+      "path": ".tools/effort-v4/baseline.jar",
+      "sha256": "5965248981d42c713f0e8a8bd8f68afebe9f27dbdc1ab13dffa2f52015661482",
+      "manifestMatch": true
+    },
+    "candidate": {
+      "path": "backend/build/libs/effort-lab.jar",
+      "sha256": "676c2ae207aa4fccb194e98743177d1a0962c09b267a43633bc90accde035992",
+      "manifestMatch": true
+    }
+  },
+  "entries": [
+    {
+      "path": "BOOT-INF/classes/answer-instructions.txt",
+      "baseline": {
+        "sha256": "7690692aaaf1708f8b6a18f29d6612edd84a314bacfcd45967b55f6a1ad9c77c",
+        "lengthBytes": 230
+      },
+      "candidate": {
+        "sha256": "7690692aaaf1708f8b6a18f29d6612edd84a314bacfcd45967b55f6a1ad9c77c",
+        "lengthBytes": 230
+      },
+      "equal": true
+    },
+    {
+      "path": "BOOT-INF/classes/application.properties",
+      "baseline": {
+        "sha256": "81635dd2dd264b4c1aabf1cb429f0135696bff5c9403449c2ae89d93d9966dd2",
+        "lengthBytes": 471
+      },
+      "candidate": {
+        "sha256": "81635dd2dd264b4c1aabf1cb429f0135696bff5c9403449c2ae89d93d9966dd2",
+        "lengthBytes": 471
+      },
+      "equal": true
+    },
+    {
+      "path": "BOOT-INF/classes/dev/effortlab/ModelGateway$1.class",
+      "baseline": {
+        "sha256": "0d66f62900c755d004cc615fe33e861b3ff783fd61adad41be8941ff391d5281",
+        "lengthBytes": 794
+      },
+      "candidate": {
+        "sha256": "0d66f62900c755d004cc615fe33e861b3ff783fd61adad41be8941ff391d5281",
+        "lengthBytes": 794
+      },
+      "equal": true
+    },
+    {
+      "path": "BOOT-INF/classes/dev/effortlab/ModelGateway$ModelFailure.class",
+      "baseline": {
+        "sha256": "e18b68582a04e7a8b306b1a1825e3d5302391a20d6f3de0a9864d5c58582693d",
+        "lengthBytes": 593
+      },
+      "candidate": {
+        "sha256": "e18b68582a04e7a8b306b1a1825e3d5302391a20d6f3de0a9864d5c58582693d",
+        "lengthBytes": 593
+      },
+      "equal": true
+    },
+    {
+      "path": "BOOT-INF/classes/dev/effortlab/ModelGateway.class",
+      "baseline": {
+        "sha256": "e2c54c4ab99eafb579f292148997247c653c85af349aee35ffdab3436ac30aa3",
+        "lengthBytes": 15192
+      },
+      "candidate": {
+        "sha256": "e2c54c4ab99eafb579f292148997247c653c85af349aee35ffdab3436ac30aa3",
+        "lengthBytes": 15192
+      },
+      "equal": true
+    }
+  ],
+  "candidateBuildReceipt": {
+    "path": ".tools/effort-v4/candidate-build.json",
+    "sha256": "cf9c0029d032a7f97021e6c5d68cbb529012b2fa5f19b5360d3c4568d9d13b80",
+    "builtAt": "2026-10-09T10:44:26.1215415Z",
+    "matchesManifest": true,
+    "jarSha256Matches": true
+  },
+  "allRequestedEntriesEqual": true,
+  "absentInBoth": [
+    "BOOT-INF/classes/application.yml",
+    "BOOT-INF/classes/application.yaml"
+  ],
+  "scope": "Byte comparison of model launcher classes, answer instructions and application configuration inside the two measured JARs. This is not a full experiment audit.",
+  "interpretation": "These launcher and prompt bytes are identical. This comparison does not identify the cause of dynamic input-token variation."
+}

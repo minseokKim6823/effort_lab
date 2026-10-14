@@ -1,0 +1,40 @@
+{
+  "index": 22,
+  "caseId": "h06",
+  "arm": "CANDIDATE",
+  "risk": "NORMAL",
+  "taskSha256": "2acb2fe5046820c41bc8a7d6c2ad84f6851bcae2947d133f9c193d2211d30ce1",
+  "startedAt": "2026-10-09T10:57:53.510Z",
+  "result": {
+    "strategy": "ADAPTIVE",
+    "decision": {
+      "effort": "HIGH",
+      "score": 70,
+      "reasons": [
+        "점화식·최단 경로·증명 등 복잡한 추론 신호가 있습니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 235,
+      "routingTokens": 0
+    },
+    "attempts": [],
+    "usage": {
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "reasoningTokens": 0,
+      "cachedInputTokens": 0
+    },
+    "totalTokens": 0,
+    "latencyMs": 0,
+    "verdict": "ERROR",
+    "error": "Codex 사용량을 수신하지 못했습니다. codex login status와 로컬 CLI 실행을 확인하세요.",
+    "unknownUsage": true
+  },
+  "traceFiles": [
+    {
+      "responseId": "62b3e77d-267d-44f3-8612-c2530634d425",
+      "path": "traces/62b3e77d-267d-44f3-8612-c2530634d425.jsonl",
+      "sha256": "5f632f75cecc0ba5e250b75c4c285b5a14f70ffff866b4ead66e22d602ea619a"
+    }
+  ]
+}

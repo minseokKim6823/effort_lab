@@ -1,0 +1,55 @@
+{
+  "index": 15,
+  "caseId": "h04",
+  "arm": "LEGACY",
+  "risk": "NORMAL",
+  "taskSha256": "0fa145a92f13f4914313a69b4f83e4eea2bbed44fc57218f58fdf52f794a7272",
+  "startedAt": "2026-10-09T10:54:46.378Z",
+  "result": {
+    "strategy": "ADAPTIVE",
+    "decision": {
+      "effort": "LOW",
+      "score": 0,
+      "reasons": [
+        "짧고 명확한 변환·추출 작업 신호가 있습니다."
+      ],
+      "policyVersion": "rules-1.1",
+      "routingMicros": 607,
+      "routingTokens": 0
+    },
+    "attempts": [
+      {
+        "effort": "LOW",
+        "output": "team7-2@example.org,team7-4@example.org,team7-5@example.org",
+        "usage": {
+          "inputTokens": 4046,
+          "outputTokens": 24,
+          "reasoningTokens": 0,
+          "cachedInputTokens": 1792
+        },
+        "latencyMs": 7971,
+        "responseId": "e8725dda-6047-4ab9-80c9-c07286fb0fdd",
+        "providerStatus": "completed",
+        "verdict": "PASS"
+      }
+    ],
+    "usage": {
+      "inputTokens": 4046,
+      "outputTokens": 24,
+      "reasoningTokens": 0,
+      "cachedInputTokens": 1792
+    },
+    "totalTokens": 4070,
+    "latencyMs": 7971,
+    "verdict": "PASS",
+    "error": null,
+    "unknownUsage": false
+  },
+  "traceFiles": [
+    {
+      "responseId": "e8725dda-6047-4ab9-80c9-c07286fb0fdd",
+      "path": "traces/e8725dda-6047-4ab9-80c9-c07286fb0fdd.jsonl",
+      "sha256": "a2203e9164dfb9e8836cf558d3f627c035c7751b6e2a507d4f8ad920b86b533e"
+    }
+  ]
+}

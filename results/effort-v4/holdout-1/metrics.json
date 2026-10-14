@@ -1,0 +1,7 @@
+{
+  "status": "AUDIT_FAIL",
+  "experimentComplete": false,
+  "runName": "holdout-1",
+  "auditedAt": "2026-10-10T15:05:53.639Z",
+  "error": "AssertionError [ERR_ASSERTION]: Incomplete runs cannot establish quality or savings\n+ actual - expected\n\n+ 'ERROR'\n- 'COMPLETED'\n"
+}

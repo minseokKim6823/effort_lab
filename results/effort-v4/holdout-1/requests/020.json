@@ -1,0 +1,55 @@
+{
+  "index": 20,
+  "caseId": "h06",
+  "arm": "LOW",
+  "risk": "NORMAL",
+  "taskSha256": "2acb2fe5046820c41bc8a7d6c2ad84f6851bcae2947d133f9c193d2211d30ce1",
+  "startedAt": "2026-10-09T10:56:58.319Z",
+  "result": {
+    "strategy": "LOW",
+    "decision": {
+      "effort": "HIGH",
+      "score": 70,
+      "reasons": [
+        "점화식·최단 경로·증명 등 복잡한 추론 신호가 있습니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 137,
+      "routingTokens": 0
+    },
+    "attempts": [
+      {
+        "effort": "LOW",
+        "output": "144",
+        "usage": {
+          "inputTokens": 4027,
+          "outputTokens": 505,
+          "reasoningTokens": 498,
+          "cachedInputTokens": 1792
+        },
+        "latencyMs": 21194,
+        "responseId": "31e7a5d0-8757-4e2b-872b-1c7dc1fd5ca0",
+        "providerStatus": "completed",
+        "verdict": "PASS"
+      }
+    ],
+    "usage": {
+      "inputTokens": 4027,
+      "outputTokens": 505,
+      "reasoningTokens": 498,
+      "cachedInputTokens": 1792
+    },
+    "totalTokens": 4532,
+    "latencyMs": 21194,
+    "verdict": "PASS",
+    "error": null,
+    "unknownUsage": false
+  },
+  "traceFiles": [
+    {
+      "responseId": "31e7a5d0-8757-4e2b-872b-1c7dc1fd5ca0",
+      "path": "traces/31e7a5d0-8757-4e2b-872b-1c7dc1fd5ca0.jsonl",
+      "sha256": "88ac214f774b7b0ce02066807304093b0aab64728b538917acfeb7d77644772f"
+    }
+  ]
+}

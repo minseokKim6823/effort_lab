@@ -1,0 +1,74 @@
+{
+  "index": 18,
+  "caseId": "h05",
+  "arm": "LEGACY",
+  "risk": "NORMAL",
+  "taskSha256": "577d944b541a09e874ffea93cd45b82e829b4932269d8f29fe20f81286d907c2",
+  "startedAt": "2026-10-09T10:55:41.457Z",
+  "result": {
+    "strategy": "ADAPTIVE",
+    "decision": {
+      "effort": "MEDIUM",
+      "score": 30,
+      "reasons": [
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.1",
+      "routingMicros": 162,
+      "routingTokens": 0
+    },
+    "attempts": [
+      {
+        "effort": "MEDIUM",
+        "output": "239",
+        "usage": {
+          "inputTokens": 3587,
+          "outputTokens": 406,
+          "reasoningTokens": 399,
+          "cachedInputTokens": 1792
+        },
+        "latencyMs": 38731,
+        "responseId": "05715042-886e-46cd-91f0-135155a35bb0",
+        "providerStatus": "completed",
+        "verdict": "FAIL"
+      },
+      {
+        "effort": "HIGH",
+        "output": "530",
+        "usage": {
+          "inputTokens": 3977,
+          "outputTokens": 336,
+          "reasoningTokens": 329,
+          "cachedInputTokens": 0
+        },
+        "latencyMs": 21214,
+        "responseId": "cd2c92ab-e438-4e67-9577-004da1f8fab0",
+        "providerStatus": "completed",
+        "verdict": "PASS"
+      }
+    ],
+    "usage": {
+      "inputTokens": 7564,
+      "outputTokens": 742,
+      "reasoningTokens": 728,
+      "cachedInputTokens": 1792
+    },
+    "totalTokens": 8306,
+    "latencyMs": 59945,
+    "verdict": "PASS",
+    "error": null,
+    "unknownUsage": false
+  },
+  "traceFiles": [
+    {
+      "responseId": "05715042-886e-46cd-91f0-135155a35bb0",
+      "path": "traces/05715042-886e-46cd-91f0-135155a35bb0.jsonl",
+      "sha256": "6d5773fa7fb866882842b186d2870d0ae0ddd1bca84dbb576080d0ce2eb89720"
+    },
+    {
+      "responseId": "cd2c92ab-e438-4e67-9577-004da1f8fab0",
+      "path": "traces/cd2c92ab-e438-4e67-9577-004da1f8fab0.jsonl",
+      "sha256": "121fe303b90581f32c62dbb79e335778fb6e55adb825bdb66d9e76fbfa17461e"
+    }
+  ]
+}

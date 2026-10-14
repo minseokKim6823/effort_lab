@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a1204b-6091-7f52-98b5-4282fc4af089"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"SHIPMENT-3TE-1Y6F-REV-D"}}
+{"type":"turn.completed","usage":{"input_tokens":3955,"cached_input_tokens":1792,"cache_write_input_tokens":0,"output_tokens":17,"reasoning_output_tokens":0}}

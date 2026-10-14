@@ -1,0 +1,869 @@
+{
+  "schemaVersion": "effort-v4-1",
+  "phase": "holdout",
+  "runName": "holdout-1",
+  "startedAt": "2026-10-09T10:52:01.323Z",
+  "baselineCommit": "e4f179d84d41558d6836d50a567676f245813f81",
+  "candidateCommit": "c42f49f16a83b7f6fc7c9dd8b3e3d8b263f8dcb8",
+  "baselinePolicy": "rules-1.1",
+  "candidatePolicy": "rules-1.2",
+  "model": "gpt-5.6-luna",
+  "cliVersion": "codex-cli 0.153.4",
+  "cliSha256": "61b0194f3bb6534439c8d26a3ed57d0805f84b884588b761795323eeb92fcf70",
+  "nativeCliBinary": "C:\\Users\\alstj\\Desktop\\effort-lab\\desktop\\node_modules\\@openai\\codex-win32-x64\\vendor\\x86_64-pc-windows-msvc\\bin\\codex.exe",
+  "nativeCliSha256": "444a3f0008050605cae73cd9b7a2dcac61294062dfaab56dd20430fd6498518b",
+  "candidateBuildReceipt": {
+    "builtAt": "2026-10-09T10:44:26.1215415Z",
+    "command": "backend/gradlew.bat -p backend test bootJar --console=plain",
+    "sourceHashes": {
+      "backend/build.gradle": "a46396c0b64d709da2e98072895ec73231e179841b9db665413b4e6bff2c9d73",
+      "backend/gradle/wrapper/gradle-wrapper.jar": "7a9ce74cff467ca1bf60a4fcd9f05185acceda4d0f382434d393e17864262c5d",
+      "backend/gradle/wrapper/gradle-wrapper.properties": "6151889971788db72b09df78deed780a559123093fd08aef8f680846399eefc2",
+      "backend/settings.gradle": "c1f7c5922fddc739d64b2a7953d510d1c5c1e8227bdaf0b082a606aa574825d7",
+      "backend/src/main/java/dev/effortlab/AnswerVerifier.java": "a7357c671274b8d259e58b94ae7ad75440f2f4a48b77fa5624ac38ec820599ca",
+      "backend/src/main/java/dev/effortlab/ApiController.java": "3e8770369b351c52b1f876eb629db7f98260b6a3a659d43e58455bdbfb600f9b",
+      "backend/src/main/java/dev/effortlab/BatchDomain.java": "11ae74bbfde927148e110f968c11c8090b03dbf2f755cfbb7916ff9f3f00fe62",
+      "backend/src/main/java/dev/effortlab/BatchService.java": "9b109e46d630a401fc96cb1965c141a117488aaf645c6b05aed91609f70067ee",
+      "backend/src/main/java/dev/effortlab/BenchmarkCases.java": "e43a493eaab28cb73a504b8fe9f9c5e1ae262d46e7efc6eef22f0c3777acdda3",
+      "backend/src/main/java/dev/effortlab/BenchmarkService.java": "19b2bb02455a7dbcd3580bb601abf66c0c6f4474c41cf21d6f0a6f2de1c0fda2",
+      "backend/src/main/java/dev/effortlab/Domain.java": "e1318a1e20a63da85b3d2b481e90e2ba623937172447e36e90a6c74c63d7ecc7",
+      "backend/src/main/java/dev/effortlab/EffortLabApplication.java": "367d10a9046f9a21634821636337b91aec6f1804a679a47b65fc58d11d77f358",
+      "backend/src/main/java/dev/effortlab/EffortRouter.java": "00b06dde78bf6269f08dd14d11fd3bd8e734fd2bb3d104f28021fb7b07464703",
+      "backend/src/main/java/dev/effortlab/EvaluationService.java": "e431a2d6a40de9e0db63fc478e9175dfc17472ca6acbb119d5f4d31c38307c7b",
+      "backend/src/main/java/dev/effortlab/ExperimentStore.java": "495e26e5a8c22874e9451cf439d173d07a6f1606357d9a412d496f08e66fd33b",
+      "backend/src/main/java/dev/effortlab/ModelGateway.java": "33805bcf0e611014f2d69ab18eb2993aaef16bb0a5bc77c673878aebdc8df3c9",
+      "backend/src/main/java/dev/effortlab/OriginGuard.java": "808014ba31ec8403632e2b0d0a5023d833f597fc9553e55a080b8af88009425b",
+      "backend/src/main/resources/answer-instructions.txt": "7690692aaaf1708f8b6a18f29d6612edd84a314bacfcd45967b55f6a1ad9c77c",
+      "backend/src/main/resources/application.properties": "81635dd2dd264b4c1aabf1cb429f0135696bff5c9403449c2ae89d93d9966dd2",
+      "backend/src/main/resources/challenge-cases.json": "1a0461d2c42f57ced0d5bb614f9c86f08ff0f1a5d5405425a2471940e34b9ae6",
+      "backend/src/main/resources/schema.sql": "068d01f421d92211e6b2e225747bebbea906d4f96f9618cd696dd00188e155e8"
+    },
+    "jarSha256": "676c2ae207aa4fccb194e98743177d1a0962c09b267a43633bc90accde035992"
+  },
+  "javaBinary": "C:\\Users\\alstj\\Desktop\\effort-lab\\desktop\\runtime\\java\\bin\\java.exe",
+  "nodeBinary": "C:\\nvm4w\\nodejs\\node.exe",
+  "commonWorkingDirectory": "C:\\Users\\alstj\\Desktop\\effort-lab\\.tools\\effort-v4\\shared",
+  "environment": {
+    "CODEX_MODEL": "gpt-5.6-luna",
+    "CODEX_JS_PATH": "C:\\Users\\alstj\\Desktop\\effort-lab\\desktop\\node_modules\\@openai\\codex\\bin\\codex.js",
+    "NODE_BINARY": "C:\\nvm4w\\nodejs\\node.exe",
+    "CODEX_TIMEOUT_SECONDS": "180",
+    "apiKeysRemoved": [
+      "OPENAI_API_KEY",
+      "CODEX_API_KEY"
+    ],
+    "inheritedEnvironment": "Same snapshot for both Java processes; user configuration ignored by CLI"
+  },
+  "baselineJarSha256": "5965248981d42c713f0e8a8bd8f68afebe9f27dbdc1ab13dffa2f52015661482",
+  "candidateJarSha256": "676c2ae207aa4fccb194e98743177d1a0962c09b267a43633bc90accde035992",
+  "dataset": [
+    {
+      "id": "h01",
+      "title": "제품 코드 변환 · 1",
+      "category": "변환",
+      "prompt": "다음 문자열을 대문자로 변환하세요: 'shipment-3te-1y6f-rev-d'. 문자열만 출력하세요.",
+      "expectedAnswer": "SHIPMENT-3TE-1Y6F-REV-D",
+      "demoMinimum": "LOW"
+    },
+    {
+      "id": "h02",
+      "title": "주문 조건 집계 · 1",
+      "category": "계산",
+      "prompt": "SQL 집계 결과를 계산하세요. orders(status,price,quantity)의 행은 [[\"cancelled\",1022,4],[\"paid\",1003,5],[\"paid\",788,2],[\"paid\",517,6],[\"cancelled\",467,6],[\"paid\",1091,3],[\"paid\",584,1],[\"paid\",411,6],[\"cancelled\",348,2],[\"paid\",867,4],[\"paid\",781,2],[\"paid\",209,5],[\"cancelled\",561,1],[\"paid\",524,6],[\"paid\",451,2],[\"paid\",208,1]] 입니다. SELECT SUM(price*quantity) FROM orders WHERE status='paid' AND quantity>=3; 정수만 출력하세요.",
+      "expectedAnswer": "21513",
+      "demoMinimum": "MEDIUM"
+    },
+    {
+      "id": "h03",
+      "title": "순열 제약의 경우의 수 · 1",
+      "category": "조합 추론",
+      "prompt": "제약 충족 문제: 1부터 8까지의 숫자를 각각 한 번 사용해 일렬로 나열합니다. 6은 1보다 앞, 7는 5보다 앞에 있어야 합니다. 3과 2는 서로 인접하면 안 되고 첫 숫자는 6일 수 없습니다. 조건을 모두 만족하는 순열의 경우의 수를 정수로 출력하세요. 답만 출력하고 설명이나 코드 블록은 쓰지 마세요.",
+      "expectedAnswer": "5760",
+      "demoMinimum": "HIGH"
+    },
+    {
+      "id": "h04",
+      "title": "필드 추출 · 1",
+      "category": "변환",
+      "prompt": "다음 JSON 배열에서 active가 true인 객체의 email만 원래 순서대로 추출하세요. 공백 없이 쉼표로 연결하고 따옴표는 쓰지 마세요. [{\"email\":\"team7-2@example.org\",\"active\":true},{\"email\":\"team7-3@example.org\",\"active\":false},{\"email\":\"team7-4@example.org\",\"active\":true},{\"email\":\"team7-5@example.org\",\"active\":true},{\"email\":\"team7-6@example.org\",\"active\":false},{\"email\":\"team7-7@example.org\",\"active\":false}]",
+      "expectedAnswer": "team7-2@example.org,team7-4@example.org,team7-5@example.org",
+      "demoMinimum": "LOW"
+    },
+    {
+      "id": "h05",
+      "title": "모듈러 점화식 · 1",
+      "category": "계산",
+      "prompt": "재귀 수열 F(0)=6, F(1)=7, F(n)=(3*F(n-1)+3*F(n-2)) mod 1009 입니다. F(17)을 계산하여 정수만 출력하세요.",
+      "expectedAnswer": "530",
+      "demoMinimum": "MEDIUM"
+    },
+    {
+      "id": "h06",
+      "title": "0/1 배낭 최적화 · 1",
+      "category": "최적화",
+      "prompt": "0/1 배낭 최적화 문제: 각 물건은 최대 한 번만 선택할 수 있습니다. (무게,가치) 목록은 [[10,22],[10,23],[14,13],[3,44],[10,40],[11,27],[9,23],[11,27],[10,19],[8,37]]이고 용량은 31입니다. 총무게가 용량 이하인 선택의 최대 총가치를 정수만 출력하세요.",
+      "expectedAnswer": "144",
+      "demoMinimum": "HIGH"
+    },
+    {
+      "id": "h07",
+      "title": "음수 포함 정렬 · 1",
+      "category": "변환",
+      "prompt": "정수를 오름차순 정렬하세요: -53,-16,-51,11,3,26,-64,-69,34,0,36,-45,-67,-21,-51. 중복도 유지하고 공백 없이 쉼표로 연결한 숫자만 출력하세요.",
+      "expectedAnswer": "-69,-67,-64,-53,-51,-51,-45,-21,-16,0,3,11,26,34,36",
+      "demoMinimum": "LOW"
+    },
+    {
+      "id": "h08",
+      "title": "가중 그래프 경로 · 1",
+      "category": "계산",
+      "prompt": "최단 경로 알고리즘 문제: 정점은 0부터 7, 방향 간선 (출발,도착,가중치)는 [[0,1,14],[0,2,8],[0,3,10],[1,2,8],[1,4,10],[2,3,12],[2,4,14],[3,5,14],[4,5,4],[4,6,3],[5,6,14],[5,7,4],[6,7,7]] 입니다. 정점 0에서 7까지 최단 거리만 정수로 출력하세요.",
+      "expectedAnswer": "28",
+      "demoMinimum": "MEDIUM"
+    },
+    {
+      "id": "h09",
+      "title": "선행 작업 일정 수 · 1",
+      "category": "조합 추론",
+      "prompt": "제약 충족 문제: 작업 0부터 6까지를 각각 한 번, 한 번에 하나씩 수행합니다. 선행 관계 (먼저,나중)는 [[3,0],[3,4],[1,4],[1,2],[0,5],[4,5],[2,6],[5,6]] 입니다. 모든 선행 관계를 만족하는 전체 실행 순서의 경우의 수를 정수로 출력하세요.",
+      "expectedAnswer": "21",
+      "demoMinimum": "HIGH"
+    },
+    {
+      "id": "h10",
+      "title": "기호 정규화 · 1",
+      "category": "변환",
+      "prompt": "문자열 'OMEGA__Shipment---4037..Package'에서 영문은 소문자로 변환하고, 연속된 영숫자 아닌 문자들을 각각 하이픈 하나로 바꾸세요. 결과만 출력하세요.",
+      "expectedAnswer": "omega-shipment-4037-package",
+      "demoMinimum": "LOW"
+    },
+    {
+      "id": "h11",
+      "title": "반올림 없는 할인 집계 · 1",
+      "category": "계산",
+      "prompt": "조건별 계산: 가격 목록은 334,250,385,487,341,353,305,425 입니다. 1부터 센 홀수 위치의 상품은 20% 할인, 짝수 위치는 12% 할인합니다. 상품별 할인 후 가격에서 소수점 이하는 버린 뒤 합산합니다. 최종 합계만 정수로 출력하세요.",
+      "expectedAnswer": "2423",
+      "demoMinimum": "MEDIUM"
+    },
+    {
+      "id": "h12",
+      "title": "작업 배정 최적화 · 1",
+      "category": "최적화",
+      "prompt": "최적화 문제: 직원 5명에게 작업 5개를 하나씩 배정합니다. 직원과 작업은 각각 정확히 한 번 사용합니다. 비용 행렬은 행이 직원, 열이 작업 순서로 [[35,36,43,26,27],[14,29,19,10,35],[16,15,40,28,44],[23,24,8,41,39],[29,26,44,16,24]] 입니다. 가능한 배정 중 최소 총비용만 정수로 출력하세요.",
+      "expectedAnswer": "80",
+      "demoMinimum": "HIGH"
+    },
+    {
+      "id": "h13",
+      "title": "제품 코드 변환 · 2",
+      "category": "변환",
+      "prompt": "다음 문자열을 대문자로 변환하세요: 'shipment-3ti-24h7-rev-f'. 문자열만 출력하세요.",
+      "expectedAnswer": "SHIPMENT-3TI-24H7-REV-F",
+      "demoMinimum": "LOW"
+    },
+    {
+      "id": "h14",
+      "title": "주문 조건 집계 · 2",
+      "category": "계산",
+      "prompt": "SQL 집계 결과를 계산하세요. orders(status,price,quantity)의 행은 [[\"paid\",722,4],[\"paid\",686,3],[\"paid\",247,1],[\"cancelled\",1000,6],[\"paid\",898,4],[\"paid\",1069,3],[\"paid\",801,4],[\"cancelled\",556,6],[\"paid\",632,1],[\"paid\",573,1],[\"paid\",468,2],[\"cancelled\",320,2],[\"paid\",181,6],[\"paid\",343,4],[\"paid\",1009,3],[\"cancelled\",173,5]] 입니다. SELECT SUM(price*quantity) FROM orders WHERE status='paid' AND quantity>=4; 정수만 출력하세요.",
+      "expectedAnswer": "12142",
+      "demoMinimum": "MEDIUM"
+    },
+    {
+      "id": "h15",
+      "title": "순열 제약의 경우의 수 · 2",
+      "category": "조합 추론",
+      "prompt": "제약 충족 문제: 1부터 8까지의 숫자를 각각 한 번 사용해 일렬로 나열합니다. 7은 5보다 앞, 6는 8보다 앞에 있어야 합니다. 2과 1는 서로 인접하면 안 되고 첫 숫자는 2일 수 없습니다. 조건을 모두 만족하는 순열의 경우의 수를 정수로 출력하세요. 답만 출력하고 설명이나 코드 블록은 쓰지 마세요.",
+      "expectedAnswer": "6480",
+      "demoMinimum": "HIGH"
+    },
+    {
+      "id": "h16",
+      "title": "필드 추출 · 2",
+      "category": "변환",
+      "prompt": "다음 JSON 배열에서 active가 true인 객체의 email만 원래 순서대로 추출하세요. 공백 없이 쉼표로 연결하고 따옴표는 쓰지 마세요. [{\"email\":\"team8-2@example.org\",\"active\":true},{\"email\":\"team8-3@example.org\",\"active\":false},{\"email\":\"team8-4@example.org\",\"active\":true},{\"email\":\"team8-5@example.org\",\"active\":true},{\"email\":\"team8-6@example.org\",\"active\":false},{\"email\":\"team8-7@example.org\",\"active\":true}]",
+      "expectedAnswer": "team8-2@example.org,team8-4@example.org,team8-5@example.org,team8-7@example.org",
+      "demoMinimum": "LOW"
+    },
+    {
+      "id": "h17",
+      "title": "모듈러 점화식 · 2",
+      "category": "계산",
+      "prompt": "재귀 수열 F(0)=5, F(1)=13, F(n)=(4*F(n-1)+2*F(n-2)) mod 1013 입니다. F(20)을 계산하여 정수만 출력하세요.",
+      "expectedAnswer": "583",
+      "demoMinimum": "MEDIUM"
+    },
+    {
+      "id": "h18",
+      "title": "0/1 배낭 최적화 · 2",
+      "category": "최적화",
+      "prompt": "0/1 배낭 최적화 문제: 각 물건은 최대 한 번만 선택할 수 있습니다. (무게,가치) 목록은 [[5,22],[3,13],[6,27],[5,38],[11,32],[9,43],[8,45],[3,13],[6,41],[8,43]]이고 용량은 34입니다. 총무게가 용량 이하인 선택의 최대 총가치를 정수만 출력하세요.",
+      "expectedAnswer": "194",
+      "demoMinimum": "HIGH"
+    },
+    {
+      "id": "h19",
+      "title": "음수 포함 정렬 · 2",
+      "category": "변환",
+      "prompt": "정수를 오름차순 정렬하세요: -7,-64,51,43,-29,-21,32,4,-57,-47,-67,35,-1,-41,51. 중복도 유지하고 공백 없이 쉼표로 연결한 숫자만 출력하세요.",
+      "expectedAnswer": "-67,-64,-57,-47,-41,-29,-21,-7,-1,4,32,35,43,51,51",
+      "demoMinimum": "LOW"
+    },
+    {
+      "id": "h20",
+      "title": "가중 그래프 경로 · 2",
+      "category": "계산",
+      "prompt": "최단 경로 알고리즘 문제: 정점은 0부터 7, 방향 간선 (출발,도착,가중치)는 [[0,1,11],[0,2,4],[0,3,11],[1,2,11],[1,4,3],[2,3,19],[2,4,13],[3,5,9],[4,5,18],[4,6,15],[5,6,8],[5,7,15],[6,7,8]] 입니다. 정점 0에서 7까지 최단 거리만 정수로 출력하세요.",
+      "expectedAnswer": "35",
+      "demoMinimum": "MEDIUM"
+    },
+    {
+      "id": "h21",
+      "title": "선행 작업 일정 수 · 2",
+      "category": "조합 추론",
+      "prompt": "제약 충족 문제: 작업 0부터 6까지를 각각 한 번, 한 번에 하나씩 수행합니다. 선행 관계 (먼저,나중)는 [[1,5],[3,5],[3,2],[5,6],[2,4],[6,0],[4,0]] 입니다. 모든 선행 관계를 만족하는 전체 실행 순서의 경우의 수를 정수로 출력하세요.",
+      "expectedAnswer": "16",
+      "demoMinimum": "HIGH"
+    },
+    {
+      "id": "h22",
+      "title": "기호 정규화 · 2",
+      "category": "변환",
+      "prompt": "문자열 'DELTA__Shipment---2813..Node'에서 영문은 소문자로 변환하고, 연속된 영숫자 아닌 문자들을 각각 하이픈 하나로 바꾸세요. 결과만 출력하세요.",
+      "expectedAnswer": "delta-shipment-2813-node",
+      "demoMinimum": "LOW"
+    },
+    {
+      "id": "h23",
+      "title": "반올림 없는 할인 집계 · 2",
+      "category": "계산",
+      "prompt": "조건별 계산: 가격 목록은 317,491,716,749,491,268,699,631 입니다. 1부터 센 홀수 위치의 상품은 18% 할인, 짝수 위치는 7% 할인합니다. 상품별 할인 후 가격에서 소수점 이하는 버린 뒤 합산합니다. 최종 합계만 정수로 출력하세요.",
+      "expectedAnswer": "3808",
+      "demoMinimum": "MEDIUM"
+    },
+    {
+      "id": "h24",
+      "title": "작업 배정 최적화 · 2",
+      "category": "최적화",
+      "prompt": "최적화 문제: 직원 5명에게 작업 5개를 하나씩 배정합니다. 직원과 작업은 각각 정확히 한 번 사용합니다. 비용 행렬은 행이 직원, 열이 작업 순서로 [[44,44,38,9,16],[14,22,17,38,20],[18,29,14,26,18],[16,25,32,22,35],[12,34,18,25,32]] 입니다. 가능한 배정 중 최소 총비용만 정수로 출력하세요.",
+      "expectedAnswer": "80",
+      "demoMinimum": "HIGH"
+    }
+  ],
+  "datasetSha256": "43970a51ac575196096e3962400f58b0c0fe9332f3aad2520d5785e0f9614a92",
+  "schedule": [
+    {
+      "index": 0,
+      "caseId": "h01",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 1,
+      "caseId": "h01",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 2,
+      "caseId": "h01",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 3,
+      "caseId": "h01",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 4,
+      "caseId": "h02",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 5,
+      "caseId": "h02",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 6,
+      "caseId": "h02",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 7,
+      "caseId": "h02",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 8,
+      "caseId": "h03",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 9,
+      "caseId": "h03",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 10,
+      "caseId": "h03",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 11,
+      "caseId": "h03",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 12,
+      "caseId": "h04",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 13,
+      "caseId": "h04",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 14,
+      "caseId": "h04",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 15,
+      "caseId": "h04",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 16,
+      "caseId": "h05",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 17,
+      "caseId": "h05",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 18,
+      "caseId": "h05",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 19,
+      "caseId": "h05",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 20,
+      "caseId": "h06",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 21,
+      "caseId": "h06",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 22,
+      "caseId": "h06",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 23,
+      "caseId": "h06",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 24,
+      "caseId": "h07",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 25,
+      "caseId": "h07",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 26,
+      "caseId": "h07",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 27,
+      "caseId": "h07",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 28,
+      "caseId": "h08",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 29,
+      "caseId": "h08",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 30,
+      "caseId": "h08",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 31,
+      "caseId": "h08",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 32,
+      "caseId": "h09",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 33,
+      "caseId": "h09",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 34,
+      "caseId": "h09",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 35,
+      "caseId": "h09",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 36,
+      "caseId": "h10",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 37,
+      "caseId": "h10",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 38,
+      "caseId": "h10",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 39,
+      "caseId": "h10",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 40,
+      "caseId": "h11",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 41,
+      "caseId": "h11",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 42,
+      "caseId": "h11",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 43,
+      "caseId": "h11",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 44,
+      "caseId": "h12",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 45,
+      "caseId": "h12",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 46,
+      "caseId": "h12",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 47,
+      "caseId": "h12",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 48,
+      "caseId": "h13",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 49,
+      "caseId": "h13",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 50,
+      "caseId": "h13",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 51,
+      "caseId": "h13",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 52,
+      "caseId": "h14",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 53,
+      "caseId": "h14",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 54,
+      "caseId": "h14",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 55,
+      "caseId": "h14",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 56,
+      "caseId": "h15",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 57,
+      "caseId": "h15",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 58,
+      "caseId": "h15",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 59,
+      "caseId": "h15",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 60,
+      "caseId": "h16",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 61,
+      "caseId": "h16",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 62,
+      "caseId": "h16",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 63,
+      "caseId": "h16",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 64,
+      "caseId": "h17",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 65,
+      "caseId": "h17",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 66,
+      "caseId": "h17",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 67,
+      "caseId": "h17",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 68,
+      "caseId": "h18",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 69,
+      "caseId": "h18",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 70,
+      "caseId": "h18",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 71,
+      "caseId": "h18",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 72,
+      "caseId": "h19",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 73,
+      "caseId": "h19",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 74,
+      "caseId": "h19",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 75,
+      "caseId": "h19",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 76,
+      "caseId": "h20",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 77,
+      "caseId": "h20",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 78,
+      "caseId": "h20",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 79,
+      "caseId": "h20",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 80,
+      "caseId": "h21",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 81,
+      "caseId": "h21",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 82,
+      "caseId": "h21",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 83,
+      "caseId": "h21",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 84,
+      "caseId": "h22",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 85,
+      "caseId": "h22",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 86,
+      "caseId": "h22",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 87,
+      "caseId": "h22",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 88,
+      "caseId": "h23",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 89,
+      "caseId": "h23",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 90,
+      "caseId": "h23",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 91,
+      "caseId": "h23",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 92,
+      "caseId": "h24",
+      "arm": "HIGH",
+      "risk": "HIGH"
+    },
+    {
+      "index": 93,
+      "caseId": "h24",
+      "arm": "LOW",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 94,
+      "caseId": "h24",
+      "arm": "LEGACY",
+      "risk": "NORMAL"
+    },
+    {
+      "index": 95,
+      "caseId": "h24",
+      "arm": "CANDIDATE",
+      "risk": "NORMAL"
+    }
+  ],
+  "plannedTrials": 96,
+  "tokenBudget": 500000,
+  "sourceHashes": {
+    "backend/src/main/java/dev/effortlab/EffortRouter.java": "00b06dde78bf6269f08dd14d11fd3bd8e734fd2bb3d104f28021fb7b07464703",
+    "backend/src/main/java/dev/effortlab/EvaluationService.java": "e431a2d6a40de9e0db63fc478e9175dfc17472ca6acbb119d5f4d31c38307c7b",
+    "backend/src/main/java/dev/effortlab/ModelGateway.java": "33805bcf0e611014f2d69ab18eb2993aaef16bb0a5bc77c673878aebdc8df3c9",
+    "backend/src/main/java/dev/effortlab/AnswerVerifier.java": "a7357c671274b8d259e58b94ae7ad75440f2f4a48b77fa5624ac38ec820599ca",
+    "backend/src/main/resources/answer-instructions.txt": "7690692aaaf1708f8b6a18f29d6612edd84a314bacfcd45967b55f6a1ad9c77c",
+    "backend/src/main/java/dev/effortlab/Domain.java": "e1318a1e20a63da85b3d2b481e90e2ba623937172447e36e90a6c74c63d7ecc7",
+    "backend/src/main/java/dev/effortlab/BenchmarkService.java": "19b2bb02455a7dbcd3580bb601abf66c0c6f4474c41cf21d6f0a6f2de1c0fda2",
+    "scripts/measure-effort-v4.mjs": "eb1d3e3e987c4c19afbcf0124f4797cfe1befb0907f306d0315bdfd1c4208449",
+    "scripts/audit-effort-v4.mjs": "661d4f27447bc3f5aae1275e64b30229bdc5247c82900900545cd62c3467773c",
+    "scripts/generate-effort-cases.mjs": "064303227c2c74f580a3a7ea94cee1aa6f0482d78c384348dac683171f896827",
+    "scripts/build-effort-v4.ps1": "b2d3c9c20775971c6ac4b3162a3167e18833012c89768234038fbe5fdc4fd0f4",
+    "docs/effort-v4-plan.md": "003da1184ee3f9edb9b3787bb2d5801b87ea218cb815f4fc4f60194273415ee0",
+    "baseline/backend/src/main/java/dev/effortlab/EffortRouter.java": "610dcab06bddee5ff1bbc44f0d3cf8409e02245354e7bbd2f9e480385bb55b7e",
+    "baseline/backend/src/main/java/dev/effortlab/EvaluationService.java": "3e3120d2d604427ce3f6470f343b026d4a34f4a7eb0c44349ed608b52696110f"
+  },
+  "sourceSnapshots": {
+    "backend/src/main/java/dev/effortlab/EffortRouter.java": "sources/00-EffortRouter.java",
+    "backend/src/main/java/dev/effortlab/EvaluationService.java": "sources/01-EvaluationService.java",
+    "backend/src/main/java/dev/effortlab/ModelGateway.java": "sources/02-ModelGateway.java",
+    "backend/src/main/java/dev/effortlab/AnswerVerifier.java": "sources/03-AnswerVerifier.java",
+    "backend/src/main/resources/answer-instructions.txt": "sources/04-answer-instructions.txt",
+    "backend/src/main/java/dev/effortlab/Domain.java": "sources/05-Domain.java",
+    "backend/src/main/java/dev/effortlab/BenchmarkService.java": "sources/06-BenchmarkService.java",
+    "scripts/measure-effort-v4.mjs": "sources/07-measure-effort-v4.mjs",
+    "scripts/audit-effort-v4.mjs": "sources/08-audit-effort-v4.mjs",
+    "scripts/generate-effort-cases.mjs": "sources/09-generate-effort-cases.mjs",
+    "scripts/build-effort-v4.ps1": "sources/10-build-effort-v4.ps1",
+    "docs/effort-v4-plan.md": "sources/11-effort-v4-plan.md",
+    "baseline/backend/src/main/java/dev/effortlab/EffortRouter.java": "sources/baseline-EffortRouter.java",
+    "baseline/backend/src/main/java/dev/effortlab/EvaluationService.java": "sources/baseline-EvaluationService.java"
+  },
+  "comparison": "One sequential execution per policy and case, including policy retries. All four policy orders rotated within each case. Identical task text, model, instructions, CLI, process environment and working directory.",
+  "grading": "EXACT after output; expected answer is sent to the local verifier only. HIGH uses Risk.HIGH, which changes only the router decision.",
+  "limitations": "Synthetic known families, one execution per arm and case. Dynamic provider input and cache may vary. Not a general routing guarantee."
+}

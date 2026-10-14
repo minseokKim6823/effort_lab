@@ -1,0 +1,56 @@
+{
+  "index": 7,
+  "caseId": "h02",
+  "arm": "HIGH",
+  "risk": "HIGH",
+  "taskSha256": "cec77015de7ea416952ea61ff047814156185fe48d60ac047dfb7200cd5802f8",
+  "startedAt": "2026-10-09T10:53:42.262Z",
+  "result": {
+    "strategy": "HIGH",
+    "decision": {
+      "effort": "HIGH",
+      "score": 100,
+      "reasons": [
+        "사용자가 높은 정확도가 필요한 작업으로 지정했습니다.",
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 643,
+      "routingTokens": 0
+    },
+    "attempts": [
+      {
+        "effort": "HIGH",
+        "output": "21513",
+        "usage": {
+          "inputTokens": 4087,
+          "outputTokens": 119,
+          "reasoningTokens": 111,
+          "cachedInputTokens": 1792
+        },
+        "latencyMs": 7567,
+        "responseId": "5be90667-1834-4bb8-a45c-db47e547fb2e",
+        "providerStatus": "completed",
+        "verdict": "PASS"
+      }
+    ],
+    "usage": {
+      "inputTokens": 4087,
+      "outputTokens": 119,
+      "reasoningTokens": 111,
+      "cachedInputTokens": 1792
+    },
+    "totalTokens": 4206,
+    "latencyMs": 7567,
+    "verdict": "PASS",
+    "error": null,
+    "unknownUsage": false
+  },
+  "traceFiles": [
+    {
+      "responseId": "5be90667-1834-4bb8-a45c-db47e547fb2e",
+      "path": "traces/5be90667-1834-4bb8-a45c-db47e547fb2e.jsonl",
+      "sha256": "0ac9ebb5336f5ca3629b58aebff8e122e35f3e479e97af5af3b74e23ea1b4ce2"
+    }
+  ]
+}

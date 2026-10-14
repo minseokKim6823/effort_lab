@@ -1,0 +1,55 @@
+{
+  "index": 6,
+  "caseId": "h02",
+  "arm": "CANDIDATE",
+  "risk": "NORMAL",
+  "taskSha256": "cec77015de7ea416952ea61ff047814156185fe48d60ac047dfb7200cd5802f8",
+  "startedAt": "2026-10-09T10:53:36.343Z",
+  "result": {
+    "strategy": "ADAPTIVE",
+    "decision": {
+      "effort": "MEDIUM",
+      "score": 30,
+      "reasons": [
+        "계산·구현 또는 여러 조건을 다루는 작업입니다."
+      ],
+      "policyVersion": "rules-1.2",
+      "routingMicros": 591,
+      "routingTokens": 0
+    },
+    "attempts": [
+      {
+        "effort": "MEDIUM",
+        "output": "21513",
+        "usage": {
+          "inputTokens": 4087,
+          "outputTokens": 114,
+          "reasoningTokens": 106,
+          "cachedInputTokens": 1792
+        },
+        "latencyMs": 5855,
+        "responseId": "920dd55d-cf59-4daf-80a6-4a15139e69cd",
+        "providerStatus": "completed",
+        "verdict": "PASS"
+      }
+    ],
+    "usage": {
+      "inputTokens": 4087,
+      "outputTokens": 114,
+      "reasoningTokens": 106,
+      "cachedInputTokens": 1792
+    },
+    "totalTokens": 4201,
+    "latencyMs": 5855,
+    "verdict": "PASS",
+    "error": null,
+    "unknownUsage": false
+  },
+  "traceFiles": [
+    {
+      "responseId": "920dd55d-cf59-4daf-80a6-4a15139e69cd",
+      "path": "traces/920dd55d-cf59-4daf-80a6-4a15139e69cd.jsonl",
+      "sha256": "2b484c0bb1868b99f4c811faab266d6a37514a41028c09edadeb0e07fe7199f5"
+    }
+  ]
+}
