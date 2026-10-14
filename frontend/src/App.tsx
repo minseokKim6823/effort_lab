@@ -2,7 +2,7 @@ import {useEffect,useState} from 'react';
 import {Activity,ArrowDownRight,ArrowRight,Beaker,BookOpen,Check,ChevronRight,Command,Download,FlaskConical,Layers,LoaderCircle,Play,RotateCcw,ShieldCheck,Square,Workflow,Zap} from 'lucide-react';
 import {api,downloadJson} from './api';
 import BatchPanel from './BatchPanel';
-import type {Decision,Execution,Mode,Report,Status,Strategy,TaskCase} from './types';
+import type {Decision,Execution,JevExecution,JevRouteResult,JevStatus,Mode,Report,Status,Strategy,TaskCase} from './types';
 const nf=new Intl.NumberFormat('ko-KR');
 const num=(n:number|undefined)=>n===undefined?'—':nf.format(Math.round(n));
 const strategies:Strategy[]=['DEFAULT_HIGH','HIGH','LOW','ADAPTIVE'];
@@ -17,6 +17,11 @@ export default function App(){
  const [suite,setSuite]=useState('challenge');
  const [reportCases,setReportCases]=useState<TaskCase[]>([]);
  const [selected,setSelected]=useState<string|null>(null);
+ const [selector,setSelector]=useState<'LOCAL'|'JEV'>('LOCAL'),[jevStatus,setJevStatus]=useState<JevStatus|null>(null),[jevStatusError,setJevStatusError]=useState('');
+ const [jevResult,setJevResult]=useState<JevRouteResult|null>(null);
+ const jevSelected=selector==='JEV';
+ const jevUnavailable=jevSelected&&(mode!=='CODEX'||(!risk&&!jevStatus?.configured));
+ const jevExecution=execution&&'routing' in execution?execution as JevExecution:null;
  const running=report?.status==='RUNNING';
  const arms=strategies.filter(s=>report?.arms[s]);
  const compactContext=report?.contextPolicy==='answer-only-v1'||!!report?.arms.DEFAULT_HIGH;
@@ -25,13 +30,17 @@ export default function App(){
    setStatus(s);setCases(c);setHistory(h);setTask(c[0]?.prompt||'');setExpected(c[0]?.expectedAnswer||'');setCheck('EXACT');
    if(!s.codexAvailable)setMode('DEMO');if(h.length)setReport(h[0]);
  }).catch(e=>setError(e.message));},[]);
+ useEffect(()=>{api<JevStatus>('/jev/status').then(setJevStatus).catch(e=>setJevStatusError(e.message));},[]);
  useEffect(()=>{if(!running||!report)return;let cancelled=false;
  const timer=setInterval(()=>{api<Report>('/benchmarks/'+report.id).then(r=>{if(cancelled)return;setReport(r);if(r.status!=='RUNNING')api<Report[]>('/benchmarks').then(setHistory).catch(()=>{});}).catch(e=>{if(!cancelled)setError(e.message);});},1200);
  return()=>{cancelled=true;clearInterval(timer);};},[running,report?.id]);
  useEffect(()=>{if(!report)return;let cancelled=false;api<TaskCase[]>('/cases?suite='+(report.request.suite||'starter')).then(c=>{if(!cancelled)setReportCases(c)}).catch(()=>{});return()=>{cancelled=true};},[report?.id]);
  async function act(work:()=>Promise<void>){setBusy(true);setError('');try{await work();}catch(e){setError(e instanceof Error?e.message:'요청에 실패했습니다.');}finally{setBusy(false);}}
- function selectCase(c:TaskCase){setTask(c.prompt);setExpected(c.expectedAnswer);setCheck('EXACT');setDecision(null);setExecution(null);}
- function modeControl(){return <label className="mode-select"><span className={'status-dot '+(mode==='CODEX'?'live':'')}/><select aria-label="실행 모드" value={mode} onChange={e=>setMode(e.target.value as Mode)} disabled={busy||running}>
+ function clearSingle(){setDecision(null);setExecution(null);setJevResult(null);}
+ function selectCase(c:TaskCase){setTask(c.prompt);setExpected(c.expectedAnswer);setCheck('EXACT');clearSingle();}
+ async function analyze(){clearSingle();if(jevSelected){const result=await api<JevRouteResult>('/jev/route',{task,risk:risk?'HIGH':'NORMAL'});setJevResult(result);setDecision(result.decision);}else setDecision(await api<Decision>('/route',{task,risk:risk?'HIGH':'NORMAL'}));}
+ async function execute(){clearSingle();const result=await api<Execution|JevExecution>(jevSelected?'/jev/execute':'/execute',{task,risk:risk?'HIGH':'NORMAL',mode,check,expectedAnswer:expected});setExecution(result);setDecision(result.decision);if('routing' in result)setJevResult({decision:result.decision,routing:result.routing,error:result.decision?null:result.error,unknownUsage:result.decision?false:result.unknownUsage});}
+ function modeControl(){return <label className="mode-select"><span className={'status-dot '+(mode==='CODEX'?'live':'')}/><select aria-label="실행 모드" value={mode} onChange={e=>{setMode(e.target.value as Mode);clearSingle();}} disabled={busy||running}>
    <option value="CODEX" disabled={!status?.codexAvailable}>Codex 구독 · 실제 측정</option><option value="DEMO">데모 · 시뮬레이션</option></select></label>}
  const latest=report?.comparable?report:null;
  const selectedTrials=report?.trials.filter(t=>t.caseId===selected)||[];
@@ -50,31 +59,36 @@ export default function App(){
     <section className="page-heading"><div><span className="eyebrow">{tab==='workspace'?'THINK JUST ENOUGH':tab==='benchmark'?'MEASURE, THEN OPTIMIZE':tab==='batch'?'SHARE THE CONTEXT':'BUILT ON EVIDENCE'}</span><h1>{tab==='workspace'?'필요한 만큼만 생각하도록.':tab==='benchmark'?'절약은 숫자로 확인하세요.':tab==='batch'?'짧은 작업은 함께 해결하세요.':'무엇을 줄이고, 무엇을 지킬까.'}</h1><p>{tab==='workspace'?'작업에 맞는 effort를 고르고, 답의 품질과 실제 사용량을 확인하세요.':tab==='benchmark'?'같은 모델, 같은 문제. 네 가지 실행 전략을 공정하게 비교합니다.':tab==='batch'?'반복되는 문맥은 한 번만. 작업별 답과 호출별 사용량을 확인하세요.':'목표는 적은 토큰 자체가 아니라, 같은 품질을 더 적은 총토큰으로 얻는 것입니다.'}</p></div>{modeControl()}</section>
     {tab==='workspace'&&<>
      <section className="stats-grid">
-      <Metric icon={<ArrowDownRight size={20}/>} label="문맥 + effort 총토큰 변화" value={(latest?.overallSavingsPercent??latest?.savingsPercent)!=null?(latest!.overallSavingsPercent??latest!.savingsPercent)!.toFixed(2)+'%':'—'} note={latest?(latest.mode==='CODEX'?'Codex 실측 · 기존 문맥 high 대비':'데모 수치 · 실제 절감률 아님'):'비교 실험 후 표시됩니다'}/>
-      <Metric icon={<ShieldCheck size={20}/>} label="자동 선택 정답률" value={latest?latest.arms.ADAPTIVE.passRate.toFixed(0)+'%':'—'} note={latest?num(latest.arms.ADAPTIVE.passed)+' / '+num(latest.arms.ADAPTIVE.trials)+'건 · 정답 일치 기준':'정답이 있는 작업만 채점'}/>
-      <Metric icon={<Zap size={20}/>} label="effort 선택에 쓴 AI 토큰" value="0" note="로컬 규칙으로 선택 · 모델 호출 없음"/>
+      <Metric icon={<ArrowDownRight size={20}/>} label="로컬 규칙 실험 · 총토큰 변화" value={(latest?.overallSavingsPercent??latest?.savingsPercent)!=null?(latest!.overallSavingsPercent??latest!.savingsPercent)!.toFixed(2)+'%':'—'} note={latest?(latest.mode==='CODEX'?'Codex 실측 · 기존 문맥 high 대비':'데모 수치 · 실제 절감률 아님'):'비교 실험 후 표시됩니다'}/>
+      <Metric icon={<ShieldCheck size={20}/>} label="로컬 규칙 실험 · 정답률" value={latest?latest.arms.ADAPTIVE.passRate.toFixed(0)+'%':'—'} note={latest?num(latest.arms.ADAPTIVE.passed)+' / '+num(latest.arms.ADAPTIVE.trials)+'건 · 정답 일치 기준':'정답이 있는 작업만 채점'}/>
+      <Metric icon={<Zap size={20}/>} label="effort 선택에 쓴 AI 토큰" value={jevSelected?(jevResult?num(jevResult.routing.totalTokens):'—'):'0'} note={jevSelected?(jevResult?.unknownUsage?'일부 사용량 미확인 · 확인된 토큰만 표시':jevResult?.routing.skipped?'정확도 우선 · Jev 호출 생략':'최근 분류 1회 · 실행 토큰과 합산'):'로컬 규칙으로 선택 · 모델 호출 없음'}/>
      </section>
      <div className="studio-grid"><section className="panel task-panel">
       <div className="panel-heading"><div><span className="step">01</span><h2>작업 입력</h2></div><span className="muted">최대 20,000자</span></div>
+      <div className="selector-control"><label htmlFor="effort-selector">effort 판단 방식</label><select id="effort-selector" value={selector} disabled={busy||running} onChange={e=>{setSelector(e.target.value as 'LOCAL'|'JEV');clearSingle();}}><option value="LOCAL">로컬 규칙 · AI 토큰 0</option><option value="JEV">Jev AI 모델 · 작업 분류</option></select></div>
+      {jevSelected&&<div className="jev-status" role="status">{jevStatus?.configured?'Jev 연결 설정됨 · '+jevStatus.model:jevStatus?'Jev 키 미설정 · 서버 환경변수 TYPESAFE_API_KEY가 필요합니다.':jevStatusError?'Jev 설정 상태를 확인할 수 없습니다. '+jevStatusError:'Jev 설정 확인 중'}{mode!=='CODEX'&&<p>Jev 분류는 Codex 실제 측정 모드에서 사용할 수 있습니다.</p>}{risk&&<p>정확도 우선에서는 Jev 호출을 생략하고 high로 실행합니다.</p>}</div>}
       <div className="sample-list">{cases.slice(0,3).map(c=><button key={c.id} onClick={()=>selectCase(c)} disabled={busy||running}><Beaker size={13}/>{c.title}</button>)}</div>
-      <label className="sr-only" htmlFor="task">분석할 작업</label><textarea id="task" disabled={busy} value={task} maxLength={20000} onChange={e=>{setTask(e.target.value);setDecision(null);setExecution(null);setCheck('NONE');setExpected('')}} placeholder="해결할 작업과 원하는 결과를 구체적으로 적어주세요."/>
-      <div className="input-footer"><label className="toggle"><input type="checkbox" disabled={busy} checked={risk} onChange={e=>{setRisk(e.target.checked);setDecision(null)}}/>정확도 우선 <ShieldCheck size={14}/></label><span>{num(task.length)}자</span></div>
-      <button className="primary full" disabled={!task.trim()||busy} onClick={()=>act(async()=>{setDecision(await api<Decision>('/route',{task,risk:risk?'HIGH':'NORMAL'}));setExecution(null)})}>{busy?<LoaderCircle className="spin" size={17}/>:<Workflow size={17}/>}effort 분석하기<ArrowRight size={16}/></button>
-      <p className="helper">분석 버튼은 모델을 호출하지 않습니다.</p>
+      <label className="sr-only" htmlFor="task">분석할 작업</label><textarea id="task" disabled={busy} value={task} maxLength={20000} onChange={e=>{setTask(e.target.value);clearSingle();setCheck('NONE');setExpected('')}} placeholder="해결할 작업과 원하는 결과를 구체적으로 적어주세요."/>
+      <div className="input-footer"><label className="toggle"><input type="checkbox" disabled={busy} checked={risk} onChange={e=>{setRisk(e.target.checked);clearSingle();}}/>정확도 우선 <ShieldCheck size={14}/></label><span>{num(task.length)}자</span></div>
+      <button className="primary full" disabled={!task.trim()||busy||running||jevUnavailable} onClick={()=>act(analyze)}>{busy?<LoaderCircle className="spin" size={17}/>:<Workflow size={17}/>}effort 분석하기<ArrowRight size={16}/></button>
+      <p className="helper">{jevSelected?(risk?'정확도 우선으로 high를 선택합니다. Jev 호출은 생략됩니다.':'분석 버튼은 Jev를 1회 호출합니다. 실행 버튼을 누르면 다시 분류하며, 앞선 분석 사용량은 실행 합계에 포함되지 않습니다.'):'분석 버튼은 모델을 호출하지 않습니다.'}</p>
      </section>
      <section className="panel decision-panel"><div className="panel-heading"><div><span className="step">02</span><h2>실행 전략</h2></div><Layers size={18}/></div>
       {decision?<><div className="effort-result"><span>추천 시작 effort</span><h3>{decision.effort.toLowerCase()}<span>effort</span></h3><p>{decision.effort==='LOW'?'명확한 작업은 가볍게 시작합니다.':decision.effort==='MEDIUM'?'근거가 부족하거나 여러 조건이 있어 충분히 검토합니다.':'복잡한 추론 신호 또는 정확도 우선 조건을 반영했습니다.'}</p></div>
       <div className="effort-scale">{['LOW','MEDIUM','HIGH'].map(e=><div className={e===decision.effort?'selected':''} key={e}><span/>{e.toLowerCase()}</div>)}</div>
       <ul className="reason-list">{decision.reasons.map(r=><li key={r}><Check size={15}/>{r}</li>)}</ul>
-      <div className="decision-meta"><span>선택 시간 <strong>{decision.routingMicros} μs</strong></span><span>추가 AI 토큰 <strong>0</strong></span></div>
-      </>:<div className="empty-decision"><div className="orbit"><Workflow size={34}/></div><h3>먼저 작업을 분석해 보세요</h3><p>선택한 effort와 판단 근거를<br/>여기에서 확인할 수 있습니다.</p></div>}
+      <div className="decision-meta"><span>선택 시간 <strong>{jevSelected?num(jevResult?.routing.latencyMs)+' ms':decision.routingMicros+' μs'}</strong></span><span>추가 AI 토큰 <strong>{num(decision.routingTokens)}</strong></span></div>
+      </>:jevResult?.error?<div className="jev-route-failure"><h3>effort를 선택하지 못했습니다</h3><p className="error-text" role="alert">{jevResult.error}</p><p className="helper">확인된 분류 사용량 {num(jevResult.routing.totalTokens)} 토큰 · 답변 생성은 시작하지 않았습니다.</p></div>:<div className="empty-decision"><div className="orbit"><Workflow size={34}/></div><h3>먼저 작업을 분석해 보세요</h3><p>선택한 effort와 판단 근거를<br/>여기에서 확인할 수 있습니다.</p></div>}
+      {jevResult?.routing.confidence!=null&&<p className="helper jev-confidence">분류 confidence {(jevResult.routing.confidence*100).toFixed(1)}% · 답변 정답률을 의미하지 않습니다.</p>}
+      {jevResult?.unknownUsage&&<p className="error-text">분류 호출의 일부 사용량을 확인하지 못했습니다. 표시된 토큰은 전체 사용량이 아닙니다.</p>}
      </section></div>
      <section className="panel execute-panel"><div className="panel-heading"><div><span className="step">03</span><h2>실행과 검증</h2></div><span className="muted">{mode==='CODEX'?'실행 시 구독 사용량을 소비합니다':'예제만 실행되는 시뮬레이션'}</span></div>
       <div className="execute-controls"><label>검증 방식<select disabled={busy} value={check} onChange={e=>setCheck(e.target.value)}><option value="NONE">검증 없음 · 품질 미확인</option><option value="EXACT">정답과 정확히 일치</option><option value="CONTAINS">필수 문자열 포함</option><option value="JSON">JSON 객체·배열 형식</option></select></label>
       {(check==='EXACT'||check==='CONTAINS')&&<label className="grow">정답 / 필수 문자열<input disabled={busy} value={expected} maxLength={4000} onChange={e=>setExpected(e.target.value)} placeholder="모델에 보내지 않고 검증에만 사용합니다"/></label>}
-      <button className="primary" disabled={!task.trim()||busy||running||((check==='EXACT'||check==='CONTAINS')&&!expected.trim())} onClick={()=>act(async()=>{const x=await api<Execution>('/execute',{task,risk:risk?'HIGH':'NORMAL',mode,check,expectedAnswer:expected});setExecution(x);setDecision(x.decision)})}>{busy?<LoaderCircle className="spin" size={16}/>:<Play size={16}/>}선택한 방식으로 실행</button></div>
+      <button className="primary" disabled={!task.trim()||busy||running||jevUnavailable||((check==='EXACT'||check==='CONTAINS')&&!expected.trim())} onClick={()=>act(execute)}>{busy?<LoaderCircle className="spin" size={16}/>:<Play size={16}/>}선택한 방식으로 실행</button></div>
+      {jevSelected&&<p className="helper">{risk?'high로 Codex 답변을 생성합니다.':'Jev가 effort를 판단한 뒤 Codex가 답변을 생성합니다. 실행 총토큰에는 이 분류와 모든 답변 생성·재시도가 포함됩니다.'}</p>}
       <p className="helper">{check==='NONE'?'검증 기준이 없으면 정답 여부를 단정하거나 자동 재시도하지 않습니다.':check==='JSON'?'JSON 형식만 검사합니다. 내용의 정확성을 보장하지 않습니다.':'low·medium에서 검증에 실패하면 high로 한 번 재시도합니다. 최대 2회 실행하며 high로 시작하면 1회로 끝납니다.'}</p>
-      {execution&&<div className="execution-result"><div className="result-strip"><Badge value={execution.verdict}/><strong>총 {num(execution.totalTokens)} 토큰</strong><span>{(execution.latencyMs/1000).toFixed(2)}초</span><span>{execution.attempts.length}회 호출</span>{execution.unknownUsage&&<span>일부 사용량 미확인</span>}</div>{execution.error&&<p className="error-text">{execution.error}</p>}{execution.attempts.map((a,i)=><details key={a.responseId} open={i===execution.attempts.length-1}><summary><Badge value={a.effort}/>{i+1}차 시도 · {a.verdict} · {num(a.usage.inputTokens+a.usage.outputTokens)} 토큰</summary><pre>{a.output}</pre></details>)}</div>}
+      {execution&&<div className="execution-result"><div className="result-strip"><Badge value={execution.verdict}/><strong>{execution.unknownUsage?'확인된':'총'} {num(execution.totalTokens)} 토큰</strong><span>{(execution.latencyMs/1000).toFixed(2)}초</span><span>{jevExecution?'Codex ':''}{execution.attempts.length}회 호출</span>{execution.unknownUsage&&<span>일부 사용량 미확인</span>}{jevExecution&&<button className="secondary compact" onClick={()=>downloadJson(jevExecution,'effort-lab-jev-execution.json')}><Download size={14}/>Jev 결과 JSON</button>}</div>{jevExecution&&<p className="helper jev-cost">Jev 분류 {num(jevExecution.routing.totalTokens)} 토큰{jevExecution.routing.skipped?' (호출 생략)':''} + Codex 생성·재시도 {num(jevExecution.generationUsage.inputTokens+jevExecution.generationUsage.outputTokens)} 토큰</p>}{execution.error&&<p className="error-text">{execution.error}</p>}{execution.attempts.map((a,i)=><details key={a.responseId} open={i===execution.attempts.length-1}><summary><Badge value={a.effort}/>{i+1}차 시도 · {a.verdict} · {num(a.usage.inputTokens+a.usage.outputTokens)} 토큰</summary><pre>{a.output}</pre></details>)}</div>}
      </section>
     </>}
     {tab==='benchmark'&&<>
@@ -103,4 +117,17 @@ export default function App(){
  </div>
 }
 function Metric({icon,label,value,note}:{icon:React.ReactNode;label:string;value:string;note:string}){return <div className="metric"><div>{label}{icon}</div><strong>{value}</strong><p>{note}</p></div>}
-function Method(){return <div className="method-grid"><section className="panel prose"><span className="eyebrow">01 / PROBLEM</span><h2>모든 작업에 high가 필요할까요?</h2><p>문자 변환과 복잡한 설계 문제에 같은 effort를 쓰면 불필요한 추론이 생길 수 있습니다. effort는 보통 호출하는 프로그램이 지정합니다. 이 앱이 그 선택을 담당합니다.</p><span className="eyebrow">02 / APPROACH</span><h2>선택은 가볍게, 품질은 확인하면서</h2><ol><li><strong>로컬 규칙으로 출발점을 정합니다.</strong> 변환·추출은 low, 일반 계산·구현은 medium으로 시작합니다. 점화식·재귀 수열·최단 경로, 복잡한 추론 신호나 정확도 우선은 high입니다.</li><li><strong>짧은 답변 전용 문맥으로 같은 모델을 호출합니다.</strong> Codex 구독 로그인을 사용하므로 별도 API 키가 필요하지 않습니다.</li><li><strong>기준이 있을 때 답을 검증합니다.</strong> low·medium에서 실패하면 high로 한 번 재시도합니다. 최대 두 번 호출하며 모든 호출의 토큰을 합산합니다.</li></ol><p>키워드 규칙은 난이도를 완벽히 이해하지 못합니다. 이 버전은 개선 효과를 검증할 수 있는 출발점입니다.</p></section><section className="panel prose"><span className="eyebrow">03 / MEASUREMENT</span><h2>전체 비용을 숨기지 않습니다</h2><div className="formula">총토큰 = Σ(입력 + 출력)<small>최초 호출과 모든 재시도 포함</small></div><p>추론 토큰은 출력 토큰의 일부로 다루며 다시 더하지 않습니다. Codex 기본 지시문과 캐시 입력도 총토큰에 포함됩니다. 구독의 남은 한도나 결제 금액으로 환산하지 않습니다.</p><p>기존 문맥 high와 짧은 문맥의 high, low, 자동 선택을 비교해 문맥 축소와 effort 선택 효과를 분리합니다. 순서를 순환 배치하고 정답률·응답 시간·추가 재시도를 함께 비교합니다.</p><span className="eyebrow">04 / LIMITS</span><h2>측정 결과를 읽는 기준</h2><ul><li>기초·확장 각 12문제는 소규모 합성 평가입니다. 실제 업무 전체를 대표하지 않습니다.</li><li>정답 일치와 JSON 형식 검사는 서로 다른 품질 기준입니다.</li><li>effort가 높아도 정답은 보장되지 않습니다.</li><li>데모 수치는 실제 모델 사용량이 아닙니다.</li><li>중단·시간 초과로 사용량이 누락되면 절감률을 확정하지 않습니다.</li></ul></section></div>}
+function Method(){return <div className="method-grid">
+ <section className="panel prose"><span className="eyebrow">01 / PROBLEM</span><h2>모든 작업에 high가 필요할까요?</h2><p>문자 변환과 복잡한 설계 문제에 같은 effort를 쓰면 불필요한 추론이 생길 수 있습니다. effort는 보통 호출하는 프로그램이 지정합니다. 이 앱이 그 선택을 담당합니다.</p>
+  <span className="eyebrow">02 / APPROACH</span><h2>선택은 가볍게, 품질은 확인하면서</h2><ol>
+   <li><strong>로컬 규칙 또는 Jev로 시작 effort를 정합니다.</strong> 기본 로컬 규칙은 변환·추출을 low, 일반 계산·구현을 medium, 점화식·최단 경로 등 복잡한 추론 신호를 high로 분류합니다. Jev를 선택하면 AI 모델이 작업을 LOW·MEDIUM·HIGH로 분류합니다. 정확도 우선은 Jev 호출을 생략하고 high를 선택합니다.</li>
+   <li><strong>선택한 effort로 Codex가 답변을 생성합니다.</strong> Codex는 구독 로그인을 사용합니다. 선택 기능인 Jev 분류에는 서버의 TYPESAFE_API_KEY 설정이 필요합니다.</li>
+   <li><strong>기준이 있을 때 답을 검증합니다.</strong> low·medium에서 실패하면 Jev 재호출 없이 high로 한 번 재시도합니다. 최대 두 번 생성하며 모든 호출의 토큰을 합산합니다.</li>
+  </ol><p>현재 Jev 경로는 키 없는 모의 API 테스트로 검증했습니다. 실제 Jev의 분류 품질과 토큰 절감은 아직 측정하지 않았습니다.</p>
+ </section>
+ <section className="panel prose"><span className="eyebrow">03 / MEASUREMENT</span><h2>전체 비용을 숨기지 않습니다</h2><div className="formula">총토큰 = Σ(입력 + 출력)<small>Jev 분류 + Codex 최초 생성과 모든 재시도 포함</small></div>
+  <p>추론 토큰과 캐시 입력은 이미 출력·입력에 포함되므로 다시 더하지 않습니다. 공급자별 토큰 합계는 보고된 사용량이며, 구독의 남은 한도나 결제 금액으로 환산하지 않습니다. 별도로 누른 분석 버튼의 Jev 사용량은 실행 결과 합계에 포함되지 않습니다.</p>
+  <p>기존 네 전략 비교 실험은 기존 문맥 high와 짧은 문맥의 high, low, 로컬 규칙 자동 선택을 비교합니다. Jev는 이 비교에 포함되지 않습니다. 순서를 순환 배치하고 정답률·응답 시간·추가 재시도를 함께 확인합니다.</p>
+  <span className="eyebrow">04 / LIMITS</span><h2>측정 결과를 읽는 기준</h2><ul><li>기초·확장 각 12문제는 소규모 합성 평가입니다. 실제 업무 전체를 대표하지 않습니다.</li><li>정답 일치와 JSON 형식 검사는 서로 다른 품질 기준입니다.</li><li>effort가 높아도 정답은 보장되지 않습니다. Jev의 분류 confidence도 답변 정답률을 의미하지 않습니다.</li><li>데모 수치와 모의 API 테스트는 실제 모델 성능의 증거가 아닙니다.</li><li>중단·시간 초과로 사용량이 누락되면 절감률을 확정하지 않습니다.</li></ul>
+ </section>
+</div>}

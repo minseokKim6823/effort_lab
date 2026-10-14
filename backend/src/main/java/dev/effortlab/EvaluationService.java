@@ -14,9 +14,13 @@ public class EvaluationService {
     }
     public Execution execute(String task,Risk risk,Check check,String expected,Mode mode,
         Strategy strategy,BooleanSupplier canContinue,LongConsumer spend) {
+        return executeWithDecision(task,check,expected,mode,strategy,router.route(task,risk),canContinue,spend);
+    }
+    public Execution executeWithDecision(String task,Check check,String expected,Mode mode,
+        Strategy strategy,Decision decision,BooleanSupplier canContinue,LongConsumer spend) {
         if((check==Check.EXACT || check==Check.CONTAINS) && (expected==null || expected.isBlank()))
             throw new IllegalArgumentException("정답 또는 필수 문자열을 입력하세요.");
-        Decision decision=router.route(task,risk);
+        Objects.requireNonNull(decision,"An initial effort decision is required");
         Effort current=strategy==Strategy.ADAPTIVE ? decision.effort() : strategy==Strategy.LOW ? Effort.LOW : Effort.HIGH;
         List<Attempt> attempts=new ArrayList<>();
         Usage usage=Usage.zero(); long elapsed=0; String verdict="STOPPED",error=null;boolean unknown=false;

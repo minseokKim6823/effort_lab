@@ -1,0 +1,73 @@
+name: Keyless regression tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'backend/**'
+      - 'frontend/**'
+      - '.github/workflows/ci.yml'
+  pull_request:
+    paths:
+      - 'backend/**'
+      - 'frontend/**'
+      - '.github/workflows/ci.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    env:
+      TYPESAFE_API_KEY: ''
+      OPENAI_API_KEY: ''
+      CODEX_API_KEY: ''
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: actions/setup-java@v6.0.1
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Install frontend dependencies
+        run: |
+          $ErrorActionPreference = 'Stop'
+          npm ci --prefix frontend
+          if ($LASTEXITCODE -ne 0) { throw 'Frontend dependency installation failed' }
+      - name: Test and build frontend
+        run: |
+          $ErrorActionPreference = 'Stop'
+          npm test --prefix frontend
+          if ($LASTEXITCODE -ne 0) { throw 'Frontend unit tests failed' }
+          npm run build --prefix frontend
+          if ($LASTEXITCODE -ne 0) { throw 'Frontend production build failed' }
+      - name: Test and build backend with mocked providers
+        run: |
+          $ErrorActionPreference = 'Stop'
+          & ./backend/gradlew.bat -p backend test bootJar --console=plain --no-daemon
+          if ($LASTEXITCODE -ne 0) { throw 'Backend tests or bootJar build failed' }
+      - name: Install Chrome for mocked browser tests
+        working-directory: frontend
+        run: |
+          $ErrorActionPreference = 'Stop'
+          npx --no-install playwright install chrome
+          if ($LASTEXITCODE -ne 0) { throw 'Playwright Chrome installation failed' }
+      - name: Test browser flows with mocked APIs
+        working-directory: frontend
+        run: |
+          $ErrorActionPreference = 'Stop'
+          npx --no-install playwright test --config=playwright.mock.config.ts
+          if ($LASTEXITCODE -ne 0) { throw 'Mocked browser tests failed' }

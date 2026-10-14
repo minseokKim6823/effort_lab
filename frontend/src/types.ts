@@ -4,7 +4,11 @@ export type Strategy='DEFAULT_HIGH'|'HIGH'|'LOW'|'ADAPTIVE';
 export interface Decision{effort:Effort;score:number;reasons:string[];policyVersion:string;routingMicros:number;routingTokens:number}
 export interface Usage{inputTokens:number;outputTokens:number;reasoningTokens:number;cachedInputTokens:number}
 export interface Attempt{effort:Effort;output:string;usage:Usage;latencyMs:number;responseId:string;providerStatus:string;verdict:string}
-export interface Execution{strategy:Strategy;decision:Decision;attempts:Attempt[];usage:Usage;totalTokens:number;latencyMs:number;verdict:string;error:string|null;unknownUsage:boolean}
+export interface Execution{strategy:Strategy;decision:Decision|null;attempts:Attempt[];usage:Usage;totalTokens:number;latencyMs:number;verdict:string;error:string|null;unknownUsage:boolean}
+export interface JevStatus{configured:boolean;model:string;policyVersion:string}
+export interface JevRouting{provider:string;model:string|null;policyVersion:string;probabilities:Partial<Record<Effort,number>>;confidence:number|null;usage:Usage;totalTokens:number;latencyMs:number;traceId:string|null;skipped:boolean}
+export interface JevRouteResult{decision:Decision|null;routing:JevRouting;error:string|null;unknownUsage:boolean}
+export interface JevExecution extends Execution{routing:JevRouting;generationUsage:Usage}
 export interface TaskCase{id:string;title:string;category:string;prompt:string;expectedAnswer:string;demoMinimum:Effort}
 export interface Trial{caseId:string;title:string;category:string;repetition:number;execution:Execution}
 export interface Arm{trials:number;passed:number;retries:number;usage:Usage;totalTokens:number;passRate:number;meanLatencyMs:number;tokensPerSuccess:number|null}

@@ -25,7 +25,7 @@ public final class Domain {
         public BenchmarkRequest { if(suite==null) suite="starter"; if(!List.of("starter","challenge").contains(suite)) throw new IllegalArgumentException("알 수 없는 문제 세트입니다."); }
     }
     public record Decision(Effort effort, int score, List<String> reasons, String policyVersion,
-        long routingMicros, int routingTokens) {}
+        long routingMicros, long routingTokens) {}
     public record Usage(long inputTokens, long outputTokens, long reasoningTokens, long cachedInputTokens) {
         public static Usage zero() { return new Usage(0,0,0,0); }
         public long totalTokens() { return inputTokens + outputTokens; }

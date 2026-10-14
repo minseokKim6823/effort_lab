@@ -1,0 +1,218 @@
+{
+    "schemaVersion":  1,
+    "status":  "PASS",
+    "scope":  "KEYLESS_MOCK_ONLY",
+    "recordedAt":  "2026-10-15T01:09:38.7302635+09:00",
+    "environment":  "Windows; local workspace byte hashes; timezone Asia/Seoul",
+    "policyVersion":  "jev-1.0",
+    "requestedJevModel":  "jev-1.13.0",
+    "liveJevCalls":  0,
+    "liveCodexCalls":  0,
+    "backend":  {
+                    "command":  ".\\backend\\gradlew.bat -p backend test --offline --no-daemon --max-workers=2 --console=plain",
+                    "status":  "PASS",
+                    "tests":  145,
+                    "failures":  0,
+                    "errors":  0,
+                    "skipped":  0,
+                    "jevTests":  71,
+                    "suites":  [
+                                   {
+                                       "suite":  "dev.effortlab.BatchServiceTest",
+                                       "tests":  10,
+                                       "failures":  0,
+                                       "errors":  0,
+                                       "skipped":  0,
+                                       "timestamp":  "2026-10-14T16:00:42.120Z",
+                                       "reportSha256":  "284cdada6bc285371b26ad141308e7fd720cdbc01221b42c7ecb3203b891fb10"
+                                   },
+                                   {
+                                       "suite":  "dev.effortlab.BudgetBoundaryTest",
+                                       "tests":  2,
+                                       "failures":  0,
+                                       "errors":  0,
+                                       "skipped":  0,
+                                       "timestamp":  "2026-10-14T16:00:45.951Z",
+                                       "reportSha256":  "3d68a5aa4f430331863308b4b3cc248d9d4e6818b157bb3941c269ed110a05d8"
+                                   },
+                                   {
+                                       "suite":  "dev.effortlab.CliParserTest",
+                                       "tests":  10,
+                                       "failures":  0,
+                                       "errors":  0,
+                                       "skipped":  0,
+                                       "timestamp":  "2026-10-14T16:00:46.510Z",
+                                       "reportSha256":  "bddeddb6e58c271459cdecd56982f7e684f5770a6a89a1caf199c473b7a701c3"
+                                   },
+                                   {
+                                       "suite":  "dev.effortlab.CoreTest",
+                                       "tests":  33,
+                                       "failures":  0,
+                                       "errors":  0,
+                                       "skipped":  0,
+                                       "timestamp":  "2026-10-14T16:00:46.786Z",
+                                       "reportSha256":  "a881dbdc5a7e38319da289319978a0a69b99faaa0c54268348fa2935a3c1dd17"
+                                   },
+                                   {
+                                       "suite":  "dev.effortlab.ExclusiveExecutionTest",
+                                       "tests":  2,
+                                       "failures":  0,
+                                       "errors":  0,
+                                       "skipped":  0,
+                                       "timestamp":  "2026-10-14T16:00:47.321Z",
+                                       "reportSha256":  "3f37c9fd2443521a9bb3df835c8ba9c6b8cfa3490db496d542f358eb57064a7e"
+                                   },
+                                   {
+                                       "suite":  "dev.effortlab.ExperimentTest",
+                                       "tests":  1,
+                                       "failures":  0,
+                                       "errors":  0,
+                                       "skipped":  0,
+                                       "timestamp":  "2026-10-14T16:00:59.456Z",
+                                       "reportSha256":  "b4f23ddeca4c5e0cdc4ddc27ea9474039b10e1c908e297212e21ae6f06020cbd"
+                                   },
+                                   {
+                                       "suite":  "dev.effortlab.GatewayCleanupTest",
+                                       "tests":  3,
+                                       "failures":  0,
+                                       "errors":  0,
+                                       "skipped":  0,
+                                       "timestamp":  "2026-10-14T16:01:00.377Z",
+                                       "reportSha256":  "8dd5b7f54b3c17720efd4041007088861a077060b57be4b0affc8e5698d7bb84"
+                                   },
+                                   {
+                                       "suite":  "dev.effortlab.JevControllerTest",
+                                       "tests":  13,
+                                       "failures":  0,
+                                       "errors":  0,
+                                       "skipped":  0,
+                                       "timestamp":  "2026-10-14T16:01:01.625Z",
+                                       "reportSha256":  "93bc9becb090ff182a8066746d4b668a2059accf0c1943704c8dcc9c9da0c551"
+                                   },
+                                   {
+                                       "suite":  "dev.effortlab.JevGatewayTest",
+                                       "tests":  36,
+                                       "failures":  0,
+                                       "errors":  0,
+                                       "skipped":  0,
+                                       "timestamp":  "2026-10-14T16:01:03.933Z",
+                                       "reportSha256":  "802626e45108e03d5b19ca7d531a27f48b9f3f1b952326d66a9ccdbc9bbeee12"
+                                   },
+                                   {
+                                       "suite":  "dev.effortlab.JevServiceTest",
+                                       "tests":  22,
+                                       "failures":  0,
+                                       "errors":  0,
+                                       "skipped":  0,
+                                       "timestamp":  "2026-10-14T16:01:08.048Z",
+                                       "reportSha256":  "8ece775643d2736a4ff385aaa07e8b85bc75065959faee8a06dcf0a991f3d62d"
+                                   },
+                                   {
+                                       "suite":  "dev.effortlab.OriginGuardTest",
+                                       "tests":  7,
+                                       "failures":  0,
+                                       "errors":  0,
+                                       "skipped":  0,
+                                       "timestamp":  "2026-10-14T16:01:08.319Z",
+                                       "reportSha256":  "121a50261ee1f7ab36d4589d695df42b618f75d50119e5b8bfe25191cca751fa"
+                                   },
+                                   {
+                                       "suite":  "dev.effortlab.ResumeTest",
+                                       "tests":  1,
+                                       "failures":  0,
+                                       "errors":  0,
+                                       "skipped":  0,
+                                       "timestamp":  "2026-10-14T16:01:09.877Z",
+                                       "reportSha256":  "809acf04d92dcb7c7035fe2fa7ee5616c1b8553ee89b259cf9c79e45a71b8f4c"
+                                   },
+                                   {
+                                       "suite":  "dev.effortlab.SingleExecutionTest",
+                                       "tests":  5,
+                                       "failures":  0,
+                                       "errors":  0,
+                                       "skipped":  0,
+                                       "timestamp":  "2026-10-14T16:01:10.671Z",
+                                       "reportSha256":  "f599090029ad2c1375fb9fd30391600db19d713ccb37af0fce5828d81aa72413"
+                                   }
+                               ]
+                },
+    "frontend":  {
+                     "unit":  {
+                                  "cwd":  "frontend",
+                                  "command":  "npm test",
+                                  "status":  "PASS",
+                                  "tests":  2,
+                                  "failures":  0
+                              },
+                     "browser":  {
+                                     "cwd":  "frontend",
+                                     "command":  "npx playwright test --config playwright.mock.config.ts",
+                                     "status":  "PASS",
+                                     "tests":  13,
+                                     "jevTests":  7,
+                                     "existingRegressionTests":  6,
+                                     "workers":  1,
+                                     "failures":  0
+                                 },
+                     "build":  {
+                                   "cwd":  "frontend",
+                                   "command":  "npm run build",
+                                   "status":  "PASS",
+                                   "indexSha256":  "a5750a61516f10d91f40ba1f1d38b5323f0b64f29bc1e8c501111c41df449817"
+                               },
+                     "notes":  "Unit and browser outcomes are recorded from successful command output. After the browser run, only explanatory copy and an npm script were added; the production build and mock test discovery passed again."
+                 },
+    "backendPackage":  {
+                           "command":  ".\\backend\\gradlew.bat -p backend bootJar --offline --no-daemon --max-workers=2 --console=plain",
+                           "status":  "PASS",
+                           "artifact":  "backend/build/libs/effort-lab.jar",
+                           "sha256":  "3dfb53293d9e15a6e906eac4421c2e237c10c72735b6584a201efa39b902cbb4"
+                       },
+    "mockAccountingExample":  {
+                                  "description":  "Fixed test fixtures, not measured performance or savings",
+                                  "routingTokens":  128,
+                                  "firstGenerationTokens":  240,
+                                  "highRetryTokens":  270,
+                                  "totalWithoutRetry":  368,
+                                  "totalWithRetry":  638
+                              },
+    "coveredBehaviors":  [
+                             "Jev LOW/MEDIUM/HIGH overrides conflicting local rules",
+                             "Expected answer is used only by local verification",
+                             "At most one HIGH retry without Jev reclassification",
+                             "Routing failure prevents Codex generation",
+                             "Known usage survives classification and later generation failure",
+                             "Unknown usage remains explicit",
+                             "Concurrent classification/execution shares existing lock",
+                             "Missing key and accuracy override",
+                             "Choice/probability/usage response validation",
+                             "Mobile layout and success/failure JSON export"
+                         ],
+    "limitations":  [
+                        "Actual Jev classification quality, response latency and token savings remain unmeasured",
+                        "Mocks establish integration and accounting behavior only",
+                        "The existing four-arm benchmark does not include Jev",
+                        "Provider token totals do not establish monetary or subscription savings",
+                        "GitHub CI execution is separate from this local verification record"
+                    ],
+    "sourceSha256":  {
+                         "backend/src/main/java/dev/effortlab/JevGateway.java":  "23787c78d23633122b6ec6b94b7fb20b2a055db236b499ba463540e30b56dfd4",
+                         "backend/src/main/java/dev/effortlab/JevService.java":  "9703ac2d95e86116a8ee35f0448c6b2fc11f309972dc7a3043334ee250451259",
+                         "backend/src/main/java/dev/effortlab/JevController.java":  "a12598647daeab84da4e0bfab11fb779215494560ef35612fce8ff4f874c9089",
+                         "backend/src/main/java/dev/effortlab/EvaluationService.java":  "cfe6d2c49f83e11b3184cd3adb7a13dde2fa4448e6f298388b2985745bc97020",
+                         "backend/src/main/java/dev/effortlab/Domain.java":  "5dc571b36c039050827bffd3cdb9a46f3c4fc27f8ebddd42d8814c16a72e48fa",
+                         "backend/src/test/java/dev/effortlab/JevGatewayTest.java":  "620167180c00b52faf77ea8ed45cfe6b71772048f8ceda03b586a46fad68aeaf",
+                         "backend/src/test/java/dev/effortlab/JevServiceTest.java":  "f60b93603bfe567d1ada6dc385538200db2a8e5a22684695ba860e1ec651cbad",
+                         "backend/src/test/java/dev/effortlab/JevControllerTest.java":  "8fba3c74319a477fef7e799331712bde5052c20c8f24692ce1b28d63cafd64af",
+                         "frontend/src/App.tsx":  "895bc2088f594db0aaf68a64ac19869a66d85c2ec8c72f17c2c09f4039430085",
+                         "frontend/src/types.ts":  "ff46f12695a7bfb4bd87d35d33c738d5e84bed5fbe80e38a47c254726cef1ab0",
+                         "frontend/src/style.css":  "f67ebef3dabc6cc071099fc7cf3610f9c57526ec21f3dc798e4a36e47d0cb69d",
+                         "frontend/e2e-mock/jev.spec.ts":  "a704ea74bacc5c0d5e541e8c9897b43471380a17cdfab58480bf882fd3da413e",
+                         "frontend/e2e-mock/batch.spec.ts":  "a74d7e58ff98e93d3920d217c27bb60693185f54a963101ab4db625741ae5cb4",
+                         "frontend/playwright.mock.config.ts":  "994eabd5cdabbd00a80e512e00fb147c78691b119d7efcb10450b99994d7bb2b",
+                         "frontend/package.json":  "fa192d059f07f9e883e93cbbd315e13ed8c99d7b4ec9feafc6f6dda47c27dd5b",
+                         "frontend/package-lock.json":  "75c14f5e5a5b4c0b3206dc46ca32887d9de106d30b6e23187a9d6e820c63922c",
+                         "backend/build.gradle":  "a46396c0b64d709da2e98072895ec73231e179841b9db665413b4e6bff2c9d73",
+                         ".github/workflows/ci.yml":  "9b94aa5aa44940c0d020cf8f880c09fab04622f19f379457c5fef964dc07146c"
+                     }
+}

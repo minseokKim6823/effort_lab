@@ -7,6 +7,7 @@ const result={id:'batch-1',createdAt:'2026-09-27T00:00:00Z',mode:'CODEX',model:'
  items:cases.map(c=>({id:c.id,output:c.expectedAnswer,verdict:'PASS',callId:'response-1'})),
  calls:[{taskIds:cases.map(c=>c.id),prompt:'fixture prompt',generation,parseError:null}],usage,totalTokens:120,latencyMs:1000,unknownUsage:false,error:null};
 async function mockApi(page:Page,opts:{reports?:unknown[];batch?:(route:Route)=>Promise<void>;execute?:(route:Route)=>Promise<void>}={}){
+ await page.route(/^https:\/\/fonts\.(googleapis|gstatic)\.com\//,route=>route.abort());
  await page.route('**/api/**',async route=>{
   const path=new URL(route.request().url()).pathname;
   if(path==='/api/status')return route.fulfill({json:{codexAvailable:true,model:'fixture-model',busy:false,policyVersion:'fixture',datasetVersion:'fixture'}});
@@ -16,7 +17,7 @@ async function mockApi(page:Page,opts:{reports?:unknown[];batch?:(route:Route)=>
   if(path==='/api/execute'&&opts.execute)return opts.execute(route);
   return route.fulfill({status:404,json:{message:'Unexpected mocked API call: '+path}});
  });
- await page.goto('/');
+ await page.goto('/',{waitUntil:'domcontentloaded'});
  await expect(page.getByLabel('분석할 작업')).toHaveValue(cases[0].prompt);
 }
 test('batch request preserves independent tasks and shows actual call totals',async({page})=>{
@@ -54,7 +55,7 @@ test('bad item IDs prevent model submission and incomplete costs remain explicit
  await expect(source).toContainText('uppercase abc0');
  await source.fill(JSON.stringify([{id:'same',task:'a',check:'NONE'},{id:'same',task:'b',check:'NONE'}]));
  await page.getByRole('button',{name:'묶음 실행 시작'}).click();
- await expect(page.getByRole('alert')).toHaveText('각 작업에는 중복되지 않는 id가 필요합니다.');
+ await expect(page.getByRole('alert')).toHaveText('각 id는 중복 없이 영문·숫자·하이픈·밑줄 1~64자로 입력해주세요.');
  expect(submissions).toBe(0);
  await page.getByRole('button',{name:'기초 예제 4개 불러오기'}).click();
  await page.getByRole('button',{name:'묶음 실행 시작'}).click();
