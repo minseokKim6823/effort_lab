@@ -1,0 +1,133 @@
+{
+    "schemaVersion":  1,
+    "scope":  "KEYLESS_MOCK_ONLY",
+    "recordedAt":  "2026-10-15T01:14:22.7223229+09:00",
+    "provider":  "GitHub Actions",
+    "workflow":  ".github/workflows/ci.yml",
+    "runId":  38595775166,
+    "testedCommit":  "70503d7797efe1d5b971eb500c1517b5ac0b1376",
+    "status":  "completed",
+    "conclusion":  "success",
+    "url":  "https://github.com/minseokKim6823/effort_lab/actions/runs/38595775166",
+    "startedAt":  "2026-10-14T16:10:20Z",
+    "updatedAt":  "2026-10-14T16:13:17Z",
+    "jobs":  [
+                 {
+                     "id":  115961997930,
+                     "name":  "windows",
+                     "status":  "completed",
+                     "conclusion":  "success",
+                     "steps":  [
+                                   {
+                                       "number":  1,
+                                       "name":  "Set up job",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "started_at":  "2026-10-14T16:10:24Z",
+                                       "completed_at":  "2026-10-14T16:10:26Z"
+                                   },
+                                   {
+                                       "number":  2,
+                                       "name":  "Run actions/checkout@v7.0.1",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "started_at":  "2026-10-14T16:10:26Z",
+                                       "completed_at":  "2026-10-14T16:10:36Z"
+                                   },
+                                   {
+                                       "number":  3,
+                                       "name":  "Run actions/setup-node@v7.0.0",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "started_at":  "2026-10-14T16:10:36Z",
+                                       "completed_at":  "2026-10-14T16:10:41Z"
+                                   },
+                                   {
+                                       "number":  4,
+                                       "name":  "Run actions/setup-java@v6.0.1",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "started_at":  "2026-10-14T16:10:41Z",
+                                       "completed_at":  "2026-10-14T16:10:41Z"
+                                   },
+                                   {
+                                       "number":  5,
+                                       "name":  "Install frontend dependencies",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "started_at":  "2026-10-14T16:10:41Z",
+                                       "completed_at":  "2026-10-14T16:10:55Z"
+                                   },
+                                   {
+                                       "number":  6,
+                                       "name":  "Test and build frontend",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "started_at":  "2026-10-14T16:10:55Z",
+                                       "completed_at":  "2026-10-14T16:10:59Z"
+                                   },
+                                   {
+                                       "number":  7,
+                                       "name":  "Test and build backend with mocked providers",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "started_at":  "2026-10-14T16:10:59Z",
+                                       "completed_at":  "2026-10-14T16:12:06Z"
+                                   },
+                                   {
+                                       "number":  8,
+                                       "name":  "Install Chrome for mocked browser tests",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "started_at":  "2026-10-14T16:12:06Z",
+                                       "completed_at":  "2026-10-14T16:12:50Z"
+                                   },
+                                   {
+                                       "number":  9,
+                                       "name":  "Test browser flows with mocked APIs",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "started_at":  "2026-10-14T16:12:50Z",
+                                       "completed_at":  "2026-10-14T16:13:10Z"
+                                   },
+                                   {
+                                       "number":  16,
+                                       "name":  "Post Run actions/setup-java@v6.0.1",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "started_at":  "2026-10-14T16:13:10Z",
+                                       "completed_at":  "2026-10-14T16:13:10Z"
+                                   },
+                                   {
+                                       "number":  17,
+                                       "name":  "Post Run actions/setup-node@v7.0.0",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "started_at":  "2026-10-14T16:13:10Z",
+                                       "completed_at":  "2026-10-14T16:13:12Z"
+                                   },
+                                   {
+                                       "number":  18,
+                                       "name":  "Post Run actions/checkout@v7.0.1",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "started_at":  "2026-10-14T16:13:12Z",
+                                       "completed_at":  "2026-10-14T16:13:14Z"
+                                   },
+                                   {
+                                       "number":  19,
+                                       "name":  "Complete job",
+                                       "status":  "completed",
+                                       "conclusion":  "success",
+                                       "started_at":  "2026-10-14T16:13:14Z",
+                                       "completed_at":  "2026-10-14T16:13:14Z"
+                                   }
+                               ]
+                 }
+             ],
+    "limitations":  [
+                        "This records CI job/step outcomes, not live Jev or Codex performance",
+                        "The workflow supplies no API keys and runs mocked provider/browser tests",
+                        "Local per-suite counts and source hashes are in mock-verification.json"
+                    ]
+}
